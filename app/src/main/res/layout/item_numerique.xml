@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="8dp">
+        <ImageView
+            android:id="@+id/note"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/note"
+            android:visibility="gone"
+            android:contentDescription="@string/note" />
+
+        <ImageView
+            android:id="@+id/fav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top"
+            android:src="@drawable/star0"
+            android:visibility="gone"
+            android:contentDescription="@string/fav_preferences" />
+
+        <TextView
+            android:id="@+id/txt_letter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_number"
+            android:textColor="@color/white"
+            android:text=""
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/txt_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_number"
+            android:textColor="@color/white"
+            android:text="344B"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+    </FrameLayout>
+    <TextView
+        android:id="@+id/txt_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:maxLines="3"
+        android:textColor="?attr/textColor"
+        android:layout_gravity="center"/>
+</LinearLayout>

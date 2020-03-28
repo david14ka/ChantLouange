@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="background1" format="color" />
+    <attr name="textColor" format="color" />
+    <attr name="textSize" format="dimension" />
+    <attr name="itemTextSize" format="dimension" />
+
+    <attr name="fabColor" format="color"/>
+    <attr name="toolbarColor" format="color"/>
+    <attr name="post_textColor" format="color"/>
+
+
+    <attr name="bg_underline" format="color"/>
+
+    <attr name="itemTextColor" format="color"/>
+    <attr name="itemIconTint" format="color"/>
+    <attr name="fontPath" format="reference"/>
+
+
+
+</resources>

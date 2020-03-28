@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="itemTextColor">18</dimen>
+    <dimen name="textColor">18</dimen>
+    <dimen name="book_height">200dp</dimen>
+    <dimen name="table_footer_size">16sp</dimen>
+
+</resources>

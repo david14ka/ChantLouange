@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contibutor">
+        <item>-------------------------</item>
+        <item>David KAZAD (Developer)</item>
+        <item>Josué MALENGELA</item>
+        <item>Emmanuel KAMAU</item>
+        <item>Rachel KAPEND</item>
+        <item>Abed MWAMBA</item>
+        <item>David KASHALA</item>
+        <item>Meschac MUTEB</item>
+        <item>Chadrack LOTA</item>
+        <item>Josué MUTEBA</item>
+    </string-array>
+
+    <string-array name="contact">
+        <item>-------------------------</item>
+        <item>Phone: +243970015092</item>
+        <item>Email: 14ka135@gmail.com</item>
+        <item></item>
+        <item>#Google+</item>
+        <item>#Youtub Channel</item>
+        <item>#Facebook page</item>
+        <item>#Github repository</item>
+    </string-array>
+
+     <string-array name="reference">
+        <item>-------------------------</item>
+        <item>Collection des cantiques</item>
+        <item>Chant de victoire</item>
+        <item>Nyimbo za mungu</item>
+        <item>Nyimbo za wokovu</item>
+        <item></item>
+        <item>Voir Autres</item>
+    </string-array>
+
+    <string-array name="book_list2">
+        <item>Collection des cantiques</item>
+        <item>Chant de Victoire</item>
+        <item>Nyimbo za Mungu</item>
+        <item>Nyimbo za Wokovu</item>
+    </string-array>
+
+    <string-array name="book_list">
+        <item>COLLECTION DES CANTIQUES</item>
+        <item>CHANT DE VICTOIRE</item>
+        <item>NYIMBO ZA MUNGU</item>
+        <item>NYIMBO ZA WOKOVU</item>
+    </string-array>
+
+    <string-array name="table_des_matieres">
+        <item>@string/alphabet</item>
+        <item>@string/numerotation</item>
+    </string-array>
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+</resources>

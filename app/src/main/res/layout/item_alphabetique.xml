@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/note"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/note"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/star0"
+                android:visibility="gone"
+                android:layout_gravity="top" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/txt_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:visibility="gone"
+                android:background="@drawable/button_alpha"
+                android:layout_gravity="center"
+                android:textColor="?attr/textColor"
+                android:textSize="18dp"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/txt_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grand Dieu nous te benissons!"
+                android:textColor="?attr/textColor"
+                android:textSize="18dp"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/txt_number"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_number"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="?attr/textColor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout"
+        android:background="?attr/bg_underline" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bground</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTansition</item>
+        <item name="actionModeBackground">@color/md_black_1000</item>
+        <item name="actionModeSplitBackground">@color/md_black_1000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="textColor">@color/white</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="bg_underline">#5ee6e4e4</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemIconTint">@color/white</item>
+
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.davidkazad.chantlouange.activities.ItemActivity">
+
+    <item
+        android:id="@+id/action_find"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_text_size"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="@string/mode_jour_nuit"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="never" />
+
+</menu>

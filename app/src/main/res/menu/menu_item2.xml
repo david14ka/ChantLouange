@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.davidkazad.chantlouange.activities.ItemActivity">
+
+    <item
+        android:id="@+id/action_textSize"
+        android:title="@string/action_text_size"
+        android:icon="@drawable/ic_format_size_black_24dp"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_helps"
+        android:orderInCategory="100"
+        android:title="@string/help"/>
+
+</menu>

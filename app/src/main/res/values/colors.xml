@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c2e2e</color>
+    <color name="colorPrimaryDark">#343636</color>
+    <color name="colorAccent">#0095ff</color>
+
+    <color name="color">#0c786d</color>
+    <color name="white">#fff</color>
+    <color name="green">#63af87</color>
+    <color name="trans">#98000000</color>
+    <color name="trans2">#1e000000</color>
+
+    <color name="app_primary">#63af87</color>
+    <color name="fab_colorNormal">#63af87</color>
+    <color name="fab_colorPressed">#0c786d</color>
+    <color name="app_primary_dark">#0c786d</color>
+    <color name="grey">#DDDDDD</color>
+    <color name="light_grey">#EEEEEE</color>
+    <color name="white_transparent">#cbd8d5d5</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="post_textColor">#fff</color>
+    <color name="black">#2a2929</color>
+    <color name="bg_underline">#5eeeeeee</color>
+    <color name="bg_day">#eee</color>
+
+
+</resources>

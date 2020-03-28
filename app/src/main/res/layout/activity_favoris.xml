@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FavorisActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <Button
+                android:id="@+id/join"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join group"
+                android:textColor="@color/md_blue_500"
+                android:onClick="joinGroup"
+                android:background="@drawable/button_resource"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="?attr/bg_underline" />
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/fav"
+            android:name="com.davidkazad.chantlouange.fragment.FavFragment"
+            tools:layout="@layout/fragment_song_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "53793527067",
+    "firebase_url": "https://chantlouange-18280.firebaseio.com",
+    "project_id": "chantlouange-18280",
+    "storage_bucket": "chantlouange-18280.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53793527067:android:202c67f63a291142",
+        "android_client_info": {
+          "package_name": "com.davidkazad.chantlouange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53793527067-j1uo5vh8srv1kq6nvpv7ldg59shl1i0r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.chantlouange",
+            "certificate_hash": "13d68af1f6e78392f64dc016d26cca7a215dfdd2"
+          }
+        },
+        {
+          "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgRhfFtFBQdlrHdqGck-Racg3_Z-canrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

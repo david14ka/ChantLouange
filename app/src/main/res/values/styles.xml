@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AnimationTansition">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    <style name="MyAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bground</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTansition</item>
+        <item name="actionModeBackground">@color/md_black_1000</item>
+        <item name="actionModeSplitBackground">@color/md_black_1000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="textColor">@color/white</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="bg_underline">#5ee6e4e4</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemIconTint">@color/white</item>
+        <!--<item name="fontPath">assets/fonts/Roboto-Regular.ttf</item>-->
+    </style>
+
+    <style name="MyAppTheme2" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTansition</item>
+        <item name="actionModeBackground">@color/white</item>
+        <item name="actionModeSplitBackground">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="textColor">@color/black</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="bg_underline">#5e000000</item>
+        <item name="itemTextColor">#2a2929</item>
+        <item name="itemIconTint">@color/md_blue_800</item>
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
+    </style>
+
+    <style name="AppThemeLogin" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
+        <item name="android:windowFullscreen">false</item>
+
+    </style>
+
+    <style name="AppThemeIntro" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+    </style>
+
+</resources>

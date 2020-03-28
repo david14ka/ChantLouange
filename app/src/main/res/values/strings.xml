@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">Chant &amp; Louange</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_theme_light">Changer de Thème</string>
+    <string name="action_theme_night">Thème nuit</string>
+    <string name="action_help">Aide</string>
+    <string name="action_text_size">Taille du text</string>
+    <string name="title_activity_songs">SongsActivity</string>
+    <string name="title_chant_list">Chants</string>
+    <string name="title_chant_detail">Chant Detail</string>
+    <string name="search">Search</string>
+    <string name="dashboard">Chants</string>
+    <string name="title_book_list">Items</string>
+    <string name="title_book_detail">Book Detail</string>
+    <string name="title_song_list">Songs</string>
+    <string name="title_song_detail">Song\'s Detail</string>
+    <string name="find_song_text">Saisir le numero de lla chanson rechercher</string>
+    <string name="sample">Replace with your own detail action</string>
+    <string name="number">Numero</string>
+    <string name="email_number">Email or Phone number</string>
+    <string name="firstname">Prenom</string>
+    <string name="song_not_found">Error: cette chanson n\'existe pas !!</string>
+    <string name="research">Rechercher</string>
+    <string name="error_search">Number not found !!</string>
+    <string name="error_search_2">invalide number !!</string>
+    <string name="cc">Collection des Cantiques</string>
+    <string name="cv">Chant de Victoire</string>
+    <string name="nm">Nyimbo za Mungu</string>
+    <string name="nw">Nyimbo za Wokovu</string>
+    <string name="text_about">Apropos</string>
+
+    <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
+    <string name="developer_name">David Kazad</string>
+    <string name="version">Version 1.2</string>
+    <string name="developed_by">developed by</string>
+    <string name="lorem_ipsum">lorem ipsum</string>
+    <string name="share_with">Partager avec</string>
+    <string name="contacts">** CONTACTS **</string>
+
+    <string name="fav_preferences">fav%d%d</string>
+    <string name="like_preferences">like%d%d</string>
+    <string name="share_song">Partager ce chant</string>
+
+    <string name="cancel">Annuler</string>
+    <string name="action_search" />
+    <string name="chant_fav">Cantiques favorites</string>
+    <string name="share">Partager l\'application</string>
+    <string name="signaler">Signaler un probleme</string>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://14ka135.wixsite.com/.well-known/assetlinks.json\" }]</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_favoris">Favoris</string>
+    <string name="next">Suivant</string>
+    <string name="finiish">Terminer</string>
+    <string name="text_size">Taille du Text</string>
+    <string name="number_ot_exists">Ce numero n\'exist pas !</string>
+    <string name="comment">%d Comments</string>
+    <string name="like">%d Likes</string>
+    <string name="write_a_post">Laisser un commentaire</string>
+    <string name="advance_research">Recherche avancée</string>
+    <string name="table_matieres">Table des Matières</string>
+    <string name="help">Aide</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="txt_number">N° %s</string>
+    <string name="txt_number2">Numero %s</string>
+    <string name="delete">Delete</string>
+    <string name="view">View</string>
+    <string name="home">Accueil</string>
+    <string name="discover">Découvrir</string>
+    <string name="community">Communautés</string>
+    <string name="favorities">Favoris</string>
+    <string name="settings">Paramètres</string>
+    <string name="send_comment">Envoyer des commentaires</string>
+    <string name="about">Apropos</string>
+    <string name="support_dev">Support Development</string>
+    <string name="note">note</string>
+    <string name="songs">344B</string>
+    <string name="c_v">C.V</string>
+    <string name="write_a_comment">Write a comment ...</string>
+    <string name="night_mode">Mode Nuit</string>
+    <string name="mode_jour">Mode Jour</string>
+    <string name="seek_progress">%d dp</string>
+    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
+    <string name="thanks">Merci pour votre correction</string>
+    <string name="comment_activity">Commentaires</string>
+    <string name="ecrire_un_commentaire">Ecrire un commentaire</string>
+    <string name="display_name">Dispaly name or Email</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="time_ago_prefix"></string>
+    <string name="time_ago_suffix">ago</string>
+    <string name="time_ago_seconds">now</string>
+    <string name="time_ago_minute">about a minute</string>
+    <string name="time_ago_minutes">%d minutes</string>
+    <string name="time_ago_hour">about an hour</string>
+    <string name="time_ago_hours">about %d hours</string>
+    <string name="time_ago_day">a day</string>
+    <string name="time_ago_days">%d days</string>
+    <string name="time_ago_month">about a month</string>
+    <string name="time_ago_months">%d months</string>
+    <string name="time_ago_year">about a year</string>
+    <string name="time_ago_years">%d years</string>
+    <string name="problems">Signaler un problème</string>
+    <string name="numero_introuvable">Numero introuvable</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="annuler">Annuler</string>
+    <string name="livres">Livres</string>
+    <string name="apropos">Apropos</string>
+    <string name="remerciement">** REMERCIEMENTS **</string>
+    <string name="home_title">Livre des cantiques</string>
+    <string name="alive_corp">http://alive-corporation.org</string>
+    <string name="list_of_songs">Liste des chants</string>
+    <string name="search_in">Rechercher dans</string>
+    <string name="ok">Ok</string>
+    <string name="add_to_favorites">Ajouter au favoris</string>
+    <string name="corriger_erreur">Corriger l\'erreur</string>
+    <string name="jaime">J\'aime</string>
+    <string name="mode_jour_nuit">Mode Jour/Nuit</string>
+    <string name="alphabet">Alphabetique</string>
+    <string name="numerotation">Numerotation</string>
+    <string name="post">Post</string>
+    <string name="send">Envoyer</string>
+    <string name="no_name">no-name</string>
+
+</resources>

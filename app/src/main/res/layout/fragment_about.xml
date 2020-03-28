@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:background="@drawable/bground">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="@string/text_about"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/about_mdg_logo"
+                    android:layout_marginTop="22dp"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/alive"
+                    android:onClick="alive"/>
+                <TextView
+                    android:id="@+id/about_music_dna_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Chant &amp; Louange"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:id="@+id/about_version_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/version"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:id="@+id/about_brought_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="44dp"
+                    android:text="@string/developed_by"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:textColor="#fff"/>
+
+
+                <TextView
+                    android:id="@+id/about_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/developer_name"
+                    android:gravity="center"
+                    android:onClick="me"
+                    android:textColor="#CCC"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/about_contributor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="8dp"
+                    android:text="VOIR L'EQUIPE"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:onClick="equipe"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/about_github_link"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_github"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="4dp"
+                        android:padding="2dp"
+                        android:onClick="github"
+                        />
+                    <ImageView
+                        android:id="@+id/about_rate_link"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/star0"
+                        android:layout_marginBottom="12dp"
+                        android:padding="8dp"
+                        android:onClick="rate_me"
+                        />
+                    <ImageView
+                        android:id="@+id/about_share_link"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_share_app"
+                        android:layout_marginBottom="12dp"
+                        android:padding="10dp"
+                        android:onClick="share_me"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/about_license_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/problems"
+            android:background="@color/trans"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:autoLink="web"
+            android:clickable="true"
+            android:textSize="14sp"
+            android:onClick="licence"
+            android:padding="20dp"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

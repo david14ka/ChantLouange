@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:id="@+id/layout">
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/note"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/star0"
+                android:visibility="visible"
+                android:layout_gravity="top"/>
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="?attr/textColor"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/txt_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quel est cet homme de Jesus"
+                android:textColor="?attr/textColor"
+                android:textSize="18dp"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/txt_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Collection des Cantiques"
+                android:textColor="?attr/textColor"
+                android:padding="5dp"
+                android:lines="1"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/item_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/menu" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout"
+        android:background="?attr/bg_underline" />
+
+</RelativeLayout>
