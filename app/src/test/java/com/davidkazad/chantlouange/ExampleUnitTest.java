@@ -28,7 +28,7 @@ public class ExampleUnitTest {
         //List<String> strings = Arrays.asList(Arrays.sort(nw.getTitle());
 
         String array[] = nw.getTitle();
-        //Arrays.sort(array, CC.reverseOrder());
+        //Arrays.sort(array, CC2.reverseOrder());
         Arrays.sort(array);
 
         System.out.println("Tableau trié\n");

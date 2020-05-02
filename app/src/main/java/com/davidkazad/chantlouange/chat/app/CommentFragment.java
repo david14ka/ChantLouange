@@ -2,9 +2,9 @@ package com.davidkazad.chantlouange.chat.app;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialogFragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -18,19 +18,13 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.activities.BaseActivity;
 import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.models.Comment;
-import com.davidkazad.chantlouange.models.Post;
 import com.davidkazad.chantlouange.models.User;
-import com.davidkazad.chantlouange.models.UserPref;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import butterknife.OnClick;
-
-import static com.davidkazad.chantlouange.common.Common.LogPrefs;
-import static com.davidkazad.chantlouange.common.Common.LogUsers;
 
 /**
  * <p>A fragment that shows a list of items as a modal bottom sheet.</p>

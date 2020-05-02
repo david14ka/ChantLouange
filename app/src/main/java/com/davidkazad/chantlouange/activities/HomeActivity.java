@@ -2,11 +2,11 @@ package com.davidkazad.chantlouange.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -98,7 +98,7 @@ public class HomeActivity extends BaseActivity {
 
     protected void hideFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
-        android.support.v4.app.Fragment frag = fm.findFragmentByTag(fragment.getTag());
+        Fragment frag = fm.findFragmentByTag(fragment.getTag());
         if (frag != null) {
             fm.beginTransaction()
                     .setCustomAnimations(R.anim.slide_left,
@@ -161,7 +161,7 @@ public class HomeActivity extends BaseActivity {
                             Log.d(TAG, "signInAnonymously:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Login login = new Login(user);
-                            Common.loginRef.child(user.getUid()).setValue(login);
+                            //Common.loginRef.child(user.getUid()).setValue(login);
 
                         } else {
                             // If sign in fails, display a message to the user.

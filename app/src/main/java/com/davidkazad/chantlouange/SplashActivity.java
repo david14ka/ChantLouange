@@ -3,8 +3,8 @@ package com.davidkazad.chantlouange;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -81,7 +81,7 @@ public class SplashActivity extends AppCompatActivity {
                             user1.store();
 
                             Login login = new Login(user);
-                            Common.loginRef.child(user.getUid()).setValue(login);
+                            //Common.loginRef.child(user.getUid()).setValue(login);
 
 
                         } else {

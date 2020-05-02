@@ -1,10 +1,10 @@
 package com.davidkazad.chantlouange.chat.app;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +18,6 @@ import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.activities.BaseActivity;
 import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.config.SongsApplication;
-import com.davidkazad.chantlouange.events.ClickItemTouchListener;
 import com.davidkazad.chantlouange.models.Post;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

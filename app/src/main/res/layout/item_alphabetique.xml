@@ -62,7 +62,7 @@
                 android:lines="1"/>
             <TextView
                 android:id="@+id/txt_number"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_number"
                 android:gravity="center"

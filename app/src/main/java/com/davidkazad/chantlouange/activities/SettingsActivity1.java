@@ -1,13 +1,12 @@
 package com.davidkazad.chantlouange.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.davidkazad.chantlouange.R;
 import com.pixplicity.easyprefs.library.Prefs;

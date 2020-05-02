@@ -18,7 +18,7 @@ package com.davidkz.eazyorm;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v4.util.LruCache;
+import androidx.collection.LruCache;
 
 import com.davidkz.eazyorm.serializer.TypeSerializer;
 import com.davidkz.eazyorm.util.Log;
