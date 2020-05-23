@@ -165,7 +165,7 @@ public class ListActivity extends BaseActivity {
             return true;
         }
         if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             return true;
         }
         if (id == R.id.action_helps) {
