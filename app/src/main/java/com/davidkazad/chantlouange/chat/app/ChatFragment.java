@@ -108,6 +108,7 @@ public class ChatFragment extends BottomSheetDialogFragment {
     private void perfomPost(final Post post) {
 
         pbar.setVisibility(View.VISIBLE);
+        dismiss();
         Toast.makeText(getContext(), "new comment Sent!", Toast.LENGTH_SHORT).show();
 
         Common.postRef.push().setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -116,9 +117,9 @@ public class ChatFragment extends BottomSheetDialogFragment {
 
                 if (onSendPostListener != null) {
 
-                    post.add();
+                    //post.add();
                     onSendPostListener.onPostSuccess(post);
-                    dismiss();
+
 
                 }
             }

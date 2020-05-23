@@ -65,7 +65,7 @@ public class ChatActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        postList = Post.getList();
+        //postList = Post.getList();
         final PostAdapter adapter = new PostAdapter();
         recyclerView.setAdapter(adapter);
 /*
@@ -105,7 +105,7 @@ public class ChatActivity extends BaseActivity {
                             }
                             post.setPid(s.getKey());
                             postList.add(post);
-                            post.add();
+                            //post.add();
 
                         }
 

@@ -6,6 +6,13 @@
         android:fontWeight="400"
         android:font="@font/maven_pro_regular" />
 
+
+    <font
+
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/thank_you" />
+
 </font-family>
 
 <!--Typeface typeface = getResources().getFont(R.font.myfont);
