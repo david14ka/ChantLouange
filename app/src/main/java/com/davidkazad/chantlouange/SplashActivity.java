@@ -10,9 +10,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.davidkazad.chantlouange.activities.HomeActivity;
+import com.davidkazad.chantlouange.activities.ItemActivity;
 import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.common.Login;
+import com.davidkazad.chantlouange.models.Book;
+import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.models.User;
+import com.davidkazad.chantlouange.songs.CC;
 import com.davidkazad.chantlouange.utils.LogUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -44,6 +48,7 @@ public class SplashActivity extends AppCompatActivity {
                 if (Prefs.getBoolean("firstRun",false))
 
                     buttonEnter.setVisibility(View.VISIBLE);
+                    //startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 
                 else
 
@@ -53,54 +58,17 @@ public class SplashActivity extends AppCompatActivity {
 
         },2000);
 
-        firebaseSignIn();
 
         LogUtil.d();
     }
 
-    private void firebaseSignIn() {
-
-        final FirebaseAuth mAuth;
-
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
-
-        LogUtil.d("signInAnonymously:success");
-
-        mAuth.signInAnonymously()
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInAnonymously:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Log.d(TAG, "signInAnonymously:success"+user.getUid());
-                            User user1 = new User();
-                            user1.setDefaultId(user.getUid());
-                            user1.store();
-
-                            Login login = new Login(user);
-                            //Common.loginRef.child(user.getUid()).setValue(login);
-
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInAnonymously:failure", task.getException());
-
-                        }
-
-                    }
-                });
-    }
 
     @OnClick({R.id.btn_enter})
     public void enter(){
 
-       /* for (Favoris f :
-                Favoris.getList()) {
-            f.delete();
-        }*/
+        /*ItemActivity.currentBook = new CC();
+        ItemActivity.currentPage = ItemActivity.currentBook.getPage(1);
+        startActivity(new Intent(getApplicationContext(), ItemActivity.class));*/
 
         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         finish();
