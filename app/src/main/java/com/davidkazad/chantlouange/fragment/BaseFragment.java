@@ -32,7 +32,6 @@ public class BaseFragment extends Fragment {
         openBrowser("help");
     }
     protected void openBrowser(String bookid) {
-        String url1 = "https://alwaysdata.tclcantiques.net/?"+bookid;
         String url = "https://14ka135.wixsite.com/website/?"+bookid;
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
