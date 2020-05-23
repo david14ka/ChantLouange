@@ -18,6 +18,7 @@ public class Common {
     public static DatabaseReference LogUsers = FirebaseDatabase.getInstance().getReference("User");
     public static DatabaseReference postRef = FirebaseDatabase.getInstance().getReference("Posts");
     public static DatabaseReference commentRef = FirebaseDatabase.getInstance().getReference("Comments");
+    public static DatabaseReference commentRefTest = FirebaseDatabase.getInstance().getReference("testComments");
     public static DatabaseReference loginRef = FirebaseDatabase.getInstance().getReference("login");
     //public static DatabaseReference logUtil = FirebaseDatabase.getInstance().getReference("logUtil");
 
