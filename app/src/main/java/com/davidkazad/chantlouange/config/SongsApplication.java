@@ -1,10 +1,11 @@
 package com.davidkazad.chantlouange.config;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.models.Post;
 import com.davidkz.eazyorm.ActiveAndroid;
+import com.karumi.dexter.Dexter;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -17,7 +18,10 @@ public class SongsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        /*Dexter.withActivity(activity)
+                .withPermission(permission)
+                .withListener(listener)
+                .check();*/
         ImageLoaderConfiguration imageLoaderConfiguration = new ImageLoaderConfiguration.Builder(this)
                 .defaultDisplayImageOptions(new DisplayImageOptions.Builder()
                         .displayer(new RoundedBitmapDisplayer(10))
@@ -48,5 +52,13 @@ public class SongsApplication extends Application {
                 .showImageForEmptyUri(R.drawable.user)
                  .showImageOnFail(R.drawable.user)
                 .build();
+    }
+
+
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        //MultiDex.install(this);
+        super.attachBaseContext(base);
     }
 }
