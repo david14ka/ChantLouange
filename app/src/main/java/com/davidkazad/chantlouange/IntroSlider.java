@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.davidkazad.chantlouange.activities.HomeActivity;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.github.paolorotolo.appintro.model.SliderPage;
@@ -26,7 +27,7 @@ public class IntroSlider extends AppIntro {
 
         SliderPage sliderPage2 = new SliderPage();
         sliderPage2.setTitle("Chant de victoire");
-        sliderPage2.setDescription("RECUEIL DE CANTIQUES\nPour reunion d'évangelisation et d'édification");
+        sliderPage2.setDescription("RECUEIL DES CANTIQUES\nPour reunion d'évangelisation et d'édification");
         //, mission de réveil
         // Nous sommes plus ques vainqueurs
         //Par Christ qui nous a aimé.	Rom. 8. 37
@@ -36,7 +37,7 @@ public class IntroSlider extends AppIntro {
 
         SliderPage sliderPage3 = new SliderPage();
         sliderPage3.setTitle("Nyimbo za mungu");
-        sliderPage3.setDescription("");
+        sliderPage3.setDescription("Communauté des Eglises de Pentecôte \nen Afrique Centrale");
         sliderPage3.setImageDrawable(R.drawable.book_3757523_640);
         sliderPage3.setBgColor(Color.TRANSPARENT);
         addSlide(AppIntroFragment.newInstance(sliderPage3));
@@ -54,7 +55,7 @@ public class IntroSlider extends AppIntro {
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
         Prefs.putBoolean("firstRun",true);
-        startActivity(new Intent(IntroSlider.this, MainActivity.class));
+        startActivity(new Intent(IntroSlider.this, HomeActivity.class));
         finish();
     }
 
@@ -62,7 +63,7 @@ public class IntroSlider extends AppIntro {
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
         Prefs.putBoolean("firstRun",true);
-        startActivity(new Intent(IntroSlider.this, MainActivity.class));
+        startActivity(new Intent(IntroSlider.this, HomeActivity.class));
         finish();
     }
 }
