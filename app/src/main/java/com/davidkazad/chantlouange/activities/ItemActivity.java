@@ -60,10 +60,8 @@ public class ItemActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         navigationDrawer(savedInstanceState, null);
-        onCreateFabMenu();
 
-
-        LogUtil.d();
+        setFabMenu();
 
         initPageContent();
 
@@ -152,8 +150,8 @@ public class ItemActivity extends BaseActivity {
     private FloatingActionButton fab3;
     private FloatingActionButton fab4;
 
-    @Override
-    protected void onCreateFabMenu() {
+
+    private void setFabMenu() {
 
         fabMenu = findViewById(R.id.menu_red);
 
@@ -237,6 +235,7 @@ public class ItemActivity extends BaseActivity {
                     break;
                 case R.id.fab3:
                     //fab1.setVisibility(View.GONE);
+                    //Toast.makeText(ItemActivity.this, "like", Toast.LENGTH_SHORT).show();
                     fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
                     fab3.setImageDrawable(getResources().getDrawable(R.drawable.star_filed));
 
@@ -287,7 +286,7 @@ public class ItemActivity extends BaseActivity {
             initPageContent();
             //findItem();
             return true;
-        }
+        }//0824731910
 
         return super.onOptionsItemSelected(item);
     }
