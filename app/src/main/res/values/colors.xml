@@ -22,7 +22,9 @@
     <color name="post_textColor">#fff</color>
     <color name="black">#2a2929</color>
     <color name="bg_underline">#5eeeeeee</color>
-    <color name="bg_day">#eee</color>
+    <color name="bg_day">#fff</color>
+    <color name="blue">#1E88E5</color>
+    <color name="bg_day_trans">#1BFFFFFF</color>
 
 
 </resources>

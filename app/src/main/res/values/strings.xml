@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chant &amp; Louange</string>
+    <string name="app_name">Recueil des cantiques</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_theme_light">Changer de Thème</string>
     <string name="action_theme_night">Thème nuit</string>
@@ -18,7 +18,7 @@
     <string name="sample">Replace with your own detail action</string>
     <string name="number">Numero</string>
     <string name="email_number">Email or Phone number</string>
-    <string name="firstname">Prenom</string>
+    <string name="identification">Identification</string>
     <string name="song_not_found">Error: cette chanson n\'existe pas !!</string>
     <string name="research">Rechercher</string>
     <string name="error_search">Number not found !!</string>
@@ -31,9 +31,8 @@
 
     <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
     <string name="developer_name">David Kazad</string>
-    <string name="version">Version 1.2</string>
+    <string name="version">Version 2.2</string>
     <string name="developed_by">developed by</string>
-    <string name="lorem_ipsum">lorem ipsum</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
 
@@ -97,24 +96,23 @@
     <string name="delete">Delete</string>
     <string name="view">View</string>
     <string name="home">Accueil</string>
-    <string name="discover">Découvrir</string>
+    <string name="discover">Chants Audio</string>
     <string name="community">Communautés</string>
     <string name="favorities">Favoris</string>
     <string name="settings">Paramètres</string>
     <string name="send_comment">Envoyer des commentaires</string>
     <string name="about">Apropos</string>
-    <string name="support_dev">Support Development</string>
+    <string name="support_dev">Donation</string>
     <string name="note">note</string>
     <string name="songs">344B</string>
     <string name="c_v">C.V</string>
-    <string name="write_a_comment">Write a comment ...</string>
     <string name="night_mode">Mode Nuit</string>
     <string name="mode_jour">Mode Jour</string>
     <string name="seek_progress">%d dp</string>
     <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
     <string name="thanks">Merci pour votre correction</string>
     <string name="comment_activity">Commentaires</string>
-    <string name="ecrire_un_commentaire">Ecrire un commentaire</string>
+    <string name="write_a_comment">Ecrire un commentaire</string>
     <string name="display_name">Dispaly name or Email</string>
     <string name="sign_in">Sign In</string>
 
@@ -132,6 +130,8 @@
     <string name="time_ago_year">about a year</string>
     <string name="time_ago_years">%d years</string>
     <string name="problems">Signaler un problème</string>
+    <string name="donation">Faire un don</string>
+
     <string name="numero_introuvable">Numero introuvable</string>
     <string name="enregistrer">Enregistrer</string>
     <string name="annuler">Annuler</string>
@@ -142,15 +142,28 @@
     <string name="alive_corp">http://alive-corporation.org</string>
     <string name="list_of_songs">Liste des chants</string>
     <string name="search_in">Rechercher dans</string>
-    <string name="ok">Ok</string>
     <string name="add_to_favorites">Ajouter au favoris</string>
     <string name="corriger_erreur">Corriger l\'erreur</string>
     <string name="jaime">J\'aime</string>
     <string name="mode_jour_nuit">Mode Jour/Nuit</string>
     <string name="alphabet">Alphabetique</string>
     <string name="numerotation">Numerotation</string>
-    <string name="post">Post</string>
     <string name="send">Envoyer</string>
     <string name="no_name">no-name</string>
+    <string name="cc1a">1A.</string>
+    <string name="post">Post</string>
+    <string name="ok">Ok</string>
+
+    <string name="account_number">00018005050200000004781</string>
+    <string name="swift_code">PRCBCDKI</string>
+    <string name="bank_name">Equity Bank Congo(Procredit)</string>
+    <string name="country">Congo, Republique Démocratique</string>
+    <string name="preach">Predication en ligne</string>
+    <string name="slogan">Jesus Christ est le meme hier aujourd\'hui et eternellement.</string>
+    <string name="slogan2">Let everything that breathes praise the Lord! \nPraise the Lord!</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="comment_is_empty">comment is empty!</string>
+    <string name="blessing">God bless you!</string>
+
 
 </resources>

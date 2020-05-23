@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chant &amp; Louange</string>
+    <string name="app_name">Recueil des cantiques</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_theme_light">Changer de Thème</string>
     <string name="action_theme_night">Thème nuit</string>
@@ -11,7 +11,7 @@
     <string name="search">Recherche</string>
     <string name="find_song_text">Saisir le numero de la chanson rechercher</string>
     <string name="number">Numero</string>
-    <string name="firstname">Prenom</string>
+    <string name="identification">Identification</string>
     <string name="song_not_found">Error: cette chanson n\'existe pas !!</string>
     <string name="research">Rechercher</string>
     <string name="error_search">Numéro introuvable !!</string>
@@ -22,9 +22,39 @@
     <string name="nw">Nyimbo za Wokovu</string>
     <string name="text_about">Apropos</string>
 
+
+    <string name="dashboard">Chants</string>
+    <string name="title_book_list">Items</string>
+    <string name="title_book_detail">Book Detail</string>
+    <string name="title_song_list">Songs</string>
+    <string name="title_song_detail">Song\'s Detail</string>
+    <string name="sample">Replace with your own detail action</string>
+    <string name="email_number">Email or Phone number</string>
+    <string name="title_activity_home">Accueil</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_dashboard">Dashboard</string>
+
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
     <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
     <string name="developer_name">David Kazad</string>
-    <string name="version">Version 1.2</string>
+    <string name="version">Version 2.2</string>
     <string name="developed_by">développée par</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
@@ -63,13 +93,13 @@
     <string name="delete">Supprimer</string>
     <string name="view">Afficher</string>
     <string name="home">Accueil</string>
-    <string name="discover">Découvrir</string>
+    <string name="discover">Audios</string>
     <string name="community">Communautés</string>
     <string name="favorities">Favoris</string>
     <string name="settings">Paramètres</string>
     <string name="send_comment">Envoyer des commentaires</string>
     <string name="about">Apropos</string>
-    <string name="support_dev">Support Development</string>
+    <string name="support_dev">Faire un don</string>
     <string name="note">note</string>
     <string name="songs">344B</string>
     <string name="c_v">C.V</string>
@@ -80,7 +110,6 @@
     <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
     <string name="thanks">Merci pour votre correction</string>
     <string name="comment_activity">Commentaires</string>
-    <string name="ecrire_un_commentaire">Ecrire un commentaire</string>
     <string name="display_name">Prenom Ou Email</string>
     <string name="sign_in">Connexion</string>
 
@@ -118,4 +147,21 @@
     <string name="numerotation">Numerotation</string>
     <string name="send">Envoyer</string>
     <string name="no_name">no-name</string>
+
+    <string name="cc1a">1A.</string>
+    <string name="post">Envoyé</string>
+    <string name="ok">OK</string>
+    <string name="donation">Faire un don</string>
+
+    <string name="account_number">00018005050200000004781</string>
+    <string name="swift_code">PRCBCDKI</string>
+    <string name="bank_name">Equity Bank Congo(Procredit)</string>
+    <string name="country">Congo, Republique Démocratique</string>
+    <string name="preach">Predication en ligne</string>
+    <string name="slogan">Jesus Christ est le meme hier aujourd\'hui et eternellement.</string>
+    <string name="slogan2">Que tout ce qui respire loue l\'Éternel!\nLouez l\'Eternel!</string>
+    <string name="username">Email ou Nom d\'utilisateur</string>
+    <string name="comment_is_empty">Ecrire un commentaire!</string>
+    <string name="blessing">Que Dieu vous bénisse!</string>
+
 </resources>
