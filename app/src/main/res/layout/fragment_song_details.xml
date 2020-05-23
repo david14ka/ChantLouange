@@ -37,6 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:text="@string/sample_text"
                     android:fontFamily="@font/maven_pro_regular"
                     android:textColor="?attr/textColor"
                     android:padding="20dp" />
