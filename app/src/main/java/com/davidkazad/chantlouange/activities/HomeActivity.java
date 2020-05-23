@@ -3,6 +3,8 @@ package com.davidkazad.chantlouange.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+
+import com.davidkazad.chantlouange.chat.CommentActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,8 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.chat.app.CommentActivity;
-import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.common.Login;
 import com.davidkazad.chantlouange.fragment.BookFragment;
 import com.davidkazad.chantlouange.fragment.DashFragment;
@@ -24,6 +24,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.pixplicity.easyprefs.library.Prefs;
+
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
+import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground;
+import uk.co.samuelwall.materialtaptargetprompt.extras.focals.RectanglePromptFocal;
 
 public class HomeActivity extends BaseActivity {
 
@@ -81,9 +86,31 @@ public class HomeActivity extends BaseActivity {
         firebaseSignIn();
 
         LogUtil.d();
+        //if (Prefs.getBoolean("show_cc",true)) promptCollection();
+
 
     }
+    private void promptCollection() {
+        new MaterialTapTargetPrompt.Builder(this)
+                .setTarget(R.id.cc)
+                .setPrimaryText("Collection des cantiques")
+                .setSecondaryText("Nouvelle version du livre avec plus de 600 chansons")
+                .setPromptBackground(new RectanglePromptBackground())
+                .setPromptFocal(new RectanglePromptFocal())
+                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener() {
+                    @Override
+                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
+                    {
+                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
+                        {
+                            // User has pressed the prompt target
 
+                        }
+                        Prefs.putBoolean("show_cc",false);
+                    }
+                })
+                .show();
+    }
     private void showFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
@@ -134,10 +161,10 @@ public class HomeActivity extends BaseActivity {
             findItem();
             return true;
         }if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             return true;
         }if (id == R.id.action_helps) {
-            //startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            //startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             openBrowser("help");
             return true;
         }
