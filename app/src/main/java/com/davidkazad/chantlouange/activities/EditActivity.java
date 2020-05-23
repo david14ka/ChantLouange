@@ -62,13 +62,16 @@ public class EditActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         setDisplaySongs();
-        onCreateFabMenu();
+
+        setFabMenu();
 
         if (getIntent().getBooleanExtra("edit",false)){
             corrigerErreur();
         }
 
         navigationDrawer(savedInstanceState, null);
+
+
     }
     private void setDisplaySongs(){
         try {
@@ -105,8 +108,8 @@ public class EditActivity extends BaseActivity {
     private FloatingActionButton fab3;
     private FloatingActionButton fab4;
 
-    @Override
-    protected void onCreateFabMenu() {
+
+    private void setFabMenu() {
 
         fabMenu = findViewById(R.id.menu_red);
 
@@ -226,6 +229,7 @@ public class EditActivity extends BaseActivity {
 
                 Toast.makeText(EditActivity.this, R.string.thanks, Toast.LENGTH_SHORT).show();
 
+                finish();
                 textView.setText(editText.getText().toString());
                 textView.setVisibility(View.VISIBLE);
                 editText.setVisibility(View.GONE);
@@ -245,7 +249,7 @@ public class EditActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                 return true;
 
             case R.id.action_find:
