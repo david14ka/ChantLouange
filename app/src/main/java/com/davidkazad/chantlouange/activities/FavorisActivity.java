@@ -41,7 +41,7 @@ public class FavorisActivity extends BaseActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             return true;
         }
 
@@ -55,6 +55,6 @@ public class FavorisActivity extends BaseActivity {
     }
 
     public void joinGroup(View view) {
-        signUp();
+        joinGroup();
     }
 }
