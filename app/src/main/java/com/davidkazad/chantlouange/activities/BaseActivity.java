@@ -22,20 +22,10 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.chat.app.ChatActivity;
-import com.davidkazad.chantlouange.chat.app.CommentActivity;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Favoris;
 import com.davidkazad.chantlouange.models.Page;
-import com.davidkazad.chantlouange.models.User;
-import com.davidkazad.chantlouange.models.UserPref;
 import com.davidkazad.chantlouange.songs.CV;
-import com.github.clans.fab.FloatingActionMenu;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.ValueEventListener;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -49,12 +39,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.pixplicity.easyprefs.library.Prefs;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.davidkazad.chantlouange.common.Common.LogPrefs;
-import static com.davidkazad.chantlouange.common.Common.LogUsers;
 
 public abstract class BaseActivity extends AppCompatActivity {
     private static final String TAG = "BaseActivity";
@@ -81,13 +67,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         // Create a few sample profile
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
         final IProfile userProfil = new ProfileDrawerItem()
-                .withName("Developer")
-                .withEmail("14ka135@gmail.com")
+                .withName("Recueil des cantiques")
+                .withEmail("tclcantiques@gmail.com")
                 .withIcon(R.drawable.holy_bible_96px).withIdentifier(1)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        dialogContact();
+                        contact();
                         return false;
                     }
                 });
@@ -96,7 +82,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withTextColor(Color.WHITE)
                 .withActivity(this)
-                //.withHeaderBackground(R.drawable.guitar_3283649_640)
+                .withHeaderBackground(R.drawable.guitar_3283649_640)
                 .withTranslucentStatusBar(true)
                 .addProfiles(
                         userProfil,
@@ -105,7 +91,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                                     @Override
                                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                        sendEmail();
+                                        contactWhatsapp();
                                         return false;
                                     }
                                 })
@@ -125,17 +111,15 @@ public abstract class BaseActivity extends AppCompatActivity {
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                         //new PrimaryDrawerItem().withName("Programme de culte").withIcon(R.drawable.details_48px).withIdentifier(5),
-
-                        new PrimaryDrawerItem().withName(R.string.home).withIcon(R.drawable.bible_48px).withIdentifier(1),
-                        new PrimaryDrawerItem().withName(R.string.discover).withSelectable(false).withIcon(R.drawable.idea_24px).withIdentifier(2),
-                        //new PrimaryDrawerItem().withName("Predication en ligne").withIcon(R.drawable.bible_48px).withIdentifier(3),
+                        new PrimaryDrawerItem().withName(R.string.home).withSelectable(false).withIcon(R.drawable.idea_24px).withIdentifier(2),
+                        new PrimaryDrawerItem().withName(R.string.preach).withIcon(R.drawable.bible_48px).withIdentifier(1),
                         //new PrimaryDrawerItem().withName("Programme de culte").withIcon(R.drawable.details_48px).withIdentifier(5),
                         new PrimaryDrawerItem().withName(R.string.community).withIcon(R.drawable.coderwall_48px).withIdentifier(6),
                         new PrimaryDrawerItem().withName(R.string.favorities).withIcon(R.drawable.star0).withIdentifier(7),
                         new DividerDrawerItem(),
                         new SecondaryDrawerItem().withName(R.string.settings).withIcon(R.drawable.settings_48px).withIdentifier(9),
                         new SecondaryDrawerItem().withName(R.string.send_comment).withIcon(R.drawable.comments_24px).withIdentifier(10),
-                        new SecondaryDrawerItem().withName(R.string.about).withIcon(R.drawable.info_48px).withIdentifier(11)
+                        new SecondaryDrawerItem().withName("Contacts").withIcon(R.drawable.info_48px).withIdentifier(11)
                 )
 
                 .withSavedInstance(savedInstanceState)
@@ -147,7 +131,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-
+                        startActivity(new Intent(getApplicationContext(), DonationActivity.class));
                         return false;
 
                     }
@@ -181,31 +165,28 @@ public abstract class BaseActivity extends AppCompatActivity {
                 switch (position) {
 
                     case 1:
-
-                        //startActivity(new Intent(getApplicationContext(), RapideAccess.class));
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         return false;
 
                     case 2:
-                        discover();
+                        openUrl("https://www.youtube.com/channel/UCr9ARDYEe-4pT4RHFtuWiRw");
                         return false;
                     case 3:
-                        displayCommunity();
+                        startActivity(new Intent(getApplicationContext(),WebviewActivity.class));
                         break;
                     case 4:
                         startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+                        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                         break;
 
                     case 7:
-                        startActivity(new Intent(getApplicationContext(), CommentActivity.class));
+                        openPlayStore();
                         break;
                     case 8:
-                        startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                        contact();
                         break;
-                    case 9:
-                        sendEmail();
 
                     default:
                         return false;
@@ -216,85 +197,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         });
     }
 
-    protected void discover() {
-        //Toast.makeText(this, "coming soon", Toast.LENGTH_SHORT).show();
-        openBrowser("discover");
+    protected void joinGroup() {
+        String link = "https://chat.whatsapp.com/GreL17Wbxz680C29RFSol8";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(link));
+        startActivity(i);
     }
 
-    protected void displayCommunity() {
-        startActivity(new Intent(getApplicationContext(), ChatActivity.class).putExtra(EXTRA_COMMUNITY, true));
-    }
-
-    private void dialogReference() {
-
-        new MaterialDialog.Builder(BaseActivity.this)
-                .title("** REFERENCES **")
-                .items(R.array.reference)
-                .itemsCallback(new MaterialDialog.ListCallback() {
-                    @Override
-                    public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
-                        switch (position) {
-                            case 0:
-                                break;
-                            case 1:
-                                openBrowser("cc");
-                                break;
-                            case 2:
-                                openBrowser("cv");
-                                break;
-                            case 3:
-                                openBrowser("nm");
-                                break;
-                            case 4:
-                                openBrowser("nw");
-                                break;
-                            case 5:
-                                break;
-                            case 6:
-                                openPlayStore();
-                                break;
-                        }
-                    }
-                })
-                .show();
-    }
-
-    protected void dialogContact() {
-
-        new MaterialDialog.Builder(BaseActivity.this)
-                .title(R.string.contacts)
-                .items(R.array.contact)
-                .itemsCallback(new MaterialDialog.ListCallback() {
-                    @Override
-                    public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
-                        switch (position) {
-                            case 0:
-                                break;
-                            case 1:
-                                sendSMS();
-                                break;
-                            case 2:
-                                sendEmail();
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                openGoogle();
-                                break;
-                            case 5:
-                                openYoutub();
-                                break;
-                            case 6:
-                                openFacebook();
-                                break;
-                            case 7:
-                                openGithub();
-                                break;
-                        }
-                    }
-                })
-                .show();
-
+    protected void contactWhatsapp(){
+        String link = "https://wa.me/+243895026521?text=[Recueil%20des%20cantiques]\n";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(link));
+        startActivity(i);
     }
 
     protected void addToFavoris(Page mPage) {
@@ -315,11 +229,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected void openUrl(String url) {
         Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(getString(R.string.alive_corp)));
+        i.setData(Uri.parse(url));
         startActivity(i);
     }
     protected void openBrowser(String bookid) {
-        String url1 = "https://alwaysdata.tclcantiques.net/?" + bookid;
         String url = "https://14ka135.wixsite.com/website/?" + bookid;
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
@@ -337,7 +250,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void openPlayStore() {
-        String url = "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange";
+        String url = "https://play.google.com/store/apps/details?id=com.davidkazad.tclcantiques";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -346,7 +259,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void shareApp() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.davidkazad.tclcantiques");
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
@@ -360,7 +273,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void openFacebook() {
-        String url = "https://github.com/david14ka/tclcantiques";
+        String url = "https://web.facebook.com/tclcantiques";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -397,8 +310,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent emailIntent = new Intent(Intent.ACTION_VIEW);
         String mailto = "mailto:14ka135@gmail.com" +
                 "?cc=" + "tclcantiques@gmail.com" +
-                "&subject=" + Uri.encode("#Chant & Louange") +
-                "&body=" + Uri.encode("Email message goes here");
+                "&subject=" + Uri.encode("#Livre des cantiques") +
+                "&body=" + Uri.encode("Que Dieu vous benisse,");
 
         emailIntent.setData(Uri.parse(mailto));
 
@@ -419,7 +332,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         smsIntent.setData(Uri.parse("smsto:"));
         smsIntent.setType("vnd.android-dir/mms-sms");
-        smsIntent.putExtra("address", new String("+243970015092"));
+        smsIntent.putExtra("address", new String("+243895026521"));
         smsIntent.putExtra("sms_body", "Chant&Louange:  ");
 
         try {
@@ -470,144 +383,25 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-
-    private FloatingActionMenu fabMenu;
-
-    protected void onCreateFabMenu() {
-
-    }
-
-    ;
-
-    protected void signUp() {
-        new MaterialDialog.Builder(BaseActivity.this)
-                .title("Creer une sauvegarde")
-                .input(R.string.email_number, R.string.action_search, false, new MaterialDialog.InputCallback() {
+    protected void contact(){
+        new MaterialDialog.Builder(this)
+                .title("Contacts")
+                .items(R.array.contact)
+                .itemsCallback(new MaterialDialog.ListCallback() {
                     @Override
-                    public void onInput(@NonNull MaterialDialog dialog, final CharSequence email) {
-                        new MaterialDialog.Builder(BaseActivity.this)
-                                .title("Sauvergarder")
-                                .input(R.string.firstname, R.string.action_search, false, new MaterialDialog.InputCallback() {
-                                    @Override
-                                    public void onInput(@NonNull MaterialDialog dialog, CharSequence firstname) {
-                                        User user = new User(String.valueOf(email), String.valueOf(firstname));
-                                        UserPref pref = new UserPref();
+                    public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
 
-                                        String eemail = firebaseEncapsulateFields(user.getEmail());
-
-                                        LogUsers.child(eemail).setValue(user);
-                                        LogPrefs.child(eemail).setValue(pref);
-                                    }
-                                })
-                                .inputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME)
-                                .negativeText(R.string.cancel)
-                                .positiveText(R.string.finiish)
-                                .show();
+                        switch (position){
+                            case 0 : contactWhatsapp();break;
+                            case 1 : sendEmail();break;
+                            case 3 : joinGroup();break;
+                            case 4 : openFacebook();break;
+                            case 5 : openGithub();break;
+                        }
                     }
                 })
-                .inputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME)
-                .negativeText(R.string.cancel)
-                .positiveText(R.string.next)
                 .show();
-
     }
-
-    protected String firebaseEncapsulateFields(String email) {
-        email = email.replace(".", "");
-        email = email.replace("#", "");
-        email = email.replace("$", "");
-        email = email.replace("[", "");
-        email = email.replace("]", "");
-
-        return email;
-    }
-
-    protected void login() {
-        new MaterialDialog.Builder(BaseActivity.this)
-                .title("Se connecter")
-                .input(R.string.email_number, R.string.action_search, false, new MaterialDialog.InputCallback() {
-                    @Override
-                    public void onInput(@NonNull MaterialDialog dialog, final CharSequence email) {
-
-                        LogUsers.child(firebaseEncapsulateFields(String.valueOf(email))).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.exists()) {
-                                    User user = dataSnapshot.getValue(User.class);
-
-                                    Toast.makeText(BaseActivity.this, "Connexion success!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                    }
-                })
-                .inputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
-                .negativeText(R.string.cancel)
-                .positiveText(R.string.next)
-                .show();
-
-    }
-
-    protected void restaurePreferences() {
-        new MaterialDialog.Builder(BaseActivity.this)
-                .title("Se connecter")
-                .input(R.string.email_number, R.string.action_search, false, new MaterialDialog.InputCallback() {
-                    @Override
-                    public void onInput(@NonNull MaterialDialog dialog, final CharSequence email) {
-
-                        LogUsers.child(firebaseEncapsulateFields(String.valueOf(email))).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.exists()) {
-                                    User user = dataSnapshot.getValue(User.class);
-                                    Toast.makeText(BaseActivity.this, "connexion success!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                        LogPrefs.child(firebaseEncapsulateFields(String.valueOf(email))).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.exists()) {
-                                    UserPref pref = dataSnapshot.getValue(UserPref.class);
-                                    Log.d(TAG, "onDataChange: " + dataSnapshot);
-
-                                    Type listType = new TypeToken<List<Favoris>>() {
-                                    }.getType();
-                                    if (pref != null) {
-                                        List<Favoris> favorisList = new GsonBuilder().create().fromJson(pref.getFavGson(), listType);
-                                        for (Favoris f :
-                                                favorisList) {
-                                            f.save();
-                                        }
-                                    }
-
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                    }
-                })
-                .inputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
-                .negativeText(R.string.cancel)
-                .positiveText(R.string.next)
-                .show();
-
-    }
-
     protected void findItem() {
 
         new MaterialDialog.Builder(this)
