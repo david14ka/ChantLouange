@@ -28,6 +28,8 @@ public class Comment extends Model{
     private long sentAt;
 
     public Comment() {
+        this.date = new Date().toString();
+        this.sentAt = System.currentTimeMillis();
     }
 
     public Comment(String post, String image) {
