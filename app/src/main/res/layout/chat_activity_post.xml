@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity"
-    android:orientation="vertical"
     android:background="#eee"
-    >
+    android:orientation="vertical"
+    tools:context=".chat.CommentActivity">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:title="Message"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Message" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -27,63 +27,94 @@
         android:id="@+id/join"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Join group"
-        android:textColor="#1E88E5"
+        android:background="@drawable/button_resource"
         android:onClick="joinGroup"
-        android:background="@drawable/button_resource"/>
+        android:text="Join group"
+        android:textColor="#1E88E5" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#eee"
-        />
+        android:background="#eee" />
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_post"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="55dp">
+            android:layout_marginBottom="65dp">
 
         </androidx.recyclerview.widget.RecyclerView>
-        <TextView
+        <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#eee"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="55dp"
-            />
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/button_write_comment"
-            android:clickable="true"
-            android:onClick="writePost"
-            android:focusable="true">
-            <ImageView
-                android:layout_width="55dp"
-                app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
-                android:padding="10dp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/write"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="@string/ecrire_un_commentaire"
-                android:gravity="center"
-                android:textColor="#1E88E5"
-                android:textSize="18dp"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_write_comment"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/user_comment"
+                    android:onClick="setUser"
+                    android:layout_width="54dp"
+                    android:layout_height="58dp"
+                    android:padding="10dp"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/textComment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:hint="@string/write_a_comment"
+                    android:textSize="18dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progressSend"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
             <ImageView
-                android:layout_width="55dp"
-                app:srcCompat="@drawable/ic_send_black_24dp"
-                android:padding="10dp"
-                android:layout_height="match_parent" />
+                android:id="@+id/sendComment"
+                android:onClick="sendComment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_send_comment"
+                app:srcCompat="@drawable/ic_send_black_24dp" />
         </LinearLayout>
-    </RelativeLayout>
+    </FrameLayout>
 </LinearLayout>
