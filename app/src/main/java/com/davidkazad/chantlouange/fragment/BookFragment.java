@@ -20,6 +20,7 @@ import com.davidkazad.chantlouange.models.Book;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 
 public class BookFragment extends Fragment implements AdapterView.OnItemClickListener {
 
@@ -30,6 +31,8 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_books, container, false);
         ButterKnife.bind(view);
+
+
         return view;
 
     }
@@ -80,10 +83,29 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                 holder.bookImage.setImageDrawable(getResources().getDrawable(Book.bookList.get(position).getImage()));
 
 
+
                 return convertView;
             }
         });
 
+    }
+
+    private void promptCollection() {
+        new MaterialTapTargetPrompt.Builder(this)
+                .setTarget(R.id.book_name)
+                .setPrimaryText("Collection des cantiques")
+                .setSecondaryText("Nouvelle version du livre avec plus de 600 chansons")
+                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener() {
+                    @Override
+                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
+                    {
+                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
+                        {
+                            // User has pressed the prompt target
+                        }
+                    }
+                })
+                .show();
     }
 
     @Override
