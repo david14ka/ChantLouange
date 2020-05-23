@@ -30,6 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:src="@drawable/guitar_3283649_640"
                     android:maxHeight="100dp"
                     android:maxWidth="260dp"
                     android:scaleType="centerCrop" />
@@ -80,10 +81,11 @@
 
                 <TextView
                     android:id="@+id/date"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:gravity="center"
+                    android:gravity="center|left"
                     android:text="23 d"
+                    android:paddingRight="5dp"
                     android:textColor="@color/primary" />
             </LinearLayout>
         </LinearLayout>
