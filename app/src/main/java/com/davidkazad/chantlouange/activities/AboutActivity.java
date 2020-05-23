@@ -42,8 +42,9 @@ public class AboutActivity extends BaseActivity {
         openGithub();
     }
 
-    public void licence(View view) {
-        sendSMS();
+    public void donation(View view) {
+
+        startActivity(new Intent(getApplicationContext(), DonationActivity.class));
     }
 
     public void equipe(View view) {
@@ -65,24 +66,5 @@ public class AboutActivity extends BaseActivity {
     }
 
     public void me(View view) {
-        new MaterialDialog.Builder(AboutActivity.this)
-                .title(R.string.contacts)
-                .items(R.array.contact)
-                .itemsCallback(new MaterialDialog.ListCallback() {
-                    @Override
-                    public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
-
-                        switch (position){
-                            case 1: sendSMS();break;
-                            case 2: sendEmail();break;
-                            case 4: openGoogle();break;
-                            case 5: openYoutub();break;
-                            case 6: openFacebook();break;
-                            case 7: openGithub();break;
-
-                        }
-                    }
-                })
-                .show();
     }
 }
