@@ -2,8 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.davidkazad.chantlouange"> <!-- 46191 -->
-    <uses-sdk tools:overrideLibrary="com.davidkazad.chantlouange.events.ClickItemTouchListener,                                         android.support.design,                                         android.support.v7.cardview,                                         android.support.v7.recyclerview,                                         com.mikepenz.materialdrawer,                                         com.afollestad.materialdialogs,                                         com.google.android.gms.flags,                                         com.bumptech.glide,                                         com.github.paolorotolo.appintro,                                         com.nightonke.boommenu,                                         com.hbb20,                                         butterknife,                                         android.support.v7.appcompat,                                         android.support.v4,                                         android.support.fragment,                                         android.support.graphics.drawable.animated,                                         android.support.coreui,                                         android.support.coreutils,                                         android.support.graphics.drawable,                                         android.support.transition,                                         android.support.mediacompat,                                         android.support.compat,                                         com.google.firebase.database.collection,                                         com.futuremind.recyclerviewfastscroll,                                         io.michaelrocks.libphonenumber.android,                                         butterknife.runtime,                                         com.mikepenz.materialize,                                         com.mikepenz.iconics.core,                                         com.mikepenz.fastadapter,                                         com.mikepenz.fastadapter.expandable,                                         com.google.firebase,                                         com.bumptech.glide.gifdecoder,                                         android.arch.lifecycle,                                         android.arch.core,                                         android.arch.lifecycle.livedata.core,                                         com.google.firebase.messaging,                                         android.arch.lifecycle.viewmodel,                                         com.google.firebase.auth.internal,                                         com.google.firebase.iid.internal,                                         com.google.firebase.analytics.connector,                                         com.google.android.gms.base,                                         com.google.android.gms.tasks,                                         com.google.android.gms.stats,                                         com.google.android.gms.common,                                         com.google.firebase.iid,                                         com.google.firebase.database,                                         com.google.firebase.auth,                                         com.github.clans.fab" />
+    <!--<uses-sdk tools:overrideLibrary="com.stripe.android,chantlouange.events.ClickItemTouchListener,com.paypal.android.sdk.payments, android.support.design
+    ,android.support.v7.cardview,android.support.v7.recyclerview,com.mikepenz.materialdrawer,com.afollestad.materialdialogs
+    ,com.google.android.gms.flags,com.bumptech.glide,com.github.paolorotolo.appintro,com.nightonke.boommenu
+    ,com.hbb20,butterknife,android.support.v7.appcompat,android.support.v4
+    ,android.support.fragment,android.support.graphics.drawable.animated,android.support.coreui
+    ,android.support.coreutils,android.support.graphics.drawable
+    ,android.support.transition,android.support.mediacompat,android.support.compat,com.google.firebase.database.collection
+    ,com.futuremind.recyclerviewfastscroll,io.michaelrocks.libphonenumber.android,butterknife.runtime,com.mikepenz.materialize
+    ,                                         com.mikepenz.iconics.core,                                         com.mikepenz.fastadapter,                                         com.mikepenz.fastadapter.expandable,                                         com.google.firebase,                                         com.bumptech.glide.gifdecoder,                                         android.arch.lifecycle,                                         android.arch.core,                                         android.arch.lifecycle.livedata.core,                                         com.google.firebase.messaging,                                         android.arch.lifecycle.viewmodel,                                         com.google.firebase.auth.internal,                                         com.google.firebase.iid.internal,                                         com.google.firebase.analytics.connector,                                         com.google.android.gms.base,                                         com.google.android.gms.tasks,                                         com.google.android.gms.stats,                                         com.google.android.gms.common,                                         com.google.firebase.iid,                                         com.google.firebase.database,                                         com.google.firebase.auth,                                         com.github.clans.fab" />
+-->
 
+    <uses-sdk tools:overrideLibrary="com.stripe.android,com.stripe.android.stripe3ds2"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -21,11 +32,10 @@
             android:resource="@string/asset_statements" />
         <meta-data
             android:name="AA_DB_NAME"
-
             android:value="main.db" />
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="1" />
+            android:value="2" />
         <meta-data
             android:name="AA_MODELS"
             android:value="com.davidkazad.chantlouange.models.Favoris
@@ -33,6 +43,13 @@
             ,com.davidkazad.chantlouange.models.Post
             ,com.davidkazad.chantlouange.models.Comment
             ,com.davidkazad.chantlouange.models.User" />
+
+        <provider
+            android:name="com.davidkz.eazyorm.content.ContentProvider"
+            android:authorities="com.davidkazad.chantlouange"
+            android:enabled="true"
+            android:exported="false">
+        </provider>
 
         <activity
             android:name=".SplashActivity"
@@ -73,7 +90,7 @@
                 android:value=".SplashActivity" />
         </activity>
         <activity
-            android:name=".activities.SettingsActivity1"
+            android:name=".activities.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -106,13 +123,30 @@
             android:theme="@style/AppTheme.Dialog">
 
         </activity>
-        <activity android:name=".chat.app.CommentActivity"
+        <activity android:name=".chat.CommentActivity"
             android:label="@string/comment_activity"
             android:parentActivityName=".SplashActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SplashActivity" />
         </activity>
+        <activity
+            android:name=".activities.DonationActivity"
+            android:label="@string/donation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SplashActivity" />
+        </activity>
+        <activity
+
+            android:name=".activities.WebviewActivity"
+            android:label="@string/community">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SplashActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>
