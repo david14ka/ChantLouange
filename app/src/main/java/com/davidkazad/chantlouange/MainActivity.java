@@ -2,7 +2,7 @@ package com.davidkazad.chantlouange;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.core.view.MenuItemCompat;
@@ -14,19 +14,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.davidkazad.chantlouange.activities.BaseActivity;
-import com.davidkazad.chantlouange.activities.SettingsActivity1;
-import com.davidkazad.chantlouange.chat.app.CommentActivity;
-import com.davidkazad.chantlouange.common.Common;
-import com.davidkazad.chantlouange.common.Login;
+import com.davidkazad.chantlouange.activities.SettingsActivity;
+import com.davidkazad.chantlouange.chat.CommentActivity;
 import com.davidkazad.chantlouange.fragment.SearchFragment;
 import com.davidkazad.chantlouange.fragment.BookFragment;
 import com.davidkazad.chantlouange.fragment.ListFragment;
-import com.davidkazad.chantlouange.utils.LogUtil;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import butterknife.ButterKnife;
@@ -137,8 +130,6 @@ public class MainActivity extends BaseActivity {
 
         navigationDrawer(savedInstanceState, toolbar);
 
-        firebaseSignIn();
-
     }
 
     @Override
@@ -162,10 +153,10 @@ public class MainActivity extends BaseActivity {
             findItem();
             return true;
         }if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             return true;
         }if (id == R.id.action_helps) {
-            //startActivity(new Intent(getApplicationContext(), SettingsActivity1.class));
+            //startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             openBrowser("help");
             return true;
         }
@@ -216,33 +207,6 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void firebaseSignIn() {
-
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
-
-        LogUtil.d("signInAnonymously:success");
-
-        mAuth.signInAnonymously()
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInAnonymously:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Log.d(TAG, "signInAnonymously:success"+user.getUid());
-                            Login login = new Login(user);
-                            Common.loginRef.child(user.getUid()).setValue(login);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInAnonymously:failure", task.getException());
-
-                        }
-
-                    }
-                });
-    }
 
     public void writePost1(View view) {
         startActivity(new Intent(getApplicationContext(), CommentActivity.class).putExtra(EXTRA_WRITE_POST,true));
