@@ -15,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class SettingsActivity1 extends BaseActivity {
+public class SettingsActivity extends BaseActivity {
 
     @BindView(R.id.seekBar)
     SeekBar seekBar;
