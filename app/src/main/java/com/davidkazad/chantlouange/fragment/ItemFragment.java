@@ -23,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.activities.SettingsActivity1;
+import com.davidkazad.chantlouange.activities.SettingsActivity;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.utils.LogUtil;
@@ -123,7 +123,7 @@ public class ItemFragment extends BaseFragment {
                 return true;
 
             case R.id.action_settings:
-                startActivity(new Intent(getContext(), SettingsActivity1.class));
+                startActivity(new Intent(getContext(), SettingsActivity.class));
                 return true;
             case R.id.action_help:
                 openHelp();
@@ -146,8 +146,11 @@ public class ItemFragment extends BaseFragment {
 
     private void initTheme() {
         if (Prefs.getBoolean("night_mode",false)){
-            layout.setBackgroundColor(getResources().getColor(R.color.bg_day));
+            //layout.setBackgroundColor(getResources().getColor(R.color.bg_day));
+            layout.setBackgroundResource(R.drawable.day_heaven);
+            textView.setBackgroundColor(getResources().getColor(R.color.bg_day_trans));
             textView.setTextColor(Color.BLACK);
+            //textView.setTypeface(Typeface.MONOSPACE);
         }else {
             layout.setBackgroundColor(getResources().getColor(R.color.transparent));
             textView.setTextColor(getResources().getColor(R.color.white));
