@@ -50,7 +50,7 @@
 -keepnames class com.google.firebase.** { *; }
 
 # keep everything in this package from being removed or renamed
--keep class com.davidkazad.chantlouange.** { *; }
+-keep class chantlouange.** { *; }
 
 # keep everything in this package from being renamed only
--keepnames class com.davidkazad.chantlouange.** { *; }
+-keepnames class chantlouange.** { *; }

@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:53793527067:android:faee01ae2ad26fc6",
+        "android_client_info": {
+          "package_name": "com.davidkazad.cevv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgRhfFtFBQdlrHdqGck-Racg3_Z-canrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:53793527067:android:202c67f63a291142",
         "android_client_info": {
           "package_name": "com.davidkazad.chantlouange"
@@ -33,20 +62,50 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53793527067:android:fae4cf4e2f6d9e6f662fbe",
+        "android_client_info": {
+          "package_name": "com.davidkazad.chantlouange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53793527067-jlohkf2jdt9uohrn39s43349vm2h5mse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.chantlouange",
+            "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
+          }
         },
-        "ads_service": {
-          "status": 2
+        {
+          "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgRhfFtFBQdlrHdqGck-Racg3_Z-canrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
