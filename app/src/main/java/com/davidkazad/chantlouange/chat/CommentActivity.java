@@ -1,33 +1,39 @@
-package com.davidkazad.chantlouange.chat.app;
+package com.davidkazad.chantlouange.chat;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
-import android.util.Log;
+
+import android.text.InputType;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.davidkazad.chantlouange.MainActivity;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.activities.BaseActivity;
 import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.config.SongsApplication;
 import com.davidkazad.chantlouange.models.Comment;
-import com.davidkazad.chantlouange.models.Post;
 import com.davidkazad.chantlouange.utils.TimeAgo;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -35,8 +41,12 @@ import butterknife.ButterKnife;
 public class CommentActivity extends BaseActivity {
 
     private static final String TAG = "ChatActivity";
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
     private List<Comment> commentList;
+    private TextView textComment;
+    private String username;
+    private ProgressBar progressBar;
+    private ProgressBar progressSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,26 +61,22 @@ public class CommentActivity extends BaseActivity {
         ButterKnife.bind(this);
         navigationDrawer(savedInstanceState, null);
 
+        progressBar =  findViewById(R.id.progress_bar);
+        progressSend =  findViewById(R.id.progressSend);
+        textComment = findViewById(R.id.textComment);
+        username = Prefs.getString("username", "");
+
         initView();
-
-        if (getIntent().getBooleanExtra(MainActivity.EXTRA_WRITE_POST, false)) {
-            writePost(null);
-        }
-
-        if (getIntent().getBooleanExtra(BaseActivity.EXTRA_COMMUNITY, false)) {
-            toolbar.setTitle(R.string.community);
-        }
     }
 
     private void initView() {
-        recyclerView = findViewById(R.id.recycler_post);
 
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView = findViewById(R.id.recycler_post);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        commentList = Comment.getList();
-        final PostAdapter adapter = new PostAdapter();
-        recyclerView.setAdapter(adapter);
+        final CommentAdapter adapter = new CommentAdapter();
 
         Common.commentRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -82,19 +88,22 @@ public class CommentActivity extends BaseActivity {
                             dataSnapshot.getChildren()) {
                         Comment comment = s.getValue(Comment.class);
                         if (comment != null) {
-                            if (s.getKey().equals("delete")) {
-                                Post.deleteAll(Post.class);
-                            }
+
+                            //Post.deleteAll(Post.class);
+
                             comment.setCid(s.getKey());
                             commentList.add(comment);
-                            comment.add();
-
+                            //comment.add();
                         }
-
                     }
                 }
-                Collections.reverse(commentList);
-                adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+
+                if (commentList!=null){
+                    Collections.reverse(commentList);
+                    //adapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(adapter);
+                }
             }
 
             @Override
@@ -106,48 +115,72 @@ public class CommentActivity extends BaseActivity {
 
 
     public void joinGroup(View view) {
+        joinGroup();
         //startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
-    public void writePost(View view) {
+    public void setUser(View view) {
 
-        CommentFragment chatFragment = new CommentFragment();
+         String name = (username.isEmpty())? getString(R.string.identification) : username;
 
-        chatFragment.setOnSendPostListener(new CommentFragment.OnSendPostListener() {
+        new MaterialDialog.Builder(view.getContext())
+                .title(R.string.identification)
+                .input(getString(R.string.username),name,  false, new MaterialDialog.InputCallback() {
+                    @Override
+                    public void onInput(@NonNull MaterialDialog dialog, CharSequence input) {
+                        username = String.valueOf(input);
+                        Prefs.putString("username", String.valueOf(input));
+                    }
+                })
 
-            @Override
-            public void onPostSuccess(Comment comment) {
-                initView();
-                Toast.makeText(CommentActivity.this, "new comment has been sent!: ", Toast.LENGTH_SHORT).show();
-            }
+                .inputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME)
+                .negativeText(R.string.cancel)
+                .positiveText(R.string.enregistrer)
+                .show();
 
-            @Override
-            public void onPostFailure(Comment comment, Throwable t) {
-                Log.d(TAG, "onPostFailure: " + t.getLocalizedMessage());
-            }
-        });
-
-        chatFragment.show(getSupportFragmentManager(), chatFragment.getTag());
     }
 
+    public void sendComment(View view) {
 
-    /*public void staff(View view) {
-     *//*Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));*//*
-    }*/
+        if (username.isEmpty()) setUser(view);
 
-    public class PostAdapter extends RecyclerView.Adapter<PostHolder> {
+        if (!TextUtils.isEmpty(textComment.getText().toString())) {
+            Comment comment = new Comment();
+            comment.setName(Prefs.getString("username", ""));
+            comment.setText(textComment.getText().toString());
+            //comment.setPhoto("https://developer.maishapay.net/presenter_assets/images/icon-logo.png");
+           // comment.setImage("https://developer.maishapay.net/presenter_assets/images/icon-logo.png");
+            comment.setDate(new Date().toString());
+
+            progressSend.setVisibility(View.VISIBLE);
+            view.setEnabled(false);
+
+            Common.commentRef.push().setValue(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    view.setEnabled(true);
+                    textComment.setText("");
+                    progressSend.setVisibility(View.GONE);
+                    initView();
+                    Toast.makeText(CommentActivity.this, "new comment has been sent!: ", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+        }else Toast.makeText(this, getString(R.string.comment_is_empty), Toast.LENGTH_SHORT).show();
+    }
+
+    public class CommentAdapter extends RecyclerView.Adapter<CommentViewHolder> {
 
         @NonNull
         @Override
-        public PostHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public CommentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.chat_item_comment, parent, false);
-            PostHolder holder = new PostHolder(view);
+            CommentViewHolder holder = new CommentViewHolder(view);
             return holder;
         }
 
         @Override
-        public void onBindViewHolder(@NonNull PostHolder holder, int position) {
+        public void onBindViewHolder(@NonNull CommentViewHolder holder, int position) {
             Comment comment = commentList.get(position);
             //holder.staffFunction.setText(staff.getUsername());
             holder.setHolder(comment);
@@ -159,7 +192,7 @@ public class CommentActivity extends BaseActivity {
         }
     }
 
-    private class PostHolder extends RecyclerView.ViewHolder {
+    private class CommentViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageUser;
         TextView textName;
@@ -167,7 +200,7 @@ public class CommentActivity extends BaseActivity {
         TextView textContent;
         ImageView imagePictue;
 
-        public PostHolder(View itemView) {
+        public CommentViewHolder(View itemView) {
             super(itemView);
 
             imageUser = itemView.findViewById(R.id.iUser);
@@ -178,7 +211,7 @@ public class CommentActivity extends BaseActivity {
         }
 
         public void setHolder(final Comment post) {
-            ImageLoader.getInstance().displayImage(post.getImage(), imageUser, SongsApplication.displayImageCircleOptions);
+            ImageLoader.getInstance().displayImage(post.getPhoto(), imageUser, SongsApplication.displayImageCircleOptions);
             textName.setText(post.getName());
             textContent.setText(post.getText());
             try {
@@ -191,7 +224,6 @@ public class CommentActivity extends BaseActivity {
             }
             ImageLoader.getInstance().displayImage(post.getImage(), imagePictue);
 
-            //ImageLoader.getInstance().displayImage(post.getImage(), imagePictue);
         }
     }
 }
