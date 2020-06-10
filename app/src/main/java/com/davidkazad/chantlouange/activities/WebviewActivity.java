@@ -1,5 +1,6 @@
 package com.davidkazad.chantlouange.activities;
 
+import android.app.Notification;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,11 +11,14 @@ import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.common.DataExtra;
+import com.davidkazad.chantlouange.models.AppNotification;
 
 public class WebviewActivity extends BaseActivity {
 
@@ -22,18 +26,31 @@ public class WebviewActivity extends BaseActivity {
     private WebView webView;
     private ProgressBar progressBar;
     private SwipeRefreshLayout mySwipeRefreshLayout;
+    public static String dataUrl;
+    public static String dataTitle;
+    private String webViewUrl;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.webview);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+
+
+        if (dataUrl!=null) {
+            toolbar.setTitle(dataTitle);
+            webViewUrl = dataUrl;
+        }else {
+            webViewUrl =  "https://14ka135.wixsite.com/website/music";
+        }
+
+        Toast.makeText(this, webViewUrl, Toast.LENGTH_SHORT).show();
+
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         navigationDrawer(savedInstanceState, null);
 
-        String webViewUrl =  "https://14ka135.wixsite.com/website/music";
 
         webView = findViewById(R.id.webview);
         progressBar = findViewById(R.id.progress_bar);
@@ -56,13 +73,14 @@ public class WebviewActivity extends BaseActivity {
         mySwipeRefreshLayout = findViewById(R.id.swipeRefresh);
         mySwipeRefreshLayout.setRefreshing(true);
 
+        String finalWebViewUrl = webViewUrl;
         mySwipeRefreshLayout.setOnRefreshListener(
                 () -> {
                     Log.i(LOG_TAG, "onRefresh called from SwipeRefreshLayout");
                     mySwipeRefreshLayout.setRefreshing(true);
                     // This method performs the actual data-refresh operation.
                     // The method calls setRefreshing(false) when it's finished.
-                    webView.loadUrl(webViewUrl);
+                    webView.loadUrl(finalWebViewUrl);
                 }
         );
 

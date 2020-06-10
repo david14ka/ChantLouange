@@ -44,7 +44,8 @@ public class AboutActivity extends BaseActivity {
 
     public void donation(View view) {
 
-        startActivity(new Intent(getApplicationContext(), DonationActivity.class));
+        shareApp();
+        //startActivity(new Intent(getApplicationContext(), DonationActivity.class));
     }
 
     public void equipe(View view) {

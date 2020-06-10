@@ -60,7 +60,7 @@ public class SettingsActivity extends BaseActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-            }
+        }
         });
 
         aSwitch.setChecked(Prefs.getBoolean("night_mode",false));

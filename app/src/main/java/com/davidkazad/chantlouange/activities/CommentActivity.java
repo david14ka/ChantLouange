@@ -1,4 +1,4 @@
-package com.davidkazad.chantlouange.chat;
+package com.davidkazad.chantlouange.activities;
 
 import android.os.Bundle;
 
@@ -19,10 +19,10 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.activities.BaseActivity;
 import com.davidkazad.chantlouange.common.Common;
 import com.davidkazad.chantlouange.config.SongsApplication;
 import com.davidkazad.chantlouange.models.Comment;
+import com.davidkazad.chantlouange.utils.StringUtil;
 import com.davidkazad.chantlouange.utils.TimeAgo;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.pixplicity.easyprefs.library.Prefs;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -121,11 +122,10 @@ public class CommentActivity extends BaseActivity {
 
     public void setUser(View view) {
 
-         String name = (username.isEmpty())? getString(R.string.identification) : username;
 
         new MaterialDialog.Builder(view.getContext())
                 .title(R.string.identification)
-                .input(getString(R.string.username),name,  false, new MaterialDialog.InputCallback() {
+                .input(getString(R.string.username),username,  false, new MaterialDialog.InputCallback() {
                     @Override
                     public void onInput(@NonNull MaterialDialog dialog, CharSequence input) {
                         username = String.valueOf(input);
@@ -142,7 +142,10 @@ public class CommentActivity extends BaseActivity {
 
     public void sendComment(View view) {
 
-        if (username.isEmpty()) setUser(view);
+        if (username.replaceAll(" ","").isEmpty()) {
+            setUser(view);
+            return;
+        }
 
         if (!TextUtils.isEmpty(textComment.getText().toString())) {
             Comment comment = new Comment();
@@ -154,6 +157,7 @@ public class CommentActivity extends BaseActivity {
 
             progressSend.setVisibility(View.VISIBLE);
             view.setEnabled(false);
+
 
             Common.commentRef.push().setValue(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override

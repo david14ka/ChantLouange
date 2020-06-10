@@ -15,7 +15,7 @@ import android.view.View;
 
 import com.davidkazad.chantlouange.activities.BaseActivity;
 import com.davidkazad.chantlouange.activities.SettingsActivity;
-import com.davidkazad.chantlouange.chat.CommentActivity;
+import com.davidkazad.chantlouange.activities.CommentActivity;
 import com.davidkazad.chantlouange.fragment.SearchFragment;
 import com.davidkazad.chantlouange.fragment.BookFragment;
 import com.davidkazad.chantlouange.fragment.ListFragment;

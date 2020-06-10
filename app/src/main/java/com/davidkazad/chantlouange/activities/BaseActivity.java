@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -14,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.telephony.SmsManager;
 import android.text.InputType;
 import android.util.Log;
@@ -22,10 +24,17 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.common.Common;
+import com.davidkazad.chantlouange.common.DataExtra;
+import com.davidkazad.chantlouange.models.AppNotification;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Favoris;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.songs.CV;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -68,7 +77,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
         final IProfile userProfil = new ProfileDrawerItem()
                 .withName("Recueil des cantiques")
-                .withEmail("tclcantiques@gmail.com")
+                .withEmail("14ka135@gmail.com")
                 .withIcon(R.drawable.holy_bible_96px).withIdentifier(1)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -111,27 +120,30 @@ public abstract class BaseActivity extends AppCompatActivity {
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                         //new PrimaryDrawerItem().withName("Programme de culte").withIcon(R.drawable.details_48px).withIdentifier(5),
-                        new PrimaryDrawerItem().withName(R.string.home).withSelectable(false).withIcon(R.drawable.idea_24px).withIdentifier(2),
-                        new PrimaryDrawerItem().withName(R.string.preach).withIcon(R.drawable.bible_48px).withIdentifier(1),
+                        new PrimaryDrawerItem().withName(R.string.home).withSelectable(false).withIcon(R.drawable.bible_48px).withIdentifier(1),
+                        //new PrimaryDrawerItem().withName(R.string.title_notifications).withIcon(R.drawable.bible_48px).withIdentifier(1),
                         //new PrimaryDrawerItem().withName("Programme de culte").withIcon(R.drawable.details_48px).withIdentifier(5),
-                        new PrimaryDrawerItem().withName(R.string.community).withIcon(R.drawable.coderwall_48px).withIdentifier(6),
-                        new PrimaryDrawerItem().withName(R.string.favorities).withIcon(R.drawable.star0).withIdentifier(7),
+                        new PrimaryDrawerItem().withName(R.string.community).withIcon(R.drawable.coderwall_48px).withIdentifier(2),
+                        new PrimaryDrawerItem().withName(R.string.favorities).withIcon(R.drawable.star0).withIdentifier(3),
+                        //new PrimaryDrawerItem().withName(R.string.recent).withIcon(R.drawable.bible_48px).withIdentifier(1),
+
                         new DividerDrawerItem(),
-                        new SecondaryDrawerItem().withName(R.string.settings).withIcon(R.drawable.settings_48px).withIdentifier(9),
-                        new SecondaryDrawerItem().withName(R.string.send_comment).withIcon(R.drawable.comments_24px).withIdentifier(10),
-                        new SecondaryDrawerItem().withName("Contacts").withIcon(R.drawable.info_48px).withIdentifier(11)
+                        new SecondaryDrawerItem().withName(R.string.settings).withIcon(R.drawable.settings_48px).withIdentifier(5),
+                        new SecondaryDrawerItem().withName(R.string.send_comment).withIcon(R.drawable.comments_24px).withIdentifier(6),
+                        new SecondaryDrawerItem().withName("Contacts").withIcon(R.drawable.info_48px).withIdentifier(7)
                 )
 
                 .withSavedInstance(savedInstanceState)
                 .build();
 
-        result.addStickyFooterItem(new PrimaryDrawerItem().withName(R.string.support_dev).withIcon(R.drawable.pay)
+        result.addStickyFooterItem(new PrimaryDrawerItem().withName(R.string.share).withIcon(R.drawable.share_64px)
 
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
 
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        startActivity(new Intent(getApplicationContext(), DonationActivity.class));
+                        //startActivity(new Intent(getApplicationContext(), DonationActivity.class));
+                        shareApp();
                         return false;
 
                     }
@@ -168,23 +180,25 @@ public abstract class BaseActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         return false;
 
+                    /*case 2:
+                        //openUrl("https://www.youtube.com/channel/UCr9ARDYEe-4pT4RHFtuWiRw");
+                        return false;*/
                     case 2:
-                        openUrl("https://www.youtube.com/channel/UCr9ARDYEe-4pT4RHFtuWiRw");
-                        return false;
-                    case 3:
-                        startActivity(new Intent(getApplicationContext(),WebviewActivity.class));
+                        WebviewActivity.dataTitle = getString(R.string.community);
+                        WebviewActivity.dataUrl = "https://14ka135.wixsite.com/website/music";
+
+                        startActivity(new Intent(getApplicationContext(), WebviewActivity.class));
                         break;
-                    case 4:
+                    case 3:
                         startActivity(new Intent(getApplicationContext(), FavorisActivity.class));
                         break;
-                    case 6:
+                    case 5:
                         startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                         break;
-
-                    case 7:
+                    case 6:
                         openPlayStore();
                         break;
-                    case 8:
+                    case 7:
                         contact();
                         break;
 
@@ -197,6 +211,48 @@ public abstract class BaseActivity extends AppCompatActivity {
         });
     }
 
+    protected void getNotification(View view) {
+
+        Common.NOTIFICATION.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+
+                    for (DataSnapshot s :
+                            dataSnapshot.getChildren()) {
+                        AppNotification notification = s.getValue(AppNotification.class);
+
+                        //Toast.makeText(BaseActivity.this, "sh: "+Prefs.getBoolean(s.getKey(),false), Toast.LENGTH_SHORT).show();
+                        if (notification != null) {
+
+                            if (!Prefs.getBoolean(s.getKey(), false)) {
+
+                                Snackbar snackbar = Snackbar.make(view, notification.getText(), Snackbar.LENGTH_INDEFINITE);
+                                snackbar.setAction("GO TO", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+
+                                        Prefs.putBoolean(s.getKey(), true);
+                                        WebviewActivity.dataUrl = notification.getUrl();
+                                        WebviewActivity.dataTitle = notification.getTitle();
+                                        startActivity(new Intent(getApplicationContext(), WebviewActivity.class));
+                                    }
+                                });
+
+                                snackbar.show();
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     protected void joinGroup() {
         String link = "https://chat.whatsapp.com/GreL17Wbxz680C29RFSol8";
         Intent i = new Intent(Intent.ACTION_VIEW);
@@ -204,7 +260,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    protected void contactWhatsapp(){
+    protected void contactWhatsapp() {
         String link = "https://wa.me/+243895026521?text=[Recueil%20des%20cantiques]\n";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(link));
@@ -232,6 +288,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         i.setData(Uri.parse(url));
         startActivity(i);
     }
+
     protected void openBrowser(String bookid) {
         String url = "https://14ka135.wixsite.com/website/?" + bookid;
         Intent i = new Intent(Intent.ACTION_VIEW);
@@ -250,7 +307,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void openPlayStore() {
-        String url = "https://play.google.com/store/apps/details?id=com.davidkazad.tclcantiques";
+        String url = "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -259,7 +316,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void shareApp() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.davidkazad.tclcantiques");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange");
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
@@ -280,7 +337,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void openGithub() {
-        String url = "https://github.com/david14ka/tclcantiques";
+        String url = "https://github.com/david14ka/chantlouange";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -383,7 +440,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-    protected void contact(){
+    protected void contact() {
         new MaterialDialog.Builder(this)
                 .title("Contacts")
                 .items(R.array.contact)
@@ -391,17 +448,28 @@ public abstract class BaseActivity extends AppCompatActivity {
                     @Override
                     public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
 
-                        switch (position){
-                            case 0 : contactWhatsapp();break;
-                            case 1 : sendEmail();break;
-                            case 3 : joinGroup();break;
-                            case 4 : openFacebook();break;
-                            case 5 : openGithub();break;
+                        switch (position) {
+                            case 0:
+                                contactWhatsapp();
+                                break;
+                            case 1:
+                                sendEmail();
+                                break;
+                            case 3:
+                                joinGroup();
+                                break;
+                            case 4:
+                                openFacebook();
+                                break;
+                            case 5:
+                                openGithub();
+                                break;
                         }
                     }
                 })
                 .show();
     }
+
     protected void findItem() {
 
         new MaterialDialog.Builder(this)
