@@ -18,5 +18,8 @@
     <attr name="fontPath" format="reference"/>
 
 
-
+    <attr name="icon_color" format="color" />
+    <attr name="theme_icon" format="color" />
+    <attr name="card_color" format="color" />
+    <attr name="controls_panel_stroke" format="color" />
 </resources>

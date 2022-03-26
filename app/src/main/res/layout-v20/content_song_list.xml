@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.ListActivity"
+    tools:context=".ui.activities.ListActivity"
     tools:showIn="@layout/activity_song_list">
 
     <customview.CustomTabLayout

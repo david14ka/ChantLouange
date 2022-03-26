@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FavorisActivity"
+    tools:context=".ui.activities.FavorisActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -48,7 +48,7 @@
 
         <fragment
             android:id="@+id/fav"
-            android:name="com.davidkazad.chantlouange.fragment.FavFragment"
+            android:name="com.davidkazad.chantlouange.ui.fragment.FavFragment"
             tools:layout="@layout/fragment_song_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

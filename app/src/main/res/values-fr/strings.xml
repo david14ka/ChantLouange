@@ -154,7 +154,7 @@
     <string name="donation">Faire un don</string>
 
     <string name="account_number">00018005050200000004781</string>
-    <string name="swift_code">PRCBCDKI</string>
+    <string name="swift_code">BCDCDKI</string>
     <string name="bank_name">Equity Bank Congo(Procredit)</string>
     <string name="country">Congo, Republique Démocratique</string>
     <string name="preach">Predication en ligne</string>
@@ -163,5 +163,12 @@
     <string name="username">Email ou Nom d\'utilisateur</string>
     <string name="comment_is_empty">Ecrire un commentaire!</string>
     <string name="blessing">Que Dieu vous bénisse!</string>
+    <string name="default_notification_channel_id">Recueil des cantiques</string>
+    <string name="default_notification_channel_name">Recueil des cantiques</string>
+    <string name="recent">Recents</string>
+    <string name="title_activity_music">Musique</string>
+    <string name="tab_text_1">SONGS</string>
+    <string name="tab_text_2">ALBUMS</string>
+    <string name="tab_text_3">LOCAL</string>
 
 </resources>

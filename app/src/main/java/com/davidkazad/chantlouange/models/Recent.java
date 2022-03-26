@@ -38,10 +38,8 @@ public class Recent extends Model {
         bookId = mPage.getBookId();
     }
 
-
     public void add(){
         try {
-
 
             List<Recent> recentList = getAll();
             if (recentList.size() > 10) {

@@ -13,12 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.davidkazad.chantlouange.activities.BaseActivity;
-import com.davidkazad.chantlouange.activities.SettingsActivity;
-import com.davidkazad.chantlouange.chat.CommentActivity;
-import com.davidkazad.chantlouange.fragment.SearchFragment;
-import com.davidkazad.chantlouange.fragment.BookFragment;
-import com.davidkazad.chantlouange.fragment.ListFragment;
+import com.davidkazad.chantlouange.ui.activities.BaseActivity;
+import com.davidkazad.chantlouange.ui.activities.SettingsActivity;
+import com.davidkazad.chantlouange.ui.activities.CommentActivity;
+import com.davidkazad.chantlouange.ui.fragment.SearchFragment;
+import com.davidkazad.chantlouange.ui.fragment.BookFragment;
+import com.davidkazad.chantlouange.ui.fragment.ListFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.pixplicity.easyprefs.library.Prefs;
 

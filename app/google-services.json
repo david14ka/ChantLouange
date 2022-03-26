@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "53793527067-9h2vb8i6lf2kot781th2ipjlbrc4ig7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.cevv",
+            "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
+          }
+        },
+        {
           "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -43,6 +51,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "53793527067-s4qaqh80jldu66iqavk79s7asf9504uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.chantlouange",
+            "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
+          }
+        },
         {
           "client_id": "53793527067-j1uo5vh8srv1kq6nvpv7ldg59shl1i0r.apps.googleusercontent.com",
           "client_type": 1,
@@ -76,7 +92,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:53793527067:android:fae4cf4e2f6d9e6f662fbe",
         "android_client_info": {
-          "package_name": "com.davidkazad.chantlouange"
+          "package_name": "com.davidkazad.tclcantiques"
         }
       },
       "oauth_client": [
@@ -84,7 +100,7 @@
           "client_id": "53793527067-jlohkf2jdt9uohrn39s43349vm2h5mse.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.davidkazad.chantlouange",
+            "package_name": "com.davidkazad.tclcantiques",
             "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
           }
         },

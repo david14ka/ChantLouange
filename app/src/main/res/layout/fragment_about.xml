@@ -159,7 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:text="@string/donation"
+            android:text="@string/share"
             android:background="@color/trans"
             android:gravity="center"
             android:textColor="@color/green"

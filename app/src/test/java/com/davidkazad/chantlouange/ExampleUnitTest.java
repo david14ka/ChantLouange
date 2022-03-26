@@ -1,14 +1,8 @@
 package com.davidkazad.chantlouange;
 
-import com.davidkazad.chantlouange.songs.NW;
-import com.davidkazad.chantlouange.songs.SongsBook;
-
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Collections;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -21,37 +15,5 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
-    @Test
-    public void man(){
 
-        NW nw = new NW();
-        //List<String> strings = Arrays.asList(Arrays.sort(nw.getTitle());
-
-        String array[] = nw.getTitle();
-        //Arrays.sort(array, CC2.reverseOrder());
-        Arrays.sort(array);
-
-        System.out.println("Tableau trié\n");
-        int i = 1;
-        for (String entier : array) {
-            System.out.println(i+". "+entier+"");
-            i++;
-        }
-    }
-    @Test
-    public void man2(){
-
-        NW nw = new NW();
-        //List<String> strings = Arrays.asList(Arrays.sort(nw.getTitle());
-
-        String array[] = nw.getTitle();
-        int search = Arrays.binarySearch(array,"yesu");
-
-        System.out.println("Tableau trié "+search);
-        int i=1;
-        for (String entier : array) {
-            System.out.println(i+". "+entier);
-            i++;
-        }
-    }
 }

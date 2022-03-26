@@ -1,22 +1,18 @@
 package com.davidkazad.chantlouange.models;
 
 import android.util.Log;
-import android.widget.Toast;
 
-import com.davidkazad.chantlouange.utils.Constants;
 import com.davidkz.eazyorm.Model;
 import com.davidkz.eazyorm.annotation.Column;
 import com.davidkz.eazyorm.annotation.Table;
-import com.davidkz.eazyorm.query.Delete;
 import com.davidkz.eazyorm.query.Select;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.davidkazad.chantlouange.utils.Constants.TAG;
+import static com.davidkazad.chantlouange.config.utils.Constants.TAG;
 
 
 @Table(name = "Favoris")

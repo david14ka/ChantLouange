@@ -6,20 +6,32 @@
     android:layout_height="match_parent"
     android:background="#eee"
     android:orientation="vertical"
-    tools:context=".chat.CommentActivity">
+    tools:context=".ui.activities.CommentActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Message" />
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Message" />
+            <ImageView
+                android:id="@+id/user_comment"
+                android:onClick="setUser"
+                android:layout_width="54dp"
+                android:layout_height="58dp"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                app:srcCompat="@drawable/user" />
+        </FrameLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -65,19 +77,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_write_comment"
-                android:clickable="true"
-                android:focusable="true"
+                android:layout_gravity="bottom"
                 android:orientation="horizontal"
                 android:layout_margin="5dp">
 
                 <ImageView
-                    android:id="@+id/user_comment"
-                    android:onClick="setUser"
                     android:layout_width="54dp"
                     android:layout_height="58dp"
                     android:padding="10dp"
                     android:layout_gravity="bottom"
-                    app:srcCompat="@drawable/user" />
+                    app:srcCompat="@drawable/chat_bubble_50px" />
 
                 <EditText
                     android:id="@+id/textComment"
@@ -103,18 +112,26 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/sendComment"
-                android:onClick="sendComment"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/button_send_comment"
-                app:srcCompat="@drawable/ic_send_black_24dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/sendComment"
+                    android:onClick="sendComment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_send_comment"
+                    app:srcCompat="@drawable/ic_send_black_24dp" />
+            </LinearLayout>
+
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

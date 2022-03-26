@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".ChatActivity">
+    tools:context=".ui.activities.ChatActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                         android:maxHeight="110dp"
                         android:padding="5dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/adult" />
+                        android:src="@drawable/book_3757523_640" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
                         android:maxHeight="110dp"
                         android:padding="5dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/adult" />
+                        android:src="@drawable/book_3755514_640" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                         android:maxHeight="110dp"
                         android:padding="5dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/adult" />
+                        android:src="@drawable/book_3755514_640" />
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>

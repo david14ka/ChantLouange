@@ -1,9 +1,11 @@
 package com.davidkazad.chantlouange.models;
 
-import com.davidkazad.chantlouange.songs.CC;
-import com.davidkazad.chantlouange.songs.CV;
-import com.davidkazad.chantlouange.songs.NM;
-import com.davidkazad.chantlouange.songs.NW;
+import com.davidkazad.chantlouange.datas.CC;
+import com.davidkazad.chantlouange.datas.CV;
+import com.davidkazad.chantlouange.datas.NIMBO_MIPYA;
+import com.davidkazad.chantlouange.datas.NIMBO_YA_BUPANDEJI;
+import com.davidkazad.chantlouange.datas.NM;
+import com.davidkazad.chantlouange.datas.NW;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,6 +26,9 @@ public abstract class Book {
         bookList.add(new CV());
         bookList.add(new NM());
         bookList.add(new NW());
+        bookList.add(new NIMBO_MIPYA());
+        bookList.add(new NIMBO_YA_BUPANDEJI());
+        //bookList.add(new Durban());
     }
 
     public Book(int id, String name, String abbreviation, int image) {
@@ -51,22 +56,6 @@ public abstract class Book {
     }
 
     abstract public List<Page> getPages();
-
-    public static Book getInstance(int bookId) {
-
-        switch (bookId) {
-            case 1:
-                return new CC();
-            case 2:
-                return new CV();
-            case 3:
-                return new CC();
-            case 4:
-                return new CC();
-        }
-
-        return new CC();
-    }
 
     public List<Page> searchPage(String query) {
 

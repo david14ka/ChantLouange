@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -21,6 +21,7 @@
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
+
     <style name="MyAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/bground</item>
         <item name="android:windowNoTitle">true</item>
@@ -91,5 +92,17 @@
         <item name="android:windowFrame">@null</item>
         <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
     </style>
+    <!-- INVERTED THEME -->
+    <style name="AppThemeInverted" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="icon_color">@color/white</item>
+        <item name="card_color">@color/black</item>
+        <item name="controls_panel_stroke">@color/gray_900</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="theme_icon">@drawable/ic_invert_theme_off</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert" />
 
 </resources>

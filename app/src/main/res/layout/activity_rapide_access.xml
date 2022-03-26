@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    tools:context=".activities.RapideAccess"
+    tools:context=".ui.activities.RapideAccess"
     android:background="@drawable/bground"
     android:orientation="vertical"
     android:layout_gravity="center">

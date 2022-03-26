@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hymnbook</string>
+    <string name="app_name">Receuil des cantiques</string>
     <string name="action_settings">Settings</string>
     <string name="action_theme_light">Change Theme</string>
     <string name="action_theme_night">Theme night</string>
@@ -38,7 +38,6 @@
 
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
 
-
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
@@ -64,7 +63,7 @@
     <string name="cancel">Cancel</string>
     <string name="action_search" />
     <string name="chant_fav">Favorites songs</string>
-    <string name="share">Share Apps</string>
+    <string name="share">Share with</string>
     <string name="signaler">Problems ?</string>
     <string name="asset_statements" translatable="false">[{ \"include\": \"https://14ka135.wixsite.com/.well-known/assetlinks.json\" }]</string>
     <string name="title_activity_settings">Settings</string>
@@ -160,6 +159,9 @@
     <string name="username">Email or Username </string>
     <string name="comment_is_empty">comment is empty!</string>
     <string name="blessing">God bless you!</string>
+    <string name="default_notification_channel_id">Recueil des cantiques</string>
+    <string name="default_notification_channel_name">Recueil des cantiques</string>
+    <string name="recent">Recents</string>
 
 
 </resources>

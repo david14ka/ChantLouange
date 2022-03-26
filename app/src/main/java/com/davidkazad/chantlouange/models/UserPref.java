@@ -1,6 +1,6 @@
 package com.davidkazad.chantlouange.models;
 
-import com.davidkazad.chantlouange.common.Common;
+import com.davidkazad.chantlouange.config.Common;
 
 public class UserPref {
 

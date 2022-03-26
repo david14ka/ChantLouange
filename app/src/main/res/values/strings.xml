@@ -164,6 +164,42 @@
     <string name="username">Nom d\'utilisateur</string>
     <string name="comment_is_empty">comment is empty!</string>
     <string name="blessing">God bless you!</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
 
+    <string name="quickstart_message" translatable="false">Click the SUBSCRIBE TO WEATHER button below to subscribe to the
+        weather topic. Messages sent to the weather topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+
+    <string name="subscribe_to_weather" translatable="false">Subscribe To Weather</string>
+    <string name="log_token" translatable="false">Log Token</string>
+
+    <string name="msg_subscribed" translatable="false">Subscribed to weather topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribe_failed" translatable="false">Failed to subscribe to weather topic</string>
+    <string name="fcm_message" translatable="false">FCM Message</string>
+    <string name="recent">Recents</string>
+    <string name="item_music" translatable="false">Music</string>
+    <string name="playing_song" translatable="false">&lt;b>%1s&lt;/b>&lt;br/>%2s</string>
+    <string name="title_activity_music">Music</string>
+    <string name="tab_text_1">SONGS</string>
+    <string name="tab_text_2">ALBUMS</string>
+    <string name="tab_text_3">LOCAL</string>
+
+    <string name="action_hide">Hide Panel</string>
+    <string name="action_show">Show Panel</string>
+    <string name="action_anchor_enable">Enable Anchor Point</string>
+    <string name="action_anchor_disable">Disable Anchor Point</string>
+    <string name="hello"><![CDATA[<b>The Awesome Sliding Up Panel</b><br/> Brought to you by<br/><a href="http://umanoapp.com">http://umanoapp.com</a>]]></string>
+    <string name="follow"><![CDATA[Follow us<br/>on <a href="http://twitter.com/umanoapp">Twitter</a>]]></string>
+    <string name="unknown_year">2020</string>
+    <string name="bad_id">Bad Id</string>
 
 </resources>

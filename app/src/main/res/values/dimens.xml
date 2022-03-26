@@ -6,7 +6,18 @@
 
     <dimen name="itemTextColor">18</dimen>
     <dimen name="textColor">18</dimen>
-    <dimen name="book_height">200dp</dimen>
+    <dimen name="book_height">160dp</dimen>
     <dimen name="table_footer_size">16sp</dimen>
+    <dimen name="notification_large_dim">256dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
 
+    <dimen name="album_height">104dp</dimen>
+    <dimen name="album_width">120dp</dimen>
+
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    <dimen name="dlg_permission_icon_size">96dp</dimen>
+    <dimen name="selected_card_stroke_width">0.1dp</dimen>
 </resources>

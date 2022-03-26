@@ -26,7 +26,7 @@
             android:id="@+id/recent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="com.davidkazad.chantlouange.fragment.RecentFragment"
+            android:name="com.davidkazad.chantlouange.ui.fragment.RecentFragment"
             tools:layout="@layout/fragment_song_details" />
     </FrameLayout>
 
@@ -40,6 +40,6 @@
         android:id="@+id/fav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.davidkazad.chantlouange.fragment.FavFragment"
+        android:name="com.davidkazad.chantlouange.ui.fragment.FavFragment"
         tools:layout="@layout/fragment_song_details"/>
 </LinearLayout>

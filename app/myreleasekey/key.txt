@@ -1,0 +1,17 @@
+com.davidkz.chant.louange153
+
+key alias = davidkazad
+
+
+commande line 
+
+Generate PKC12 keystore
+keytool -genkeypair -alias newalias -keyalg RSA -keysize 2048 -validity 9125 -keystore nameofkeystore.jks
+
+
+export JKS to PERM certificat
+keytool -export -rfc -alias newalias -file keystore_cert.pem -keystore keystore.jks
+
+
+convert JKS to PKCS12
+keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.jks -deststoretype pkcs12

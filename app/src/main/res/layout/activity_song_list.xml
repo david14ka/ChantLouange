@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.ListActivity">
+    tools:context=".ui.activities.ListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
