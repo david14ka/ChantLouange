@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "53793527067",
+    "firebase_url": "https://chantlouange-18280.firebaseio.com",
+    "project_id": "chantlouange-18280",
+    "storage_bucket": "chantlouange-18280.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53793527067:android:faee01ae2ad26fc6",
+        "android_client_info": {
+          "package_name": "com.davidkazad.cevv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53793527067-9h2vb8i6lf2kot781th2ipjlbrc4ig7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.cevv",
+            "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
+          }
+        },
+        {
+          "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgRhfFtFBQdlrHdqGck-Racg3_Z-canrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53793527067:android:202c67f63a291142",
+        "android_client_info": {
+          "package_name": "com.davidkazad.chantlouange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53793527067-j1uo5vh8srv1kq6nvpv7ldg59shl1i0r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.chantlouange",
+            "certificate_hash": "13d68af1f6e78392f64dc016d26cca7a215dfdd2"
+          }
+        },
+        {
+          "client_id": "53793527067-s4qaqh80jldu66iqavk79s7asf9504uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidkazad.chantlouange",
+            "certificate_hash": "470627376d828cc271ba2dbd245abf9adc0a16f3"
+          }
+        },
+        {
+          "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgRhfFtFBQdlrHdqGck-Racg3_Z-canrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53793527067-t1dhp62hufuaiuoskqlav63ulqi6e44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
