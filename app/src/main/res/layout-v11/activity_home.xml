@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"
         android:orientation="vertical">
+        
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,31 +30,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <include android:id="@+id/cc" android:visibility="visible" layout="@layout/item_book" android:layout_width="160dp"
-                android:layout_height="200dp" android:layout_margin="20dp"/>
+            <include 
+                android:id="@+id/cc" 
+                android:visibility="visible" layout="@layout/item_book" 
+                android:layout_width="160dp"
+                android:layout_height="200dp" 
+                android:layout_margin="20dp"/>
 
         </FrameLayout>
 
     </LinearLayout>
-
-
+    
     <TextView
         android:id="@+id/writPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:padding="10dp"
+        android:textColor="@color/bg_day"
+        android:padding="15dp"
         android:textSize="18sp"
         android:layout_alignParentBottom="true"
         android:drawablePadding="10dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/button"
         android:text="@string/write_a_post"
         android:layout_marginBottom="80dp"
         android:onClick="writePost1"
-        android:layout_alignParentRight="true"
         android:layout_marginEnd="20dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"

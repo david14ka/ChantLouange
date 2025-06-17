@@ -35,24 +35,23 @@
 
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/writPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:padding="10dp"
+        android:padding="15dp"
         android:textSize="18sp"
         android:layout_alignParentBottom="true"
         android:drawablePadding="10dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/button"
         android:text="@string/write_a_post"
         android:layout_marginBottom="80dp"
         android:onClick="writePost1"
-        android:layout_alignParentRight="true"
         android:layout_marginEnd="20dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
