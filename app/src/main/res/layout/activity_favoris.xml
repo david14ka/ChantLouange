@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.FavorisActivity"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -36,7 +31,7 @@
                 android:id="@+id/join"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Join group"
+                android:text="@string/join_group"
                 android:textColor="@color/md_blue_500"
                 android:onClick="joinGroup"
                 android:background="@drawable/button_resource"/>
@@ -52,7 +47,5 @@
             tools:layout="@layout/fragment_song_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-
-    </LinearLayout>
-</RelativeLayout>
+            tools:ignore="FragmentTagUsage" />
+</LinearLayout>

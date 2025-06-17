@@ -22,7 +22,6 @@
     <string name="nw">Nyimbo za Wokovu</string>
     <string name="text_about">Apropos</string>
 
-
     <string name="dashboard">Chants</string>
     <string name="title_book_list">Items</string>
     <string name="title_book_detail">Book Detail</string>
@@ -57,6 +56,10 @@
     <string name="developed_by">developed by</string>
     <string name="share_with">Share with</string>
     <string name="contacts">** CONTACTS **</string>
+    <string name="title_activity_music">Music</string>
+    <string name="tab_text_1">SONGS</string>
+    <string name="tab_text_2">ALBUMS</string>
+    <string name="tab_text_3">LOCAL</string>
 
     <string name="fav_preferences">fav%d%d</string>
     <string name="like_preferences">like%d%d</string>
@@ -162,6 +165,11 @@
     <string name="default_notification_channel_id">Recueil des cantiques</string>
     <string name="default_notification_channel_name">Recueil des cantiques</string>
     <string name="recent">Recents</string>
+    <string name="likes">Likes</string>
+    <string name="comments">Comments</string>
+    <string name="posted_date">23 d</string>
+    <string name="under_line">underline</string>
+    <string name="join_group">Join group</string>
 
 
 </resources>

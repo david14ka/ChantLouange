@@ -58,7 +58,6 @@
     <string name="developed_by">développée par</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
-
     <string name="fav_preferences">fav%d%d</string>
     <string name="like_preferences">like%d%d</string>
     <string name="share_song">Partager ce chant</string>
@@ -170,5 +169,10 @@
     <string name="tab_text_1">SONGS</string>
     <string name="tab_text_2">ALBUMS</string>
     <string name="tab_text_3">LOCAL</string>
+    <string name="likes">Likes</string>
+    <string name="comments">Comments</string>
+    <string name="posted_date">23 d</string>
+    <string name="under_line">underline</string>
+    <string name="join_group">Join group</string>
 
 </resources>

@@ -19,15 +19,13 @@
         app:tabSelectedTextColor="@color/green"
         android:elevation="6dp"
         android:minHeight="?attr/actionBarSize"
-        android:contentDescription="@string/app_name"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout"
-        android:contentDescription="@string/app_name"/>
+        android:layout_below="@id/tab_layout" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +39,6 @@
         android:textColor="@color/white"
         android:drawablePadding="15dp"
         android:background="@color/trans"
-        android:onClick="trie"
-        app:drawableLeftCompat="@drawable/ic_sort_black_24dp" />
+        android:onClick="trie"/>
 
 </RelativeLayout>

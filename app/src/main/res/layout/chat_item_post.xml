@@ -33,6 +33,7 @@
                     android:id="@+id/iUser"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:contentDescription="@string/user_image"
                     android:src="@drawable/user" />
 
                 <LinearLayout
@@ -47,9 +48,9 @@
                         android:id="@+id/username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="LAMBI E. MARION"
+                        android:text="@string/username"
                         android:textColor="@color/md_blue_500"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -58,7 +59,7 @@
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="23 d"
+                    android:text="@string/posted_date"
                     android:textColor="@color/primary" />
             </LinearLayout>
 
@@ -74,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/under_line"
                     android:maxHeight="160dp"
                     android:scaleType="centerCrop" />
 
@@ -82,15 +84,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/maven_pro_regular"
-                    android:text="Yahoo!!"
+                    android:text="@string/sample"
                     android:textColor="@color/primary"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:baselineAligned="false"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -104,21 +107,23 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="top"
-                        android:src="@drawable/likee" />
+                        android:src="@drawable/likee"
+                        android:contentDescription="@string/emoji"/>
 
                     <ImageView
                         android:id="@+id/comment"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="bottom"
-                        android:src="@drawable/comment" />
+                        android:src="@drawable/comment"
+                        android:contentDescription="@string/emoji"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center|right"
+                    android:gravity="center|end"
                     android:orientation="horizontal"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp">
@@ -129,7 +134,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="Likes"
+                        android:text="@string/likes"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -138,14 +143,15 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="Comments"
+                        android:text="@string/comments"
                         android:textColor="@color/black" />
 
                     <ImageView
                         android:id="@+id/more"
                         android:layout_width="24dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:contentDescription="@string/user_image"
                         android:src="@drawable/more" />
 
                 </LinearLayout>
