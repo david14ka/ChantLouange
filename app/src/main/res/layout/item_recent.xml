@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/note"
+        android:visibility="visible"
+        android:contentDescription="@string/note" />
+
+    <ImageView
+        android:id="@+id/fav"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top"
+        android:src="@drawable/star0"
+        android:visibility="gone"
+        android:contentDescription="@string/fav_preferences" />
+
+    <TextView
+        android:id="@+id/txt_number"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_recent"
+        android:gravity="center"
+        android:text="@string/songs"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_book"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:gravity="bottom|center"
+        android:text="@string/c_v"
+        android:textColor="@color/white_transparent"
+        android:padding="4dp"/>
+
+
+
+</FrameLayout>

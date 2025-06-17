@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:background="@drawable/bground"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="100dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bass_guitar_913092_1920"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RECUEIL DES CANTIQUES"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECUEIL DES CANTIQUES"
+            android:textColor="@color/white"
+            android:fontFamily="@font/maven_pro_regular"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pour reunion d'évangelisation et d'édification"
+            android:textColor="@color/white"
+            android:fontFamily="@font/maven_pro_regular"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Entrer"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@drawable/button"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:onClick="slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="left"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/sacramento_regular"
+        android:text="@string/slogan2"/>
+
+
+</FrameLayout>
