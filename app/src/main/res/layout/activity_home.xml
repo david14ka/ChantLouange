@@ -50,7 +50,8 @@
         android:onClick="writePost1"
         android:layout_marginEnd="20dp"
         android:layout_alignParentEnd="true"
-        tools:ignore="RelativeOverlap" />
+        tools:ignore="RelativeOverlap"
+        android:visibility="gone"/>
     
     <TextView
         android:layout_width="match_parent"
@@ -68,6 +69,7 @@
         android:layout_marginStart="0dp"
         app:itemTextColor="?attr/itemTextColor"
         app:itemIconTint="?attr/itemIconTint"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"
+        android:visibility="gone"/>
 
 </RelativeLayout>
