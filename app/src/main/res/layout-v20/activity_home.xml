@@ -53,7 +53,8 @@
         android:layout_marginEnd="20dp"
         app:drawableLeftCompat="@drawable/ic_email_black_24dp"
         app:drawableStartCompat="@drawable/ic_email_black_24dp"
-        tools:ignore="RelativeOverlap" />
+        tools:ignore="RelativeOverlap"
+        android:visibility="gone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -70,6 +71,7 @@
         android:layout_marginStart="0dp"
         app:itemTextColor="?attr/itemTextColor"
         app:itemIconTint="?attr/itemIconTint"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"
+        android:visibility="gone"/>
 
 </RelativeLayout>

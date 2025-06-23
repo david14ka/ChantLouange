@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.datas.CC;
 import com.davidkazad.chantlouange.ui.fragment.ItemFragment;
 import com.davidkazad.chantlouange.ui.fragment.ListFragment;
 import com.davidkazad.chantlouange.models.Book;
@@ -331,55 +332,12 @@ public class ItemActivity extends BaseActivity {
                                     public void onInput(@NonNull MaterialDialog dialog, CharSequence page) {
 
                                         currentBook = Book.bookList.get(bookId);
+                                        Book bookWithPageMarkedAB = (bookId==1)? new CV(): (bookId == 0) ? new CC() : null;
 
-                                        if (bookId == 1) {
-                                            Book book = new CV();
-                                            final List<Page> pageList = book.find("" + page);
-                                            final List<String> numberList = new ArrayList<>();
-
-                                            if (pageList.size() > 1) {
-
-                                                for (Page page1 :
-                                                        pageList) {
-                                                    numberList.add(page1.getNumber());
-                                                }
-                                                new MaterialDialog.Builder(ItemActivity.this)
-                                                        .title(text)
-                                                        .items(numberList)
-                                                        .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
-                                                            @Override
-                                                            public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
-
-                                                                currentPage = pageList.get(which);
-
-                                                                if (currentPage != null) {
-
-                                                                    initPageContent();
-
-                                                                } else {
-
-                                                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
-                                                                }
-
-                                                                return false;
-                                                            }
-                                                        })
-                                                        .show();
-
-                                            } else if (pageList.size() == 1) {
-
-                                                currentPage = pageList.get(0);
-                                                if (currentPage != null) {
-
-                                                    initPageContent();
-
-                                                } else {
-
-                                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-
-                                        } else {
+                                        if (bookWithPageMarkedAB != null){
+                                            findPageSongWith_A_B(bookWithPageMarkedAB, page);
+                                        }
+                                        else {
                                             currentPage = currentBook.getPage(Integer.valueOf(String.valueOf(page)) - 1);
 
                                             if (currentPage != null) {
@@ -405,5 +363,55 @@ public class ItemActivity extends BaseActivity {
 
     }
 
+    private void findPageSongWith_A_B(Book book, CharSequence page) {
 
+            final List<Page> pageList = book.find("" + page);
+            final List<String> numberList = new ArrayList<>();
+
+            if (pageList.size() > 1) {
+
+                for (Page page1 :
+                        pageList) {
+                    numberList.add(page1.getNumber());
+                }
+                new MaterialDialog.Builder(ItemActivity.this)
+                        .title(book.getName())
+                        .items(numberList)
+                        .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
+                            @Override
+                            public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
+
+                                currentPage = pageList.get(which);
+
+                                if (currentPage != null) {
+
+                                    initPageContent();
+
+                                } else {
+
+                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
+                                }
+
+                                return false;
+                            }
+                        })
+                        .show();
+
+            } else if (pageList.size() == 1) {
+
+                currentPage = pageList.get(0);
+                if (currentPage != null) {
+
+                    initPageContent();
+
+                } else {
+
+                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        }
 }
+
+
+
