@@ -1,6 +1,6 @@
 package com.davidkazad.chantlouange.config.utils;
 
-import com.davidkazad.chantlouange.models.Favoris;
+import com.davidkazad.chantlouange.models.Favorites;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -16,14 +16,14 @@ public class StrHash {
         addItem();
     }
 
-    private static ArrayList<Favoris> getList() {
+    private static ArrayList<Favorites> getList() {
         String s  ="[{\"songsBook\":3,\"songsId\":5},{\"songsBook\":2,\"songsId\":1}]";
-        Type listType = new TypeToken<List<Favoris>>() {}.getType();
+        Type listType = new TypeToken<List<Favorites>>() {}.getType();
         return new GsonBuilder().create().fromJson(s, listType);
     }
-    private static ArrayList<Favoris> getHash() {
+    private static ArrayList<Favorites> getHash() {
         String s  ="[{\"songsBook\":3,\"songsId\":5},{\"songsBook\":2,\"songsId\":1}]";
-        Type listType = new TypeToken<List<Favoris>>() {}.getType();
+        Type listType = new TypeToken<List<Favorites>>() {}.getType();
         return new GsonBuilder().create().fromJson(s, listType);
     }
     private static boolean addItem() {

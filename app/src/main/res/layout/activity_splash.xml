@@ -5,28 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:background="@drawable/bground"
     android:gravity="center"
-    android:padding="20dp"
+
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingBottom="100dp">
+        android:paddingBottom="100dp"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:src="@drawable/bass_guitar_913092_1920"/>
+            android:src="@mipmap/ic_launcher"
+            app:civ_circle_background_color="#fff"
+            app:civ_border_color= "#fff"
+            app:civ_border_width="4dp"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RECUEIL DES CANTIQUES"
+            android:text="@string/splash_title"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:gravity="center"
@@ -38,7 +51,7 @@
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RECUEIL DES CANTIQUES"
+            android:text="@string/splash_title"
             android:textColor="@color/white"
             android:fontFamily="@font/maven_pro_regular"
             android:padding="10dp"/>
@@ -46,7 +59,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pour reunion d'évangelisation et d'édification"
+            android:text="@string/splash_subtitle"
             android:textColor="@color/white"
             android:fontFamily="@font/maven_pro_regular"
             android:textSize="18dp"
@@ -57,11 +70,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Entrer"
+            android:text="@string/enter"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:background="@drawable/button"
-            android:visibility="gone"/>
+            android:visibility="visible"/>
     </LinearLayout>
 
     <TextView
@@ -72,6 +85,7 @@
         android:gravity="left"
         android:padding="20dp"
         android:textSize="20dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/sacramento_regular"
         android:text="@string/slogan2"/>
 

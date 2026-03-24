@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Recueil des cantiques</string>
+    <string name="app_name">Chants de Louange</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_theme_light">Changer de Thème</string>
     <string name="action_theme_night">Thème nuit</string>
@@ -13,7 +13,7 @@
     <string name="title_book_list">Items</string>
     <string name="title_book_detail">Book Detail</string>
     <string name="title_song_list">Songs</string>
-    <string name="title_song_detail">Song\'s Detail</string>
+    <string name="title_song_detail">Content</string>
     <string name="find_song_text">Saisir le numero de lla chanson rechercher</string>
     <string name="sample">Replace with your own detail action</string>
     <string name="number">Numero</string>
@@ -27,11 +27,17 @@
     <string name="cv">Chant de Victoire</string>
     <string name="nm">Nyimbo za Mungu</string>
     <string name="nw">Nyimbo za Wokovu</string>
+    <string name="np">Nyimbo Mipya</string>
+    <string name="nb">Nyimbo Ya Bupandeji</string>
+    <string name="ob">Only Believe</string>
+    <string name="cs">Crois Seulement</string>
+    <string name="bb">Bemba Songs - Inyimbo</string>
+
     <string name="text_about">Apropos</string>
 
     <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
     <string name="developer_name">David Kazad</string>
-    <string name="version">Version 2.2</string>
+    <string name="version" translatable="false">Version 6.2.0</string>
     <string name="developed_by">developed by</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
@@ -45,7 +51,7 @@
     <string name="chant_fav">Cantiques favorites</string>
     <string name="share">Partager l\'application</string>
     <string name="signaler">Signaler un probleme</string>
-    <string name="asset_statements" translatable="false">[{ \"include\": \"https://14ka135.wixsite.com/.well-known/assetlinks.json\" }]</string>
+    <string name="asset_statements" translatable="false">null</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
@@ -83,7 +89,7 @@
     <string name="number_ot_exists">Ce numero n\'exist pas !</string>
     <string name="comment">%d Comments</string>
     <string name="like">%d Likes</string>
-    <string name="write_a_post">Laisser un commentaire</string>
+    <string name="write_a_post">Commentaires</string>
     <string name="advance_research">Recherche avancée</string>
     <string name="table_matieres">Table des Matières</string>
     <string name="help">Aide</string>
@@ -101,7 +107,7 @@
     <string name="favorities">Favoris</string>
     <string name="settings">Paramètres</string>
     <string name="send_comment">Envoyer des commentaires</string>
-    <string name="about">Apropos</string>
+    <string name="about">A propos</string>
     <string name="support_dev">Donation</string>
     <string name="note">note</string>
     <string name="songs">344B</string>
@@ -138,11 +144,11 @@
     <string name="livres">Livres</string>
     <string name="apropos">Apropos</string>
     <string name="remerciement">** REMERCIEMENTS **</string>
-    <string name="home_title">Livre des cantiques</string>
+    <string name="home_title">Recueils</string>
     <string name="alive_corp">http://alive-corporation.org</string>
     <string name="list_of_songs">Liste des chants</string>
     <string name="search_in">Rechercher dans</string>
-    <string name="add_to_favorites">Ajouter au favoris</string>
+    <string name="add_to_favorites">Ajouter au favorites</string>
     <string name="corriger_erreur">Corriger l\'erreur</string>
     <string name="jaime">J\'aime</string>
     <string name="mode_jour_nuit">Mode Jour/Nuit</string>
@@ -208,5 +214,11 @@
     <string name="emoji" translatable="false">emoji</string>
     <string name="under_line">underline</string>
     <string name="join_group">Join group</string>
+    <string name="rechercher_dans">Rechercher dans</string>
+    <string name="version_2" translatable="false">"Version "</string>
+    <string name="collection_de_cantiques" translatable="false">Collection de cantiques</string>
+    <string name="splash_title">SONG OF WORSHIP</string>
+    <string name="splash_subtitle">For evangelism and edification meetings</string>
+    <string name="enter">Enter</string>
 
 </resources>

@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,16 +21,17 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.datas.CC;
+import com.davidkazad.chantlouange.models.Favorites;
 import com.davidkazad.chantlouange.ui.fragment.ItemFragment;
 import com.davidkazad.chantlouange.ui.fragment.ListFragment;
 import com.davidkazad.chantlouange.models.Book;
-import com.davidkazad.chantlouange.models.Favoris;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.models.Recent;
 import com.davidkazad.chantlouange.datas.CV;
@@ -40,6 +42,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.ButterKnife;
 
@@ -57,8 +60,11 @@ public class ItemActivity extends BaseActivity {
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title_song_detail);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
+
+        // Keep screen awake
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         navigationDrawer(savedInstanceState, null);
 
@@ -67,8 +73,7 @@ public class ItemActivity extends BaseActivity {
         initPageContent();
 
         try {
-            Recent recent = new Recent(currentPage);
-            recent.add();
+            currentPage.toggleRecent();
         } catch (Exception ex) {
             Log.e(TAG, "onViewCreated: ", ex);
         }
@@ -93,7 +98,7 @@ public class ItemActivity extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 currentPage = currentBook.getPage(position);
-                checkFavoris(currentPage);
+                updateIconFabMenuButton();
                 toolbar.setSubtitle(currentPage.getNumber() + currentPage.getTitle());
             }
 
@@ -113,7 +118,7 @@ public class ItemActivity extends BaseActivity {
             toolbar.setSubtitle(currentPage.getNumber() + currentPage.getTitle());
             toolbar.setTitle(currentBook.getName());
 
-            checkFavoris(currentPage);
+            updateIconFabMenuButton();
 
         } catch (Exception ax) {
 
@@ -166,6 +171,8 @@ public class ItemActivity extends BaseActivity {
         fab3.setLabelText(getString(R.string.add_to_favorites));
         fab4.setLabelText(getString(R.string.corriger_erreur));
 
+        updateIconFabMenuButton();
+
         fabMenu.showMenuButton(false);
         fabMenu.setClosedOnTouchOutside(true);
 
@@ -188,6 +195,16 @@ public class ItemActivity extends BaseActivity {
 
         fabMenu.getMenuIconView().setImageResource(fabMenu.isOpened()
                 ? R.drawable.ic_close : R.drawable.ic_menu);
+    }
+
+    public void updateIconFabMenuButton(){
+        if (!currentPage.isFavorite()) {
+            fab1.setImageDrawable(getDrawable(R.drawable.ic_favorite_border_black_24dp));
+            fab3.setImageDrawable(getDrawable(R.drawable.star0));
+        }else  {
+            fab1.setImageDrawable(getDrawable(R.drawable.baseline_favorite_24));
+            fab3.setImageDrawable(getDrawable(R.drawable.star_filed));
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
@@ -221,26 +238,27 @@ public class ItemActivity extends BaseActivity {
         fabMenu.setIconToggleAnimatorSet(set);
     }
 
-    private View.OnClickListener fabClickListener = new View.OnClickListener() {
+    private final View.OnClickListener fabClickListener = new View.OnClickListener() {
+        @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.fab1:
-                    fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
-                    //addToLike(bookId, mSong.getId());
+                case R.id.fab3:
+
+                    Toast.makeText(ItemActivity.this,
+                            (currentPage.isFavorite())
+                                    ?"Song Removed!"
+                                    : "Song Added!"
+                            , Toast.LENGTH_SHORT).show();
+                    currentPage.toggleFavorite();
+
+                    updateIconFabMenuButton();
+
                     break;
                 case R.id.fab2:
 
                     sendText(currentBook.getName() + "\n" + currentPage.getNumber() + currentPage.getTitle() + "\n\n" + currentPage.getContent());
-
-                    break;
-                case R.id.fab3:
-                    //fab1.setVisibility(View.GONE);
-                    //Toast.makeText(ItemActivity.this, "like", Toast.LENGTH_SHORT).show();
-                    fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
-                    fab3.setImageDrawable(getResources().getDrawable(R.drawable.star_filed));
-
-                    addToFavoris(currentPage);
 
                     break;
 
@@ -287,7 +305,7 @@ public class ItemActivity extends BaseActivity {
             initPageContent();
             //findItem();
             return true;
-        }//0824731910
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -305,15 +323,6 @@ public class ItemActivity extends BaseActivity {
         ListFragment.query = null;
     }
 
-    private void checkFavoris(Page currentPage) {
-        if (Favoris.exists(currentPage)) {
-            fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
-            fab3.setImageDrawable(getResources().getDrawable(R.drawable.star_filed));
-        } else {
-            fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav));
-            fab3.setImageDrawable(getResources().getDrawable(R.drawable.star0));
-        }
-    }
 
     @Override
     public void findItem() {

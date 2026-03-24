@@ -10,7 +10,7 @@ import java.util.List;
 public class CV extends Book{
 
     public CV() {
-        super(2,"Chant de Victoire", "C.V", R.drawable.guitar_3283649_640);
+        super(2,"Chant de Victoire", "CV", R.drawable.guitar_3283649_640);
     }
 
     @Override

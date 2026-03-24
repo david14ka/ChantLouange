@@ -1,26 +1,16 @@
 package com.davidkazad.chantlouange.models;
 
-import com.davidkz.eazyorm.Model;
-import com.davidkz.eazyorm.annotation.Column;
-import com.davidkz.eazyorm.annotation.Table;
-import com.davidkz.eazyorm.query.Select;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.UUID;
 
-@Table(name = "User")
-public class User extends Model {
+public class User  {
 
-    @Column(name = "uid", unique = true, onUniqueConflict = Column.ConflictAction.REPLACE)
     private String uid = "unique";
-    @Column(name = "email")
     private String email;
-    @Column(name = "name")
     private String name;
-    @Column(name = "photoUrl")
     private String photoUrl;
-    @Column(name = "defaultId")
     private String defaultId;
 
     public User() {
@@ -41,13 +31,11 @@ public class User extends Model {
 
     public static Boolean exists() {
 
-        return new Select().from(User.class).count() > 0;
+        return true;
     }
 
     public static User getUser() {
-        if (exists()) {
-            return (User) new Select().from(User.class).execute().get(0);
-        } else return new User("@no-user","no-name");
+        return new User("@no-user","no-name");
     }
 
 

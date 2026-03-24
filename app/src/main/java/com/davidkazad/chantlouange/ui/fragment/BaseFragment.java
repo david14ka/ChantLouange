@@ -29,7 +29,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void openHelp() {
-        String url = "https://davidkazad.com/?chantlouange&action=help";
+        String url = "davidkazad";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);

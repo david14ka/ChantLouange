@@ -1,0 +1,11 @@
+[
+
+    Consultant Ken
+    Semaine prochaine: MVP
+
+    Payment tax USSD
+
+    le project exist?
+    Cahier des charges
+
+]

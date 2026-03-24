@@ -28,11 +28,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/fab_margin"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
         fab:menu_labels_ellipsize="end"
         fab:menu_labels_singleLine="true"
         app:menu_colorNormal="@color/app_primary"
         app:menu_colorPressed="@color/app_primary_dark"
-        fab:menu_backgroundColor="@color/trans">
+        fab:menu_backgroundColor="@color/trans"
+        app:fab_colorRipple="@android:color/transparent">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab1"

@@ -125,7 +125,7 @@
                         android:maxHeight="110dp"
                         android:padding="5dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/book_3757523_640" />
+                        android:src="@drawable/book_3" />
 
                     <ImageView
                         android:layout_width="wrap_content"

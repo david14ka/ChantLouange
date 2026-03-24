@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.bumptech.glide.Glide;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.config.Common;
 import com.davidkazad.chantlouange.config.SongsApplication;
@@ -27,7 +28,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.ArrayList;
@@ -200,7 +200,7 @@ public class CommentActivity extends BaseActivity {
         TextView textName;
         TextView date;
         TextView textContent;
-        ImageView imagePictue;
+        ImageView imagePicture;
 
         public CommentViewHolder(View itemView) {
             super(itemView);
@@ -208,12 +208,11 @@ public class CommentActivity extends BaseActivity {
             imageUser = itemView.findViewById(R.id.iUser);
             textName = itemView.findViewById(R.id.username);
             textContent = itemView.findViewById(R.id.content);
-            imagePictue = itemView.findViewById(R.id.picture);
+            imagePicture = itemView.findViewById(R.id.picture);
             date = itemView.findViewById(R.id.date);
         }
 
         public void setHolder(final Comment post) {
-            ImageLoader.getInstance().displayImage(post.getPhoto(), imageUser, SongsApplication.displayImageCircleOptions);
             textName.setText(post.getName());
             textContent.setText(post.getText());
             try {
@@ -224,7 +223,16 @@ public class CommentActivity extends BaseActivity {
             } catch (Exception e) {
 
             }
-            ImageLoader.getInstance().displayImage(post.getImage(), imagePictue);
+            Glide.with(imageUser.getContext())
+                    .load(post.getPhoto())
+                    .placeholder(R.drawable.profil)
+                    .error(R.drawable.profil)
+                    .circleCrop()
+                    .into(imageUser);
+
+            Glide.with(imagePicture.getContext())
+                    .load(post.getImage())
+                    .into(imagePicture);
 
         }
     }

@@ -23,7 +23,7 @@ import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
 
 import static com.davidkazad.chantlouange.config.Common.PREFS_TABLE_MATIERES_ALPHABETIQUE;
 
@@ -173,6 +173,9 @@ public class ListActivity extends BaseActivity {
         if (id == R.id.action_helps) {
 
             openHelp();
+            return true;
+        }if (id == R.id.action_about) {
+            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
             return true;
         }
 

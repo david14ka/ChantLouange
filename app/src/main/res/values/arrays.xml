@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="contibutor">
+    <string-array name="contributor">
         <item>-------------------------</item>
-        <item>David KAZAD (Developer)</item>
         <item>Josué MALENGELA</item>
-        <item>Emmanuel KAMAU</item>
-        <item>Rachel KAPEND</item>
+        <item>Josué MALENGELA</item>
+        <item>Prince NTUNKA</item>
+        <item>Elisée LAMBI</item>
+        <item>Herbert KALONJI</item>
+        <item>Job MUKUTA</item>
+        <item>Martin NTAMBWE</item>
         <item>Abed MWAMBA</item>
-        <item>David KASHALA</item>
         <item>Meschac MUTEB</item>
-        <item>Chadrack LOTA</item>
         <item>Josué MUTEBA</item>
+
     </string-array>
 
     <string-array name="contact">
@@ -24,13 +26,17 @@
     </string-array>
 
      <string-array name="reference">
-        <item>-------------------------</item>
-        <item>Collection des cantiques</item>
-        <item>Chant de victoire</item>
-        <item>Nyimbo za mungu</item>
-        <item>Nyimbo za wokovu</item>
-        <item></item>
-        <item>Voir Autres</item>
+         <item>-------------------------</item>
+         <item>Collection de cantiques</item>
+         <item>Chant de victoire</item>
+         <item>Nyimbo za mungu</item>
+         <item>Nyimbo za wokovu</item>
+         <item>Nyimbo ya Bupandeji</item>
+         <item>Nyimbo Mipya</item>
+         <item>Only Believe</item>
+         <item>Crois Seulement</item>
+         <item>Bemba Songs - Inyimbo</item>
+         <item>Voir Autres</item>
     </string-array>
 
     <string-array name="book_list2">
@@ -38,6 +44,11 @@
         <item>Chant de Victoire</item>
         <item>Nyimbo za Mungu</item>
         <item>Nyimbo za Wokovu</item>
+        <item>Nyimbo ya Bupandeji</item>
+        <item>Nyimbo Mipya</item>
+        <item>Only Believe</item>
+        <item>Crois Seulement</item>
+        <item>Bemba Songs - Inyimbo</item>
     </string-array>
 
     <string-array name="book_list">
@@ -45,6 +56,11 @@
         <item>CHANT DE VICTOIRE</item>
         <item>NYIMBO ZA MUNGU</item>
         <item>NYIMBO ZA WOKOVU</item>
+        <item>NYIMBO YA BUPANDEJI</item>
+        <item>NYIMBO MIPYA</item>
+        <item>ONLY BELIEVE</item>
+        <item>CROIS SEULEMENT</item>
+        <item>BEMBA SONGS - INYIMBO</item>
     </string-array>
 
     <string-array name="table_des_matieres">
@@ -64,9 +80,9 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_data_sync" translatable="false">Data &amp; sync</string>
 
-    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
     <string-array name="pref_sync_frequency_titles">
         <item>15 minutes</item>
         <item>30 minutes</item>

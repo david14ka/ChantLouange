@@ -88,8 +88,8 @@
                     android:text="@string/developer_name"
                     android:gravity="center"
                     android:onClick="me"
-                    android:textColor="#CCC"
-                    android:textSize="20dp" />
+                    android:textColor="#fff"
+                    android:textSize="26sp" />
 
                 <TextView
                     android:id="@+id/about_contributor"

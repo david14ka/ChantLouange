@@ -19,3 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# Keep default constructors for all model and data classes
+-keepclassmembers class * {
+    public <init>();
+}
+
+# Keep all model classes (example)
+-keep class com.davidkazad.chantlouange.models.** { *; }
+
+# Keep greenrobot EventBus subscriber info
+-keep class org.greenrobot.eventbus.** { *; }
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}

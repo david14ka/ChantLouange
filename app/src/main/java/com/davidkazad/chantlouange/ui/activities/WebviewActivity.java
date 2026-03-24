@@ -37,7 +37,7 @@ public class WebviewActivity extends BaseActivity {
             toolbar.setTitle(dataTitle);
             webViewUrl = dataUrl;
         }else {
-            webViewUrl =  "https://14ka135.wixsite.com/website/music";
+            webViewUrl =  "";
         }
 
         Toast.makeText(this, webViewUrl, Toast.LENGTH_SHORT).show();

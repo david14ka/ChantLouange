@@ -25,9 +25,10 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.config.Common;
+import com.davidkazad.chantlouange.datas.CC;
 import com.davidkazad.chantlouange.models.AppNotification;
 import com.davidkazad.chantlouange.models.Book;
-import com.davidkazad.chantlouange.models.Favoris;
+import com.davidkazad.chantlouange.models.Favorites;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.datas.CV;
 import com.google.android.material.snackbar.Snackbar;
@@ -75,7 +76,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         // Create a few sample profile
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
         final IProfile userProfil = new ProfileDrawerItem()
-                .withName("Recueil des cantiques")
+                .withName(R.string.app_name)
                 .withEmail("14ka135@gmail.com")
                 .withIcon(R.drawable.holy_bible_96px).withIdentifier(1)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -267,17 +268,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    protected void addToFavoris(Page mPage) {
-        Favoris favoris = new Favoris(mPage);
-        favoris.add();
-    }
-
-    protected void addToLike(int bookId, int songId) {
-        Prefs.putBoolean(String.format(getString(R.string.like_preferences), bookId, songId), true);
-        Toast.makeText(this, "successfully added!", Toast.LENGTH_SHORT).show();
-    }
-
-
     protected void openHelp() {
         String url = "https://davidkazad.com/?chantlouange&action=help";
         Intent i = new Intent(Intent.ACTION_VIEW);
@@ -424,19 +414,18 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_SEND_SMS: {
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(phoneNo, null, message, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS sent.",
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getApplicationContext(),
-                            "SMS faild, please try again.", Toast.LENGTH_LONG).show();
-                    return;
-                }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_PERMISSIONS_REQUEST_SEND_SMS) {
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNo, null, message, null, null);
+                Toast.makeText(getApplicationContext(), "SMS sent.",
+                        Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(),
+                        "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+                return;
             }
         }
 
@@ -475,7 +464,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void findItem() {
 
         new MaterialDialog.Builder(this)
-                .title("Rechercher dans")
+                .title(R.string.rechercher_dans)
                 .items(R.array.book_list2)
                 .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
                     @Override
@@ -488,55 +477,12 @@ public abstract class BaseActivity extends AppCompatActivity {
                                     public void onInput(@NonNull MaterialDialog dialog, CharSequence page) {
 
                                         final Book currentBook = Book.bookList.get(bookId);
+                                        Book bookWithPageMarkedAB = (bookId==1)? new CV(): (bookId == 0) ? new CC() : null;
 
-                                        if (bookId == 1) {
-                                            Book book = new CV();
-                                            final List<Page> pageList = book.find("" + page);
-                                            final List<String> numberList = new ArrayList<>();
-
-                                            if (pageList.size() > 1) {
-
-                                                for (Page page1 :
-                                                        pageList) {
-                                                    numberList.add(page1.getNumber());
-                                                }
-                                                new MaterialDialog.Builder(BaseActivity.this)
-                                                        .title(text)
-                                                        .items(numberList)
-                                                        .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
-                                                            @Override
-                                                            public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
-
-                                                                Page currentPage = pageList.get(which);
-
-                                                                if (currentPage != null) {
-
-                                                                    initPageContent(currentBook, currentPage);
-
-                                                                } else {
-
-                                                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
-                                                                }
-
-                                                                return false;
-                                                            }
-                                                        })
-                                                        .show();
-
-                                            } else if (pageList.size() == 1) {
-
-                                                Page currentPage = pageList.get(0);
-                                                if (currentPage != null) {
-
-                                                    initPageContent(currentBook, currentPage);
-
-                                                } else {
-
-                                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-
-                                        } else {
+                                        if (bookWithPageMarkedAB != null){
+                                            findSongWithABMark(bookWithPageMarkedAB, page);
+                                        }
+                                        else {
                                             Page currentPage = currentBook.getPage(Integer.valueOf(String.valueOf(page)) - 1);
 
                                             if (currentPage != null) {
@@ -562,9 +508,59 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
+    private void findSongWithABMark(Book book, CharSequence page) {
+
+            final List<Page> pageList = book.find("" + page);
+            final List<String> numberList = new ArrayList<>();
+
+            if (pageList.size() > 1) {
+
+                for (Page page1 :
+                        pageList) {
+                    numberList.add(page1.getNumber());
+                }
+                new MaterialDialog.Builder(BaseActivity.this)
+                        .title(book.getName())
+                        .items(numberList)
+                        .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
+                            @Override
+                            public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
+
+                                Page currentPage = pageList.get(which);
+
+                                if (currentPage != null) {
+
+                                    initPageContent(book, currentPage);
+
+                                } else {
+
+                                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
+                                }
+
+                                return false;
+                            }
+                        })
+                        .show();
+
+            } else if (pageList.size() == 1) {
+
+                Page currentPage = pageList.get(0);
+                if (currentPage != null) {
+
+                    initPageContent(book, currentPage);
+
+                } else {
+
+                    Toast.makeText(getApplicationContext(), R.string.number_ot_exists, Toast.LENGTH_SHORT).show();
+                }
+            }
+    }
+
     private void initPageContent(Book currentBook, Page currentPage) {
         ItemActivity.currentBook = currentBook;
         ItemActivity.currentPage = currentPage;
         startActivity(new Intent(getApplicationContext(), ItemActivity.class));
     }
+
+
 }
