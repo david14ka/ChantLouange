@@ -2,7 +2,8 @@
 Livre des Cantiques inspirés des frères et soeurs du Tabernacle Chretien de Lubumbashi et d'ailleurs, jugés être en harmonie avec la parole de l'Heure que nous croyons.
 https://14ka135.wixsite.com/website
 
-<img width="1080" height="2220" alt="Screenshot_20251215_132915" src="https://github.com/user-attachments/assets/b54991d5-5a6d-4e4f-beda-42001d81081a" />
+
+<img width="540" height="1110" alt="Screenshot_20251222_101028" src="https://github.com/user-attachments/assets/55c6e925-d870-4c2d-8269-9e0009484d85" />
 
 
 
