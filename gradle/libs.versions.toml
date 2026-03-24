@@ -6,35 +6,33 @@ butterknife = "10.2.1"
 cardview = "1.0.0"
 circleimageview = "3.1.0"
 core = "0.9.6.0"
-dexter = "6.1.2"
+eventbus = "3.3.1"
 fab = "1.6.4"
 glide = "4.12.0"
 gson = "2.11.0"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-appcompat = "1.6.1"
-library = "1.9.0"
-material = "1.10.0"
-constraintlayout = "2.1.4"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+constraintlayout = "2.2.1"
 materialdrawer = "6.1.2"
 materialTapTargetPrompt = "3.0.0"
 recyclerview = "1.4.0"
-universalImageLoader = "1.9.5"
-vectordrawable = "1.1.0"
-lifecycleLivedataKtx = "2.6.1"
-lifecycleViewmodelKtx = "2.6.1"
-navigationFragment = "2.6.0"
-navigationUi = "2.6.0"
-googleGmsGoogleServices = "4.4.2"
-firebaseAuth = "23.2.1"
+vectordrawable = "1.2.0"
+lifecycleLivedataKtx = "2.10.0"
+lifecycleViewmodelKtx = "2.10.0"
+navigationFragment = "2.9.6"
+navigationUi = "2.9.6"
+googleGmsGoogleServices = "4.4.4"
+firebaseAuth = "24.0.1"
 credentials = "1.5.0"
 credentialsPlayServicesAuth = "1.5.0"
 googleid = "1.1.1"
-firebaseDatabase = "21.0.0"
-workRuntime = "2.10.1"
-firebaseMessaging = "24.1.1"
-swiperefreshlayout = "1.1.0"
+firebaseDatabase = "22.0.1"
+workRuntime = "2.11.0"
+firebaseMessaging = "25.0.1"
+swiperefreshlayout = "1.2.0"
 
 [libraries]
 androidslidinguppanel = { module = "com.github.kabouzeid:androidslidinguppanel", version.ref = "androidslidinguppanel" }
@@ -45,7 +43,7 @@ cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 core = { module = "com.afollestad.material-dialogs:core", version.ref = "core" }
-dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
+eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 fab = { module = "com.github.clans:fab", version.ref = "fab" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
@@ -53,13 +51,11 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-library = { module = "com.pixplicity.easyprefs:library", version.ref = "library" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 material-tap-target-prompt = { module = "uk.co.samuelwall:material-tap-target-prompt", version.ref = "materialTapTargetPrompt" }
 materialdrawer = { module = "com.mikepenz:materialdrawer", version.ref = "materialdrawer" }
 recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
-universal-image-loader = { module = "com.nostra13.universalimageloader:universal-image-loader", version.ref = "universalImageLoader" }
 vectordrawable = { group = "androidx.vectordrawable", name = "vectordrawable", version.ref = "vectordrawable" }
 lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }

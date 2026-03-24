@@ -35,6 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.davidkazad.chantlouange.config.Common.SongsError;
+import static com.davidkazad.chantlouange.ui.activities.ItemActivity.currentPage;
 
 public class EditActivity extends BaseActivity {
 
@@ -118,6 +119,8 @@ public class EditActivity extends BaseActivity {
         fab3 = findViewById(R.id.fab3);
         fab4 = findViewById(R.id.fab4);
 
+        updateIconFabMenuButton();
+
         fabMenu.showMenuButton(false);
         fabMenu.setClosedOnTouchOutside(true);
 
@@ -142,6 +145,15 @@ public class EditActivity extends BaseActivity {
                 ? R.drawable.ic_close : R.drawable.ic_menu);
     }
 
+    public void updateIconFabMenuButton(){
+        if (!mItem.isFavorite()) {
+            fab1.setImageDrawable(getDrawable(R.drawable.ic_favorite_border_black_24dp));
+            fab3.setImageDrawable(getDrawable(R.drawable.star0));
+        }else  {
+            fab1.setImageDrawable(getDrawable(R.drawable.baseline_favorite_24));
+            fab3.setImageDrawable(getDrawable(R.drawable.star_filed));
+        }
+    }
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private void createCustomAnimation() {
         AnimatorSet set = new AnimatorSet();
@@ -178,20 +190,20 @@ public class EditActivity extends BaseActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.fab1:
-                    fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
-                    addToLike(bookId, mItem.getId());
+                case R.id.fab3:
+
+                    mItem.toggleFavorite();
+                    Toast.makeText(EditActivity.this,
+                            (mItem.isFavorite())
+                                    ?"Song Removed!"
+                                    : "Song Added!"
+                            , Toast.LENGTH_SHORT).show();
+                    updateIconFabMenuButton();
+
                     break;
                 case R.id.fab2:
 
                     sendText(mItem.getNumber()+mItem.getTitle()+"\n"+mItem.getContent());
-
-                    break;
-                case R.id.fab3:
-                    //fab1.setVisibility(View.GONE);
-                    fab1.setImageDrawable(getResources().getDrawable(R.drawable.fav_full));
-                    fab3.setImageDrawable(getResources().getDrawable(R.drawable.star_filed));
-
-                    addToFavoris(mItem);
 
                     break;
 

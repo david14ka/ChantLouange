@@ -1,5 +1,7 @@
 package com.davidkazad.chantlouange.config;
 
+import android.health.connect.datatypes.AppInfo;
+
 import com.davidkazad.chantlouange.models.Post;
 import com.davidkazad.chantlouange.models.User;
 import com.google.firebase.database.DatabaseReference;
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
+
 
     public static DatabaseReference SONG_REF =  FirebaseDatabase.getInstance().getReference("Songs");;
     public static DatabaseReference LogUtil = FirebaseDatabase.getInstance().getReference("LogUtil");
@@ -20,6 +23,7 @@ public class Common {
     public static DatabaseReference USER_REFERENCE = FirebaseDatabase.getInstance().getReference("Users");
 
     public static final String PREFS_TABLE_MATIERES_ALPHABETIQUE = "numerotation";
+    public static final String FIRST_RUN = "version2";
 
     public static User currentUser = User.getUser();
     public static List<Post> posts = new ArrayList<>();

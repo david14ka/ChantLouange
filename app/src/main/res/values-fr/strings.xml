@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Recueil des cantiques</string>
+    <string name="app_name">Chants de Louange</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_theme_light">Changer de Thème</string>
     <string name="action_theme_night">Thème nuit</string>
@@ -7,7 +7,7 @@
     <string name="action_text_size">Taille du text</string>
     <string name="title_activity_songs">Corriger l\'erreur</string>
     <string name="title_chant_list">Chants</string>
-    <string name="title_chant_detail">Detail</string>
+    <string name="title_chant_detail">Texte du chant</string>
     <string name="search">Recherche</string>
     <string name="find_song_text">Saisir le numero de la chanson rechercher</string>
     <string name="number">Numero</string>
@@ -20,14 +20,19 @@
     <string name="cv">Chant de Victoire</string>
     <string name="nm">Nyimbo za Mungu</string>
     <string name="nw">Nyimbo za Wokovu</string>
+    <string name="np">Nyimbo Mipya</string>
+    <string name="nb">Nyimbo Ya Bupandeji</string>
+    <string name="ob">Only Believe</string>
+    <string name="cs">Crois Seulement</string>
+    <string name="bb">Bemba Songs - Inyimbo</string>
+
     <string name="text_about">Apropos</string>
 
-
-    <string name="dashboard">Chants</string>
+    <string name="dashboard">Receuils</string>
     <string name="title_book_list">Items</string>
     <string name="title_book_detail">Book Detail</string>
-    <string name="title_song_list">Songs</string>
-    <string name="title_song_detail">Song\'s Detail</string>
+    <string name="title_song_list">Liste de chants</string>
+    <string name="title_song_detail">Texte du chant</string>
     <string name="sample">Replace with your own detail action</string>
     <string name="email_number">Email or Phone number</string>
     <string name="title_activity_home">Accueil</string>
@@ -54,7 +59,6 @@
 
     <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
     <string name="developer_name">David Kazad</string>
-    <string name="version">Version 2.2</string>
     <string name="developed_by">développée par</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
@@ -66,7 +70,7 @@
     <string name="chant_fav">Cantiques favorites</string>
     <string name="share">Partager l\'application</string>
     <string name="signaler">Signaler un probleme</string>
-    <string name="asset_statements" translatable="false">[{ \"include\": \"https://14ka135.wixsite.com/.well-known/assetlinks.json\" }]</string>
+    <string name="asset_statements" translatable="false">wix removed</string>
     <string name="title_activity_settings">Paramètres</string>
     <string name="pref_header_general">General</string>
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
@@ -82,7 +86,7 @@
     <string name="number_ot_exists">Ce numero n\'exist pas !</string>
     <string name="comment">%d Comments</string>
     <string name="like">%d Likes</string>
-    <string name="write_a_post">Laisser un commentaire</string>
+    <string name="write_a_post">Commentaires</string>
     <string name="advance_research">Recherche avancée</string>
     <string name="table_matieres">Table des Matières</string>
     <string name="help">Aide</string>
@@ -106,13 +110,13 @@
     <string name="night_mode">Mode Nuit</string>
     <string name="mode_jour">Mode Jour</string>
     <string name="seek_progress">%d dp</string>
-    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
+    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) …</string>
     <string name="thanks">Merci pour votre correction</string>
     <string name="comment_activity">Commentaires</string>
     <string name="display_name">Prenom Ou Email</string>
     <string name="sign_in">Connexion</string>
 
-    <string name="time_ago_prefix"></string>
+    <string name="time_ago_prefix" />
     <string name="time_ago_suffix"/>
     <string name="time_ago_seconds">mantenant</string>
     <string name="time_ago_minute">1 minute</string>
@@ -132,12 +136,12 @@
     <string name="livres">Livres</string>
     <string name="apropos">Apropos</string>
     <string name="remerciement">** REMERCIEMENTS **</string>
-    <string name="home_title">Livre des cantiques</string>
+    <string name="home_title">Recueils</string>
     <string name="alive_corp">http://alive-corporation.org</string>
     <string name="list_of_songs">Liste des chants</string>
     <string name="search_in">Rechercher dans</string>
 
-    <string name="add_to_favorites">Ajouter au favoris</string>
+    <string name="add_to_favorites">Ajouter au favorites</string>
     <string name="corriger_erreur">Corriger l\'erreur</string>
     <string name="jaime">J\'aime</string>
     <string name="mode_jour_nuit">Mode Jour/Nuit</string>
@@ -162,8 +166,8 @@
     <string name="username">Email ou Nom d\'utilisateur</string>
     <string name="comment_is_empty">Ecrire un commentaire!</string>
     <string name="blessing">Que Dieu vous bénisse!</string>
-    <string name="default_notification_channel_id">Recueil des cantiques</string>
-    <string name="default_notification_channel_name">Recueil des cantiques</string>
+    <string name="default_notification_channel_id">Recueil de cantiques</string>
+    <string name="default_notification_channel_name">Recueil de cantiques</string>
     <string name="recent">Recents</string>
     <string name="title_activity_music">Musique</string>
     <string name="tab_text_1">SONGS</string>
@@ -174,5 +178,9 @@
     <string name="posted_date">23 d</string>
     <string name="under_line">underline</string>
     <string name="join_group">Join group</string>
+    <string name="rechercher_dans">Rechercher dans</string>
+    <string name="splash_title">RECUEIL DE CANTIQUES</string>
+    <string name="splash_subtitle">Pour reunion d\'évangelisation et d\'édification</string>
+    <string name="enter">Entrer</string>
 
 </resources>

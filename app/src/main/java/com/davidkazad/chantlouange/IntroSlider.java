@@ -18,36 +18,34 @@ public class IntroSlider extends AppIntro {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SliderPage sliderPage1 = new SliderPage();
-        sliderPage1.setTitle("Collection des cantiques");
-        sliderPage1.setDescription("Cantiques inspirés des frères et soeurs du Tabernacle Chretien de Lubumbashi et d'ailleurs, jugés être en harmonie avec la parole de l'Heure que nous croyons.");
-        sliderPage1.setImageDrawable(R.drawable.bground);
-        sliderPage1.setBgColor(Color.TRANSPARENT);
-        addSlide(AppIntroFragment.newInstance(sliderPage1));
+//        SliderPage sliderPage1 = new SliderPage();
+//        sliderPage1.setTitle("Collection de cantiques Nouvelle Edition");
+//        sliderPage1.setDescription("Cantiques inspirés des frères et soeurs du Tabernacle Chretien de Lubumbashi et d'ailleurs, jugés être en harmonie avec la parole de l'Heure que nous croyons.");
+//        sliderPage1.setImageDrawable(R.drawable.cc);
+//        sliderPage1.setBgColor(Color.TRANSPARENT);
+
+        //addSlide(AppIntroFragment.newInstance(sliderPage1));
 
         SliderPage sliderPage2 = new SliderPage();
-        sliderPage2.setTitle("Chant de victoire");
-        sliderPage2.setDescription("RECUEIL DES CANTIQUES\nPour reunion d'évangelisation et d'édification");
-        //, mission de réveil
-        // Nous sommes plus ques vainqueurs
-        //Par Christ qui nous a aimé.	Rom. 8. 37
-        sliderPage2.setImageDrawable(R.drawable.guitar_3283649_640);
+        sliderPage2.setTitle("Only Believe");
+        sliderPage2.setDescription("Song of worship Sung by William Marrion Branham.");
+        sliderPage2.setImageDrawable(R.drawable.ob_piano_2);
         sliderPage2.setBgColor(Color.TRANSPARENT);
         addSlide(AppIntroFragment.newInstance(sliderPage2));
 
         SliderPage sliderPage3 = new SliderPage();
-        sliderPage3.setTitle("Nyimbo za mungu");
-        sliderPage3.setDescription("Communauté des Eglises de Pentecôte \nen Afrique Centrale");
-        sliderPage3.setImageDrawable(R.drawable.book_3757523_640);
-        sliderPage3.setBgColor(Color.TRANSPARENT);
-        addSlide(AppIntroFragment.newInstance(sliderPage3));
+        sliderPage2.setTitle("Crois Seulement");
+        sliderPage2.setDescription("Version française de Only Believe");
+        sliderPage2.setImageDrawable(R.drawable.book_cs);
+        sliderPage2.setBgColor(Color.TRANSPARENT);
+        addSlide(AppIntroFragment.newInstance(sliderPage2));
 
         SliderPage sliderPage4 = new SliderPage();
-        sliderPage4.setTitle("Nyimbo za wokovu");
-        sliderPage4.setDescription("Communauté des Eglises de Pentecôte \nen Afrique Centrale");
-        sliderPage4.setImageDrawable(R.drawable.book_3755514_640);
-        sliderPage4.setBgColor(Color.TRANSPARENT);
-        addSlide(AppIntroFragment.newInstance(sliderPage4));
+        sliderPage2.setTitle("Bemba Hymns");
+        sliderPage2.setDescription("Inyimbo Sha Kulumbanya Lesa.");
+        sliderPage2.setImageDrawable(R.drawable.book_bb);
+        sliderPage2.setBgColor(Color.TRANSPARENT);
+        addSlide(AppIntroFragment.newInstance(sliderPage2));
 
     }
 

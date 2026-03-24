@@ -23,7 +23,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 
 public class MainActivity extends BaseActivity {
@@ -104,12 +106,12 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onStop() {
-        super.onStop();
+
         EventBus.getDefault().unregister(this);
+        super.onStop();
     }
-
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(String s){
-
         //showFragment(s);
         //Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Receuil des cantiques</string>
+    <string name="app_name">Songs of Praise</string>
     <string name="action_settings">Settings</string>
     <string name="action_theme_light">Change Theme</string>
     <string name="action_theme_night">Theme night</string>
@@ -20,6 +20,11 @@
     <string name="cv">Chant de Victoire</string>
     <string name="nm">Nyimbo za Mungu</string>
     <string name="nw">Nyimbo za Wokovu</string>
+    <string name="np">Nyimbo Mipya</string>
+    <string name="nb">Nyimbo Ya Bupandeji</string>
+    <string name="ob">Only Believe</string>
+    <string name="cs">Crois Seulement</string>
+    <string name="bb">Bemba Songs - Inyimbo</string>
     <string name="text_about">Apropos</string>
 
     <string name="dashboard">Chants</string>
@@ -52,7 +57,6 @@
 
     <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
     <string name="developer_name">David Kazad</string>
-    <string name="version">Version 2.2</string>
     <string name="developed_by">developed by</string>
     <string name="share_with">Share with</string>
     <string name="contacts">** CONTACTS **</string>
@@ -68,7 +72,7 @@
     <string name="chant_fav">Favorites songs</string>
     <string name="share">Share with</string>
     <string name="signaler">Problems ?</string>
-    <string name="asset_statements" translatable="false">[{ \"include\": \"https://14ka135.wixsite.com/.well-known/assetlinks.json\" }]</string>
+    <string name="asset_statements" translatable="false">removed</string>
     <string name="title_activity_settings">Settings</string>
     <string name="pref_header_general">General</string>
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
@@ -85,7 +89,7 @@
     <string name="number_ot_exists">Number not exists !</string>
     <string name="comment">%d Comments</string>
     <string name="like">%d Likes</string>
-    <string name="write_a_post">Write a comment</string>
+    <string name="write_a_post">Comments</string>
     <string name="advance_research">Advanced research</string>
     <string name="table_matieres">Table of contents</string>
     <string name="help">Help</string>
@@ -108,14 +112,14 @@
     <string name="night_mode">Night Mode</string>
     <string name="mode_jour">Day Mode</string>
     <string name="seek_progress">%d dp</string>
-    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
+    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) …</string>
     <string name="thanks">Thank you</string>
     <string name="comment_activity">Comments</string>
     <string name="write_a_comment">Write un comment</string>
     <string name="display_name">Dispaly name or Email</string>
     <string name="sign_in">Sign in</string>
 
-    <string name="time_ago_prefix"></string>
+    <string name="time_ago_prefix" />
     <string name="time_ago_suffix"/>
     <string name="time_ago_seconds">now</string>
     <string name="time_ago_minute">1 minute</string>
@@ -135,9 +139,9 @@
     <string name="livres">Books</string>
     <string name="apropos">About</string>
     <string name="remerciement">** THANKS **</string>
-    <string name="home_title">Book\'s List</string>
+    <string name="home_title">Books</string>
     <string name="alive_corp">http://alive-corporation.org</string>
-    <string name="list_of_songs">Song\'s list</string>
+    <string name="list_of_songs">Songs </string>
     <string name="search_in">Research In</string>
     <string name="add_to_favorites">Add to favorites</string>
     <string name="corriger_erreur">Correct the error</string>
@@ -150,7 +154,7 @@
 
     <string name="cc1a">1A.</string>
     <string name="post">Post</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="donation">Donation</string>
     <string name="account_number">00018005050200000004781</string>
     <string name="swift_code">PRCBCDKI</string>
@@ -162,14 +166,18 @@
     <string name="username">Email or Username </string>
     <string name="comment_is_empty">comment is empty!</string>
     <string name="blessing">God bless you!</string>
-    <string name="default_notification_channel_id">Recueil des cantiques</string>
-    <string name="default_notification_channel_name">Recueil des cantiques</string>
+    <string name="default_notification_channel_id">Collection of Songs</string>
+    <string name="default_notification_channel_name">Collection of Songs</string>
     <string name="recent">Recents</string>
     <string name="likes">Likes</string>
     <string name="comments">Comments</string>
     <string name="posted_date">23 d</string>
     <string name="under_line">underline</string>
     <string name="join_group">Join group</string>
+    <string name="rechercher_dans">Search in </string>
+    <string name="splash_title">COLLECTION OF SONGS</string>
+    <string name="splash_subtitle">For evangelism and edification meetings</string>
+    <string name="enter">Enter</string>
 
 
 </resources>

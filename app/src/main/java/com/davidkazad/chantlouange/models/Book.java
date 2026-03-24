@@ -1,11 +1,14 @@
 package com.davidkazad.chantlouange.models;
 
+import com.davidkazad.chantlouange.datas.BB;
 import com.davidkazad.chantlouange.datas.CC;
+import com.davidkazad.chantlouange.datas.CS;
 import com.davidkazad.chantlouange.datas.CV;
-import com.davidkazad.chantlouange.datas.NIMBO_MIPYA;
-import com.davidkazad.chantlouange.datas.NIMBO_YA_BUPANDEJI;
+import com.davidkazad.chantlouange.datas.NP;
+import com.davidkazad.chantlouange.datas.NB;
 import com.davidkazad.chantlouange.datas.NM;
 import com.davidkazad.chantlouange.datas.NW;
+import com.davidkazad.chantlouange.datas.OB;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +21,10 @@ public abstract class Book {
     private final String abbreviation;
     private final int image;
     private final int id;
+
+    private final List<Page> pages;
+
+    protected boolean bookComingSoon = false;
     public static List<Book> bookList;
 
     static {
@@ -26,9 +33,20 @@ public abstract class Book {
         bookList.add(new CV());
         bookList.add(new NM());
         bookList.add(new NW());
-        bookList.add(new NIMBO_MIPYA());
-        bookList.add(new NIMBO_YA_BUPANDEJI());
+        bookList.add(new NP());
+        bookList.add(new NB());
+        bookList.add(new OB());
+        bookList.add(new CS());
+        bookList.add(new BB());
         //bookList.add(new Durban());
+    }
+
+    public Book(){
+        this.name = "name";
+        this.abbreviation = "abbreviation";
+        this.image = 0;
+        this.id = 0;
+        this.pages = this.getPages();
     }
 
     public Book(int id, String name, String abbreviation, int image) {
@@ -36,6 +54,7 @@ public abstract class Book {
         this.abbreviation = abbreviation;
         this.image = image;
         this.id = id;
+        this.pages = this.getPages();
     }
 
     public static List<Book> getAll() {
@@ -192,4 +211,8 @@ public abstract class Book {
     public String getAbbreviation() {
         return abbreviation;
     }
+    public boolean isBookComingSoon(){
+        return bookComingSoon;
+    }
+
 }

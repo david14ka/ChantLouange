@@ -1,30 +1,18 @@
 package com.davidkazad.chantlouange.models;
 
-import com.davidkz.eazyorm.Model;
-import com.davidkz.eazyorm.annotation.Column;
-import com.davidkz.eazyorm.annotation.Table;
-import com.davidkz.eazyorm.query.Select;
 
 import java.util.Date;
 import java.util.List;
 
-@Table(name = "Comment")
-public class Comment extends Model{
+public class Comment {
 
     private String date;
-    @Column(name = "cid", unique = true, onUniqueConflict = Column.ConflictAction.REPLACE)
     private String cid;
-    @Column(name = "defaultId")
     private String defaultId;
-    @Column(name = "photo")
     private String photo;
-    @Column(name = "name")
     private String name;
-    @Column(name = "text")
     private String text;
-    @Column(name = "image")
     private String image;
-    @Column(name = "sentAt")
     private long sentAt;
 
     public Comment() {
@@ -66,18 +54,8 @@ public class Comment extends Model{
         this.image = image;
     }
 
-    public static List<Comment> getList(){
-        return new Select().from(Comment.class).orderBy("id DESC").execute();
-    }
-
     public void add() {
-        try {
 
-            this.save();
-
-        }catch (Exception ex){
-
-        }
     }
 
     public String getDefaultId() {

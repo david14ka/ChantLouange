@@ -1,11 +1,14 @@
 package com.davidkazad.chantlouange.ui.activities;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -27,6 +30,17 @@ public class AboutActivity extends BaseActivity {
         String appLinkAction = appLinkIntent.getAction();
         Uri appLinkData = appLinkIntent.getData();
 
+        TextView vcode = findViewById(R.id.about_version_text);
+
+        PackageManager pm = this.getPackageManager();
+        try {
+            PackageInfo info = pm.getPackageInfo("com.davidkazad.chantlouange", 0);
+            String versionName = info.versionName;
+            int versionCode = info.versionCode; // deprecated in API 28, use info.getLongVersionCode()
+            vcode.setText(String.format("%s%s", getString(R.string.version_2), versionName));
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         navigationDrawer(savedInstanceState,null);
     }
 
@@ -51,7 +65,7 @@ public class AboutActivity extends BaseActivity {
     public void equipe(View view) {
         new MaterialDialog.Builder(AboutActivity.this)
                 .title(R.string.remerciement)
-                .items(R.array.contibutor)
+                .items(R.array.contributor)
                 .itemsCallback(new MaterialDialog.ListCallback() {
                     @Override
                     public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
@@ -63,7 +77,7 @@ public class AboutActivity extends BaseActivity {
     }
 
     public void alive(View view) {
-        openUrl("");
+        openUrl("alivecorp.com");
     }
 
     public void me(View view) {

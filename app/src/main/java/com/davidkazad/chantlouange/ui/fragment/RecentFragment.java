@@ -13,9 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.models.ReadingListUtils;
 import com.davidkazad.chantlouange.ui.activities.ItemActivity;
 import com.davidkazad.chantlouange.models.Book;
-import com.davidkazad.chantlouange.models.Favoris;
+import com.davidkazad.chantlouange.models.Favorites;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.models.Recent;
 
@@ -58,13 +59,13 @@ public class RecentFragment extends BaseFragment {
         recycler_song.setVisibility(View.VISIBLE);
         recycler_song.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,true));
 
-        recentList = Recent.getList();
+        recentList = ReadingListUtils.loadRecentList();
         adapter = new RecentAdapter();
         recycler_song.setAdapter(adapter);
 
     }
 
-    private class RecentItem extends RecyclerView.ViewHolder {
+    private static class RecentItem extends RecyclerView.ViewHolder {
         public TextView number;
         public TextView book;
         public ImageView fav;
@@ -98,7 +99,7 @@ public class RecentFragment extends BaseFragment {
             holder.number.setText(mPage.getNumber().replace(". ",""));
             holder.book.setText(book.getAbbreviation());
 
-            if (Favoris.exists(mPage)){
+            if (mPage.isFavorite()){
                 holder.fav.setVisibility(View.VISIBLE);
             }else {
                 holder.fav.setVisibility(View.INVISIBLE);

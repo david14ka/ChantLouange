@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.davidkazad.chantlouange.MainActivity;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.config.Common;
@@ -22,7 +23,6 @@ import com.davidkazad.chantlouange.models.Post;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -101,7 +101,7 @@ public class ChatActivity extends BaseActivity {
                         Post post = s.getValue(Post.class);
                         if (post != null) {
                             if (s.getKey().equals("delete")){
-                                Post.deleteAll(Post.class);
+                                //Post.deleteAll(Post.class);
                             }
                             post.setPid(s.getKey());
                             postList.add(post);
@@ -184,7 +184,7 @@ public class ChatActivity extends BaseActivity {
         TextView textContent;
         TextView textlike;
         TextView textComment;
-        ImageView imagePictue;
+        ImageView imagePicture;
         ImageView like;
         ImageView comment;
 
@@ -198,16 +198,14 @@ public class ChatActivity extends BaseActivity {
             textComment = itemView.findViewById(R.id.comment1);
             like = itemView.findViewById(R.id.like);
             comment = itemView.findViewById(R.id.comment);
-            imagePictue = itemView.findViewById(R.id.picture);
+            imagePicture = itemView.findViewById(R.id.picture);
         }
 
         public void setHolder(Post post) {
-            ImageLoader.getInstance().displayImage(post.getImage(), imageUser, SongsApplication.displayImageCircleOptions);
             textName.setText(post.getName());
             textContent.setText(post.getText());
             textComment.setText(String.format(getString(R.string.comment), post.getComments()));
             textlike.setText(String.format(getString(R.string.like), post.getLikes()));
-            ImageLoader.getInstance().displayImage(post.getImage(), imagePictue);
 
             like.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -216,6 +214,17 @@ public class ChatActivity extends BaseActivity {
 
                 }
             });
+
+            Glide.with(imageUser.getContext())
+                    .load(post.getPhoto())
+                    .placeholder(R.drawable.profil)
+                    .error(R.drawable.profil)
+                    .circleCrop()
+                    .into(imageUser);
+
+            Glide.with(imagePicture.getContext())
+                    .load(post.getImage())
+                    .into(imagePicture);
 
         }
     }

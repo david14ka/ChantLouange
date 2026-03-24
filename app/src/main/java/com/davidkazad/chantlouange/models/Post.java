@@ -1,36 +1,20 @@
 package com.davidkazad.chantlouange.models;
 
-import com.davidkz.eazyorm.Model;
-import com.davidkz.eazyorm.annotation.Column;
-import com.davidkz.eazyorm.annotation.Table;
-import com.davidkz.eazyorm.query.Select;
-
 import java.util.Date;
 import java.util.List;
 
-@Table(name = "Post")
-public class Post extends Model{
+public class Post {
 
-    @Column(name = "pid", unique = true, onUniqueConflict = Column.ConflictAction.ROLLBACK)
     private String pid;
-    @Column(name = "email")
     private String email;
-    @Column(name = "defaultId")
     private String defaultId;
-    @Column(name = "name")
     private String name;
-    @Column(name = "photo")
     private String photo;
-    @Column(name = "text")
     private String text;
-    @Column(name = "image")
     private String image;
 
-    @Column(name = "comments")
     private int comments;
-    @Column(name = "likes")
     private int likes;
-    @Column(name = "date")
     private String date;
 
     public Post() {
@@ -85,19 +69,7 @@ public class Post extends Model{
         return likes;
     }
 
-
-    public static List<Post> getList(){
-        return new Select().from(Post.class).orderBy("id DESC").execute();
-    }
-
     public void add() {
-        try {
-
-            this.save();
-
-        }catch (Exception ex){
-
-        }
     }
 
     public String getEmail() {

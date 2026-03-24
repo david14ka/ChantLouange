@@ -18,7 +18,6 @@ import android.widget.TextView;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.ui.activities.ItemActivity;
 import com.davidkazad.chantlouange.models.Book;
-import com.davidkazad.chantlouange.models.Favoris;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.pixplicity.easyprefs.library.Prefs;
@@ -27,7 +26,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import static com.davidkazad.chantlouange.config.Common.PREFS_TABLE_MATIERES_ALPHABETIQUE;
 
@@ -129,10 +131,11 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
 
     @Override
     public void onStop() {
-        super.onStop();
         EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(String query) {
 
         pageList = bookItem.searchPage(query);
@@ -223,7 +226,7 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
                 holder.note.setVisibility(View.VISIBLE);
             }
 
-            if (Favoris.exists(mPage)){
+            if (mPage.isFavorite()){
                 holder.fav.setVisibility(View.VISIBLE);
             }else {
                 holder.fav.setVisibility(View.GONE);

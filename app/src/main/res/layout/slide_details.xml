@@ -78,7 +78,7 @@
                 app:fab_colorNormal="@color/fab_colorNormal"
                 app:fab_colorPressed="@color/fab_colorPressed"
                 fab:fab_size="mini"
-                fab:fab_label="Ajouter au favoris" />
+                fab:fab_label="Ajouter au favorites" />
 
             <com.github.clans.fab.FloatingActionButton
                 android:id="@+id/fab4"

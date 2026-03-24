@@ -1,10 +1,13 @@
 package com.davidkazad.chantlouange.ui.fragment;
 
+import static com.davidkazad.chantlouange.models.FavoriteUtils.loadFavorites;
+
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.PopupMenu;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -15,14 +18,17 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.models.FavoriteUtils;
+import com.davidkazad.chantlouange.models.Favorites;
 import com.davidkazad.chantlouange.ui.activities.ItemActivity;
 import com.davidkazad.chantlouange.models.Book;
-import com.davidkazad.chantlouange.models.Favoris;
 import com.davidkazad.chantlouange.models.Page;
 
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,7 +45,8 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
 
     private Book bookItem;
     private GridAdapter adapter;
-    private List<Favoris> favorisList;
+    private List<Favorites> favoritesList;
+
 
     public FavFragment() {
 
@@ -62,7 +69,8 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
         grid_song.setNumColumns(1);
         grid_song.setOnItemClickListener(this);
 
-        favorisList = Favoris.getList();
+        //favorisList = Favoris.getList();
+        favoritesList = loadFavorites();
         adapter = new GridAdapter();
         grid_song.setAdapter(adapter);
 
@@ -80,9 +88,9 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         //Toast.makeText(getContext(), pageList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
-        final Favoris favoris = favorisList.get(position);
-        final Book favItemBook = Book.bookList.get(favorisList.get(position).getBookId()-1);
-        final Page mPage = favItemBook.getPage(favorisList.get(position).getSongId()-1);
+        final Favorites favorites = favoritesList.get(position);
+        final Book favItemBook = Book.bookList.get(favoritesList.get(position).getBookId()-1);
+        final Page mPage = favItemBook.getPage(favoritesList.get(position).getSongId()-1);
         if (mPage.getId() < 0) {
             return;
         }
@@ -94,7 +102,7 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
     private class GridAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return favorisList.size();
+            return favoritesList.size();
         }
 
         @Override
@@ -112,9 +120,8 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
             LayoutInflater inflater = LayoutInflater.from(getContext());
             HolderItem holder = new HolderItem();
 
-            final Favoris favoris = favorisList.get(position);
-            final Book favItemBook = Book.bookList.get(favorisList.get(position).getBookId()-1);
-            final Page mPage = favItemBook.getPage(favorisList.get(position).getSongId()-1);
+            final Book favItemBook = Book.bookList.get(favoritesList.get(position).getBookId()-1);
+            final Page mPage = favItemBook.getPage(favoritesList.get(position).getSongId()-1);
 
             if (convertView == null) {
                 convertView = inflater.inflate(R.layout.item_fav, parent, false);
@@ -131,14 +138,13 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
                 holder = (HolderItem) convertView.getTag();
             }
 
-
             holder.number.setText(String.format(getString(R.string.txt_number), mPage.getNumber().replace(". ", "")));
             holder.title.setText(mPage.getTitle());
             holder.subtitle.setText(favItemBook.getName());
             holder.menu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PopupMenu popup = new PopupMenu(getContext(), v);
+                    PopupMenu popup = new PopupMenu(requireContext(), v);
                     //inflating menu from xml resource
                     popup.inflate(R.menu.fav_options_menu);
                     //adding click listener
@@ -154,8 +160,15 @@ public class FavFragment extends BaseFragment implements AdapterView.OnItemClick
                                     break;
                                 case R.id.menu2:
                                     //handle menu2 click
-                                    favoris.remove();
-                                    favorisList = Favoris.getList();
+                                    Toast.makeText(getContext(),
+                                            (mPage.isFavorite())
+                                                    ?"Song Removed!"
+                                                    : "Song Added!"
+                                            , Toast.LENGTH_SHORT).show();
+
+                                    mPage.toggleFavorite();
+
+                                    favoritesList = FavoriteUtils.loadFavorites();
                                     adapter.notifyDataSetChanged();
                                     break;
                             }

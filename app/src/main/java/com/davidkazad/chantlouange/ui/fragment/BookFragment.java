@@ -1,10 +1,15 @@
 package com.davidkazad.chantlouange.ui.fragment;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +18,17 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.datas.OB;
 import com.davidkazad.chantlouange.ui.activities.ListActivity;
 import com.davidkazad.chantlouange.models.Book;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,8 +89,15 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                 }
 
 
-                holder.bookName.setText(Book.bookList.get(position).getName());
-                holder.bookImage.setImageDrawable(getResources().getDrawable(Book.bookList.get(position).getImage()));
+                String bookName = Book.bookList.get(position).getName();
+                int bookImage = Book.bookList.get(position).getImage();
+
+                Resources res = getResources();
+                Log.d("TAG BookImage : ", bookName + " : "+ bookImage);
+                Drawable drawableBookImage = ResourcesCompat.getDrawable(res, bookImage, null);
+
+                holder.bookName.setText(bookName);
+                holder.bookImage.setImageDrawable(drawableBookImage);
 
 
 
@@ -109,9 +128,14 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        ListActivity.bookItem = Book.bookList.get(position);
-        startActivity(new Intent(getContext(), ListActivity.class));
+        Book clickedBook = Book.bookList.get(position);
+        ListActivity.bookItem = clickedBook;
+        if (clickedBook.isBookComingSoon()){
+            Toast.makeText(getContext(), "This book is Coming soon!", Toast.LENGTH_SHORT).show();
 
+        }else {
+            startActivity(new Intent(getContext(), ListActivity.class));
+        }
     }
 
 

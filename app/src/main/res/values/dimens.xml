@@ -6,7 +6,7 @@
 
     <dimen name="itemTextColor">18</dimen>
     <dimen name="textColor">18</dimen>
-    <dimen name="book_height">160dp</dimen>
+    <dimen name="book_height">128dp</dimen>
     <dimen name="table_footer_size">16sp</dimen>
     <dimen name="notification_large_dim">256dp</dimen>
     <dimen name="appbar_padding">16dp</dimen>

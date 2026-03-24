@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.davidkazad.chantlouange">
+    package="com.davidkazad.chantlouange"
+    android:hardwareAccelerated="true">
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -14,7 +15,7 @@
     <application
         android:name=".config.SongsApplication"
         android:allowBackup="true"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -42,12 +43,6 @@
         <meta-data
             android:name="AA_MODELS"
             android:value="com.davidkazad.chantlouange.models.Favoris             ,com.davidkazad.chantlouange.models.Recent             ,com.davidkazad.chantlouange.models.Post             ,com.davidkazad.chantlouange.models.Comment             ,com.davidkazad.chantlouange.models.User" />
-
-        <provider
-            android:name="com.davidkz.eazyorm.content.ContentProvider"
-            android:authorities="com.davidkazad.chantlouange"
-            android:enabled="true"
-            android:exported="false" />
 
         <activity
             android:name=".SplashActivity"
@@ -79,7 +74,7 @@
         <activity android:name=".ui.activities.ItemActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activities.HomeActivity" />
+                android:value=".ui.activities.ListActivity" />
         </activity>
         <activity
             android:name=".ui.activities.AboutActivity"
@@ -130,13 +125,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.activities.HomeActivity" />
         </activity>
-        <activity
-            android:name=".ui.activities.DonationActivity"
-            android:label="@string/donation">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activities.HomeActivity" />
-        </activity>
+
         <activity
             android:name=".ui.activities.WebviewActivity"
             android:label="@string/community">

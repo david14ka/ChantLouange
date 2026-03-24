@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/activity_hymn_1" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="19sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CH. 1. SSS 9."
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="normal|bold|italic"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:text="All people that on Earth do Dwell"
+                android:layout_centerHorizontal="true"/>
+            <TextView 
+                android:textSize="18sp" 
+                android:id="@+id/textView4" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="10dp" 
+                android:text=" Mwe bantu bonse ba pa nshi,\n     Mulumbanyeni, mutote,\n No kumutemwa iseni,\n     Imbeni pa cinso cakwe.\n\n Ibukisheni ni Lesa,\n     Atubumbile fwe bonse;\n Alatucema nge mpanga,\n     Pantu ifwe tuli bakwe.\n\n Ingileni no muchinshi,\n    Shi palameni no kwanga,\n‘Shina lyakwe lumbuleni,\n    Ici cine e cisuma.\n\n Lesa wesu e musuma,\n    Ali no luse kuli fwe;\n ‘Cine cakwe ciminina\n    ‘Nshiku ne nshiku shonse pe." 
+                android:layout_below="@+id/textView3" 
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

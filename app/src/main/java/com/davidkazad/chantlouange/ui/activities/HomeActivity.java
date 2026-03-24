@@ -167,6 +167,9 @@ public class HomeActivity extends BaseActivity {
             //startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             openBrowser("help");
             return true;
+        }if (id == R.id.action_about) {
+            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
