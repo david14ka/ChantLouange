@@ -1,174 +1,195 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:orientation="vertical"
-    android:background="@drawable/bground">
+    android:background="@color/surface">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="256dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:title="@string/text_about"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ScrollView
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp">
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/text_about"
+            app:expandedTitleMarginStart="24dp"
+            app:expandedTitleMarginBottom="24dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline4">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/guitar_3283649_640"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="24dp">
 
-                <ImageView
-                    android:id="@+id/about_mdg_logo"
-                    android:layout_marginTop="22dp"
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/alive"
-                    android:onClick="alive"/>
-                <TextView
-                    android:id="@+id/about_music_dna_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Chant &amp; Louange"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:textColor="#fff"/>
-
-                <TextView
-                    android:id="@+id/about_version_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/version"
-                    android:textSize="11sp"
-                    android:gravity="center"
-                    android:textColor="#fff"/>
-
-                <TextView
-                    android:id="@+id/about_brought_by"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="44dp"
-                    android:text="@string/developed_by"
-                    android:textSize="12sp"
-                    android:textStyle="italic"
-                    android:gravity="center"
-                    android:textColor="#fff"/>
-
-
-                <TextView
-                    android:id="@+id/about_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/developer_name"
-                    android:gravity="center"
-                    android:onClick="me"
-                    android:textColor="#fff"
-                    android:textSize="26sp" />
-
-                <TextView
-                    android:id="@+id/about_contributor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginTop="8dp"
-                    android:text="VOIR L'EQUIPE"
-                    android:gravity="center"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:drawablePadding="10dp"
-                    android:padding="10dp"
-                    android:onClick="equipe"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/about_github_link"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_github"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginRight="4dp"
-                        android:padding="2dp"
-                        android:onClick="github"
-                        />
-                    <ImageView
-                        android:id="@+id/about_rate_link"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/star0"
-                        android:layout_marginBottom="12dp"
-                        android:padding="8dp"
-                        android:onClick="rate_me"
-                        />
-                    <ImageView
-                        android:id="@+id/about_share_link"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="4dp"
-                        android:src="@drawable/ic_share_app"
-                        android:layout_marginBottom="12dp"
-                        android:padding="10dp"
-                        android:onClick="share_me"
-                        />
-                </LinearLayout>
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/blessing"
-                    android:textColor="#fff"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/thank_you"
-                    android:textSize="20dp"/>
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chant &amp; Louange"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/about_version_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version"
+                        android:textColor="@color/ed_text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_developer"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/about_contributor"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="equipe"
+                android:text="VIEW CONTRIBUTORS"
+                android:textColor="@color/app_primary"
+                app:strokeColor="@color/app_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Connect with us"
+                android:textColor="@color/ed_text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/about_github_link"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="github"
+                    android:src="@drawable/ic_github"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/about_rate_link"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="rate_me"
+                    android:src="@drawable/star_filed"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/about_share_link"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="share_me"
+                    android:src="@drawable/share_24px"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="alive"
+                    android:src="@drawable/alive"
+                    android:padding="8dp" />
 
             </LinearLayout>
-        </ScrollView>
-        <TextView
-            android:id="@+id/about_license_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="@string/share"
-            android:background="@color/trans"
-            android:gravity="center"
-            android:textColor="@color/green"
-            android:autoLink="web"
-            android:clickable="true"
-            android:textSize="14sp"
-            android:onClick="donation"
-            android:padding="20dp"
-            android:layout_alignParentBottom="true"
-            />
-    </RelativeLayout>
-</LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/thank_you"
+                android:text="@string/blessing"
+                android:textColor="@color/tertiary_fixed"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/about_license_text"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:onClick="donation"
+        android:text="@string/support_dev"
+        app:backgroundTint="@color/primary_container"
+        app:cornerRadius="12dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

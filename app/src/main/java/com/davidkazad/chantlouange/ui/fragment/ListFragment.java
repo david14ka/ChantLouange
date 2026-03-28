@@ -6,58 +6,56 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.BackgroundColorSpan;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import android.view.Gravity;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.ui.activities.ItemActivity;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
-import com.davidkazad.chantlouange.config.utils.LogUtil;
+import com.davidkazad.chantlouange.ui.activities.ItemActivity;
 import com.pixplicity.easyprefs.library.Prefs;
-
-import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static com.davidkazad.chantlouange.config.Common.PREFS_TABLE_MATIERES_ALPHABETIQUE;
 
-public class ListFragment extends BaseFragment implements AdapterView.OnItemClickListener {
+public class ListFragment extends BaseFragment {
 
     public static final String TAG = ListFragment.class.getName();
     public static final String EXTRA_BOOK_ID = "bookId";
 
-    /** Kept static for backward-compat: ListActivity writes here before EventBus fires. */
     public static String query;
 
-    @BindView(R.id.grid_song)
-    GridView grid_song;
+    @BindView(R.id.recycler_song)
+    RecyclerView recyclerView;
 
-    private TextView resultCountView;
-    private android.widget.CheckBox checkSearchLyrics;
-    private LinearLayout emptyView;
+    @BindView(R.id.result_count)
+    TextView resultCountView;
 
-    private List<Page> pageList;
+    @BindView(R.id.empty_view)
+    LinearLayout emptyView;
+
+    private List<Page> pageList = new ArrayList<>();
     private Book bookItem;
-    private GridAdapter adapter;
-
-    /** Per-instance copy so tabs don't share a stale query between each other. */
+    private SongAdapter adapter;
     private String currentQuery = "";
 
     public ListFragment() {}
@@ -72,60 +70,38 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_song_list, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_song_list, container, false);
+        ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(view);
 
-        LogUtil.d();
-
-        grid_song     = view.findViewById(R.id.grid_song);
-        resultCountView = view.findViewById(R.id.result_count);
-        checkSearchLyrics = view.findViewById(R.id.check_search_lyrics);
-        emptyView     = view.findViewById(R.id.empty_view);
-
-        if (checkSearchLyrics != null) {
-            checkSearchLyrics.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                applySearch(currentQuery);
-            });
-        }
-
-        grid_song.setVisibility(View.VISIBLE);
-        grid_song.setOnItemClickListener(this);
-
-        if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-            grid_song.setNumColumns(1);
-        }
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new SongAdapter();
+        recyclerView.setAdapter(adapter);
 
         if (getArguments() != null) {
             int bookId = getArguments().getInt(EXTRA_BOOK_ID);
             bookItem = Book.bookList.get(bookId);
+            loadData();
+        }
 
-            // Load the default page list
-            pageList = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
-                    ? bookItem.sort()
-                    : bookItem.getPages();
-
-            adapter = new GridAdapter();
-
-            // Apply any pre-existing query
-            if (query != null && !query.isEmpty()) {
-                applySearch(query);
-            }
-
-            grid_song.setAdapter(adapter);
+        if (query != null && !query.isEmpty()) {
+            applySearch(query);
         }
     }
 
-    // -------------------------------------------------------------------------
-    // Search handling
-    // -------------------------------------------------------------------------
+    private void loadData() {
+        if (bookItem == null) return;
+        pageList = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
+                ? bookItem.sort()
+                : bookItem.getPages();
+        adapter.notifyDataSetChanged();
+    }
 
     private void applySearch(String q) {
         currentQuery = (q == null) ? "" : q;
@@ -136,46 +112,31 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
                     ? bookItem.sort()
                     : bookItem.getPages();
         } else {
-            boolean searchInLyrics = (checkSearchLyrics != null && checkSearchLyrics.isChecked());
-            pageList = bookItem.searchPage(currentQuery, !searchInLyrics);
+            pageList = bookItem.searchPage(currentQuery);
             if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
                 pageList = bookItem.sort(pageList);
             }
         }
 
-        boolean hasQuery   = !currentQuery.isEmpty();
+        boolean hasQuery = !currentQuery.isEmpty();
         boolean hasResults = !pageList.isEmpty();
 
-        // Result count bar
         if (resultCountView != null) {
             if (hasQuery) {
                 resultCountView.setVisibility(View.VISIBLE);
-                resultCountView.setText(
-                        getString(R.string.result_count, pageList.size()));
+                resultCountView.setText(getString(R.string.result_count, pageList.size()));
             } else {
                 resultCountView.setVisibility(View.GONE);
             }
         }
 
-        // Checkbox visibility
-        if (checkSearchLyrics != null) {
-            checkSearchLyrics.setVisibility(hasQuery ? View.VISIBLE : View.GONE);
-        }
-
-        // Empty state / grid visibility
         if (emptyView != null) {
             emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
         }
-        if (grid_song != null) {
-            grid_song.setVisibility(!hasQuery || hasResults ? View.VISIBLE : View.GONE);
-        }
+        recyclerView.setVisibility(!hasQuery || hasResults ? View.VISIBLE : View.GONE);
 
-        if (adapter != null) adapter.notifyDataSetChanged();
+        adapter.notifyDataSetChanged();
     }
-
-    // -------------------------------------------------------------------------
-    // EventBus
-    // -------------------------------------------------------------------------
 
     @Override
     public void onStart() {
@@ -194,127 +155,91 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
         applySearch(q);
     }
 
-    // -------------------------------------------------------------------------
-    // Item click
-    // -------------------------------------------------------------------------
+    public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        final Page item = pageList.get(position);
-        if (item.getId() < 0) return;
-
-        ItemActivity.currentPage = item;
-        ItemActivity.currentBook = bookItem;
-        startActivity(new Intent(getContext(), ItemActivity.class));
-    }
-
-    // -------------------------------------------------------------------------
-    // Adapter
-    // -------------------------------------------------------------------------
-
-    private class HolderItem {
-        public View      cardLayout;
-        public TextView  number;
-        public TextView  title;
-        public ImageView fav;
-        public ImageView note;
-        public TextView  letter;
-    }
-
-    private class GridAdapter extends BaseAdapter {
-
-        @Override public int getCount()              { return pageList.size(); }
-        @Override public Object getItem(int pos)     { return pageList.get(pos); }
-        @Override public long   getItemId(int pos)   { return 0; }
-
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = LayoutInflater.from(getContext());
-            HolderItem holder;
-
-            Page mPage = pageList.get(position);
-
-            if (convertView == null) {
-                if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-                    convertView = inflater.inflate(R.layout.item_alphabetique, parent, false);
-                } else {
-                    convertView = inflater.inflate(R.layout.item_numerique, parent, false);
-                }
-
-                holder        = new HolderItem();
-                holder.cardLayout = convertView.findViewById(R.id.layout);
-                holder.number = convertView.findViewById(R.id.txt_number);
-                holder.title  = convertView.findViewById(R.id.txt_tittle);
-                holder.fav    = convertView.findViewById(R.id.fav);
-                holder.note   = convertView.findViewById(R.id.note);
-                try {
-                    holder.letter = convertView.findViewById(R.id.txt_letter);
-                } catch (Exception ignored) { /* alphabetic mode only */ }
-
-                convertView.setTag(holder);
-            } else {
-                holder = (HolderItem) convertView.getTag();
-            }
-
-            if (mPage.getId() < 0) {
-                // Alphabetic section header
-                if (holder.cardLayout != null) holder.cardLayout.setVisibility(View.GONE);
-                if (holder.letter != null) {
-                    holder.letter.setText(mPage.getTitle());
-                    holder.letter.setVisibility(View.VISIBLE);
-                }
-                holder.number.setVisibility(View.INVISIBLE);
-                holder.note.setVisibility(View.GONE);
-                holder.title.setVisibility(View.GONE);
-            } else {
-                if (holder.cardLayout != null) holder.cardLayout.setVisibility(View.VISIBLE);
-                if (holder.letter != null) holder.letter.setVisibility(View.GONE);
-                holder.title.setVisibility(View.VISIBLE);
-                holder.title.setGravity(Gravity.LEFT);
-                holder.number.setVisibility(View.VISIBLE);
-                holder.note.setVisibility(View.VISIBLE);
-
-                // Highlight matched portion of the title
-                highlightText(holder.title, mPage.getTitle(), currentQuery);
-            }
-
-            holder.fav.setVisibility(mPage.isFavorite() ? View.VISIBLE : View.GONE);
-
-            if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-                holder.number.setText(String.format(
-                        getString(R.string.txt_number),
-                        mPage.getNumber().replace(". ", "")));
-            } else {
-                holder.note.setVisibility(View.GONE);
-                holder.number.setText(mPage.getNumber().replace(". ", ""));
-            }
-
-            return convertView;
+        public SongViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            int layoutId = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
+                    ? R.layout.item_alphabetique
+                    : R.layout.item_numerique;
+            View view = LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
+            return new SongViewHolder(view);
         }
 
-        /** Applies a gold background span around the portion of {@code text} that
-         *  matches {@code query}. Falls back to plain text if no match or empty query. */
-        private void highlightText(TextView tv, String text, String query) {
-            if (query == null || query.isEmpty()) {
-                tv.setText(text);
-                return;
+        @Override
+        public void onBindViewHolder(@NonNull SongViewHolder holder, int position) {
+            holder.bind(pageList.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return pageList.size();
+        }
+
+        public class SongViewHolder extends RecyclerView.ViewHolder {
+            @BindView(R.id.txt_number) TextView number;
+            @BindView(R.id.txt_tittle) TextView title;
+            @BindView(R.id.fav) ImageView fav;
+            @BindView(R.id.note) ImageView note;
+            @Nullable @BindView(R.id.txt_letter) TextView letter;
+
+            public SongViewHolder(@NonNull View itemView) {
+                super(itemView);
+                ButterKnife.bind(this, itemView);
+                itemView.setOnClickListener(v -> {
+                    int pos = getAdapterPosition();
+                    if (pos != RecyclerView.NO_POSITION) {
+                        Page item = pageList.get(pos);
+                        if (item.getId() >= 0) {
+                            ItemActivity.currentPage = item;
+                            ItemActivity.currentBook = bookItem;
+                            startActivity(new Intent(getContext(), ItemActivity.class));
+                        }
+                    }
+                });
             }
-            int start = text.toLowerCase().indexOf(query.toLowerCase());
-            if (start >= 0) {
-                SpannableString spannable = new SpannableString(text);
-                spannable.setSpan(
-                        new BackgroundColorSpan(Color.parseColor("#88FFD700")),
-                        start,
-                        start + query.length(),
-                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                spannable.setSpan(
-                        new android.text.style.ForegroundColorSpan(Color.BLACK),
-                        start,
-                        start + query.length(),
-                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                tv.setText(spannable);
-            } else {
-                tv.setText(text);
+
+            public void bind(Page mPage) {
+                if (mPage.getId() < 0) {
+                    if (letter != null) {
+                        letter.setText(mPage.getTitle());
+                        letter.setVisibility(View.VISIBLE);
+                    }
+                    number.setVisibility(View.INVISIBLE);
+                    note.setVisibility(View.GONE);
+                    title.setVisibility(View.GONE);
+                } else {
+                    if (letter != null) letter.setVisibility(View.GONE);
+                    title.setVisibility(View.VISIBLE);
+                    number.setVisibility(View.VISIBLE);
+                    note.setVisibility(View.GONE);
+
+                    highlightText(title, mPage.getTitle(), currentQuery);
+                    
+                    if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
+                        number.setText(String.format(getString(R.string.txt_number), mPage.getNumber().replace(". ", "")));
+                    } else {
+                        number.setText(mPage.getNumber().replace(". ", ""));
+                    }
+                }
+                fav.setVisibility(mPage.isFavorite() ? View.VISIBLE : View.GONE);
+            }
+
+            private void highlightText(TextView tv, String text, String query) {
+                if (query == null || query.isEmpty()) {
+                    tv.setText(text);
+                    return;
+                }
+                int start = text.toLowerCase().indexOf(query.toLowerCase());
+                if (start >= 0) {
+                    SpannableString spannable = new SpannableString(text);
+                    spannable.setSpan(new BackgroundColorSpan(Color.parseColor("#88FFD700")), start, start + query.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    spannable.setSpan(new ForegroundColorSpan(Color.BLACK), start, start + query.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    tv.setText(spannable);
+                } else {
+                    tv.setText(text);
+                }
             }
         }
     }
