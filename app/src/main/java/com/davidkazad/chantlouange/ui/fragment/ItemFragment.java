@@ -120,6 +120,19 @@ public class ItemFragment extends BaseFragment {
             }
         });
 
+        // Theme Pill Button
+        final View btnTheme = view.findViewById(R.id.btn_theme);
+        if (btnTheme != null) {
+            btnTheme.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    changeTheme();
+                    initTheme();
+                    parseAndRenderLyrics();
+                }
+            });
+        }
+
         try {
 
             Bundle args = getArguments();
@@ -165,6 +178,16 @@ public class ItemFragment extends BaseFragment {
         lyricsContainer.removeAllViews();
         String content = currentPage.getContent();
         if (content == null) return;
+        
+        boolean isNight = Prefs.getBoolean("night_mode", true);
+        int colorPrimaryText = isNight ? Color.WHITE : Color.parseColor("#111111");
+        int colorRedAccent = Color.parseColor("#C62828");
+        int colorGoldText = Color.parseColor("#F5E0B7");
+        int colorLightSubtext = Color.parseColor("#9E9E9E");
+        
+        int verseNumberColor = isNight ? colorLightSubtext : colorRedAccent;
+        int refrainBgColor = isNight ? Color.parseColor("#1A1A1A") : Color.parseColor("#F5F5F5");
+        int refrainTextColor = isNight ? colorGoldText : colorRedAccent;
 
         String[] stanzas = content.split("\n\\s*\n");
         LayoutInflater inflater = LayoutInflater.from(getContext());
@@ -177,9 +200,16 @@ public class ItemFragment extends BaseFragment {
                 String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR)\\s*:?\\s*", "").trim();
                 
                 View refrainView = inflater.inflate(R.layout.item_lyric_refrain, lyricsContainer, false);
+                ((androidx.cardview.widget.CardView) refrainView).setCardBackgroundColor(refrainBgColor);
+                
                 TextView txtRefrain = refrainView.findViewById(R.id.txt_refrain_content);
                 txtRefrain.setText(text);
                 txtRefrain.setTextSize(currentTextSize);
+                txtRefrain.setTextColor(refrainTextColor);
+                
+                TextView txtLabel = (TextView) ((LinearLayout) ((LinearLayout) refrainView.getChildAt(0)).getChildAt(1)).getChildAt(0);
+                txtLabel.setTextColor(isNight ? colorLightSubtext : colorRedAccent);
+
                 lyricsContainer.addView(refrainView);
             } else {
                 View verseView = inflater.inflate(R.layout.item_lyric_verse, lyricsContainer, false);
@@ -190,6 +220,7 @@ public class ItemFragment extends BaseFragment {
                 if (m.matches()) {
                     txtNumber.setText(m.group(1));
                     txtNumber.setVisibility(View.VISIBLE);
+                    txtNumber.setTextColor(verseNumberColor);
                     txtContent.setText(m.group(2).trim());
                 } else {
                     txtNumber.setVisibility(View.GONE);
@@ -197,6 +228,7 @@ public class ItemFragment extends BaseFragment {
                 }
                 
                 txtContent.setTextSize(currentTextSize);
+                txtContent.setTextColor(colorPrimaryText);
                 lyricsContainer.addView(verseView);
             }
         }
@@ -255,15 +287,34 @@ public class ItemFragment extends BaseFragment {
     }
 
     private void changeTheme() {
-        if (Prefs.getBoolean("night_mode", false)) {
-            Prefs.putBoolean("night_mode",false);
-        } else {
-            Prefs.putBoolean("night_mode", true);
-        }
+        boolean current = Prefs.getBoolean("night_mode", true);
+        Prefs.putBoolean("night_mode", !current);
     }
 
     private void initTheme() {
-        // Obsolete UI bindings removed to prevent crash. Let default dark theme dominate.
+        boolean isNight = Prefs.getBoolean("night_mode", true);
+        if (scrollView != null) {
+            scrollView.setBackgroundColor(isNight ? Color.parseColor("#131313") : Color.WHITE);
+        }
+        
+        if (txtTitle != null) {
+            txtTitle.setTextColor(isNight ? Color.WHITE : Color.parseColor("#111111"));
+        }
+        if (txtWatermark != null) {
+            txtWatermark.setTextColor(isNight ? Color.parseColor("#33C62828") : Color.parseColor("#11C62828"));
+        }
+        if (txtCategory != null) {
+            txtCategory.setTextColor(isNight ? Color.parseColor("#9E9E9E") : Color.parseColor("#757575"));
+        }
+        if (txtAuthor != null) {
+            txtAuthor.setTextColor(isNight ? Color.parseColor("#9E9E9E") : Color.parseColor("#757575"));
+        }
+        
+        View pillGroup = getView() != null ? getView().findViewById(R.id.control_pill) : null;
+        if (pillGroup != null) {
+            pillGroup.setBackgroundResource(R.drawable.pill_background);
+            // Wait, pill_background is deeply dark by default (`#222222`). For extremely light aesthetics, we could build `pill_background_light.xml`, but keeping a dark luxury control pill in Light Mode (like a dark floating island) still contrasts well and fits standard UX concepts. We will keep pill_background for now to let it "float" beautifully.
+        }
     }
 
     private void resizeTextDialog() {
