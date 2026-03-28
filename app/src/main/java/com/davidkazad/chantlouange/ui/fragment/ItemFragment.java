@@ -33,6 +33,7 @@ import butterknife.BindView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import android.os.Handler;
 
 public class ItemFragment extends BaseFragment {
 
@@ -45,6 +46,20 @@ public class ItemFragment extends BaseFragment {
     private float currentTextSize = 18f;
 
     private Page currentPage;
+    
+    // Auto Scroll variables
+    private androidx.core.widget.NestedScrollView scrollView;
+    private Handler autoScrollHandler = new Handler();
+    private boolean isAutoScrolling = false;
+    private Runnable autoScrollRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (isAutoScrolling && scrollView != null) {
+                scrollView.smoothScrollBy(0, 2);
+                autoScrollHandler.postDelayed(this, 30); // smooth tick rate
+            }
+        }
+    };
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,12 +84,41 @@ public class ItemFragment extends BaseFragment {
         txtCategory = view.findViewById(R.id.txt_category);
         txtAuthor = view.findViewById(R.id.txt_author);
         txtKey = view.findViewById(R.id.txt_key);
+        scrollView = view.findViewById(R.id.layout);
         
         currentTextSize = Prefs.getFloat("TextSize", 18f);
 
         // Control Pill Buttons
-        view.findViewById(R.id.btn_text_plus).setOnClickListener(v -> zoomText(2f));
-        view.findViewById(R.id.btn_text_minus).setOnClickListener(v -> zoomText(-2f));
+        view.findViewById(R.id.btn_text_plus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zoomText(2f);
+            }
+        });
+        view.findViewById(R.id.btn_text_minus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zoomText(-2f);
+            }
+        });
+        
+        // Auto Scroll Pill Button Toggle
+        final TextView btnAutoScroll = view.findViewById(R.id.btn_auto_scroll);
+        btnAutoScroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isAutoScrolling = !isAutoScrolling;
+                if (isAutoScrolling) {
+                    btnAutoScroll.setBackgroundResource(R.drawable.pill_background);
+                    btnAutoScroll.setTextColor(Color.parseColor("#C62828"));
+                    autoScrollHandler.post(autoScrollRunnable);
+                } else {
+                    btnAutoScroll.setBackgroundResource(R.drawable.pill_red);
+                    btnAutoScroll.setTextColor(Color.WHITE);
+                    autoScrollHandler.removeCallbacks(autoScrollRunnable);
+                }
+            }
+        });
 
         try {
 
@@ -173,6 +217,15 @@ public class ItemFragment extends BaseFragment {
         fragment.setArguments(bundle);
 
         return fragment;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        isAutoScrolling = false;
+        if (autoScrollHandler != null) {
+            autoScrollHandler.removeCallbacks(autoScrollRunnable);
+        }
     }
 
     @Override
