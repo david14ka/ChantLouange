@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +36,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.davidkazad.chantlouange.config.Common.SongsError;
-import static com.davidkazad.chantlouange.ui.activities.ItemActivity.currentPage;
 
 public class EditActivity extends BaseActivity {
 
@@ -58,9 +58,18 @@ public class EditActivity extends BaseActivity {
         setContentView(R.layout.activity_song_details);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         ButterKnife.bind(this);
+
+        // Keep screen awake setting
+        if (Prefs.getBoolean("keep_screen_on", false)) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
 
         setDisplaySongs();
 
@@ -93,11 +102,13 @@ public class EditActivity extends BaseActivity {
 
             toolbar.setTitle(mBook.getName());
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
 
         } catch (Exception ax) {
 
-            Toast.makeText(this, "Numero introvable", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.numero_introuvable, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -308,7 +319,7 @@ public class EditActivity extends BaseActivity {
         alert.setView(seekBar);
 
 
-        alert.setPositiveButton("Enregistrer", new DialogInterface.OnClickListener() {
+        alert.setPositiveButton(R.string.enregistrer, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
 
                 Prefs.putFloat("TextSize", seekBar.getProgress());
@@ -316,7 +327,7 @@ public class EditActivity extends BaseActivity {
             }
         });
 
-        alert.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+        alert.setNegativeButton(R.string.annuler, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int whichButton) {
                 dialog.cancel();

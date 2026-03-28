@@ -15,7 +15,7 @@
     <string name="song_not_found">Error: cette chanson n\'existe pas !!</string>
     <string name="research">Rechercher</string>
     <string name="error_search">Numéro introuvable !!</string>
-    <string name="error_search_2">Numéro invalide !!</string>
+    <string name="error_search_2">Numéro invalide</string>
     <string name="cc">Collection des Cantiques</string>
     <string name="cv">Chant de Victoire</string>
     <string name="nm">Nyimbo za Mungu</string>
@@ -86,7 +86,7 @@
     <string name="number_ot_exists">Ce numero n\'exist pas !</string>
     <string name="comment">%d Comments</string>
     <string name="like">%d Likes</string>
-    <string name="write_a_post">Commentaires</string>
+    <string name="write_a_post">Publier dans la communauté</string>
     <string name="advance_research">Recherche avancée</string>
     <string name="table_matieres">Table des Matières</string>
     <string name="help">Aide</string>
@@ -97,7 +97,7 @@
     <string name="view">Afficher</string>
     <string name="home">Accueil</string>
     <string name="discover">Audios</string>
-    <string name="community">Communautés</string>
+    <string name="community">Communauté</string>
     <string name="favorities">Favoris</string>
     <string name="settings">Paramètres</string>
     <string name="send_comment">Envoyer des commentaires</string>
@@ -113,7 +113,7 @@
     <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) …</string>
     <string name="thanks">Merci pour votre correction</string>
     <string name="comment_activity">Commentaires</string>
-    <string name="display_name">Prenom Ou Email</string>
+    <string name="display_name">Nom d\'affichage ou Email</string>
     <string name="sign_in">Connexion</string>
 
     <string name="time_ago_prefix" />
@@ -142,7 +142,7 @@
     <string name="search_in">Rechercher dans</string>
 
     <string name="add_to_favorites">Ajouter au favorites</string>
-    <string name="corriger_erreur">Corriger l\'erreur</string>
+    <string name="corriger_erreur">Signaler une erreur</string>
     <string name="jaime">J\'aime</string>
     <string name="mode_jour_nuit">Mode Jour/Nuit</string>
 
@@ -173,14 +173,20 @@
     <string name="tab_text_1">SONGS</string>
     <string name="tab_text_2">ALBUMS</string>
     <string name="tab_text_3">LOCAL</string>
-    <string name="likes">Likes</string>
-    <string name="comments">Comments</string>
-    <string name="posted_date">23 d</string>
-    <string name="under_line">underline</string>
-    <string name="join_group">Join group</string>
+    <string name="likes">J\'aimes</string>
+    <string name="comments">Commentaires</string>
+    <string name="posted_date">23 j</string>
+    <string name="under_line">souligné</string>
+    <string name="join_group">Rejoindre le groupe</string>
     <string name="rechercher_dans">Rechercher dans</string>
     <string name="splash_title">RECUEIL DE CANTIQUES</string>
     <string name="splash_subtitle">Pour reunion d\'évangelisation et d\'édification</string>
     <string name="enter">Entrer</string>
+    <string name="keep_screen_on">Garder l\'écran allumé pendant la lecture</string>
+    <string name="send_feedback">Envoyer des commentaires</string>
+    <string name="version_2">Version </string>
+    <string name="msg_subscribed">Abonné au sujet météo</string>
+    <string name="msg_subscribe_failed">Échec de l\'abonnement au sujet météo</string>
+    <string name="msg_token_fmt">Jeton InstanceID: %s</string>
 
 </resources>

@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -52,6 +53,9 @@ public class ItemActivity extends BaseActivity {
     public static Page currentPage;
     public static Book currentBook;
     private Toolbar toolbar;
+    private ViewPager viewPager;
+    private ImageButton btnPrev;
+    private ImageButton btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +67,39 @@ public class ItemActivity extends BaseActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
 
-        // Keep screen awake
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // Keep screen awake setting
+        if (Prefs.getBoolean("keep_screen_on", false)) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
 
         navigationDrawer(savedInstanceState, null);
 
         setFabMenu();
 
+        btnPrev = findViewById(R.id.btn_prev);
+        btnNext = findViewById(R.id.btn_next);
+
         initPageContent();
+
+        btnPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (viewPager.getCurrentItem() > 0) {
+                    viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+                }
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (viewPager.getCurrentItem() < currentBook.count() - 1) {
+                    viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+                }
+            }
+        });
 
         try {
             currentPage.toggleRecent();
@@ -83,12 +112,15 @@ public class ItemActivity extends BaseActivity {
 
         setDisplaySong(currentPage);
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager);
 
         PagerAdapter1 adapter = new PagerAdapter1(getSupportFragmentManager(), currentBook.count());
 
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(currentPage.getId() - 1);
+        
+        updateNavigationButtons(viewPager.getCurrentItem());
+
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -99,7 +131,7 @@ public class ItemActivity extends BaseActivity {
             public void onPageSelected(int position) {
                 currentPage = currentBook.getPage(position);
                 updateIconFabMenuButton();
-                toolbar.setSubtitle(currentPage.getNumber() + currentPage.getTitle());
+                updateDisplay(position);
             }
 
             @Override
@@ -111,11 +143,23 @@ public class ItemActivity extends BaseActivity {
         LogUtil.d();
     }
 
+    private void updateDisplay(int position) {
+        toolbar.setSubtitle(String.format("%s (%d / %d)", currentPage.getNumber() + currentPage.getTitle(), position + 1, currentBook.count()));
+        updateNavigationButtons(position);
+    }
+
+    private void updateNavigationButtons(int position) {
+        btnPrev.setEnabled(position > 0);
+        btnPrev.setAlpha(position > 0 ? 1.0f : 0.5f);
+        btnNext.setEnabled(position < currentBook.count() - 1);
+        btnNext.setAlpha(position < currentBook.count() - 1 ? 1.0f : 0.5f);
+    }
+
     private void setDisplaySong(Page currentPage) {
 
         try {
 
-            toolbar.setSubtitle(currentPage.getNumber() + currentPage.getTitle());
+            toolbar.setSubtitle(String.format("%s (%d / %d)", currentPage.getNumber() + currentPage.getTitle(), currentPage.getId(), currentBook.count()));
             toolbar.setTitle(currentBook.getName());
 
             updateIconFabMenuButton();
@@ -130,7 +174,7 @@ public class ItemActivity extends BaseActivity {
         int mNumOfTabs;
 
         public PagerAdapter1(FragmentManager fm, int NumOfTabs) {
-            super(fm);
+            super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
             this.mNumOfTabs = NumOfTabs;
         }
 
@@ -421,6 +465,3 @@ public class ItemActivity extends BaseActivity {
 
         }
 }
-
-
-

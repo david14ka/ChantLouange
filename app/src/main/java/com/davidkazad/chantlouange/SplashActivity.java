@@ -3,6 +3,7 @@ package com.davidkazad.chantlouange;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +16,13 @@ import com.davidkazad.chantlouange.config.utils.LogUtil;
 public class SplashActivity extends AppCompatActivity {
 
     private ActivitySplashBinding binding;
-    OB obBook = new OB();
-    private static final String TAG = "Splash";
+    private Handler handler = new Handler(Looper.getMainLooper());
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            enter();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +30,12 @@ public class SplashActivity extends AppCompatActivity {
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-            }
-
-        }, 2000);
+        handler.postDelayed(runnable, 1500);
 
         binding.btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                handler.removeCallbacks(runnable);
                 enter();
             }
         });
@@ -49,5 +50,11 @@ public class SplashActivity extends AppCompatActivity {
 
     public void slogan(View view) {
         //startActivity(new Intent(getApplicationContext(), MusicActivity.class));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacks(runnable);
     }
 }

@@ -28,30 +28,61 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
+
+            <!-- Night Mode -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:layout_marginBottom="20dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:drawablePadding="10dp"
+                    android:layout_weight="1"
                     android:text="@string/night_mode"
                     android:textColor="?attr/textColor"/>
 
                 <Switch
                     android:id="@+id/switch1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Switch" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="?attr/bg_underline"/>
+
+            <!-- Keep Screen On -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/keep_screen_on"
+                    android:textColor="?attr/textColor"/>
+
+                <Switch
+                    android:id="@+id/switch_keep_screen_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/bg_underline"/>
+
+            <!-- Text Size -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,26 +91,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawablePadding="10dp"
                     android:text="@string/text_size"
                     android:textColor="?attr/textColor"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:layout_margin="10dp">
                     <SeekBar
                         android:id="@+id/seekBar"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:max="3"
                         />
                     <TextView
                         android:id="@+id/txtSize"
-                        android:layout_width="wrap_content"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="18dp"
+                        android:text="Medium"
                         android:textColor="?attr/textColor"/>
 
                 </LinearLayout>
@@ -89,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="?attr/textColor"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="20dp"
                     android:text="@string/sample_text"
                     />
             </LinearLayout>

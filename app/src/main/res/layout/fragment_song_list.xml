@@ -9,6 +9,8 @@
         android:id="@+id/recycler_song"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
         android:visibility="visible">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -17,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/grid_song"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
         android:numColumns="auto_fit"
         android:visibility="gone">
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     >
     <com.google.android.material.appbar.AppBarLayout
@@ -24,20 +24,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_layout"
         android:layout_below="@+id/app">
-
-        <ImageView
-            android:id="@+id/slide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:src="@drawable/common_full_open_on_phone"
-            android:visibility="gone"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent" />
+            android:layout_height="match_parent" />
 
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/menu_red"
@@ -96,85 +89,35 @@
 
     </FrameLayout>
 
-
     <LinearLayout
-        android:id="@+id/bottom"
+        android:id="@+id/navigation_layout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/appIntroBottomBarHeight"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/transparent"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="?attr/colorPrimary">
 
-        <TextView
-            android:id="@+id/bottom_separator"
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#55000000" />
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_skip_previous"
+            app:tint="@android:color/white"
+            android:contentDescription="Previous" />
 
-        <FrameLayout
-            android:id="@+id/bottomContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_skip_next"
+            app:tint="@android:color/white"
+            android:contentDescription="Next" />
 
-            <FrameLayout
-                android:id="@+id/indicator_container"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layoutDirection="ltr"
-                android:visibility="gone"/>
-
-            <ImageButton
-                android:id="@+id/skip"
-                style="@style/AppIntroButtonStyleCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:minWidth="100dp"
-                android:labelFor="@string/app_intro_skip_button"
-                android:text="@string/app_intro_skip_button"
-                android:textColor="@android:color/white" />
-
-            <ImageButton
-                android:id="@+id/back"
-                style="@style/AppIntroButtonStyleCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:minWidth="100dp"
-                android:visibility="invisible"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/next"
-                style="@style/AppIntroButtonStyleCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:minWidth="100dp"
-                tools:ignore="ContentDescription" />
-
-            <Button
-                android:id="@+id/done"
-                style="@style/AppIntroButtonStyleCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:minWidth="100dp"
-                android:labelFor="@string/app_intro_done_button"
-                android:text="@string/app_intro_done_button"
-                android:textColor="@android:color/white"
-                android:visibility="gone" />
-        </FrameLayout>
     </LinearLayout>
+
 </RelativeLayout>
