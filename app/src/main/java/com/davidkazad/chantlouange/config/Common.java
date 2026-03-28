@@ -1,7 +1,5 @@
 package com.davidkazad.chantlouange.config;
 
-import android.health.connect.datatypes.AppInfo;
-
 import com.davidkazad.chantlouange.models.Post;
 import com.davidkazad.chantlouange.models.User;
 import com.google.firebase.database.DatabaseReference;
