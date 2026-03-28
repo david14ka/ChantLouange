@@ -50,6 +50,7 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
     GridView grid_song;
 
     private TextView resultCountView;
+    private android.widget.CheckBox checkSearchLyrics;
     private LinearLayout emptyView;
 
     private List<Page> pageList;
@@ -86,7 +87,14 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
 
         grid_song     = view.findViewById(R.id.grid_song);
         resultCountView = view.findViewById(R.id.result_count);
+        checkSearchLyrics = view.findViewById(R.id.check_search_lyrics);
         emptyView     = view.findViewById(R.id.empty_view);
+
+        if (checkSearchLyrics != null) {
+            checkSearchLyrics.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                applySearch(currentQuery);
+            });
+        }
 
         grid_song.setVisibility(View.VISIBLE);
         grid_song.setOnItemClickListener(this);
@@ -128,7 +136,8 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
                     ? bookItem.sort()
                     : bookItem.getPages();
         } else {
-            pageList = bookItem.searchPage(currentQuery);
+            boolean searchInLyrics = (checkSearchLyrics != null && checkSearchLyrics.isChecked());
+            pageList = bookItem.searchPage(currentQuery, !searchInLyrics);
             if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
                 pageList = bookItem.sort(pageList);
             }
@@ -146,6 +155,11 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
             } else {
                 resultCountView.setVisibility(View.GONE);
             }
+        }
+
+        // Checkbox visibility
+        if (checkSearchLyrics != null) {
+            checkSearchLyrics.setVisibility(hasQuery ? View.VISIBLE : View.GONE);
         }
 
         // Empty state / grid visibility
@@ -199,6 +213,7 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
     // -------------------------------------------------------------------------
 
     private class HolderItem {
+        public View      cardLayout;
         public TextView  number;
         public TextView  title;
         public ImageView fav;
@@ -227,6 +242,7 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
                 }
 
                 holder        = new HolderItem();
+                holder.cardLayout = convertView.findViewById(R.id.layout);
                 holder.number = convertView.findViewById(R.id.txt_number);
                 holder.title  = convertView.findViewById(R.id.txt_tittle);
                 holder.fav    = convertView.findViewById(R.id.fav);
@@ -242,13 +258,17 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
 
             if (mPage.getId() < 0) {
                 // Alphabetic section header
-                holder.letter.setText(mPage.getTitle());
-                holder.letter.setVisibility(View.VISIBLE);
+                if (holder.cardLayout != null) holder.cardLayout.setVisibility(View.GONE);
+                if (holder.letter != null) {
+                    holder.letter.setText(mPage.getTitle());
+                    holder.letter.setVisibility(View.VISIBLE);
+                }
                 holder.number.setVisibility(View.INVISIBLE);
                 holder.note.setVisibility(View.GONE);
                 holder.title.setVisibility(View.GONE);
             } else {
-                holder.letter.setVisibility(View.GONE);
+                if (holder.cardLayout != null) holder.cardLayout.setVisibility(View.VISIBLE);
+                if (holder.letter != null) holder.letter.setVisibility(View.GONE);
                 holder.title.setVisibility(View.VISIBLE);
                 holder.title.setGravity(Gravity.LEFT);
                 holder.number.setVisibility(View.VISIBLE);

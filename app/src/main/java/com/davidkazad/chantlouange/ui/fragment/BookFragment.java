@@ -80,6 +80,8 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                     convertView = inflater.inflate(R.layout.item_book, parent, false);
                     holder.bookName = convertView.findViewById(R.id.book_name);
                     holder.bookImage = convertView.findViewById(R.id.book_image);
+                    holder.bookTag = convertView.findViewById(R.id.book_tag);
+                    holder.bookCount = convertView.findViewById(R.id.book_count);
 
                     convertView.setTag(holder);
 
@@ -89,8 +91,10 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                 }
 
 
-                String bookName = Book.bookList.get(position).getName();
-                int bookImage = Book.bookList.get(position).getImage();
+                Book currentBook = Book.bookList.get(position);
+                String bookName = currentBook.getName();
+                int bookImage = currentBook.getImage();
+                int songCount = currentBook.getPages() != null ? currentBook.getPages().size() : 0;
 
                 Resources res = getResources();
                 Log.d("TAG BookImage : ", bookName + " : "+ bookImage);
@@ -98,6 +102,19 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
 
                 holder.bookName.setText(bookName);
                 holder.bookImage.setImageDrawable(drawableBookImage);
+
+                // Populate song count 
+                if (songCount > 0) {
+                    holder.bookCount.setVisibility(View.VISIBLE);
+                    holder.bookCount.setText(songCount + " Chants");
+                } else {
+                    holder.bookCount.setVisibility(View.GONE);
+                }
+
+                // Populate category tag based on position for varied editorial look
+                holder.bookTag.setVisibility(View.VISIBLE);
+                String[] tags = {"CLASSIQUE", "TRADITIONNEL", "LITURGIQUE", "HÉRITAGE", "RENAISSANCE", "RECUEIL", "SPÉCIAL", "COLLECTION"};
+                holder.bookTag.setText(tags[position % tags.length]);
 
 
 
@@ -142,6 +159,8 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
     private class BookHolder {
         public ImageView bookImage;
         public TextView bookName;
+        public TextView bookTag;
+        public TextView bookCount;
     }
 
 }

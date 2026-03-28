@@ -1,81 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_4">
 
-    <LinearLayout
+    <!-- Primary Card for actual song items (similar to item_numerique) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/layout">
+        app:cardBackgroundColor="@color/surface_container_high"
+        app:cardCornerRadius="@dimen/radius_lg"
+        app:cardElevation="0dp">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/note"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/note"
-                android:visibility="visible"/>
-            <ImageView
-                android:id="@+id/fav"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/star0"
-                android:visibility="gone"
-                android:layout_gravity="top" />
-
-        </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="5dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingRight="5dp">
+            android:padding="@dimen/spacing_4">
 
-            <TextView
-                android:id="@+id/txt_letter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A"
-                android:visibility="gone"
-                android:background="@drawable/button_alpha"
-                android:layout_gravity="center"
-                android:textColor="?attr/textColor"
-                android:textSize="18dp"
-                android:lines="1"/>
-            <TextView
-                android:id="@+id/txt_tittle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Grand Dieu nous te benissons!"
-                android:textColor="?attr/textColor"
-                android:textSize="18dp"
-                android:lines="1"/>
             <TextView
                 android:id="@+id/txt_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_number"
-                android:gravity="center"
-                android:textSize="14dp"
-                android:layout_marginLeft="5dp"
-                android:textColor="?attr/textColor"/>
-        </LinearLayout>
+                android:text="344B"
+                android:textColor="@color/on_primary_container"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txt_tittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingMultiplier="1.6"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/fav"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Secondary elements (Notes / Favorites) pinned to top right -->
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/star0"
+                android:visibility="gone"
+                android:contentDescription="@string/fav_preferences"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/note"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/note"
+                android:visibility="gone"
+                android:contentDescription="@string/note"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Alphabet Section Header overlayed on top, but effectively separates sections -->
+    <!-- Usually when ListFragment encounters an item with negative ID, it hides other 
+         fields and shows txt_letter. We just need to ensure txt_letter has a transparent
+         or matching background to hover over the list elegantly. -->
     <TextView
+        android:id="@+id/txt_letter"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/layout"
-        android:background="?attr/bg_underline" />
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/spacing_6"
+        android:text="A"
+        android:textColor="@color/tertiary_fixed"
+        android:textSize="48sp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@android:color/transparent" /> <!-- Fully transparent for the new background image mode -->
 
-</RelativeLayout>
+</FrameLayout>

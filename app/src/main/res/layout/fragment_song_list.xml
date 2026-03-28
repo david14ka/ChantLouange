@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bground"
+    android:paddingHorizontal="@dimen/spacing_4">
 
     <!-- Result count bar — shown only during an active search -->
     <TextView
@@ -12,12 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="16dp"
-        android:paddingVertical="6dp"
+        android:paddingTop="6dp"
         android:textSize="12sp"
         android:textColor="@color/green"
         android:visibility="gone"
         tools:text="5 songs found"
         tools:visibility="visible"/>
+
+    <!-- Search in lyrics option -->
+    <CheckBox
+        android:id="@+id/check_search_lyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:text="@string/search_in_lyrics"
+        android:textColor="?attr/textColor"
+        android:buttonTint="?attr/colorAccent"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -39,6 +53,8 @@
             android:paddingBottom="80dp"
             android:clipToPadding="false"
             android:numColumns="auto_fit"
+            android:verticalSpacing="@dimen/spacing_4"
+            android:horizontalSpacing="@dimen/spacing_4"
             android:visibility="gone"/>
 
         <!-- Empty state — shown when search returns no results -->

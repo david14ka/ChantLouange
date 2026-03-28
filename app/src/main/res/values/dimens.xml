@@ -6,7 +6,7 @@
 
     <dimen name="itemTextColor">18</dimen>
     <dimen name="textColor">18</dimen>
-    <dimen name="book_height">128dp</dimen>
+    <dimen name="book_height">220dp</dimen>
     <dimen name="table_footer_size">16sp</dimen>
     <dimen name="notification_large_dim">256dp</dimen>
     <dimen name="appbar_padding">16dp</dimen>
@@ -20,4 +20,10 @@
     <dimen name="bottom_sheet_corner_radius">16dp</dimen>
     <dimen name="dlg_permission_icon_size">96dp</dimen>
     <dimen name="selected_card_stroke_width">0.1dp</dimen>
+
+    <!-- Sacred Archive Design System Spacing & Radius -->
+    <dimen name="spacing_4">16dp</dimen>
+    <dimen name="spacing_6">24dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
 </resources>

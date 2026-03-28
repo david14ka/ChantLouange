@@ -45,4 +45,19 @@
     <color name="gray_900">#212121</color>
     <color name="grey_font">#757575</color>
 
+    <!-- ── Editorial Dark Design System ──────────────────────── -->
+    <color name="ed_surface">#111111</color>
+    <color name="ed_card">#1E1E1E</color>
+    <color name="ed_accent">#C62828</color>
+    <color name="ed_text_secondary">#9E9E9E</color>
+    <color name="ed_number_bg">#2A1515</color>
+    
+    <!-- ── Sacred Archive Design System ──────────────────────── -->
+    <color name="surface">#131313</color>
+    <color name="surface_container_low">#1A1A1A</color>
+    <color name="surface_container_high">#99222222</color>
+    <color name="primary_container">#C62828</color>
+    <color name="on_primary_container">#FFDAD6</color>
+    <color name="tertiary_fixed">#F5E0B7</color>
+
 </resources>
