@@ -57,7 +57,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Result count -->
     <TextView
         android:id="@+id/result_count"
         android:layout_width="match_parent"
@@ -82,7 +81,6 @@
             android:clipToPadding="false"
             android:paddingBottom="80dp" />
 
-        <!-- Empty state -->
         <LinearLayout
             android:id="@+id/empty_view"
             android:layout_width="match_parent"
