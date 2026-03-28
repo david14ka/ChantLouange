@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="24dp">
+
+    <!-- Verse Number (Optional) -->
+    <TextView
+        android:id="@+id/txt_verse_number"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_container"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"
+        tools:text="1."
+        tools:visibility="visible" />
+
+    <!-- Verse Text -->
+    <TextView
+        android:id="@+id/txt_verse_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:lineSpacingMultiplier="1.3"
+        tools:text="Grand Dieu, nous te bénissons,\nNous célébrons tes louanges ;\nÉternel, nous t’exaltons,\nAvec les chœurs des saints anges !" />
+
+</LinearLayout>

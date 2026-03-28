@@ -45,7 +45,7 @@ public class EditActivity extends BaseActivity {
     @BindView(R.id.text)
     TextView textView;
     private Toolbar toolbar;
-    @BindView(R.id.edit) EditText editText;
+    @BindView(R.id.edit) EditText   editText;
     @BindView(R.id.annuler)
     Button buttonAnnuler;
     @BindView(R.id.envoyer) Button buttonEnvoyer;

@@ -58,11 +58,10 @@ public class ListActivity extends BaseActivity {
         tabLayout.removeAllTabs();
 
         for (Book book : Book.bookList){
-
             tabLayout.addTab(tabLayout.newTab().setText(book.getAbbreviation()));
         }
 
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 

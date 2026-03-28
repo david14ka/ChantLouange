@@ -31,23 +31,20 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import butterknife.BindView;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class ItemFragment extends BaseFragment {
 
     private static final String TAG = "ItemFragment";
     private static final String EXTRA_PAGE_ID = "pageId";
     public static Book currentBook;
 
-    private TextView textView;
-    @BindView(R.id.edit)
-    EditText editText;
-    @BindView(R.id.annuler)
-    Button buttonAnnuler;
-    @BindView(R.id.envoyer)
-    Button buttonEnvoyer;
-    @BindView(R.id.layout_button)
-    LinearLayout layoutButton;
+    private LinearLayout lyricsContainer;
+    private TextView txtTitle, txtWatermark, txtCategory, txtAuthor, txtKey;
+    private float currentTextSize = 18f;
+
     private Page currentPage;
-    private RelativeLayout layout;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,8 +63,19 @@ public class ItemFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        textView = view.findViewById(R.id.text);
-        layout = view.findViewById(R.id.layout);
+        lyricsContainer = view.findViewById(R.id.lyrics_container);
+        txtTitle = view.findViewById(R.id.txt_title);
+        txtWatermark = view.findViewById(R.id.txt_watermark_number);
+        txtCategory = view.findViewById(R.id.txt_category);
+        txtAuthor = view.findViewById(R.id.txt_author);
+        txtKey = view.findViewById(R.id.txt_key);
+        
+        currentTextSize = Prefs.getFloat("TextSize", 18f);
+
+        // Control Pill Buttons
+        view.findViewById(R.id.btn_text_plus).setOnClickListener(v -> zoomText(2f));
+        view.findViewById(R.id.btn_text_minus).setOnClickListener(v -> zoomText(-2f));
+
         try {
 
             Bundle args = getArguments();
@@ -87,18 +95,75 @@ public class ItemFragment extends BaseFragment {
     }
 
     private void initPageContent() {
+        if (currentPage == null) return;
+        
+        txtTitle.setText(currentPage.getTitle());
+        txtWatermark.setText(currentPage.getNumber());
+        txtCategory.setText(currentBook.getName() != null ? currentBook.getName().toUpperCase() : "");
 
-        textView.setMovementMethod(new ScrollingMovementMethod());
-        textView.setText(currentPage.getContent());
-        textView.setTextSize(Prefs.getFloat("TextSize", 18));
-        textView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                resizeTextDialog();
-                return false;
+        String author = currentPage.getReference();
+        if (author != null && !author.trim().isEmpty()) {
+            txtAuthor.setText(author);
+            txtAuthor.setVisibility(View.VISIBLE);
+            if(getView() != null) getView().findViewById(R.id.ic_author).setVisibility(View.VISIBLE);
+        } else {
+            txtAuthor.setVisibility(View.GONE);
+            if(getView() != null) getView().findViewById(R.id.ic_author).setVisibility(View.GONE);
+        }
+        
+        txtKey.setVisibility(View.GONE);
+        if(getView() != null) getView().findViewById(R.id.ic_key).setVisibility(View.GONE);
+
+        parseAndRenderLyrics();
+    }
+    
+    private void parseAndRenderLyrics() {
+        lyricsContainer.removeAllViews();
+        String content = currentPage.getContent();
+        if (content == null) return;
+
+        String[] stanzas = content.split("\n\\s*\n");
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+
+        for (String stanza : stanzas) {
+            stanza = stanza.trim();
+            if (stanza.isEmpty()) continue;
+
+            if (stanza.toUpperCase().startsWith("REFRAIN") || stanza.toUpperCase().startsWith("CHOEUR")) {
+                String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR)\\s*:?\\s*", "").trim();
+                
+                View refrainView = inflater.inflate(R.layout.item_lyric_refrain, lyricsContainer, false);
+                TextView txtRefrain = refrainView.findViewById(R.id.txt_refrain_content);
+                txtRefrain.setText(text);
+                txtRefrain.setTextSize(currentTextSize);
+                lyricsContainer.addView(refrainView);
+            } else {
+                View verseView = inflater.inflate(R.layout.item_lyric_verse, lyricsContainer, false);
+                TextView txtContent = verseView.findViewById(R.id.txt_verse_content);
+                TextView txtNumber = verseView.findViewById(R.id.txt_verse_number);
+
+                Matcher m = Pattern.compile("^(\\d+\\.)\\s*(.*)", Pattern.DOTALL).matcher(stanza);
+                if (m.matches()) {
+                    txtNumber.setText(m.group(1));
+                    txtNumber.setVisibility(View.VISIBLE);
+                    txtContent.setText(m.group(2).trim());
+                } else {
+                    txtNumber.setVisibility(View.GONE);
+                    txtContent.setText(stanza);
+                }
+                
+                txtContent.setTextSize(currentTextSize);
+                lyricsContainer.addView(verseView);
             }
-        });
-
+        }
+    }
+    
+    private void zoomText(float diff) {
+        currentTextSize += diff;
+        if (currentTextSize < 12f) currentTextSize = 12f;
+        if (currentTextSize > 40f) currentTextSize = 40f;
+        Prefs.putFloat("TextSize", currentTextSize);
+        parseAndRenderLyrics();
     }
 
     public static ItemFragment getInstance(int songId) {
@@ -145,62 +210,11 @@ public class ItemFragment extends BaseFragment {
     }
 
     private void initTheme() {
-        if (Prefs.getBoolean("night_mode",false)){
-            //layout.setBackgroundColor(getResources().getColor(R.color.bg_day));
-            layout.setBackgroundResource(R.drawable.day_heaven);
-            textView.setBackgroundColor(getResources().getColor(R.color.bg_day_trans));
-            textView.setTextColor(Color.BLACK);
-            //textView.setTypeface(Typeface.MONOSPACE);
-        }else {
-            layout.setBackgroundColor(getResources().getColor(R.color.transparent));
-            textView.setTextColor(getResources().getColor(R.color.white));
-
-        }
+        // Obsolete UI bindings removed to prevent crash. Let default dark theme dominate.
     }
 
     private void resizeTextDialog() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
-        alert.setMessage(R.string.text_size); //Message here
-
-        final SeekBar seekBar = new SeekBar(getContext());
-        seekBar.setProgress((int) Prefs.getFloat("TextSize", 18));
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-                textView.setTextSize(progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        alert.setView(seekBar);
-
-
-        alert.setPositiveButton(R.string.enregistrer, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-
-                Prefs.putFloat("TextSize", seekBar.getProgress());
-                dialog.cancel();
-            }
-        });
-
-        alert.setNegativeButton(R.string.annuler, new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int whichButton) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alertDialog = alert.create();
-
-        alertDialog.show();
+       // Replaced by inline control pill buttons
     }
 
 }

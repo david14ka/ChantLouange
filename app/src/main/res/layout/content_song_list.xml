@@ -8,16 +8,18 @@
     tools:context=".ui.activities.ListActivity"
     tools:showIn="@layout/activity_song_list">
 
-    <customview.CustomTabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/white"
-        app:tabIndicatorHeight="3.9dp"
-        android:background="@color/colorPrimary"
-        app:tabTextColor="@color/white"
-        app:tabSelectedTextColor="@color/green"
-        android:elevation="6dp"
+        app:tabIndicatorColor="@color/tertiary_fixed"
+        app:tabIndicatorHeight="4dp"
+        android:background="#1A1A1A"
+        app:tabTextColor="@color/ed_text_secondary"
+        app:tabSelectedTextColor="@color/tertiary_fixed"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:elevation="0dp"
+        app:tabRippleColor="@color/tertiary_fixed"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
