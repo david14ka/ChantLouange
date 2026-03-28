@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?android:colorBackground"
     tools:context=".ui.activities.GlobalSearchActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -23,31 +22,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorPrimaryDark"
             android:orientation="vertical"
             android:paddingHorizontal="16dp"
-            android:paddingBottom="8dp">
+            android:paddingVertical="8dp">
 
-            <androidx.cardview.widget.CardView
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:iconifiedByDefault="false"
-                    app:queryHint="@string/action_search" />
-                    
-            </androidx.cardview.widget.CardView>
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/action_search" />
 
             <CheckBox
                 android:id="@+id/check_search_lyrics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:buttonTint="@color/white"
                 android:textColor="@color/white"
                 android:textSize="12sp"

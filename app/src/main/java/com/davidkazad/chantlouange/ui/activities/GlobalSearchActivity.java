@@ -182,7 +182,12 @@ public class GlobalSearchActivity extends BaseActivity {
             if (start >= 0) {
                 SpannableString spannable = new SpannableString(text);
                 spannable.setSpan(
-                        new BackgroundColorSpan(Color.parseColor("#55FFD700")),
+                        new BackgroundColorSpan(Color.parseColor("#88FFD700")),
+                        start,
+                        start + query.length(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                spannable.setSpan(
+                        new android.text.style.ForegroundColorSpan(Color.BLACK),
                         start,
                         start + query.length(),
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
