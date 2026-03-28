@@ -43,5 +43,6 @@
     <color name="blue_gray">#B0BEC5</color>
     <color name="gray_50">#FAFAFA</color>
     <color name="gray_900">#212121</color>
+    <color name="grey_font">#757575</color>
 
 </resources>

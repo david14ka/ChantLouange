@@ -146,20 +146,61 @@ public class ListActivity extends BaseActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_list, menu);
         search(menu);
+        
+        // Hide standard findItem dialog and wire up quick jump bar
+        View quickJumpBar = findViewById(R.id.quick_jump_bar);
+        android.widget.EditText editQuickJump = findViewById(R.id.edit_quick_jump);
+        android.widget.Button btnQuickJumpGo = findViewById(R.id.btn_quick_jump_go);
+        
+        btnQuickJumpGo.setOnClickListener(v -> {
+            String query = editQuickJump.getText().toString().trim();
+            if (query.isEmpty()) return;
+            
+            // Search inside the current active book
+            java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
+            
+            if (results.size() >= 1) {
+                // To keep it simple, just navigate to the first match
+                // (find() returns size 1 usually, unless "1a" / "1b")
+                ItemActivity.currentBook = bookItem;
+                ItemActivity.currentPage = results.get(0);
+                startActivity(new Intent(ListActivity.this, ItemActivity.class));
+                
+                // Reset so it's clean next time
+                editQuickJump.setText("");
+                quickJumpBar.setVisibility(View.GONE);
+                
+                // Hide keyboard
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
+            } else {
+                android.widget.Toast.makeText(getApplicationContext(), R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
+            }
+        });
+        
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-
         if (id == R.id.action_find) {
-            findItem();
+            // Toggle visibility of quick jump bar
+            View quickJumpBar = findViewById(R.id.quick_jump_bar);
+            if (quickJumpBar.getVisibility() == View.VISIBLE) {
+                quickJumpBar.setVisibility(View.GONE);
+                // hide keyboard
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                if (imm != null) imm.hideSoftInputFromWindow(quickJumpBar.getWindowToken(), 0);
+            } else {
+                quickJumpBar.setVisibility(View.VISIBLE);
+                android.widget.EditText editQuickJump = findViewById(R.id.edit_quick_jump);
+                editQuickJump.requestFocus();
+                // show keyboard
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
+            }
             return true;
         }
         if (id == R.id.action_sort) {
@@ -190,20 +231,14 @@ public class ListActivity extends BaseActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
-                ListFragment.query = query;
-                invalidateOptionsMenu();
-
+                // Let EventBus or the instance field handle it
+                EventBus.getDefault().post(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String query) {
-
-                ListFragment.query = query;
                 EventBus.getDefault().post(query);
-                //Arrays.
-                Log.d(TAG, "onQueryTextChange: ");
                 return false;
             }
         });
@@ -212,12 +247,10 @@ public class ListActivity extends BaseActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        ListFragment.query = null;
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        ListFragment.query = null;
     }
 }

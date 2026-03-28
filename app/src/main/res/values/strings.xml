@@ -193,5 +193,8 @@
     <string name="version_2">Version </string>
     <string name="no_results">No results found</string>
     <string name="result_count">%d results found</string>
+    <string name="search_all_books">Global Search</string>
+    <string name="search_in_lyrics">Also search in lyrics</string>
+    <string name="title_activity_global_search">Global Search</string>
 
 </resources>

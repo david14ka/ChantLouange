@@ -33,29 +33,28 @@ public class SearchFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("C.C"));
-        tabLayout.addTab(tabLayout.newTab().setText("C.V"));
-        tabLayout.addTab(tabLayout.newTab().setText("N.M"));
-        tabLayout.addTab(tabLayout.newTab().setText("N.W"));
+        
+        // Dynamically add all available books
+        for (com.davidkazad.chantlouange.models.Book book : com.davidkazad.chantlouange.models.Book.bookList) {
+            tabLayout.addTab(tabLayout.newTab().setText(book.getAbbreviation()));
+        }
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
-
-        viewPager.setCurrentItem(1);
 
         PagerAdapter1 adapter = new PagerAdapter1(getChildFragmentManager(), tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        int tabIndex = 1;
-        tabLayout.setScrollPosition(tabIndex, 0f, true);
+        int tabIndex = 0; // Default to first tab (CC)
         viewPager.setCurrentItem(tabIndex);
+        tabLayout.setScrollPosition(tabIndex, 0f, true);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
                 viewPager.setCurrentItem(tab.getPosition());
             }
 

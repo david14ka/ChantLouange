@@ -117,7 +117,7 @@ public class HomeActivity extends BaseActivity {
         int id = item.getItemId();
 
         if (id == R.id.app_bar_search) {
-            findItem();
+            startActivity(new Intent(this, GlobalSearchActivity.class));
             return true;
         }if (id == R.id.action_settings) {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));

@@ -21,11 +21,45 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
+    <LinearLayout
+        android:id="@+id/quick_jump_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_layout"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:background="?attr/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/edit_quick_jump"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/number"
+            android:textColorHint="@color/grey_font"
+            android:textColor="@color/white"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:backgroundTint="@color/white"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/btn_quick_jump_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            style="@style/Widget.AppCompat.Button.Colored" />
+    </LinearLayout>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout" />
+        android:layout_below="@id/quick_jump_bar" />
 
     <TextView
         android:layout_width="wrap_content"

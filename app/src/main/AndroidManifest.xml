@@ -134,6 +134,17 @@
                 android:value=".ui.activities.HomeActivity" />
         </activity>
         <activity android:name=".ui.nofications.NotificationActivity" />
+        
+        <activity 
+            android:name=".ui.activities.GlobalSearchActivity"
+            android:label="@string/search_all_books"
+            android:theme="@style/MyAppTheme"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.HomeActivity" />
+        </activity>
+        
     </application>
 
 
