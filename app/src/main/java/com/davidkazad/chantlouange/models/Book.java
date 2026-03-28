@@ -77,21 +77,26 @@ public abstract class Book {
     abstract public List<Page> getPages();
 
     public List<Page> searchPage(String query) {
+        return searchPage(query, false);
+    }
+
+    public List<Page> searchPage(String query, boolean titleOnly) {
 
         if (!query.equals("")) {
 
             List<Page> pageList = new ArrayList<>();
+            String tmp2 = query.toLowerCase();
 
-            for (Page page :
-                    this.getPages()) {
-                String title = page.getNumber() + page.getTitle();
+            for (Page page : this.getPages()) {
+                String number    = page.getNumber();
+                String titleLow  = page.getTitle().toLowerCase();
+                String searchStr = number + " " + titleLow;
 
-                String number = page.getNumber();
-                String tmp0 = page.getTitle().toLowerCase();
-                String tmp1 = number + " " + tmp0;
-                String tmp2 = query.toLowerCase();
+                if (!titleOnly && page.getContent() != null) {
+                    searchStr += " " + page.getContent().toLowerCase();
+                }
 
-                if (tmp1.contains(tmp2)) {
+                if (searchStr.contains(tmp2)) {
                     pageList.add(page);
                 }
             }

@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout">
+    android:id="@+id/layout"
+    android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_song"
+    <!-- Result count bar — shown only during an active search -->
+    <TextView
+        android:id="@+id/result_count"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="80dp"
-        android:clipToPadding="false"
-        android:visibility="visible">
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:textSize="12sp"
+        android:textColor="@color/green"
+        android:visibility="gone"
+        tools:text="5 songs found"
+        tools:visibility="visible"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <GridView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/grid_song"
-        android:paddingBottom="80dp"
-        android:clipToPadding="false"
-        android:numColumns="auto_fit"
-        android:visibility="gone">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    </GridView>
-</FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:visibility="visible"/>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/grid_song"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:numColumns="auto_fit"
+            android:visibility="gone"/>
+
+        <!-- Empty state — shown when search returns no results -->
+        <LinearLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍"
+                android:textSize="48sp"/>
+
+            <TextView
+                android:id="@+id/empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/textColor"
+                android:gravity="center"
+                android:text="@string/no_results"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

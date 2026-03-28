@@ -1,7 +1,11 @@
 package com.davidkazad.chantlouange.ui.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.BackgroundColorSpan;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -13,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.davidkazad.chantlouange.R;
@@ -38,33 +43,38 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
     public static final String TAG = ListFragment.class.getName();
     public static final String EXTRA_BOOK_ID = "bookId";
 
+    /** Kept static for backward-compat: ListActivity writes here before EventBus fires. */
     public static String query;
 
     @BindView(R.id.grid_song)
     GridView grid_song;
 
+    private TextView resultCountView;
+    private LinearLayout emptyView;
+
     private List<Page> pageList;
     private Book bookItem;
     private GridAdapter adapter;
 
-    public ListFragment() {
+    /** Per-instance copy so tabs don't share a stale query between each other. */
+    private String currentQuery = "";
 
-    }
+    public ListFragment() {}
 
     public static ListFragment getInstance(int bookId) {
         ListFragment fragment = new ListFragment();
         Bundle args = new Bundle();
         args.putInt(EXTRA_BOOK_ID, bookId);
         fragment.setArguments(args);
-
         return fragment;
     }
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_song_list, container, false);
-
     }
 
     @Override
@@ -74,7 +84,10 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
 
         LogUtil.d();
 
-        grid_song = view.findViewById(R.id.grid_song);
+        grid_song     = view.findViewById(R.id.grid_song);
+        resultCountView = view.findViewById(R.id.result_count);
+        emptyView     = view.findViewById(R.id.empty_view);
+
         grid_song.setVisibility(View.VISIBLE);
         grid_song.setOnItemClickListener(this);
 
@@ -83,45 +96,72 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
         }
 
         if (getArguments() != null) {
-
             int bookId = getArguments().getInt(EXTRA_BOOK_ID);
-
             bookItem = Book.bookList.get(bookId);
 
-            if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-
-                pageList = bookItem.sort();
-
-            } else
-
-                pageList = bookItem.getPages();
+            // Load the default page list
+            pageList = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
+                    ? bookItem.sort()
+                    : bookItem.getPages();
 
             adapter = new GridAdapter();
 
-            //if there is data in searchView
-            if (query != null && !query.equals("")) {
-
-                pageList = bookItem.searchPage(query);
-
-                if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-
-                    pageList = bookItem.sort(pageList);
-
-                }
-
+            // Apply any pre-existing query
+            if (query != null && !query.isEmpty()) {
+                applySearch(query);
             }
 
             grid_song.setAdapter(adapter);
         }
     }
 
-    private class HolderItem {
-        public TextView number;
-        public TextView title;
-        public ImageView fav;
-        public ImageView note;
-        public TextView letter;
+    // -------------------------------------------------------------------------
+    // Search handling
+    // -------------------------------------------------------------------------
+
+    private void applySearch(String q) {
+        currentQuery = (q == null) ? "" : q;
+        if (bookItem == null) return;
+
+        if (currentQuery.isEmpty()) {
+            pageList = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
+                    ? bookItem.sort()
+                    : bookItem.getPages();
+        } else {
+            pageList = bookItem.searchPage(currentQuery);
+            if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
+                pageList = bookItem.sort(pageList);
+            }
+        }
+
+        boolean hasQuery   = !currentQuery.isEmpty();
+        boolean hasResults = !pageList.isEmpty();
+
+        // Result count bar
+        if (resultCountView != null) {
+            if (hasQuery) {
+                resultCountView.setVisibility(View.VISIBLE);
+                resultCountView.setText(
+                        getString(R.string.result_count, pageList.size()));
+            } else {
+                resultCountView.setVisibility(View.GONE);
+            }
+        }
+
+        // Empty state / grid visibility
+        if (emptyView != null) {
+            emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
+        }
+        if (grid_song != null) {
+            grid_song.setVisibility(!hasQuery || hasResults ? View.VISIBLE : View.GONE);
+        }
+
+        if (adapter != null) adapter.notifyDataSetChanged();
     }
+
+    // -------------------------------------------------------------------------
+    // EventBus
+    // -------------------------------------------------------------------------
 
     @Override
     public void onStart() {
@@ -136,113 +176,121 @@ public class ListFragment extends BaseFragment implements AdapterView.OnItemClic
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEvent(String query) {
-
-        pageList = bookItem.searchPage(query);
-        adapter.notifyDataSetChanged();
-
+    public void onEvent(String q) {
+        applySearch(q);
     }
+
+    // -------------------------------------------------------------------------
+    // Item click
+    // -------------------------------------------------------------------------
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        //Toast.makeText(getContext(), pageList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
         final Page item = pageList.get(position);
-        if (item.getId()<0){
-            return;
-        }
+        if (item.getId() < 0) return;
+
         ItemActivity.currentPage = item;
         ItemActivity.currentBook = bookItem;
         startActivity(new Intent(getContext(), ItemActivity.class));
     }
 
+    // -------------------------------------------------------------------------
+    // Adapter
+    // -------------------------------------------------------------------------
+
+    private class HolderItem {
+        public TextView  number;
+        public TextView  title;
+        public ImageView fav;
+        public ImageView note;
+        public TextView  letter;
+    }
+
     private class GridAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return pageList.size();
-        }
 
-        @Override
-        public Object getItem(int position) {
-            return Book.bookList.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
+        @Override public int getCount()              { return pageList.size(); }
+        @Override public Object getItem(int pos)     { return pageList.get(pos); }
+        @Override public long   getItemId(int pos)   { return 0; }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            HolderItem holder = new HolderItem();
+            HolderItem holder;
 
             Page mPage = pageList.get(position);
 
             if (convertView == null) {
                 if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-
                     convertView = inflater.inflate(R.layout.item_alphabetique, parent, false);
                 } else {
-
                     convertView = inflater.inflate(R.layout.item_numerique, parent, false);
                 }
 
+                holder        = new HolderItem();
                 holder.number = convertView.findViewById(R.id.txt_number);
-                holder.title = convertView.findViewById(R.id.txt_tittle);
-                holder.fav = convertView.findViewById(R.id.fav);
-                holder.note = convertView.findViewById(R.id.note);
+                holder.title  = convertView.findViewById(R.id.txt_tittle);
+                holder.fav    = convertView.findViewById(R.id.fav);
+                holder.note   = convertView.findViewById(R.id.note);
                 try {
                     holder.letter = convertView.findViewById(R.id.txt_letter);
-                }catch (Exception r){
-
-                }
+                } catch (Exception ignored) { /* alphabetic mode only */ }
 
                 convertView.setTag(holder);
-
             } else {
-
                 holder = (HolderItem) convertView.getTag();
             }
 
-
-            holder.title.setText(mPage.getTitle());
-
-            if (mPage.getId()<0){
-
+            if (mPage.getId() < 0) {
+                // Alphabetic section header
                 holder.letter.setText(mPage.getTitle());
                 holder.letter.setVisibility(View.VISIBLE);
-
                 holder.number.setVisibility(View.INVISIBLE);
                 holder.note.setVisibility(View.GONE);
                 holder.title.setVisibility(View.GONE);
-
-            }else {
-
+            } else {
                 holder.letter.setVisibility(View.GONE);
                 holder.title.setVisibility(View.VISIBLE);
                 holder.title.setGravity(Gravity.LEFT);
                 holder.number.setVisibility(View.VISIBLE);
                 holder.note.setVisibility(View.VISIBLE);
+
+                // Highlight matched portion of the title
+                highlightText(holder.title, mPage.getTitle(), currentQuery);
             }
 
-            if (mPage.isFavorite()){
-                holder.fav.setVisibility(View.VISIBLE);
-            }else {
-                holder.fav.setVisibility(View.GONE);
-            }
+            holder.fav.setVisibility(mPage.isFavorite() ? View.VISIBLE : View.GONE);
+
             if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-                holder.number.setText(String.format(getString(R.string.txt_number), mPage.getNumber().replace(". ", "")));
-
+                holder.number.setText(String.format(
+                        getString(R.string.txt_number),
+                        mPage.getNumber().replace(". ", "")));
             } else {
                 holder.note.setVisibility(View.GONE);
                 holder.number.setText(mPage.getNumber().replace(". ", ""));
             }
 
-            //holder.number.setText(mPage.getNumber().replace(". ", ""));
-
-
             return convertView;
+        }
+
+        /** Applies a gold background span around the portion of {@code text} that
+         *  matches {@code query}. Falls back to plain text if no match or empty query. */
+        private void highlightText(TextView tv, String text, String query) {
+            if (query == null || query.isEmpty()) {
+                tv.setText(text);
+                return;
+            }
+            int start = text.toLowerCase().indexOf(query.toLowerCase());
+            if (start >= 0) {
+                SpannableString spannable = new SpannableString(text);
+                spannable.setSpan(
+                        new BackgroundColorSpan(Color.parseColor("#55FFD700")),
+                        start,
+                        start + query.length(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                tv.setText(spannable);
+            } else {
+                tv.setText(text);
+            }
         }
     }
 }
