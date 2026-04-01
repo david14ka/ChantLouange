@@ -23,9 +23,9 @@
     <color name="bg_underline">#5eeeeeee</color>
     <color name="bg_day">#fff</color>
     <color name="bg_day_trans">#1BFFFFFF</color>
-    <color name="black">#000000</color>
+    <color name="black">#131313</color> <!-- Replaced #000000 for Sacred Archive aesthetic -->
     <color name="light">#FAFAFA</color>
-    <color name="inverted">#060606</color>
+    <color name="inverted">#131313</color>
     <color name="red">#EF9A9A</color>
     <color name="pink">#F48FB1</color>
     <color name="purple">#CE93D8</color>
@@ -54,8 +54,12 @@
     
     <!-- ── Sacred Archive Design System ──────────────────────── -->
     <color name="surface">#131313</color>
+    <color name="surface_container_lowest">#0F0F0F</color>
     <color name="surface_container_low">#1A1A1A</color>
     <color name="surface_container_high">#99222222</color>
+    <color name="surface_bright">#4DFFFFFF</color> <!-- 30% opacity input fields -->
+    <color name="surface_glass">#D91A1A1A</color> <!-- 85% opacity surface-container for nav -->
+    
     <color name="primary_container">#C62828</color>
     <color name="on_primary_container">#FFDAD6</color>
     <color name="tertiary_fixed">#F5E0B7</color>
