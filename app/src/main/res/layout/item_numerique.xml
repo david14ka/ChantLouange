@@ -4,39 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/spacing_4"
     android:background="@drawable/item_song_border"
-    android:padding="@dimen/spacing_4">
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="16dp">
 
-        <!-- Hymn Number: Offset to top left, Serif font for authority -->
+        <!-- Hymn Number -->
         <TextView
             android:id="@+id/txt_number"
-            android:layout_width="wrap_content"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
             tools:text="344B"
             android:textColor="@color/on_primary_container"
-            android:textSize="24sp"
+            android:textSize="14sp"
             android:fontFamily="serif"
             android:textStyle="bold"
+            android:layout_marginEnd="8dp"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Title: Shifted inwards, Sans-serif for function, right-aligned to create tension -->
+        <!-- Title -->
         <TextView
             android:id="@+id/txt_tittle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
-            android:lineSpacingMultiplier="1.6"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/txt_number"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/fav"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:lineSpacingMultiplier="1.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txt_number"
+            app:layout_constraintEnd_toStartOf="@+id/fav" />
 
         <!-- Secondary elements (Notes / Favorites) pinned to top right -->
         <ImageView
