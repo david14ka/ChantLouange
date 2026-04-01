@@ -10,6 +10,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.models.Book;
@@ -52,12 +54,13 @@ public class ListFragment extends BaseFragment {
     TextView resultCountView;
 
     @BindView(R.id.empty_view)
-    LinearLayout emptyView;
+    View emptyView;
 
-    // Cross-book results views (bound manually because they may not exist in older layout variants)
+    // Cross-book results views (bound manually — not present in all layout variants)
     private RecyclerView recyclerOtherBooks;
     private TextView txtOtherBooksHeader;
     private CheckBox checkSearchLyrics;
+    private Button btnSearchOtherBooks;
 
     private List<Page> pageList = new ArrayList<>();
     private List<CrossBookResult> otherBookResults = new ArrayList<>();
@@ -107,6 +110,12 @@ public class ListFragment extends BaseFragment {
             recyclerOtherBooks.setLayoutManager(new LinearLayoutManager(getContext()));
             crossBookAdapter = new CrossBookAdapter();
             recyclerOtherBooks.setAdapter(crossBookAdapter);
+        }
+
+        // Button: search in other books (only visible when current book has no results)
+        btnSearchOtherBooks = view.findViewById(R.id.btn_search_other_books);
+        if (btnSearchOtherBooks != null) {
+            btnSearchOtherBooks.setOnClickListener(v -> searchInOtherBooks());
         }
 
         // Lyrics search checkbox
@@ -161,25 +170,19 @@ public class ListFragment extends BaseFragment {
         boolean hasQuery = !currentQuery.isEmpty();
         boolean hasResults = !pageList.isEmpty();
 
-        // --- Cross-book fallback ---
+        // Reset cross-book section — user must click the button again for each new query
         otherBookResults.clear();
-        if (hasQuery && !hasResults) {
-            for (Book other : Book.bookList) {
-                if (other == bookItem) continue;
-                List<Page> matches = other.searchPage(currentQuery, titleOnly);
-                for (Page p : matches) {
-                    otherBookResults.add(new CrossBookResult(other, p));
-                }
-            }
-        }
-        boolean hasOtherResults = !otherBookResults.isEmpty();
-
         if (recyclerOtherBooks != null && crossBookAdapter != null) {
             crossBookAdapter.notifyDataSetChanged();
-            recyclerOtherBooks.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+            recyclerOtherBooks.setVisibility(View.GONE);
         }
         if (txtOtherBooksHeader != null) {
-            txtOtherBooksHeader.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+            txtOtherBooksHeader.setVisibility(View.GONE);
+        }
+
+        // Show the "search in other books" button only when no results in the current book
+        if (btnSearchOtherBooks != null) {
+            btnSearchOtherBooks.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
         }
 
         if (resultCountView != null) {
@@ -191,13 +194,55 @@ public class ListFragment extends BaseFragment {
             }
         }
 
-        // Show empty view only when no results in current book AND no cross-book results either
+        // Show empty view when no results in current book (button inside will offer the cross-book option)
         if (emptyView != null) {
-            emptyView.setVisibility(hasQuery && !hasResults && !hasOtherResults ? View.VISIBLE : View.GONE);
+            emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
         }
         recyclerView.setVisibility(!hasQuery || hasResults ? View.VISIBLE : View.GONE);
 
         adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * Triggered by the "Search in other books" button.
+     * Searches all books except the active one and displays results below.
+     */
+    private void searchInOtherBooks() {
+        if (currentQuery.isEmpty()) return;
+
+        boolean titleOnly = checkSearchLyrics == null || !checkSearchLyrics.isChecked();
+
+        otherBookResults.clear();
+        for (Book other : Book.bookList) {
+            if (other == bookItem) continue;
+            List<Page> matches = other.searchPage(currentQuery, titleOnly);
+            for (Page p : matches) {
+                otherBookResults.add(new CrossBookResult(other, p));
+            }
+        }
+
+        boolean hasOtherResults = !otherBookResults.isEmpty();
+
+        // Hide the button — user already clicked it
+        if (btnSearchOtherBooks != null) {
+            btnSearchOtherBooks.setVisibility(View.GONE);
+        }
+
+        if (recyclerOtherBooks != null && crossBookAdapter != null) {
+            crossBookAdapter.notifyDataSetChanged();
+            recyclerOtherBooks.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+        }
+        if (txtOtherBooksHeader != null) {
+            txtOtherBooksHeader.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+        }
+
+        // If truly nothing found anywhere, update the empty message
+        if (!hasOtherResults && emptyView != null) {
+            TextView emptyText = emptyView.findViewById(R.id.empty_text);
+            if (emptyText != null) {
+                emptyText.setText(getString(R.string.no_results_anywhere));
+            }
+        }
     }
 
     @Override
