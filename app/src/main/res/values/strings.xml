@@ -196,6 +196,7 @@
     <string name="search_all_books">Global Search</string>
     <string name="search_in_lyrics">Also search in lyrics</string>
     <string name="title_activity_global_search">Global Search</string>
+    <string name="found_in_other_books">Found in other books</string>
     <!-- Favorites screen editorial design -->
     <string name="fav_subtitle">Your saved hymns, always within reach</string>
     <string name="fav_section_label">Saved Songs</string>

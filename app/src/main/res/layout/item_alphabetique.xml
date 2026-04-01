@@ -7,18 +7,12 @@
     android:layout_marginBottom="@dimen/spacing_4">
 
     <!-- Primary Card for actual song items (similar to item_numerique) -->
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/surface_container_high"
-        app:cardCornerRadius="@dimen/radius_lg"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/spacing_4">
+        android:background="@drawable/item_song_border"
+        android:padding="@dimen/spacing_4">
 
             <TextView
                 android:id="@+id/txt_number"
@@ -67,11 +61,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Alphabet Section Header overlayed on top, but effectively separates sections -->
-    <!-- Usually when ListFragment encounters an item with negative ID, it hides other 
+    <!-- Usually when ListFragment encounters an item with negative ID, it hides other
          fields and shows txt_letter. We just need to ensure txt_letter has a transparent
          or matching background to hover over the list elegantly. -->
     <TextView

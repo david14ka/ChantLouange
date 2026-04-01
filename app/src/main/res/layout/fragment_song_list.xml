@@ -21,7 +21,7 @@
         tools:text="5 songs found"
         tools:visibility="visible"/>
 
-    <!-- Search in lyrics option -->
+    <!-- Search in lyrics option — visible only during an active search -->
     <CheckBox
         android:id="@+id/check_search_lyrics"
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:horizontalSpacing="@dimen/spacing_4"
             android:visibility="gone"/>
 
-        <!-- Empty state — shown when search returns no results -->
+        <!-- Empty state — shown when search returns no results in any book -->
         <LinearLayout
             android:id="@+id/empty_view"
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🔍"
+                android:text="&#128269;"
                 android:textSize="48sp"/>
 
             <TextView
@@ -85,5 +85,32 @@
         </LinearLayout>
 
     </FrameLayout>
+
+    <!-- Cross-book results section — visible only when current book has no results
+         but other books contain a match -->
+    <TextView
+        android:id="@+id/txt_other_books_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/found_in_other_books"
+        android:textSize="11sp"
+        android:textAllCaps="true"
+        android:letterSpacing="0.08"
+        android:textColor="?attr/colorAccent"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_other_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:listitem="@layout/item_search_result"/>
 
 </LinearLayout>

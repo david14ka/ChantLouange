@@ -14,14 +14,14 @@
         android:layout_height="wrap_content"
         app:tabIndicatorColor="@color/tertiary_fixed"
         app:tabIndicatorHeight="4dp"
-        android:background="#1A1A1A"
+        android:background="?android:attr/windowBackground"
         app:tabTextColor="@color/ed_text_secondary"
         app:tabSelectedTextColor="@color/tertiary_fixed"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
         android:elevation="0dp"
         app:tabRippleColor="@color/tertiary_fixed"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"/>
 
     <LinearLayout
         android:id="@+id/quick_jump_bar"
@@ -63,18 +63,28 @@
         android:layout_height="fill_parent"
         android:layout_below="@id/quick_jump_bar" />
 
-    <TextView
+    <!-- Floating Table of Contents Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_trie"
+        style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/table_matieres"
-        android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:padding="12dp"
-        android:textSize="@dimen/table_footer_size"
+        android:layout_marginBottom="32dp"
+        android:text="@string/table_matieres"
         android:textColor="@color/white"
-        android:drawablePadding="15dp"
-        android:background="@color/trans"
-        android:onClick="trie"/>
+        app:backgroundTint="@color/app_primary"
+        app:cornerRadius="28dp"
+        app:icon="@drawable/sorting"
+        app:iconTint="@color/white"
+        app:strokeColor="#44FFFFFF"
+        app:strokeWidth="1dp"
+        android:onClick="trie"
+        android:elevation="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:textAllCaps="false"
+        android:letterSpacing="0.02" />
 
 </RelativeLayout>

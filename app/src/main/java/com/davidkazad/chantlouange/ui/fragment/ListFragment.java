@@ -10,6 +10,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,10 +54,24 @@ public class ListFragment extends BaseFragment {
     @BindView(R.id.empty_view)
     LinearLayout emptyView;
 
+    // Cross-book results views (bound manually because they may not exist in older layout variants)
+    private RecyclerView recyclerOtherBooks;
+    private TextView txtOtherBooksHeader;
+    private CheckBox checkSearchLyrics;
+
     private List<Page> pageList = new ArrayList<>();
+    private List<CrossBookResult> otherBookResults = new ArrayList<>();
     private Book bookItem;
     private SongAdapter adapter;
+    private CrossBookAdapter crossBookAdapter;
     private String currentQuery = "";
+
+    /** Simple holder pairing a page with the book it came from. */
+    private static class CrossBookResult {
+        final Book book;
+        final Page page;
+        CrossBookResult(Book book, Page page) { this.book = book; this.page = page; }
+    }
 
     public ListFragment() {}
 
@@ -80,9 +95,25 @@ public class ListFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Main list
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new SongAdapter();
         recyclerView.setAdapter(adapter);
+
+        // Cross-book results list (optional — only present in current layout)
+        recyclerOtherBooks = view.findViewById(R.id.recycler_other_books);
+        txtOtherBooksHeader = view.findViewById(R.id.txt_other_books_header);
+        if (recyclerOtherBooks != null) {
+            recyclerOtherBooks.setLayoutManager(new LinearLayoutManager(getContext()));
+            crossBookAdapter = new CrossBookAdapter();
+            recyclerOtherBooks.setAdapter(crossBookAdapter);
+        }
+
+        // Lyrics search checkbox
+        checkSearchLyrics = view.findViewById(R.id.check_search_lyrics);
+        if (checkSearchLyrics != null) {
+            checkSearchLyrics.setOnCheckedChangeListener((btn, checked) -> applySearch(currentQuery));
+        }
 
         if (getArguments() != null) {
             int bookId = getArguments().getInt(EXTRA_BOOK_ID);
@@ -107,12 +138,21 @@ public class ListFragment extends BaseFragment {
         currentQuery = (q == null) ? "" : q;
         if (bookItem == null) return;
 
+        // Determine whether to include lyrics in search
+        boolean searchInLyrics = checkSearchLyrics != null && checkSearchLyrics.isChecked();
+        boolean titleOnly = !searchInLyrics;
+
+        // Show/hide the lyrics checkbox only when a search is active
+        if (checkSearchLyrics != null) {
+            checkSearchLyrics.setVisibility(!currentQuery.isEmpty() ? View.VISIBLE : View.GONE);
+        }
+
         if (currentQuery.isEmpty()) {
             pageList = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)
                     ? bookItem.sort()
                     : bookItem.getPages();
         } else {
-            pageList = bookItem.searchPage(currentQuery);
+            pageList = bookItem.searchPage(currentQuery, titleOnly);
             if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
                 pageList = bookItem.sort(pageList);
             }
@@ -120,6 +160,27 @@ public class ListFragment extends BaseFragment {
 
         boolean hasQuery = !currentQuery.isEmpty();
         boolean hasResults = !pageList.isEmpty();
+
+        // --- Cross-book fallback ---
+        otherBookResults.clear();
+        if (hasQuery && !hasResults) {
+            for (Book other : Book.bookList) {
+                if (other == bookItem) continue;
+                List<Page> matches = other.searchPage(currentQuery, titleOnly);
+                for (Page p : matches) {
+                    otherBookResults.add(new CrossBookResult(other, p));
+                }
+            }
+        }
+        boolean hasOtherResults = !otherBookResults.isEmpty();
+
+        if (recyclerOtherBooks != null && crossBookAdapter != null) {
+            crossBookAdapter.notifyDataSetChanged();
+            recyclerOtherBooks.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+        }
+        if (txtOtherBooksHeader != null) {
+            txtOtherBooksHeader.setVisibility(hasOtherResults ? View.VISIBLE : View.GONE);
+        }
 
         if (resultCountView != null) {
             if (hasQuery) {
@@ -130,8 +191,9 @@ public class ListFragment extends BaseFragment {
             }
         }
 
+        // Show empty view only when no results in current book AND no cross-book results either
         if (emptyView != null) {
-            emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
+            emptyView.setVisibility(hasQuery && !hasResults && !hasOtherResults ? View.VISIBLE : View.GONE);
         }
         recyclerView.setVisibility(!hasQuery || hasResults ? View.VISIBLE : View.GONE);
 
@@ -240,6 +302,67 @@ public class ListFragment extends BaseFragment {
                 } else {
                     tv.setText(text);
                 }
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------
+    // Cross-book results adapter
+    // -----------------------------------------------------------------------
+
+    public class CrossBookAdapter extends RecyclerView.Adapter<CrossBookAdapter.ViewHolder> {
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_search_result, parent, false);
+            return new ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+            CrossBookResult result = otherBookResults.get(position);
+            Page page = result.page;
+            Book book = result.book;
+
+            holder.txtNumber.setText(page.getNumber().replace(". ", ""));
+            highlightText(holder.txtTitle, page.getTitle(), currentQuery);
+            holder.txtSubtitle.setText(book.getName());
+            holder.imgFav.setVisibility(page.isFavorite() ? View.VISIBLE : View.GONE);
+
+            holder.itemView.setOnClickListener(v -> {
+                ItemActivity.currentBook = book;
+                ItemActivity.currentPage = page;
+                startActivity(new Intent(getContext(), ItemActivity.class));
+            });
+        }
+
+        @Override
+        public int getItemCount() { return otherBookResults.size(); }
+
+        class ViewHolder extends RecyclerView.ViewHolder {
+            TextView txtNumber, txtTitle, txtSubtitle;
+            ImageView imgFav;
+            ViewHolder(View itemView) {
+                super(itemView);
+                txtNumber   = itemView.findViewById(R.id.txt_number);
+                txtTitle    = itemView.findViewById(R.id.txt_title);
+                txtSubtitle = itemView.findViewById(R.id.txt_subtitle);
+                imgFav      = itemView.findViewById(R.id.img_fav);
+            }
+        }
+
+        private void highlightText(TextView tv, String text, String query) {
+            if (query == null || query.isEmpty()) { tv.setText(text); return; }
+            int start = text.toLowerCase().indexOf(query.toLowerCase());
+            if (start >= 0) {
+                SpannableString s = new SpannableString(text);
+                s.setSpan(new BackgroundColorSpan(Color.parseColor("#88FFD700")), start, start + query.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                s.setSpan(new ForegroundColorSpan(Color.BLACK), start, start + query.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                tv.setText(s);
+            } else {
+                tv.setText(text);
             }
         }
     }
