@@ -112,7 +112,9 @@ public class ListActivity extends BaseActivity {
         android.widget.TextView btnSort = findViewById(R.id.btn_trie);
         if (btnSort != null) {
             boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
-            btnSort.setText(isAlpha ? "A Z" : "1 9");
+            btnSort.setText(isAlpha ? " A Z" : " 1 9");
+            int iconRes = isAlpha ? R.drawable.asorting : R.drawable.nsorting;
+            btnSort.setCompoundDrawablesWithIntrinsicBounds(iconRes, 0, 0, 0);
         }
     }
 

@@ -73,7 +73,8 @@
         android:textSize="@dimen/table_footer_size"
         android:textColor="@color/white"
         android:drawablePadding="15dp"
-        android:background="@color/trans"
+        android:background="@drawable/btn_toggle_sort_bg"
+        android:elevation="16dp"
         android:onClick="trie"/>
 
 </RelativeLayout>
