@@ -62,9 +62,9 @@ public class ItemActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide_details);
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.title_song_detail);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         ButterKnife.bind(this);
 
         // Keep screen awake setting
@@ -144,7 +144,6 @@ public class ItemActivity extends BaseActivity {
     }
 
     private void updateDisplay(int position) {
-        toolbar.setSubtitle(String.format("%s (%d / %d)", currentPage.getNumber() + currentPage.getTitle(), position + 1, currentBook.count()));
         updateNavigationButtons(position);
     }
 
@@ -158,10 +157,6 @@ public class ItemActivity extends BaseActivity {
     private void setDisplaySong(Page currentPage) {
 
         try {
-
-            toolbar.setSubtitle(String.format("%s (%d / %d)", currentPage.getNumber() + currentPage.getTitle(), currentPage.getId(), currentBook.count()));
-            toolbar.setTitle(currentBook.getName());
-
             updateIconFabMenuButton();
 
         } catch (Exception ax) {

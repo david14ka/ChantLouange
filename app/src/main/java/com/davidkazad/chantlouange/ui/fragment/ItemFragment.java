@@ -48,19 +48,6 @@ public class ItemFragment extends BaseFragment {
 
     private Page currentPage;
     
-    // Auto Scroll variables
-    private androidx.core.widget.NestedScrollView scrollView;
-    private Handler autoScrollHandler = new Handler();
-    private boolean isAutoScrolling = false;
-    private Runnable autoScrollRunnable = new Runnable() {
-        @Override
-        public void run() {
-            if (isAutoScrolling && scrollView != null) {
-                scrollView.smoothScrollBy(0, 2);
-                autoScrollHandler.postDelayed(this, 30); // smooth tick rate
-            }
-        }
-    };
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -85,8 +72,6 @@ public class ItemFragment extends BaseFragment {
         txtCategory = view.findViewById(R.id.txt_category);
         txtAuthor = view.findViewById(R.id.txt_author);
         txtKey = view.findViewById(R.id.txt_key);
-        scrollView = view.findViewById(R.id.layout);
-        
         currentTextSize = Prefs.getFloat("TextSize", 18f);
 
         // Control Pill Buttons
@@ -106,26 +91,23 @@ public class ItemFragment extends BaseFragment {
             }
         });
         
-        // Auto Scroll Pill Button Toggle
-        final TextView btnAutoScroll = view.findViewById(R.id.btn_auto_scroll);
-        if (btnAutoScroll != null) {
-            btnAutoScroll.setOnClickListener(new View.OnClickListener() {
+        // Share Pill Button
+        final View btnShare = view.findViewById(R.id.btn_share);
+        if (btnShare != null) {
+            btnShare.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    isAutoScrolling = !isAutoScrolling;
-                    if (isAutoScrolling) {
-                        btnAutoScroll.setBackgroundResource(R.drawable.pill_background);
-                        btnAutoScroll.setTextColor(Color.parseColor("#C62828"));
-                        autoScrollHandler.post(autoScrollRunnable);
-                    } else {
-                        btnAutoScroll.setBackgroundResource(R.drawable.pill_red);
-                        btnAutoScroll.setTextColor(Color.WHITE);
-                        autoScrollHandler.removeCallbacks(autoScrollRunnable);
+                    if (currentPage != null && currentBook != null) {
+                        String shareBody = currentBook.getName() + "\n" + currentPage.getNumber() + " " + currentPage.getTitle() + "\n\n" + currentPage.getContent();
+                        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        sharingIntent.setType("text/plain");
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, currentPage.getTitle());
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                        startActivity(Intent.createChooser(sharingIntent, "Share via"));
                     }
                 }
             });
         }
-
         // Theme Pill Button
         final View btnTheme = view.findViewById(R.id.btn_theme);
         if (btnTheme != null) {
@@ -268,10 +250,6 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        isAutoScrolling = false;
-        if (autoScrollHandler != null) {
-            autoScrollHandler.removeCallbacks(autoScrollRunnable);
-        }
     }
 
     @Override
