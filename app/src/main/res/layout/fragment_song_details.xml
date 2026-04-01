@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/send"
                 android:textColor="@color/white"
-                android:background="@color/green"/>
+                android:background="?attr/colorAccent"/>
         </LinearLayout>
 
     </LinearLayout>

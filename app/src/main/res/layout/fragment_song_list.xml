@@ -16,7 +16,7 @@
         android:paddingHorizontal="16dp"
         android:paddingTop="6dp"
         android:textSize="12sp"
-        android:textColor="@color/green"
+        android:textColor="?attr/colorAccent"
         android:visibility="gone"
         tools:text="5 songs found"
         tools:visibility="visible"/>
