@@ -62,10 +62,11 @@
         android:layout_below="@id/quick_jump_bar" />
 
     <TextView
+        android:id="@+id/btn_trie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/table_matieres"
+        android:text="1-9"
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:padding="12dp"

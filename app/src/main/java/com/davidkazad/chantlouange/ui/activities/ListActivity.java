@@ -50,6 +50,7 @@ public class ListActivity extends BaseActivity {
         LogUtil.d();
 
         initView(bookItem.getId() - 1);
+        updateSortButton();
     }
 
     private void initView(int currentTab) {
@@ -101,21 +102,18 @@ public class ListActivity extends BaseActivity {
     }
 
     public void trie(View view) {
+        boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
+        Prefs.putBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, !isAlpha);
+        initView(bookItem.getId() - 1);
+        updateSortButton();
+    }
 
-        new MaterialDialog.Builder(ListActivity.this)
-                .title(R.string.table_matieres)
-                .items(R.array.table_des_matieres)
-                .itemsCallbackSingleChoice((Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false) ? 0 : 1), new MaterialDialog.ListCallbackSingleChoice() {
-                    @Override
-                    public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
-                        Prefs.putBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, which == 0);
-                        initView(bookItem.getId() - 1);
-                        return false;
-                    }
-                })
-                .positiveText(R.string.ok)
-                .negativeText(R.string.cancel)
-                .show();
+    private void updateSortButton() {
+        android.widget.TextView btnSort = findViewById(R.id.btn_trie);
+        if (btnSort != null) {
+            boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
+            btnSort.setText(isAlpha ? "A Z" : "1 9");
+        }
     }
 
     public class PagerAdapter1 extends FragmentStatePagerAdapter {
