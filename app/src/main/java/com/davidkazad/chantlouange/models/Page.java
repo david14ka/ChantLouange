@@ -28,6 +28,10 @@ public class Page {
     public void toggleRecent() {
         readUtils.toggleReadingList();
     }
+    
+    public void addToRecent() {
+        readUtils.addToRecent();
+    }
 
     private boolean isFavorite;
 

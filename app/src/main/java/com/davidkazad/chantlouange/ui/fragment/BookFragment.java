@@ -52,6 +52,16 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
         super.onViewCreated(view, savedInstanceState);
 
         grid_book = view.findViewById(R.id.grid_book);
+        
+        View btnFakeSearch = view.findViewById(R.id.btn_fake_search);
+        if (btnFakeSearch != null) {
+            btnFakeSearch.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getContext(), com.davidkazad.chantlouange.ui.activities.GlobalSearchActivity.class));
+                }
+            });
+        }
 
         grid_book.setOnItemClickListener(this);
         grid_book.setAdapter(new BaseAdapter() {
@@ -80,7 +90,6 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                     convertView = inflater.inflate(R.layout.item_book, parent, false);
                     holder.bookName = convertView.findViewById(R.id.book_name);
                     holder.bookImage = convertView.findViewById(R.id.book_image);
-                    holder.bookTag = convertView.findViewById(R.id.book_tag);
                     holder.bookCount = convertView.findViewById(R.id.book_count);
 
                     convertView.setTag(holder);
@@ -110,13 +119,6 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
                 } else {
                     holder.bookCount.setVisibility(View.GONE);
                 }
-
-                // Populate category tag based on position for varied editorial look
-                holder.bookTag.setVisibility(View.VISIBLE);
-                String[] tags = {"CLASSIQUE", "TRADITIONNEL", "LITURGIQUE", "HÉRITAGE", "RENAISSANCE", "RECUEIL", "SPÉCIAL", "COLLECTION"};
-                holder.bookTag.setText(tags[position % tags.length]);
-
-
 
                 return convertView;
             }
@@ -159,7 +161,6 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
     private class BookHolder {
         public ImageView bookImage;
         public TextView bookName;
-        public TextView bookTag;
         public TextView bookCount;
     }
 

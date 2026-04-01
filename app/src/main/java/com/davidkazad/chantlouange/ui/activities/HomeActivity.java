@@ -19,6 +19,7 @@ import com.davidkazad.chantlouange.ui.fragment.BookFragment;
 import com.davidkazad.chantlouange.ui.fragment.DashFragment;
 import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.davidkazad.chantlouange.ui.fragment.FavFragment;
+import com.davidkazad.chantlouange.ui.fragment.AllSongsFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -45,20 +46,20 @@ public class HomeActivity extends BaseActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_dashboard:
-                    showFragment(new BookFragment());
-                    toolbar.setTitle(R.string.home_title);
-                    return true;
                 case R.id.navigation_home:
+                    showFragment(new BookFragment());
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText("Chant Louange");
+                    return true;
+                case R.id.navigation_songs:
+                    showFragment(new AllSongsFragment());
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText("Nos Chants");
+                    return true;
+                case R.id.navigation_favorites:
                     showFragment(new FavFragment());
-                    toolbar.setTitle(R.string.favorities);
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.favorities);
                     return true;
-                case R.id.navigation_audio:
-                    // Navigate to Audio Activity or show fragment if available
-                    // For now, staying on current fragment or opening an activity
-                    return true;
-                case R.id.navigation_community:
-                    startActivity(new Intent(getApplicationContext(), ChatActivity.class));
+                case R.id.navigation_settings:
+                    startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                     return true;
             }
             return false;
@@ -70,12 +71,14 @@ public class HomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.home_title);
         setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_dashboard);
+        navigation.setSelectedItemId(R.id.navigation_home);
 
         fm = getSupportFragmentManager();
 
@@ -87,7 +90,7 @@ public class HomeActivity extends BaseActivity {
         firebaseSignIn();
 
         LogUtil.d();
-        getNotification(toolbar);
+        // getNotification(toolbar); // Removed startup notification as requested
     }
 
     private void showFragment(Fragment fragment) {
@@ -102,9 +105,6 @@ public class HomeActivity extends BaseActivity {
                 .commit();
     }
 
-    public void writePost1(View view) {
-        startActivity(new Intent(getApplicationContext(), CommentActivity.class).putExtra(EXTRA_WRITE_POST,true));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

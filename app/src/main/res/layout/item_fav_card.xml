@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#2A2A2A"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:id="@+id/txt_watermark_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="242"
+            android:textColor="#08FFFFFF"
+            android:textSize="56sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/txt_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HYMNS OF GRACE"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/txt_song_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Amazing Grace (How Sweet the Sound)"
+            android:textColor="#EEEEEE"
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ic_bookmark"
+            app:layout_constraintTop_toBottomOf="@id/txt_book_name"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/ic_bookmark"
+            android:layout_width="16dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_star"
+            app:tint="#E53935"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp" />
+
+        <TextView
+            android:id="@+id/txt_lyrics_preview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="On a hill far away stood an old rugged cross..."
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_song_title"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:id="@+id/bottom_meta_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/txt_lyrics_preview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+                
+            <TextView
+                android:id="@+id/txt_key_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. 242"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+                
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

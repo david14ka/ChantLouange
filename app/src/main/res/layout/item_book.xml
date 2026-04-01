@@ -14,6 +14,7 @@
         android:layout_height="@dimen/book_height"
         app:cardElevation="0dp"
         app:cardCornerRadius="12dp"
+        android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/ed_card">
 
         <!-- Full-bleed image -->
@@ -42,19 +43,6 @@
             android:paddingBottom="10dp"
             android:paddingTop="6dp">
 
-            <!-- Category tag — small red uppercase label -->
-            <TextView
-                android:id="@+id/book_tag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="@color/ed_accent"
-                android:textSize="9sp"
-                android:textAllCaps="true"
-                android:letterSpacing="0.10"
-                android:fontFamily="sans-serif-medium"
-                android:visibility="gone" />
-
             <!-- Book name -->
             <TextView
                 android:id="@+id/book_name"
@@ -62,7 +50,7 @@
                 android:layout_height="wrap_content"
                 tools:text="@string/collection_de_cantiques"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:lines="2"
                 android:ellipsize="end"

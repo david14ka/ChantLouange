@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface_container_lowest"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/txt_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LETTRE B"
+        android:textColor="@color/ed_text_secondary"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:textAllCaps="true" />
+</LinearLayout>

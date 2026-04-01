@@ -63,6 +63,29 @@ public class ReadingListUtils {
         Prefs.putString(FAVORITES_KEY, readingList.toString());
         Log.d(TAG, "toggleReadingList: "+readingList);
     }
+    
+    public void addToRecent() {
+        JSONArray readingList = getReadingList();
+        
+        int index = findIndex(readingList, this.id);
+        if (index != -1) {
+            readingList.remove(index); // Remove it so we can push it to the top
+        }
+        
+        JSONArray newList = new JSONArray();
+        newList.put(this.id);
+        
+        for (int i = 0; i < readingList.length(); i++) {
+            newList.put(readingList.optString(i));
+        }
+        
+        // Keep only top 50 recent
+        while (newList.length() > 50) {
+            newList.remove(newList.length() - 1);
+        }
+        
+        Prefs.putString(FAVORITES_KEY, newList.toString());
+    }
 
     public boolean wasOpenedRecently() {
         JSONArray favorites = getReadingList();

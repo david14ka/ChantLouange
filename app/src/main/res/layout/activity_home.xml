@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.HomeActivity"
-    android:background="@drawable/bground"
+    android:background="@color/home_bg_dark"
     android:layout_gravity="center">
 
     <LinearLayout
@@ -22,8 +22,21 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                android:background="@color/surface_container_lowest"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+                
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chant Louange"
+                    android:textColor="@color/primary_container"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:layout_gravity="center" />
+                    
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout
@@ -46,35 +59,19 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/writPost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:padding="15dp"
-        android:textSize="18sp"
-        android:layout_alignParentBottom="true"
-        android:drawablePadding="10dp"
-        android:background="@drawable/button"
-        android:text="@string/write_a_post"
-        android:layout_marginBottom="90dp"
-        android:onClick="writePost1"
-        android:layout_gravity="bottom|end"
-        android:layout_alignParentEnd="true"
-        tools:ignore="RelativeOverlap"
-        android:layout_marginEnd="20dp"
-        android:visibility="visible"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        app:itemTextColor="?attr/itemTextColor"
-        app:itemIconTint="?attr/itemIconTint"
-        android:background="#953A3630"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="16dp"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemBackground="@drawable/nav_item_bg"
+        android:background="@drawable/bg_bottom_nav"
         app:menu="@menu/navigation"
         android:visibility="visible"/>
 

@@ -102,7 +102,7 @@ public class ItemActivity extends BaseActivity {
         });
 
         try {
-            currentPage.toggleRecent();
+            currentPage.addToRecent();
         } catch (Exception ex) {
             Log.e(TAG, "onViewCreated: ", ex);
         }
@@ -130,6 +130,9 @@ public class ItemActivity extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 currentPage = currentBook.getPage(position);
+                try {
+                    currentPage.addToRecent();
+                } catch (Exception ignored) {}
                 updateIconFabMenuButton();
                 updateDisplay(position);
             }

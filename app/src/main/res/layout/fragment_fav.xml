@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B1B"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+
+    <!-- Header area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu"
+            android:visibility="invisible"/> <!-- To balance padding -->
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Favorites"
+            android:textColor="#E53935"
+            android:textSize="28sp"
+            android:fontFamily="serif"
+            android:textStyle="bold" />
+            
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+    </LinearLayout>
+
+    <!-- Subtitle mapping -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        
+        <TextView
+            android:id="@+id/txt_fav_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Your curated collection"
+            android:textColor="#EEEEEE"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:fontFamily="serif" />
+            
+        <TextView
+            android:id="@+id/txt_fav_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 SONGS"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true" />
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33FFFFFF"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:layout_marginBottom="16dp">
+        
+        <TextView
+            android:id="@+id/tab_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favoris"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/pill_active_bg" />
+            
+        <TextView
+            android:id="@+id/tab_recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Consultés Récemment"
+            android:textColor="@color/home_text_body"
+            android:textSize="12sp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/pill_inactive_bg" />
+    </LinearLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp" />
+
+</LinearLayout>
