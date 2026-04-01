@@ -3,12 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.activities.ItemActivity">
 
-    <item
-        android:id="@+id/action_find"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:orderInCategory="100"
-        android:title="@string/action_text_size"
-        app:showAsAction="always" />
+
     <item
         android:id="@+id/app_bar_switch"
         android:title="@string/mode_jour_nuit"

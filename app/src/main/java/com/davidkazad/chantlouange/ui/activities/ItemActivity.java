@@ -334,10 +334,7 @@ public class ItemActivity extends BaseActivity {
         //noinspection SimplifiableIfStatement
 
 
-        if (id == R.id.action_find) {
-            findItem();
-            return true;
-        }
+
         if (id == R.id.app_bar_switch) {
 
             if (Prefs.getBoolean("night_mode", false)) {
