@@ -161,23 +161,10 @@
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/btn_auto_scroll"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginHorizontal="8dp"
-                android:background="@drawable/pill_red"
-                android:gravity="center"
-                android:paddingHorizontal="16dp"
-                android:text="AUTO SCROLL"
-                android:textColor="@color/white"
-                android:textSize="10sp"
-                android:textStyle="bold" />
-
             <View
                 android:layout_width="1dp"
                 android:layout_height="24dp"
-                android:background="#33FFFFFF" />
+                android:background="#0CFFFFFF" />
 
             <ImageButton
                 android:id="@+id/btn_theme"
@@ -187,6 +174,23 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_invert_theme"
                 app:tint="@color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="#33FFFFFF" />
+
+            <TextView
+                android:id="@+id/btn_auto_scroll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="AUTO"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="1dp"

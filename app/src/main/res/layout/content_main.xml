@@ -24,7 +24,7 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="20dp"
             android:drawablePadding="10dp"
-            android:background="@drawable/button"
+            android:background="@drawable/btn_pill_editorial"
             android:text="@string/write_a_post"
             android:onClick="writePost1"
             />
