@@ -74,7 +74,7 @@ public class ItemActivity extends BaseActivity {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
 
-        navigationDrawer(savedInstanceState, null);
+        navigationDrawer(savedInstanceState, toolbar);
 
         setFabMenu();
 

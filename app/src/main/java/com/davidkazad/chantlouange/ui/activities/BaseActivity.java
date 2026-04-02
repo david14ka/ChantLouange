@@ -34,15 +34,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.ArrayList;
@@ -90,70 +85,60 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void navigationDrawer(Bundle savedInstanceState, Toolbar toolbar) {
-        final IProfile userProfil = new ProfileDrawerItem()
-                .withName(R.string.app_name)
-                .withEmail("14ka135@gmail.com")
-                .withIcon(R.drawable.holy_bible_96px).withIdentifier(1)
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        contact();
-                        return false;
-                    }
-                });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer == null) return;
 
-        AccountHeader headerResult = new AccountHeaderBuilder()
-                .withTextColor(Color.WHITE)
-                .withActivity(this)
-                .withHeaderBackground(R.drawable.guitar_3283649_640)
-                .withTranslucentStatusBar(true)
-                .addProfiles(
-                        userProfil,
-                        new ProfileSettingDrawerItem()
-                                .withName(R.string.problems)
-                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                                    @Override
-                                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                        contactWhatsapp();
-                                        return false;
-                                    }
-                                })
-                )
-                .withSavedInstance(savedInstanceState)
-                .build();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
-        Drawer result = new DrawerBuilder()
-                .withSelectedItemByPosition(1)
-                .withSavedInstance(savedInstanceState)
-                .withToolbar(toolbar)
-                .withDisplayBelowStatusBar(false)
-                .withTranslucentStatusBar(false)
-                .withShowDrawerOnFirstLaunch(true)
-                .withActivity(this)
-                .withHasStableIds(true)
-                .withAccountHeader(headerResult)
-                .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.home).withSelectable(false).withIcon(R.drawable.bible_48px).withIdentifier(1),
-                        new PrimaryDrawerItem().withName(R.string.community).withIcon(R.drawable.coderwall_48px).withIdentifier(2)
-                )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        switch (position) {
-                            case 1:
-                                if (!(BaseActivity.this instanceof HomeActivity)) {
-                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                                }
-                                break;
-                            case 2:
-                                startActivity(new Intent(getApplicationContext(), ChatActivity.class));
-                                break;
-                        }
-                        return false;
-                    }
-                })
-                .withSavedInstance(savedInstanceState)
-                .build();
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        if (navigationView == null) return;
+
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            Intent intent = null;
+
+            if (id == R.id.navigation_home) {
+                if (!(this instanceof HomeActivity)) {
+                    intent = new Intent(this, HomeActivity.class);
+                    intent.putExtra("targetFragment", R.id.navigation_home);
+                } else {
+                    ((HomeActivity)this).findViewById(R.id.navigation_home).performClick();
+                }
+            } else if (id == R.id.navigation_songs) {
+                if (!(this instanceof HomeActivity)) {
+                    intent = new Intent(this, HomeActivity.class);
+                    intent.putExtra("targetFragment", R.id.navigation_songs);
+                } else {
+                    ((HomeActivity)this).findViewById(R.id.navigation_songs).performClick();
+                }
+            } else if (id == R.id.navigation_favorites) {
+                if (!(this instanceof HomeActivity)) {
+                    intent = new Intent(this, HomeActivity.class);
+                    intent.putExtra("targetFragment", R.id.navigation_favorites);
+                } else {
+                    ((HomeActivity)this).findViewById(R.id.navigation_favorites).performClick();
+                }
+            } else if (id == R.id.navigation_community) {
+                intent = new Intent(this, ChatActivity.class);
+            } else if (id == R.id.navigation_share) {
+                shareApp();
+            } else if (id == R.id.navigation_about) {
+                intent = new Intent(this, AboutActivity.class);
+            } else if (id == R.id.navigation_settings) {
+                intent = new Intent(this, SettingsActivity.class);
+            }
+
+            if (intent != null) {
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+        });
     }
 
     protected void getNotification(View view) {

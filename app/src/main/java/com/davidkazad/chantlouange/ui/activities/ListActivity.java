@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.models.Book;
@@ -50,21 +51,22 @@ public class ListActivity extends BaseActivity {
 
         LogUtil.d();
 
-        // ── Compact AppBar setup ──────────────────────────────────────────────
+        // ── Standard Toolbar setup for Drawer ──────────────────────────────
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+        navigationDrawer(savedInstanceState, toolbar);
+
+        // ── Compact UI elements setup ─────────────────────────────────────────
         TextView heroCount   = findViewById(R.id.hero_count_chip);
         TextView heroName    = findViewById(R.id.hero_book_name);
         ImageView btnBack    = findViewById(R.id.btn_back);
-        ImageView btnSearch  = null; // Bouton recherche supprimé du header
-
+        
         if (bookItem != null) {
-            // Titre du livre dans la barre compacte
             if (heroName != null) heroName.setText(bookItem.getName());
-
-            // Compteur de cantiques
-            if (heroCount != null) {
-                int songCount = bookItem.getPages().size();
-                heroCount.setText(songCount + "");
-            }
+            if (heroCount != null) heroCount.setText(String.valueOf(bookItem.getPages().size()));
         }
 
         if (btnBack != null) btnBack.setOnClickListener(v -> onBackPressed());
@@ -79,50 +81,11 @@ public class ListActivity extends BaseActivity {
             @Override public void afterTextChanged(Editable s) {}
         });
 
-        // Toggle quick-jump bar via search icon in top bar (repurposed)
-        View quickJumpBar = findViewById(R.id.quick_jump_bar);
-        EditText editQuickJump = findViewById(R.id.edit_quick_jump);
-        android.widget.Button btnQuickJumpGo = findViewById(R.id.btn_quick_jump_go);
-
-        if (btnSearch != null && quickJumpBar != null && editQuickJump != null) {
-            btnSearch.setOnClickListener(v -> {
-                if (quickJumpBar.getVisibility() == View.VISIBLE) {
-                    quickJumpBar.setVisibility(View.GONE);
-                } else {
-                    quickJumpBar.setVisibility(View.VISIBLE);
-                    editQuickJump.requestFocus();
-                    android.view.inputmethod.InputMethodManager imm =
-                            (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                    if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
-                }
-            });
-        }
-
-        if (btnQuickJumpGo != null && editQuickJump != null && quickJumpBar != null) {
-            btnQuickJumpGo.setOnClickListener(v -> {
-                String query = editQuickJump.getText().toString().trim();
-                if (query.isEmpty()) return;
-                java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
-                if (results.size() >= 1) {
-                    ItemActivity.currentBook = bookItem;
-                    ItemActivity.currentPage = results.get(0);
-                    startActivity(new Intent(ListActivity.this, ItemActivity.class));
-                    editQuickJump.setText("");
-                    quickJumpBar.setVisibility(View.GONE);
-                    android.view.inputmethod.InputMethodManager imm =
-                            (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                    if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
-                } else {
-                    android.widget.Toast.makeText(this, R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-
         // ── Pager (no TabLayout — single book view) ───────────────────────────
         initPager();
 
         // ── Setup Bottom Navigation Global ────────────────────────────────────
-        setupBottomNavigation(R.id.navigation_home); // Considéré comme dans l'onglet Home
+        setupBottomNavigation(R.id.navigation_home);
     }
 
     private void initPager() {

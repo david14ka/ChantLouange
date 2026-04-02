@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/navigation_songs"
+            android:icon="@drawable/ic_menu_songs"
+            android:title="Nos Chants" />
+        <item
+            android:id="@+id/navigation_favorites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/favorities" />
+    </group>
+
+    <item android:title="Communauté">
+        <menu>
+            <item
+                android:id="@+id/navigation_community"
+                android:icon="@drawable/coderwall_48px"
+                android:title="@string/community" />
+            <item
+                android:id="@+id/navigation_share"
+                android:icon="@drawable/share_24px"
+                android:title="@string/share" />
+        </menu>
+    </item>
+
+    <item android:title="Application">
+        <menu>
+            <item
+                android:id="@+id/navigation_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/navigation_about"
+                android:icon="@drawable/ic_menu_about"
+                android:title="À Propos" />
+        </menu>
+    </item>
+
+</menu>

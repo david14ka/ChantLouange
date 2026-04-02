@@ -203,8 +203,7 @@
     <string name="fav_subtitle">Your saved hymns, always within reach</string>
     <string name="fav_section_label">Saved Songs</string>
 
-    <!-- Books Fragment screen editorial design -->
-    <string name="books_hero_title">Nos Recueils</string>
-    <string name="books_hero_subtitle">L\'archive digitale sacrée</string>
-
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
+    <string name="navigation_drawer_close">Fermer le menu de navigation</string>
 </resources>
