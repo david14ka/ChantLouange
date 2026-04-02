@@ -14,7 +14,7 @@ public class CCz extends Book {
 	}
 
 	@Override
-	public List<Page> getPages() {
+	protected List<Page> buildPages() {
 		List<Page> pg = new ArrayList<>();
 
 		pg.add(new Page(1, "1A. ","O CHRIST, ETERNEL", "SAF 239 ; SSS 237 ; NM 118 ;\nMKN 22 ; HP 51 ; CS 33 ; BHB 350\n1. O Christ, Eternel Rocher,\nJe viens en Toi me cacher !\nDe Ton cœur percé coulèrent\nL’eau, le Sang qui régénèrent :\nQue par ce flot rédempteur\nDu péché je sois vainqueur !\n\n2. Tous les travaux de mes mains\nPour Te plaire seraient vains.\nLors même qu’en ma détresse,\nMes pleurs couleraient sans cesse,\nIls ne sauraient me laver :\nToi seul peux et veux sauver !\n\n3. Seigneur, je n’apporte rien,\nTa croix seule est mon soutien.\nJe viens à Toi sans ressource ;\nSouillé, je viens à la source\nOuverte pour les pécheurs :\nAh ! Rends-moi pur, ou je meurs !\n\n4. Tant que je respire encore ;\nQuand pour moi viendra la mort ;\nLorsque je devrai paraître\nDevant mon Juge et mon Maître,\nO Christ, Eternel Rocher,\nJe veux en Toi me cacher !\n", 1));

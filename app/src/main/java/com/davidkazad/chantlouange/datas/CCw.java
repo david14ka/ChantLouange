@@ -14,7 +14,7 @@ public class CCw extends Book {
     }
 
     @Override
-    public List<Page> getPages() {
+    protected List<Page> buildPages() {
         List<Page> pg = new ArrayList<>();
         pg.add(new Page(1, "1A.", "O CHRIST, ETERNEL", "1. O Christ, Eternel Rocher, \nJe viens en Toi me cacher ! \nDe Ton cœur percé coulèrent \nL’eau, le Sang qui régénèrent : \nQue par ce flot rédempteur \nDu péché je sois vainqueur ! \n \n2. Tous les travaux de mes mains \nPour Te plaire seraient vains. \nLors même qu’en ma détresse, \nMes pleurs couleraient sans cesse, \nIls ne sauraient me laver : \nToi seul peux et veux sauver ! \n \n3. Seigneur, je n’apporte rien, \nTa croix seule est mon soutien. \nJe viens à Toi sans ressource ; \nSouillé, je viens à la source \nOuverte pour les pécheurs : \nAh ! Rends-moi pur, ou je meurs ! \n \n4. Tant que je respire encore ; \nQuand pour moi viendra la mort ; \nLorsque je devrai paraître \nDevant mon Juge et mon Maître, \nO Christ, Eternel Rocher, \nJe veux en Toi me cacher ! \n", 1));
         pg.add(new Page(2, "1B.", "YESU, YESU UDIKU", "1. Yesu, Yesu udiku, \nNenye kuudi lubilu, \n \nMeme tshiena ne muoyo, \nMibi yakunkengesha. \nMutshima wanyi mubi, \nUmpe luse lubilu. \n \n2. Satana wakunteya, \nNakushipa mikenji \nTshiena mua kupanduka, \nMibi yanyi idiku. \nTshiena mwa ku’ijimija, \nAnu Wewe nkayebe. \n \n3. Tshiena ne bintu bianyi, \nBianza bidi bitupu ; \nNdi ne mutshima mubi, \nTshiena mua kumvua bimpe ; \nUnguvuile mutshima, \nTshiena musue kukenga. \n \n4. Pandi bianyi ne muoyo, \nKundekedi patupu ; \nPalua bualu bukole, \nWalua biebe pabuipi ; \nPalua lufu pabuipi, \nUmpe muoyo kashidi. \n\nSAF 239 ; SSS 237 ; NM 118 ; \nMKN 22 ; HP 51 ; CS 33 ; BHB 350", 1));

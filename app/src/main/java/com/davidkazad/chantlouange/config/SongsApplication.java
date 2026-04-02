@@ -26,6 +26,16 @@ public class SongsApplication extends Application {
                 .setMode(MODE_PRIVATE)
                 .setPrefsName("chant_louange")
                 .build();
+
+        // Pré-chargement du cache de tous les livres en arrière-plan.
+        // Chaque livre peut contenir 200-650 chansons (fichiers de données > 300KB),
+        // donc on fait ce travail hors du thread principal pour ne pas bloquer le démarrage.
+        new Thread(() -> {
+            for (com.davidkazad.chantlouange.models.Book book : com.davidkazad.chantlouange.models.Book.bookList) {
+                book.getPages(); // déclenche la construction du cache par défaut
+                book.sort();     // déclenche la construction du cache alphabétique
+            }
+        }, "book-cache-preloader").start();
     }
 
     public void setMediaPlayer() {

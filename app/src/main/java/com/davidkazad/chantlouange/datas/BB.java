@@ -17,7 +17,7 @@ public class BB extends Book {
 	}
 
 	@Override
-	public List<Page> getPages() {
+	protected List<Page> buildPages() {
 		ArrayList<Page> pg = new ArrayList<>();
 
 		pg.add(new Page(1, "1. ", "CH. 1. SSS 9.", "Mwe bantu bonse ba pa nshi," , "All people that on Earth do Dwell", "Mwe bantu bonse ba pa nshi,\n    Mulumbanyeni, mutote,\nNo kumutemwa iseni,\n    Imbeni pa cinso cakwe.\n\nIbukisheni ni Lesa,\n    Atubumbile fwe bonse;\nAlatucema nge mpanga,\n    Pantu ifwe tuli bakwe.\n\nIngileni no muchinshi,\n   Shi palameni no kwanga,\n‘Shina lyakwe lumbuleni,\n   Ici cine e cisuma.\n\nLesa wesu e musuma,\n   Ali no luse kuli fwe;\n‘Cine cakwe ciminina\n   ‘Nshiku ne nshiku shonse pe.", 9));

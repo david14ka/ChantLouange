@@ -14,7 +14,7 @@ public class CV extends Book{
     }
 
     @Override
-    public List<Page> getPages() {
+    protected List<Page> buildPages() {
         List<Page> pg = new ArrayList<>();
 
         pg.add(new Page(1, "1. ","GRAND DIEU, NOUS TE BÉNISSONS","1.Grand Dieu, nous te bénissons,\n Nous célébrons tes louanges!\n Eternel, nous t'exaltons,\n De concert avec les anges,\n  { Et prosternés devant toi,  \n Nous t'adorons, ô grand Roi!} bis \n    \n 2.Les saints et les bienheureux,\n Les trônes et les puissances,\n Toutes les vertus des cieux \n Disent tes magnificences,\n { Proclamant dans leurs concerts \n Le grand Dieu de l'Univers.  }  bis\n    \n 3.Saint, saint, saint, est l'Eternel,\n Le seigneur, Dieu des armées;\n Son pouvoir est immortel;\n Ses oeuvres partout semées\n { Font éclater sa grandeur, \n Sa majesté, sa splendeur } bis\n    \n 4.Sauve, ton peuple, Seigneur,\n Et bénis ton héritage;\n Que ta gloire et ta splendeur\n Soient à jamais son partage,\n { Conduis-le par ton amour \n Jusqu'au céleste séjour! } bis\n    \n 5.Gloire soit au Saint-Esprit!\n Gloire soit à Dieu le Père!\n Gloire soit à Jésus-Christ,\n Notre Sauveur, notre Frère!\n { Son immense charité  \n Dure à perpétuité. } bis",2));

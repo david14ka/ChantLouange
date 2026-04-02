@@ -17,7 +17,7 @@ public class CS extends Book {
 	}
 
 	@Override
-	public List<Page> getPages() {
+	protected List<Page> buildPages() {
 		ArrayList<Page> pg = new ArrayList<>();
 
 		pg.add(new Page(1, "1. ", "1. CROIS  SEULEMENT.   C", "Crains  point,  petit  troupeau,  de  la  croix \nau trône,\nDe  la  mort  à  la  vie,  Il  cherchait  les  Siens;\nTout  pouvoir  sur  terre,tout  pouvoir  au  Ciel,\nLui  est  donné  pour  Son  troupeau  bien-aimé.\n\nChoeur\nCrois  seulement,  crois  seulement,\nTout  est  possible,  crois  seulement;\nCrois  seulement,  crois  seulement,\nTout    est    possible,  crois  seulement.\n(Seigneur,    je  crois...)\n(Dieu,  je  reçois...)\n(Jésus  est  là  ...)\n\nCrains  point,  petit  troupeau,  Il  t’a  précédé,\nTon  Berger  a  choisi  le  sentier  à  suivre;\nPour    toi,  Il  rendra  pure  l’eau  de  Mara,\nIl  but  toute  l’amertume  à  Gethsémané.\n\n'Crains  point,  petit    troupeau,  peu\nimporte  ton  sort,\nIl  entre  dans  les  chambres  aux\n«portes  fermées»;\nIl  n’abandonne  point,  Il  n’est  point  absent,\nAinsi,  compte  sur  Sa  présence  le  jour,\nla nuit.", 8));

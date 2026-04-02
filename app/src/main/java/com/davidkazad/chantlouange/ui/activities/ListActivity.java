@@ -50,29 +50,24 @@ public class ListActivity extends BaseActivity {
 
         LogUtil.d();
 
-        // ── Hero setup ────────────────────────────────────────────────────────
-        ImageView heroImage  = findViewById(R.id.hero_image);
-        TextView heroTitle   = findViewById(R.id.hero_title);
+        // ── Compact AppBar setup ──────────────────────────────────────────────
         TextView heroCount   = findViewById(R.id.hero_count_chip);
-        TextView heroEdition = findViewById(R.id.hero_edition);
         TextView heroName    = findViewById(R.id.hero_book_name);
         ImageView btnBack    = findViewById(R.id.btn_back);
         ImageView btnSearch  = findViewById(R.id.btn_search_icon);
 
         if (bookItem != null) {
-            // Set hero image based on book id
-            int imgIdx = Math.max(0, Math.min(bookItem.getId() - 1, BOOK_IMAGES.length - 1));
-            heroImage.setImageResource(BOOK_IMAGES[imgIdx]);
+            // Titre du livre dans la barre compacte
+            if (heroName != null) heroName.setText(bookItem.getName());
 
-            // Hero text
-            heroTitle.setText(bookItem.getName());
-            heroName.setText(bookItem.getName());
-
-            int songCount = bookItem.getPages().size();
-            heroCount.setText(songCount + " Cantiques");
+            // Compteur de cantiques
+            if (heroCount != null) {
+                int songCount = bookItem.getPages().size();
+                heroCount.setText(songCount + "");
+            }
         }
 
-        btnBack.setOnClickListener(v -> onBackPressed());
+        if (btnBack != null) btnBack.setOnClickListener(v -> onBackPressed());
 
         // ── Inline search ─────────────────────────────────────────────────────
         EditText searchEdit = findViewById(R.id.search_edit);
@@ -89,35 +84,39 @@ public class ListActivity extends BaseActivity {
         EditText editQuickJump = findViewById(R.id.edit_quick_jump);
         android.widget.Button btnQuickJumpGo = findViewById(R.id.btn_quick_jump_go);
 
-        btnSearch.setOnClickListener(v -> {
-            if (quickJumpBar.getVisibility() == View.VISIBLE) {
-                quickJumpBar.setVisibility(View.GONE);
-            } else {
-                quickJumpBar.setVisibility(View.VISIBLE);
-                editQuickJump.requestFocus();
-                android.view.inputmethod.InputMethodManager imm =
-                        (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
-            }
-        });
+        if (btnSearch != null && quickJumpBar != null && editQuickJump != null) {
+            btnSearch.setOnClickListener(v -> {
+                if (quickJumpBar.getVisibility() == View.VISIBLE) {
+                    quickJumpBar.setVisibility(View.GONE);
+                } else {
+                    quickJumpBar.setVisibility(View.VISIBLE);
+                    editQuickJump.requestFocus();
+                    android.view.inputmethod.InputMethodManager imm =
+                            (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
+                }
+            });
+        }
 
-        btnQuickJumpGo.setOnClickListener(v -> {
-            String query = editQuickJump.getText().toString().trim();
-            if (query.isEmpty()) return;
-            java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
-            if (results.size() >= 1) {
-                ItemActivity.currentBook = bookItem;
-                ItemActivity.currentPage = results.get(0);
-                startActivity(new Intent(ListActivity.this, ItemActivity.class));
-                editQuickJump.setText("");
-                quickJumpBar.setVisibility(View.GONE);
-                android.view.inputmethod.InputMethodManager imm =
-                        (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
-            } else {
-                android.widget.Toast.makeText(this, R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (btnQuickJumpGo != null && editQuickJump != null && quickJumpBar != null) {
+            btnQuickJumpGo.setOnClickListener(v -> {
+                String query = editQuickJump.getText().toString().trim();
+                if (query.isEmpty()) return;
+                java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
+                if (results.size() >= 1) {
+                    ItemActivity.currentBook = bookItem;
+                    ItemActivity.currentPage = results.get(0);
+                    startActivity(new Intent(ListActivity.this, ItemActivity.class));
+                    editQuickJump.setText("");
+                    quickJumpBar.setVisibility(View.GONE);
+                    android.view.inputmethod.InputMethodManager imm =
+                            (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
+                } else {
+                    android.widget.Toast.makeText(this, R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
         // ── Pager (no TabLayout — single book view) ───────────────────────────
         initPager();

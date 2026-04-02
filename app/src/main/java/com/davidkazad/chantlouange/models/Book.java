@@ -22,7 +22,8 @@ public abstract class Book {
     private final int image;
     private final int id;
 
-    private final List<Page> pages;
+    // Lazy cache — built once on first access, never again.
+    private List<Page> cachedPages = null;
 
     protected boolean bookComingSoon = false;
     public static List<Book> bookList;
@@ -46,7 +47,6 @@ public abstract class Book {
         this.abbreviation = "abbreviation";
         this.image = 0;
         this.id = 0;
-        this.pages = this.getPages();
     }
 
     public Book(int id, String name, String abbreviation, int image) {
@@ -54,7 +54,6 @@ public abstract class Book {
         this.abbreviation = abbreviation;
         this.image = image;
         this.id = id;
-        this.pages = this.getPages();
     }
 
     public static List<Book> getAll() {
@@ -74,7 +73,19 @@ public abstract class Book {
         return id;
     }
 
-    abstract public List<Page> getPages();
+    /** Subclasses implement this to supply their raw page list. Called at most once. */
+    protected abstract List<Page> buildPages();
+
+    /**
+     * Returns the cached page list, building it on the first call.
+     * This avoids rebuilding thousands of Page objects every time the list is needed.
+     */
+    public final List<Page> getPages() {
+        if (cachedPages == null) {
+            cachedPages = buildPages();
+        }
+        return cachedPages;
+    }
 
     public List<Page> searchPage(String query) {
         return searchPage(query, false);
@@ -131,18 +142,23 @@ public abstract class Book {
         return getPages();
     }
 
-    public List<Page> sort() {
+    // Cache for alphabet sorted pages
+    private List<Page> cachedSortedPages = null;
 
-        List<Page> pageList = this.getPages();
+    public List<Page> sort() {
+        if (cachedSortedPages != null) {
+            return cachedSortedPages;
+        }
+
+        // Must work on a copy to avoid modifying the original cachedPages!
+        List<Page> pageList = new ArrayList<>(this.getPages());
 
         String[] letters = new String[]{
                 "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
         };
 
         for (int j = 0; j < letters.length; j++) {
-
             pageList.add(new Page(-1*(j+1), "",letters[j],"",getId()));
-
         }
 
         Collections.sort(pageList, new Comparator<Page>() {
@@ -152,9 +168,8 @@ public abstract class Book {
             }
         });
 
-        //Collections.reverse(pageList);
-
-        return pageList;
+        cachedSortedPages = pageList;
+        return cachedSortedPages;
     }
 
     public List<Page> sort(List<Page> pageList) {

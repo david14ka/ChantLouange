@@ -14,7 +14,7 @@ public class NM extends Book {
     }
 
     @Override
-    public List<Page> getPages() {
+    protected List<Page> buildPages() {
         List<Page> pg = new ArrayList<>();
 
         pg.add(new Page(1, "1. ","MUSIFU MUNGU KWA BARAKA","1. Musifu Mungu kwa baraka \nMusifu Mungu, watu wote, \nMusifu Mungu, malaika, \nMusifu Baba, Mwana, Roho. \n \n",3));

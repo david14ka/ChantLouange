@@ -14,7 +14,7 @@ public class NB extends Book {
 	}
 
 	@Override
-	public List<Page> getPages() {
+	protected List<Page> buildPages() {
 		List<Page> pg = new ArrayList<>();
 
 		pg.add(new Page(1, "1. ","U KOLA, U KOLA", "\n\n1. U kola, u kola, u kola\nWa bukomo bonso\nBatwe tu kwimbilanga ne\nKu lubanga bwe,\nLeza Wi Mukole, U fwila bal usa,\nLeza Pasatu, A tumbijibwe.\n\n\n2. U kola, u kola, u kola.\nBangi ba ku tota,\nBapandulwemo bonso ne\nBamalaika,\nBa ka ku ponena neku\nMaulu obe\nKala wa diko ne u kayako.\n\n\n3. U kola, u kola, u kola\nU be fi Ku Bantu,\nBa monka mu fukutu,\nKe ba ki ku mone,\nEnk’abe u kola\nMubwanininye’tu\nMu bukomo ne mu lusa lwine.\n\n\n4. U kola, u kola, u kola,\nWA bukomo bonso\nNe Bipangibwa byobe bi kufwijangako\nA Leza, u kola, u fwila ba lusa\nLeza Pasatu, A tumbijibwe.\n\n\n", 6));

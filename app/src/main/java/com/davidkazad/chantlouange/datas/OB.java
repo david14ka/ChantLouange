@@ -17,7 +17,7 @@ public class OB extends Book {
 	}
 
 	@Override
-	public List<Page> getPages() {
+	protected List<Page> buildPages() {
 		List<Page> pg = new ArrayList<>();
 
 		pg.add(new Page(1, "1.", "ONLY BELIEVE (C)", "Fear not, little flock, from the cross to\nthe throne, From death into life He\nwent for His own; All power in earth,\nall power above, Is given to Him for\nthe flock of His love.\n\nCHORUS\nOnly believe, only believe,\nAll things are possible, only\nbelieve;\nOnly believe, only believe,\nAll things are possible, only\nbelieve.\n(Lord, I believe . . . )\n(Lord, I receive . . .)\n(Jesus is here . . . )*\n\nFear not, little flock, He goeth ahead,\nYour Shepherd selecteth the path you\nmust tread; The waters of Marah He’ll\nsweeten for thee, He drank all the\nbitter in Gethsemane.\n\nFear not, little flock, whatever your lot,\nHe enters all rooms, “the doors being\nshut;” He never forsakes, He never is\ngone, So count on His presence in\ndarkness and dawn.", 7 ));

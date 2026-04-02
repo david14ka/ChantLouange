@@ -11,8 +11,8 @@ public class Durban extends Book {
         super(5, "Christian Assembly of Durban", "Durban", R.drawable.bground);
     }
     @Override
-    public List<Page> getPages() {
-        return null;
+    protected List<Page> buildPages() {
+        return new java.util.ArrayList<>();
     }
     private void buildTextItem(String valueOf) {
     }

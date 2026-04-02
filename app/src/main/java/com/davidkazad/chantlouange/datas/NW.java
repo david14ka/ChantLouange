@@ -14,7 +14,7 @@ public class NW extends Book {
     }
 
     @Override
-    public List<Page> getPages() {
+    protected List<Page> buildPages() {
         List<Page> pg = new ArrayList<>();
 
         pg.add(new Page(1, "1. ","E YESU MSHINDAJI WA GOLGOTHA  ","1. E Yesu Mshindaji wa Golgotha, twakusifu!  \nBendera ya mapenzi ni alama ya kushinda.  \nUlichukuwa dhambi zetu juu ya msalaba wako.  \nTwakuhimidi, Bwana na Mfalme! Haleluya! \n\n2. Twashinda na zaidi ya kushinda kati' yote.  \nKwa damu yako, Yesu, na watuinua moyo.  \nKatika vita na 'jaribu twaipeleka kwa furaha  \nBendera yako nzuri ya kushinda kati' vita. \n\n3. Mbinguni Mkombozi ni Mkuu mwenye sifa.  \nAliondoa dhambi kwa kutufilia wote.  \nMwana Kondoo wake Mungu, Umestahili kupokea  \nUweza, Utukufu na Heshima. Haleluya! \n",4));
