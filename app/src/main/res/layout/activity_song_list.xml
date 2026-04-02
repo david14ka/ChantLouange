@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#121212">
 
     <!-- Soft background image (light music sheet texture) -->
     <ImageView
@@ -10,184 +12,219 @@
         android:layout_height="match_parent"
         android:src="@drawable/music_sheet_5117328_640"
         android:scaleType="centerCrop"
-        android:alpha="0.10" />
+        android:alpha="0.05" />
 
-    <!-- Semi-transparent dark overlay for readability -->
+    <!-- Semi-transparent dark overlay -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C0101010" />
+        android:background="#E6121212" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@null"
-    android:orientation="vertical">
-
-    <!-- ── Hero Header with book image ── -->
-    <FrameLayout
-        android:id="@+id/hero_container"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp">
+        android:layout_height="match_parent">
 
-        <!-- Background image -->
-        <ImageView
-            android:id="@+id/hero_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/music_book_6168179_640" />
-
-        <!-- Dark gradient scrim -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/hero_scrim_gradient" />
-
-        <!-- Back arrow + Search button -->
-        <LinearLayout
-            android:id="@+id/top_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp">
-
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/forward_24px"
-                android:rotation="180"
-                app:tint="#FFFFFF"
-                android:padding="6dp" />
-
-            <TextView
-                android:id="@+id/hero_book_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:fontFamily="serif"
-                android:textColor="#E53935"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Chant Louange" />
-
-            <ImageView
-                android:id="@+id/btn_search_icon"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/gsearch_50px"
-                app:tint="#FFFFFF"
-                android:padding="6dp" />
-        </LinearLayout>
-
-        <!-- Hero title area (bottom of header) -->
-        <LinearLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="16dp">
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
 
-            <TextView
-                android:id="@+id/hero_category_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RECUEIL OFFICIEL"
-                android:textColor="#CCCCCC"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.12" />
-
-            <TextView
-                android:id="@+id/hero_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="serif"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:lineSpacingMultiplier="1.1"
-                android:text="Hymnes et\nCantiques" />
-
-            <!-- Meta chips row -->
-            <LinearLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-                <TextView
-                    android:id="@+id/hero_count_chip"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/pill_active_bg"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="4dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:text="650 Cantiques" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/hero_edition"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:textColor="#CCCCCC"
-                    android:textSize="12sp"
-                    android:text="Édition Révisée" />
+                    <!-- Hero Header -->
+                    <FrameLayout
+                        android:id="@+id/hero_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp">
 
-            </LinearLayout>
-        </LinearLayout>
-    </FrameLayout>
+                        <!-- Background image -->
+                        <ImageView
+                            android:id="@+id/hero_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/music_book_6168179_640" />
 
-    <!-- ── Inline search bar ── -->
-    <LinearLayout
-        android:id="@+id/search_bar_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="#1E1E1E"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="10dp">
+                        <!-- Dark gradient scrim -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/hero_scrim_gradient" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/gsearch_50px"
-            app:tint="#888888" />
+                        <!-- Back arrow + Title + Search icon -->
+                        <LinearLayout
+                            android:id="@+id/top_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="16dp">
 
-        <EditText
-            android:id="@+id/search_edit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:background="@null"
-            android:hint="Rechercher dans ce recueil..."
-            android:textColorHint="#666666"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:inputType="text"
-            android:maxLines="1"
-            android:imeOptions="actionSearch" />
-    </LinearLayout>
+                            <ImageView
+                                android:id="@+id/btn_back"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_arrow_back"
+                                app:tint="#E53935"
+                                android:padding="8dp" />
 
-    <!-- Quick jump bar (toggled by number search icon) -->
+                            <TextView
+                                android:id="@+id/hero_book_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:fontFamily="serif"
+                                android:textColor="#E53935"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:text="Chant Louange" />
+
+                            <ImageView
+                                android:id="@+id/btn_search_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/gsearch_50px"
+                                app:tint="#888888"
+                                android:padding="8dp" />
+                        </LinearLayout>
+
+                        <!-- Hero content -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="24dp"
+                            android:paddingBottom="32dp">
+
+                            <TextView
+                                android:id="@+id/hero_category_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RECUEIL OFFICIEL"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.15" />
+
+                            <TextView
+                                android:id="@+id/hero_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="serif"
+                                android:textColor="#FFFFFF"
+                                android:textSize="36sp"
+                                android:textStyle="bold"
+                                android:lineSpacingMultiplier="1.0"
+                                android:text="Hymnes et\nCantiques" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/hero_count_chip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/pill_active_bg"
+                                    android:backgroundTint="#2D1515"
+                                    android:paddingHorizontal="14dp"
+                                    android:paddingVertical="6dp"
+                                    android:textColor="#E53935"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="650 Cantiques" />
+
+                                <TextView
+                                    android:id="@+id/hero_edition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:textColor="#888888"
+                                    android:textSize="13sp"
+                                    android:text="Édition Révisée" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Search Bar area -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/search_pill_bg"
+                            android:backgroundTint="#1E1E1E"
+                            android:paddingHorizontal="16dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/gsearch_50px"
+                                app:tint="#555555" />
+
+                            <EditText
+                                android:id="@+id/search_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:background="@null"
+                                android:hint="Rechercher dans ce recueil..."
+                                android:textColorHint="#555555"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:imeOptions="actionSearch" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Quick jump overlay (optional, keeping logic) -->
     <LinearLayout
         android:id="@+id/quick_jump_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="56dp"
         android:orientation="horizontal"
-        android:padding="8dp"
+        android:padding="12dp"
         android:visibility="gone"
         android:background="#2A2A2A"
+        android:elevation="8dp"
         android:gravity="center_vertical">
 
         <EditText
@@ -198,8 +235,8 @@
             android:hint="@string/number"
             android:textColorHint="#888888"
             android:textColor="#FFFFFF"
-            android:inputType="textNoSuggestions|textVisiblePassword"
-            android:backgroundTint="#FFFFFF"
+            android:inputType="number"
+            android:backgroundTint="#E53935"
             android:maxLines="1" />
 
         <Button
@@ -209,16 +246,7 @@
             android:text="GO"
             android:layout_marginStart="8dp"
             android:textColor="#FFFFFF"
-            style="@style/Widget.AppCompat.Button.Colored" />
+            android:backgroundTint="#E53935" />
     </LinearLayout>
-
-    <!-- ── Song list FragmentPager ── -->
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-</LinearLayout>
 
 </FrameLayout>

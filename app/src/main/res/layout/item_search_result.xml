@@ -4,46 +4,51 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:padding="16dp"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="16dp"
     android:gravity="center_vertical"
     android:background="?android:attr/selectableItemBackground">
 
-    <!-- Number badge -->
     <TextView
         android:id="@+id/txt_number"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/red"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="#A0332D"
+        android:textSize="32sp"
         android:textStyle="bold"
-        tools:text="123" />
+        android:fontFamily="serif"
+        android:gravity="start|center_vertical"
+        android:letterSpacing="-0.02"
+        android:includeFontPadding="false"
+        tools:text="042" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginStart="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
 
         <TextView
             android:id="@+id/txt_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?attr/textColor"
-            android:textSize="16sp"
+            android:textColor="@color/home_cat_text"
+            android:textSize="18sp"
             android:textStyle="bold"
-            tools:text="Amazing Grace" />
+            android:fontFamily="serif"
+            android:includeFontPadding="false"
+            tools:text="Grand Dieu, nous te bénissons" />
 
         <TextView
             android:id="@+id/txt_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/grey_font"
-            android:textSize="14sp"
-            tools:text="Chants de Victoire" />
+            android:layout_marginTop="4dp"
+            android:textColor="@color/home_text_body"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif"
+            tools:text="Adoration &amp; Louange" />
 
     </LinearLayout>
 
@@ -52,7 +57,9 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/star_filed"
-        android:layout_marginStart="8dp"
+        app:tint="@color/home_cat_text"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginStart="16dp"
         android:visibility="gone"
         tools:visibility="visible" />
 

@@ -66,7 +66,7 @@
     <string name="like_preferences">like%d%d</string>
     <string name="share_song">Partager ce chant</string>
     <string name="cancel">Annuler</string>
-    <string name="action_search" />
+    <string name="action_search">Rechercher...</string>
     <string name="chant_fav">Cantiques favorites</string>
     <string name="share">Partager l\'application</string>
     <string name="signaler">Signaler un probleme</string>
@@ -188,5 +188,15 @@
     <string name="msg_subscribed">Abonné au sujet météo</string>
     <string name="msg_subscribe_failed">Échec de l\'abonnement au sujet météo</string>
     <string name="msg_token_fmt">Jeton InstanceID: %s</string>
+
+    <!-- Global Search French Translations -->
+    <string name="no_results">Aucun résultat</string>
+    <string name="result_count">%d résultats trouvés</string>
+    <string name="search_all_books">Rechercher</string>
+    <string name="search_in_lyrics">Rechercher aussi dans les paroles</string>
+    <string name="title_activity_global_search">Recherche Globale</string>
+    <string name="found_in_other_books">Trouvé dans d\'autres recueils</string>
+    <string name="search_in_other_books">Chercher dans d\'autres recueils</string>
+    <string name="no_results_anywhere">Aucun résultat dans les recueils</string>
 
 </resources>

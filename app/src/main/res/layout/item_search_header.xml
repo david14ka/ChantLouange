@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="8dp"
+    android:gravity="bottom">
+
+    <TextView
+        android:id="@+id/txt_header_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/home_cat_text"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        tools:text="Chants d'Espérance" />
+
+    <TextView
+        android:id="@+id/txt_header_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/home_text_body"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:letterSpacing="0.05"
+        android:paddingBottom="4dp"
+        tools:text="12 RÉSULTATS" />
+
+</LinearLayout>

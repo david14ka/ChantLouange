@@ -10,13 +10,11 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,31 +28,37 @@ import java.util.List;
 public class GlobalSearchActivity extends BaseActivity {
 
     private SearchView searchView;
-    private CheckBox checkSearchLyrics;
     private RecyclerView recyclerResults;
     private View emptyView;
-    private TextView resultCountView;
+    private ImageView btnBack;
+
+    private TextView chipAll, chipTitles, chipNumbers, chipLyrics;
 
     private SearchAdapter adapter;
-    private List<SearchResult> allResults = new ArrayList<>();
+    private List<ListItem> allItems = new ArrayList<>();
     private String currentQuery = "";
+
+    // 0 = All, 1 = Titles, 2 = Numbers, 3 = Lyrics
+    private int currentFilter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_global_search);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
         searchView = findViewById(R.id.search_view);
-        checkSearchLyrics = findViewById(R.id.check_search_lyrics);
         recyclerResults = findViewById(R.id.recycler_results);
         emptyView = findViewById(R.id.empty_view);
-        resultCountView = findViewById(R.id.result_count);
+        btnBack = findViewById(R.id.btn_back);
+
+        chipAll = findViewById(R.id.chip_all);
+        chipTitles = findViewById(R.id.chip_titles);
+        chipNumbers = findViewById(R.id.chip_numbers);
+        chipLyrics = findViewById(R.id.chip_lyrics);
+
+        btnBack.setOnClickListener(v -> finish());
+
+        setupChips();
 
         recyclerResults.setLayoutManager(new LinearLayoutManager(this));
         adapter = new SearchAdapter();
@@ -75,25 +79,86 @@ public class GlobalSearchActivity extends BaseActivity {
             }
         });
 
-        checkSearchLyrics.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            performSearch(searchView.getQuery().toString());
-        });
-
-        // Auto-focus search view
         searchView.requestFocus();
+    }
+
+    private void setupChips() {
+        View.OnClickListener listener = v -> {
+            if (v == chipAll) currentFilter = 0;
+            else if (v == chipTitles) currentFilter = 1;
+            else if (v == chipNumbers) currentFilter = 2;
+            else if (v == chipLyrics) currentFilter = 3;
+
+            updateChipUI();
+            performSearch(searchView.getQuery().toString());
+        };
+
+        chipAll.setOnClickListener(listener);
+        chipTitles.setOnClickListener(listener);
+        chipNumbers.setOnClickListener(listener);
+        chipLyrics.setOnClickListener(listener);
+    }
+
+    private void updateChipUI() {
+        TextView[] chips = {chipAll, chipTitles, chipNumbers, chipLyrics};
+        for (int i = 0; i < chips.length; i++) {
+            if (i == currentFilter) {
+                chips[i].setBackgroundResource(R.drawable.bg_search_chip_selected);
+                chips[i].setTextColor(Color.WHITE);
+            } else {
+                chips[i].setBackgroundResource(R.drawable.bg_search_chip_unselected);
+                chips[i].setTextColor(getResources().getColor(R.color.home_text_body));
+            }
+        }
     }
 
     private void performSearch(String query) {
         currentQuery = query == null ? "" : query.trim();
-        allResults.clear();
+        allItems.clear();
 
         if (currentQuery.length() >= 2) {
-            boolean searchLyrics = checkSearchLyrics.isChecked();
-            
             for (Book book : Book.bookList) {
-                List<Page> matches = book.searchPage(currentQuery, !searchLyrics);
-                for (Page p : matches) {
-                    allResults.add(new SearchResult(book, p));
+                List<Page> bookMatches = new ArrayList<>();
+                
+                // Fetch matches based on current filter
+                // (Note: The existing searchPage method only searched titles/content.
+                // We'll mimic the logic per the filter required).
+                
+                for (Page page : book.getPages()) {
+                    boolean matches = false;
+                    String title = page.getTitle() != null ? page.getTitle().toLowerCase() : "";
+                    String content = page.getContent() != null ? page.getContent().toLowerCase() : "";
+                    String number = page.getNumber() != null ? page.getNumber().toLowerCase() : "";
+                    String q = currentQuery.toLowerCase();
+
+                    switch (currentFilter) {
+                        case 0: // Tout
+                            matches = title.contains(q) || number.contains(q) || content.contains(q);
+                            break;
+                        case 1: // Titres
+                            matches = title.contains(q);
+                            break;
+                        case 2: // Numéros
+                            matches = number.contains(q);
+                            break;
+                        case 3: // Paroles
+                            matches = content.contains(q);
+                            break;
+                    }
+
+                    if (matches) {
+                        bookMatches.add(page);
+                    }
+                }
+
+                if (!bookMatches.isEmpty()) {
+                    // Add header
+                    allItems.add(new HeaderItem(book.getName(), bookMatches.size()));
+                    
+                    // Add items
+                    for (Page p : bookMatches) {
+                        allItems.add(new SearchResult(book, p));
+                    }
                 }
             }
         }
@@ -101,70 +166,96 @@ public class GlobalSearchActivity extends BaseActivity {
         adapter.notifyDataSetChanged();
         
         boolean hasQuery = currentQuery.length() >= 2;
-        boolean hasResults = !allResults.isEmpty();
-
-        if (hasQuery) {
-            resultCountView.setVisibility(View.VISIBLE);
-            resultCountView.setText(getString(R.string.result_count, allResults.size()));
-        } else {
-            resultCountView.setVisibility(View.GONE);
-        }
+        boolean hasResults = !allItems.isEmpty();
 
         emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
         recyclerResults.setVisibility(hasResults ? View.VISIBLE : View.GONE);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     // --- Adapter ---
 
-    private class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
+    private class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+        private static final int TYPE_HEADER = 0;
+        private static final int TYPE_ITEM = 1;
+
+        @Override
+        public int getItemViewType(int position) {
+            ListItem item = allItems.get(position);
+            if (item instanceof HeaderItem) return TYPE_HEADER;
+            return TYPE_ITEM;
+        }
 
         @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_search_result, parent, false);
-            return new ViewHolder(view);
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            if (viewType == TYPE_HEADER) {
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_search_header, parent, false);
+                return new HeaderViewHolder(view);
+            } else {
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_search_result, parent, false);
+                return new ItemViewHolder(view);
+            }
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            SearchResult result = allResults.get(position);
-            Page page = result.page;
-            Book book = result.book;
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+            ListItem listItem = allItems.get(position);
+            
+            if (getItemViewType(position) == TYPE_HEADER) {
+                HeaderItem header = (HeaderItem) listItem;
+                HeaderViewHolder hvh = (HeaderViewHolder) holder;
+                hvh.txtTitle.setText(header.bookName);
+                if (header.count == 1) {
+                    hvh.txtCount.setText("1 RÉSULTAT");
+                } else {
+                    hvh.txtCount.setText(header.count + " RÉSULTATS");
+                }
+            } else {
+                SearchResult result = (SearchResult) listItem;
+                ItemViewHolder ivh = (ItemViewHolder) holder;
+                Page page = result.page;
+                Book book = result.book;
 
-            holder.txtNumber.setText(page.getNumber().replace(". ", ""));
-            highlightText(holder.txtTitle, page.getTitle(), currentQuery);
-            holder.txtSubtitle.setText(book.getName());
-            holder.imgFav.setVisibility(page.isFavorite() ? View.VISIBLE : View.GONE);
+                String num = page.getNumber().replace(". ", "");
+                // Clean up string like "042" if it's "42." or "42" (Optional, depends on dataset)
+                ivh.txtNumber.setText(num);
+                highlightText(ivh.txtTitle, page.getTitle(), currentQuery);
+                ivh.txtSubtitle.setText(book.getName());
+                ivh.imgFav.setVisibility(page.isFavorite() ? View.VISIBLE : View.GONE);
 
-            holder.itemView.setOnClickListener(v -> {
-                ItemActivity.currentBook = book;
-                ItemActivity.currentPage = page;
-                startActivity(new Intent(GlobalSearchActivity.this, ItemActivity.class));
-            });
+                ivh.itemView.setOnClickListener(v -> {
+                    ItemActivity.currentBook = book;
+                    ItemActivity.currentPage = page;
+                    startActivity(new Intent(GlobalSearchActivity.this, ItemActivity.class));
+                });
+            }
         }
 
         @Override
         public int getItemCount() {
-            return allResults.size();
+            return allItems.size();
         }
 
-        class ViewHolder extends RecyclerView.ViewHolder {
+        class HeaderViewHolder extends RecyclerView.ViewHolder {
+            TextView txtTitle;
+            TextView txtCount;
+
+            HeaderViewHolder(View itemView) {
+                super(itemView);
+                txtTitle = itemView.findViewById(R.id.txt_header_title);
+                txtCount = itemView.findViewById(R.id.txt_header_count);
+            }
+        }
+
+        class ItemViewHolder extends RecyclerView.ViewHolder {
             TextView txtNumber;
             TextView txtTitle;
             TextView txtSubtitle;
             ImageView imgFav;
 
-            ViewHolder(View itemView) {
+            ItemViewHolder(View itemView) {
                 super(itemView);
                 txtNumber = itemView.findViewById(R.id.txt_number);
                 txtTitle = itemView.findViewById(R.id.txt_title);
@@ -174,7 +265,9 @@ public class GlobalSearchActivity extends BaseActivity {
         }
         
         private void highlightText(TextView tv, String text, String query) {
-            if (query == null || query.isEmpty()) {
+            // Highlighting titles only works gracefully if the filter is Titles or All, 
+            // but we can apply it universally as before.
+            if (query == null || query.isEmpty() || text == null) {
                 tv.setText(text);
                 return;
             }
@@ -182,12 +275,12 @@ public class GlobalSearchActivity extends BaseActivity {
             if (start >= 0) {
                 SpannableString spannable = new SpannableString(text);
                 spannable.setSpan(
-                        new BackgroundColorSpan(Color.parseColor("#88FFD700")),
+                        new BackgroundColorSpan(Color.parseColor("#44FFD700")),
                         start,
                         start + query.length(),
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                 spannable.setSpan(
-                        new android.text.style.ForegroundColorSpan(Color.BLACK),
+                        new android.text.style.ForegroundColorSpan(Color.WHITE),
                         start,
                         start + query.length(),
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -198,9 +291,21 @@ public class GlobalSearchActivity extends BaseActivity {
         }
     }
 
-    // --- POJO ---
+    // --- POJOs ---
 
-    private static class SearchResult {
+    private interface ListItem {}
+
+    private static class HeaderItem implements ListItem {
+        final String bookName;
+        final int count;
+
+        HeaderItem(String bookName, int count) {
+            this.bookName = bookName;
+            this.count = count;
+        }
+    }
+
+    private static class SearchResult implements ListItem {
         final Book book;
         final Page page;
 

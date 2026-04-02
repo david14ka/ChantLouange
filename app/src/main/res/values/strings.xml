@@ -47,7 +47,7 @@
     <string name="share_song">Share this song</string>
 
     <string name="cancel">Cancel</string>
-    <string name="action_search" />
+    <string name="action_search">Rechercher...</string>
     <string name="chant_fav">Favorite Hymns</string>
     <string name="share">Share application</string>
     <string name="signaler">Report a problem</string>
@@ -191,14 +191,14 @@
     <string name="under_line">underline</string>
     <string name="collection_de_cantiques" translatable="false">Collection de cantiques</string>
     <string name="version_2">Version </string>
-    <string name="no_results">No results found</string>
-    <string name="result_count">%d results found</string>
-    <string name="search_all_books">Global Search</string>
-    <string name="search_in_lyrics">Also search in lyrics</string>
-    <string name="title_activity_global_search">Global Search</string>
-    <string name="found_in_other_books">Found in other books</string>
-    <string name="search_in_other_books">Search in other books</string>
-    <string name="no_results_anywhere">No results found in any book</string>
+    <string name="no_results">Aucun résultat</string>
+    <string name="result_count">%d résultats trouvés</string>
+    <string name="search_all_books">Rechercher</string>
+    <string name="search_in_lyrics">Rechercher aussi dans les paroles</string>
+    <string name="title_activity_global_search">Recherche Globale</string>
+    <string name="found_in_other_books">Trouvé dans d\'autres recueils</string>
+    <string name="search_in_other_books">Chercher dans d\'autres recueils</string>
+    <string name="no_results_anywhere">Aucun résultat dans les recueils</string>
     <!-- Favorites screen editorial design -->
     <string name="fav_subtitle">Your saved hymns, always within reach</string>
     <string name="fav_section_label">Saved Songs</string>

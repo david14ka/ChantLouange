@@ -1,133 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
-    android:paddingVertical="14dp"
-    android:paddingHorizontal="20dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#262626">
 
-    <!-- Left vertical red accent bar (active/favorite indicator) -->
-    <View
-        android:id="@+id/accent_bar"
-        android:layout_width="3dp"
-        android:layout_height="0dp"
-        android:background="#E53935"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Hymn Number (large, formatted like 01, 02...) -->
-    <TextView
-        android:id="@+id/txt_number"
-        android:layout_width="42dp"
-        android:layout_height="wrap_content"
-        tools:text="01"
-        android:textColor="#E53935"
-        android:textSize="18sp"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Title + Subtitle column -->
-    <LinearLayout
-        android:id="@+id/text_column"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/txt_number"
-        app:layout_constraintEnd_toStartOf="@id/right_icons">
-
-        <TextView
-            android:id="@+id/txt_tittle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-medium"
-            android:lineSpacingMultiplier="1.2" />
-
-        <TextView
-            android:id="@+id/txt_original_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text=""
-            android:textColor="#888888"
-            android:textSize="11sp"
-            android:textAllCaps="true"
-            android:letterSpacing="0.04"
-            android:visibility="gone"
-            tools:text="AMAZING GRACE"
-            tools:visibility="visible" />
-    </LinearLayout>
-
-    <!-- Right icons: favorite star + chevron -->
-    <LinearLayout
-        android:id="@+id/right_icons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:id="@+id/fav"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/star0"
-            app:tint="#E53935"
-            android:visibility="gone"
-            android:contentDescription="@string/fav_preferences" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:text=">"
-            android:textColor="#555555"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <!-- Letter divider for alphabetic mode -->
-    <TextView
-        android:id="@+id/txt_letter"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:paddingBottom="2dp"
-        android:paddingHorizontal="20dp"
-        android:textColor="#E53935"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:fontFamily="serif"
-        android:visibility="gone"
-        tools:text="A"
-        tools:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="12dp">
 
-    <!-- Compatibility stub -->
-    <ImageView
-        android:id="@+id/note"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/note"
-        android:visibility="gone"
-        android:contentDescription="@string/note"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <!-- Left vertical red accent bar (active/favorite indicator) -->
+        <View
+            android:id="@+id/accent_bar"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#E53935"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Hymn Number box -->
+        <FrameLayout
+            android:id="@+id/number_container"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_search_pill"
+            android:backgroundTint="#1A1A1A"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txt_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="01"
+                android:textColor="#F5E0B7"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textStyle="italic" />
+        </FrameLayout>
+
+        <!-- Title + Subtitle column -->
+        <LinearLayout
+            android:id="@+id/text_column"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/number_container"
+            app:layout_constraintEnd_toStartOf="@id/right_icons">
+
+            <TextView
+                android:id="@+id/txt_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/txt_original_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="#888888"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.04"
+                android:visibility="gone"
+                tools:text="TE DEUM LAUDAMUS"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <!-- Right icons: favorite star + chevron -->
+        <LinearLayout
+            android:id="@+id/right_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_favorite_24"
+                app:tint="#E53935"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:contentDescription="@string/fav_preferences" />
+
+            <ImageView
+                android:id="@+id/chevron"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/forward_24px"
+                app:tint="#555555" />
+        </LinearLayout>
+
+        <!-- Letter divider for alphabetic mode -->
+        <TextView
+            android:id="@+id/txt_letter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:textColor="#E53935"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:text="A" />
+
+        <!-- Compatibility stub -->
+        <ImageView
+            android:id="@+id/note"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/note"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
