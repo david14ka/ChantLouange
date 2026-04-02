@@ -4,62 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/item_song_border"
-    android:paddingVertical="12dp"
-    android:paddingHorizontal="16dp">
+    android:background="?attr/selectableItemBackground"
+    android:paddingVertical="14dp"
+    android:paddingHorizontal="20dp">
 
-        <!-- Hymn Number -->
-        <TextView
-            android:id="@+id/txt_number"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            tools:text="344B"
-            android:textColor="@color/on_primary_container"
-            android:textSize="14sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <!-- Left vertical red accent bar (active/favorite indicator) -->
+    <View
+        android:id="@+id/accent_bar"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:background="#E53935"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Title -->
+    <!-- Hymn Number (large, formatted like 01, 02...) -->
+    <TextView
+        android:id="@+id/txt_number"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        tools:text="01"
+        android:textColor="#E53935"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Title + Subtitle column -->
+    <LinearLayout
+        android:id="@+id/text_column"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_number"
+        app:layout_constraintEnd_toStartOf="@id/right_icons">
+
         <TextView
             android:id="@+id/txt_tittle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             android:fontFamily="sans-serif-medium"
-            android:lineSpacingMultiplier="1.2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/txt_number"
-            app:layout_constraintEnd_toStartOf="@+id/fav" />
+            android:lineSpacingMultiplier="1.2" />
 
-        <!-- Secondary elements (Notes / Favorites) pinned to top right -->
+        <TextView
+            android:id="@+id/txt_original_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.04"
+            android:visibility="gone"
+            tools:text="AMAZING GRACE"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <!-- Right icons: favorite star + chevron -->
+    <LinearLayout
+        android:id="@+id/right_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
         <ImageView
             android:id="@+id/fav"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/star0"
-            app:tint="@color/tertiary_fixed"
+            app:tint="#E53935"
             android:visibility="gone"
-            android:contentDescription="@string/fav_preferences"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:contentDescription="@string/fav_preferences" />
 
-        <!-- Kept for backward compatibility with ListFragment -->
-        <ImageView
-            android:id="@+id/note"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/note"
-            app:tint="@color/tertiary_fixed"
-            android:visibility="gone"
-            android:contentDescription="@string/note"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text=">"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Letter divider for alphabetic mode -->
+    <TextView
+        android:id="@+id/txt_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="2dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="#E53935"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Compatibility stub -->
+    <ImageView
+        android:id="@+id/note"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/note"
+        android:visibility="gone"
+        android:contentDescription="@string/note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

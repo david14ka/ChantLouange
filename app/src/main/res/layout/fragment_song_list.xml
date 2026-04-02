@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/layout"
     android:orientation="vertical"
-    android:background="@drawable/bground"
-    android:paddingHorizontal="@dimen/spacing_4">
+    android:background="@null">
 
     <!-- Result count bar — shown only during an active search -->
     <TextView
@@ -16,20 +15,20 @@
         android:paddingHorizontal="16dp"
         android:paddingTop="6dp"
         android:textSize="12sp"
-        android:textColor="?attr/colorAccent"
+        android:textColor="#E53935"
         android:visibility="gone"
         tools:text="5 songs found"
         tools:visibility="visible"/>
 
-    <!-- Search in lyrics option — visible only during an active search -->
+    <!-- Search in lyrics option -->
     <CheckBox
         android:id="@+id/check_search_lyrics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:text="@string/search_in_lyrics"
-        android:textColor="?attr/textColor"
-        android:buttonTint="?attr/colorAccent"
+        android:textColor="#CCCCCC"
+        android:buttonTint="#E53935"
         android:visibility="gone"
         tools:visibility="visible" />
 
@@ -42,22 +41,11 @@
             android:id="@+id/recycler_song"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="80dp"
+            android:paddingBottom="160dp"
             android:clipToPadding="false"
             android:visibility="visible"/>
 
-        <GridView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/grid_song"
-            android:paddingBottom="80dp"
-            android:clipToPadding="false"
-            android:numColumns="auto_fit"
-            android:verticalSpacing="@dimen/spacing_4"
-            android:horizontalSpacing="@dimen/spacing_4"
-            android:visibility="gone"/>
-
-        <!-- Empty state — shown when current book has no results -->
+        <!-- Empty state -->
         <LinearLayout
             android:id="@+id/empty_view"
             android:layout_width="match_parent"
@@ -78,11 +66,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:textSize="16sp"
-                android:textColor="?attr/textColor"
+                android:textColor="#CCCCCC"
                 android:gravity="center"
                 android:text="@string/no_results"/>
 
-            <!-- Button to trigger cross-book search (plain Button — compatible with AppCompat theme) -->
             <Button
                 android:id="@+id/btn_search_other_books"
                 style="@style/Widget.AppCompat.Button.Borderless"
@@ -90,15 +77,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/search_in_other_books"
-                android:textColor="?attr/colorAccent"
+                android:textColor="#E53935"
                 android:textAllCaps="false"
                 android:visibility="gone"/>
-
         </LinearLayout>
 
     </FrameLayout>
 
-    <!-- Cross-book results section — visible only after the user taps the button above -->
+    <!-- Cross-book results section -->
     <TextView
         android:id="@+id/txt_other_books_header"
         android:layout_width="match_parent"
@@ -110,7 +96,7 @@
         android:textSize="11sp"
         android:textAllCaps="true"
         android:letterSpacing="0.08"
-        android:textColor="?attr/colorAccent"
+        android:textColor="#E53935"
         android:visibility="gone"
         tools:visibility="visible"/>
 
@@ -123,5 +109,33 @@
         android:visibility="gone"
         tools:visibility="visible"
         tools:listitem="@layout/item_search_result"/>
+
+    <!-- ── Scripture quote footer ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A1A"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:textColor="#DDDDDD"
+            android:textSize="15sp"
+            android:lineSpacingMultiplier="1.4"
+            android:text="&quot;Chantez à l&apos;Éternel un chant nouveau\u202F! Chantez à l&apos;Éternel, vous tous, habitants de la terre\u202F!&quot;" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="PSAUME 96:1"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:letterSpacing="0.1" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -2,208 +2,174 @@ package com.davidkazad.chantlouange.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.material.tabs.TabLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.core.view.MenuItemCompat;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.ui.fragment.ListFragment;
 import com.davidkazad.chantlouange.models.Book;
+import com.davidkazad.chantlouange.ui.fragment.ListFragment;
 import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.pixplicity.easyprefs.library.Prefs;
 
-import butterknife.ButterKnife;
 import org.greenrobot.eventbus.EventBus;
 
 import static com.davidkazad.chantlouange.config.Common.PREFS_TABLE_MATIERES_ALPHABETIQUE;
 
 public class ListActivity extends BaseActivity {
-    private static final String TAG = ListFragment.class.getName();
+    private static final String TAG = ListActivity.class.getSimpleName();
 
     public static Book bookItem;
 
-    private Toolbar toolbar;
-
+    // ── Book image map keyed by book id ──────────────────────────────────────
+    // Assign existing drawables to each book id (1-based)
+    private static final int[] BOOK_IMAGES = {
+            R.drawable.music_book_6168179_640, // 1
+            R.drawable.music_notes_3221097_640, // 2
+            R.drawable.bground,                 // 3
+            R.drawable.bground_3,               // 4
+            R.drawable.music_sheet_5117328_640, // 5
+            R.drawable.guitar_3283649_640,      // 6
+            R.drawable.ob_piano,                // 7
+            R.drawable.book_1,                  // 8
+            R.drawable.book_3,                  // 9
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.list_of_songs);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ButterKnife.bind(this);
-
-        navigationDrawer(savedInstanceState, null);
 
         LogUtil.d();
 
-        initView(bookItem.getId() - 1);
-        updateSortButton();
-    }
+        // ── Hero setup ────────────────────────────────────────────────────────
+        ImageView heroImage  = findViewById(R.id.hero_image);
+        TextView heroTitle   = findViewById(R.id.hero_title);
+        TextView heroCount   = findViewById(R.id.hero_count_chip);
+        TextView heroEdition = findViewById(R.id.hero_edition);
+        TextView heroName    = findViewById(R.id.hero_book_name);
+        ImageView btnBack    = findViewById(R.id.btn_back);
+        ImageView btnSearch  = findViewById(R.id.btn_search_icon);
 
-    private void initView(int currentTab) {
+        if (bookItem != null) {
+            // Set hero image based on book id
+            int imgIdx = Math.max(0, Math.min(bookItem.getId() - 1, BOOK_IMAGES.length - 1));
+            heroImage.setImageResource(BOOK_IMAGES[imgIdx]);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.removeAllTabs();
+            // Hero text
+            heroTitle.setText(bookItem.getName());
+            heroName.setText(bookItem.getName());
 
-        for (Book book : Book.bookList){
-            tabLayout.addTab(tabLayout.newTab().setText(book.getAbbreviation()));
+            int songCount = bookItem.getPages().size();
+            heroCount.setText(songCount + " Cantiques");
         }
 
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        btnBack.setOnClickListener(v -> onBackPressed());
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-
-        toolbar.setSubtitle(bookItem.getName());
-
-        PagerAdapter1 adapter = new PagerAdapter1(getSupportFragmentManager(), tabLayout.getTabCount());
-
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        tabLayout.setScrollPosition(currentTab, 0f, true);
-        viewPager.setCurrentItem(currentTab);
-
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-                bookItem = Book.bookList.get(tab.getPosition());
-                viewPager.setCurrentItem(tab.getPosition());
-                Log.d(TAG, "onTabSelected: tab " + tab.getPosition());
-                toolbar.setSubtitle(bookItem.getName());
+        // ── Inline search ─────────────────────────────────────────────────────
+        EditText searchEdit = findViewById(R.id.search_edit);
+        searchEdit.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
+                EventBus.getDefault().post(s.toString());
             }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-
+            @Override public void afterTextChanged(Editable s) {}
         });
 
-        LogUtil.d();
+        // Toggle quick-jump bar via search icon in top bar (repurposed)
+        View quickJumpBar = findViewById(R.id.quick_jump_bar);
+        EditText editQuickJump = findViewById(R.id.edit_quick_jump);
+        android.widget.Button btnQuickJumpGo = findViewById(R.id.btn_quick_jump_go);
+
+        btnSearch.setOnClickListener(v -> {
+            if (quickJumpBar.getVisibility() == View.VISIBLE) {
+                quickJumpBar.setVisibility(View.GONE);
+            } else {
+                quickJumpBar.setVisibility(View.VISIBLE);
+                editQuickJump.requestFocus();
+                android.view.inputmethod.InputMethodManager imm =
+                        (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
+            }
+        });
+
+        btnQuickJumpGo.setOnClickListener(v -> {
+            String query = editQuickJump.getText().toString().trim();
+            if (query.isEmpty()) return;
+            java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
+            if (results.size() >= 1) {
+                ItemActivity.currentBook = bookItem;
+                ItemActivity.currentPage = results.get(0);
+                startActivity(new Intent(ListActivity.this, ItemActivity.class));
+                editQuickJump.setText("");
+                quickJumpBar.setVisibility(View.GONE);
+                android.view.inputmethod.InputMethodManager imm =
+                        (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
+            } else {
+                android.widget.Toast.makeText(this, R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // ── Pager (no TabLayout — single book view) ───────────────────────────
+        initPager();
     }
 
-    public void trie(View view) {
-        boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
-        Prefs.putBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, !isAlpha);
-        initView(bookItem.getId() - 1);
-        updateSortButton();
+    private void initPager() {
+        ViewPager viewPager = findViewById(R.id.pager);
+        int bookIdx = bookItem != null ? bookItem.getId() - 1 : 0;
+        viewPager.setAdapter(new SingleBookPagerAdapter(getSupportFragmentManager(), bookIdx));
+        viewPager.setCurrentItem(0);
     }
 
-    private void updateSortButton() {
-        android.widget.TextView btnSort = findViewById(R.id.btn_trie);
-        if (btnSort != null) {
-            boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
-            btnSort.setText(isAlpha ? " A Z" : " 1 9");
-            int iconRes = isAlpha ? R.drawable.asorting : R.drawable.nsorting;
-            btnSort.setCompoundDrawablesWithIntrinsicBounds(iconRes, 0, 0, 0);
-        }
-    }
+    /** Single-page pager that shows only the current book's ListFragment. */
+    private static class SingleBookPagerAdapter extends FragmentStatePagerAdapter {
+        private final int bookIdx;
 
-    public class PagerAdapter1 extends FragmentStatePagerAdapter {
-        int mNumOfTabs;
-
-        PagerAdapter1(FragmentManager fm, int NumOfTabs) {
+        SingleBookPagerAdapter(FragmentManager fm, int bookIdx) {
             super(fm);
-            this.mNumOfTabs = NumOfTabs;
+            this.bookIdx = bookIdx;
         }
 
         @Override
         public Fragment getItem(int position) {
-
-            //int bookId = Book.bookList.get(position).getId();
-            return ListFragment.getInstance(position);
-
+            return ListFragment.getInstance(bookIdx);
         }
 
         @Override
         public int getCount() {
-            return mNumOfTabs;
+            return 1;
         }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        // minimal menu — sort option remains
         getMenuInflater().inflate(R.menu.menu_list, menu);
-        search(menu);
-        
-        // Hide standard findItem dialog and wire up quick jump bar
-        View quickJumpBar = findViewById(R.id.quick_jump_bar);
-        android.widget.EditText editQuickJump = findViewById(R.id.edit_quick_jump);
-        android.widget.Button btnQuickJumpGo = findViewById(R.id.btn_quick_jump_go);
-        
-        btnQuickJumpGo.setOnClickListener(v -> {
-            String query = editQuickJump.getText().toString().trim();
-            if (query.isEmpty()) return;
-            
-            // Search inside the current active book
-            java.util.List<com.davidkazad.chantlouange.models.Page> results = bookItem.find(query);
-            
-            if (results.size() >= 1) {
-                // To keep it simple, just navigate to the first match
-                // (find() returns size 1 usually, unless "1a" / "1b")
-                ItemActivity.currentBook = bookItem;
-                ItemActivity.currentPage = results.get(0);
-                startActivity(new Intent(ListActivity.this, ItemActivity.class));
-                
-                // Reset so it's clean next time
-                editQuickJump.setText("");
-                quickJumpBar.setVisibility(View.GONE);
-                
-                // Hide keyboard
-                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-                if (imm != null) imm.hideSoftInputFromWindow(editQuickJump.getWindowToken(), 0);
-            } else {
-                android.widget.Toast.makeText(getApplicationContext(), R.string.number_ot_exists, android.widget.Toast.LENGTH_SHORT).show();
-            }
-        });
-        
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_find) {
-            // Toggle visibility of quick jump bar
-            View quickJumpBar = findViewById(R.id.quick_jump_bar);
-            if (quickJumpBar.getVisibility() == View.VISIBLE) {
-                quickJumpBar.setVisibility(View.GONE);
-                // hide keyboard
-                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-                if (imm != null) imm.hideSoftInputFromWindow(quickJumpBar.getWindowToken(), 0);
-            } else {
-                quickJumpBar.setVisibility(View.VISIBLE);
-                android.widget.EditText editQuickJump = findViewById(R.id.edit_quick_jump);
-                editQuickJump.requestFocus();
-                // show keyboard
-                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-                if (imm != null) imm.showSoftInput(editQuickJump, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
-            }
+        if (id == android.R.id.home) {
+            onBackPressed();
             return true;
         }
         if (id == R.id.action_sort) {
-            trie(null);
+            boolean isAlpha = Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false);
+            Prefs.putBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, !isAlpha);
+            // reload fragment via EventBus reload trigger (re-init pager)
+            initPager();
             return true;
         }
         if (id == R.id.action_settings) {
@@ -211,45 +177,14 @@ public class ListActivity extends BaseActivity {
             return true;
         }
         if (id == R.id.action_helps) {
-
             openHelp();
             return true;
-        }if (id == R.id.action_about) {
+        }
+        if (id == R.id.action_about) {
             startActivity(new Intent(getApplicationContext(), AboutActivity.class));
             return true;
         }
 
-
         return super.onOptionsItemSelected(item);
-    }
-
-    private void search(Menu menu) {
-        final MenuItem searchItem = menu.findItem(R.id.app_bar_search);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                // Let EventBus or the instance field handle it
-                EventBus.getDefault().post(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String query) {
-                EventBus.getDefault().post(query);
-                return false;
-            }
-        });
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
     }
 }

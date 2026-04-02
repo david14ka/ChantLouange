@@ -1,43 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Soft background image (light music sheet texture) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/music_sheet_5117328_640"
+        android:scaleType="centerCrop"
+        android:alpha="0.10" />
+
+    <!-- Semi-transparent dark overlay for readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C0101010" />
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.activities.ListActivity">
+    android:background="@null"
+    android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!-- ── Hero Header with book image ── -->
+    <FrameLayout
+        android:id="@+id/hero_container"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <!-- Background image -->
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/music_book_6168179_640" />
+
+        <!-- Dark gradient scrim -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hero_scrim_gradient" />
+
+        <!-- Back arrow + Search button -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/forward_24px"
+                android:rotation="180"
+                app:tint="#FFFFFF"
+                android:padding="6dp" />
+
+            <TextView
+                android:id="@+id/hero_book_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:textColor="#E53935"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Chant Louange" />
+
+            <ImageView
+                android:id="@+id/btn_search_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/gsearch_50px"
+                app:tint="#FFFFFF"
+                android:padding="6dp" />
+        </LinearLayout>
+
+        <!-- Hero title area (bottom of header) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/hero_category_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECUEIL OFFICIEL"
+                android:textColor="#CCCCCC"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12" />
+
+            <TextView
+                android:id="@+id/hero_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="serif"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:lineSpacingMultiplier="1.1"
+                android:text="Hymnes et\nCantiques" />
+
+            <!-- Meta chips row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/hero_count_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pill_active_bg"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:text="650 Cantiques" />
+
+                <TextView
+                    android:id="@+id/hero_edition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12sp"
+                    android:text="Édition Révisée" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- ── Inline search bar ── -->
+    <LinearLayout
+        android:id="@+id/search_bar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#1E1E1E"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gsearch_50px"
+            app:tint="#888888" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:hint="Rechercher dans ce recueil..."
+            android:textColorHint="#666666"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionSearch" />
+    </LinearLayout>
 
-    <include layout="@layout/content_song_list" />
-
-    <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/fab"
-        android:onClick="trie"
-        android:layout_width="wrap_content"
+    <!-- Quick jump bar (toggled by number search icon) -->
+    <LinearLayout
+        android:id="@+id/quick_jump_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/sorting"
-        fab:menu_labels_ellipsize="end"
-        app:fab_colorNormal="@color/app_primary"
-        app:fab_colorPressed="@color/app_primary_dark"
-        fab:fab_showAnimation="@anim/show_from_bottom"
-        fab:fab_hideAnimation="@anim/hide_to_bottom"
-        android:visibility="gone"/>
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:background="#2A2A2A"
+        android:gravity="center_vertical">
 
+        <EditText
+            android:id="@+id/edit_quick_jump"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/number"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:backgroundTint="#FFFFFF"
+            android:maxLines="1" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <Button
+            android:id="@+id/btn_quick_jump_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:layout_marginStart="8dp"
+            android:textColor="#FFFFFF"
+            style="@style/Widget.AppCompat.Button.Colored" />
+    </LinearLayout>
+
+    <!-- ── Song list FragmentPager ── -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
+
+</FrameLayout>

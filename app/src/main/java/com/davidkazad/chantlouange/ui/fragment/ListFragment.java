@@ -290,10 +290,15 @@ public class ListFragment extends BaseFragment {
             @BindView(R.id.fav) ImageView fav;
             @BindView(R.id.note) ImageView note;
             @Nullable @BindView(R.id.txt_letter) TextView letter;
+            // Optional subtitle view (present in new design)
+            TextView txtOriginalTitle;
+            View accentBar;
 
             public SongViewHolder(@NonNull View itemView) {
                 super(itemView);
                 ButterKnife.bind(this, itemView);
+                txtOriginalTitle = itemView.findViewById(R.id.txt_original_title);
+                accentBar = itemView.findViewById(R.id.accent_bar);
                 itemView.setOnClickListener(v -> {
                     int pos = getAdapterPosition();
                     if (pos != RecyclerView.NO_POSITION) {
@@ -323,14 +328,36 @@ public class ListFragment extends BaseFragment {
                     note.setVisibility(View.GONE);
 
                     highlightText(title, mPage.getTitle(), currentQuery);
-                    
+
+                    // Format number with leading zero
+                    String numStr = mPage.getNumber().replace(". ", "").trim();
                     if (Prefs.getBoolean(PREFS_TABLE_MATIERES_ALPHABETIQUE, false)) {
-                        number.setText(String.format(getString(R.string.txt_number), mPage.getNumber().replace(". ", "")));
+                        number.setText(String.format(getString(R.string.txt_number), numStr));
                     } else {
-                        number.setText(mPage.getNumber().replace(". ", ""));
+                        try {
+                            int n = Integer.parseInt(numStr);
+                            number.setText(String.format("%02d", n));
+                        } catch (NumberFormatException e) {
+                            number.setText(numStr);
+                        }
+                    }
+
+                    // Show original title as subtitle
+                    if (txtOriginalTitle != null) {
+                        String orig = mPage.getOriginalTitle();
+                        if (orig != null && !orig.isEmpty()) {
+                            txtOriginalTitle.setText(orig.toUpperCase());
+                            txtOriginalTitle.setVisibility(View.VISIBLE);
+                        } else {
+                            txtOriginalTitle.setVisibility(View.GONE);
+                        }
                     }
                 }
-                fav.setVisibility(mPage.isFavorite() ? View.VISIBLE : View.GONE);
+                boolean isFav = mPage.isFavorite();
+                fav.setVisibility(isFav ? View.VISIBLE : View.GONE);
+                if (accentBar != null) {
+                    accentBar.setVisibility(isFav ? View.VISIBLE : View.GONE);
+                }
             }
 
             private void highlightText(TextView tv, String text, String query) {
