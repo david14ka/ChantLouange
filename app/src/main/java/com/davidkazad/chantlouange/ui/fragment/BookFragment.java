@@ -1,5 +1,6 @@
 package com.davidkazad.chantlouange.ui.fragment;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -16,9 +17,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import com.davidkazad.chantlouange.ui.fragment.FullHeightGridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.davidkazad.chantlouange.datas.PsalmVerses;
 
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.datas.OB;
@@ -37,7 +41,10 @@ import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 public class BookFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     @BindView(R.id.grid_book)
-    GridView grid_book;
+    FullHeightGridView grid_book;
+
+    private TextView tvVerseText;
+    private TextView tvVerseReference;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,16 +59,12 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
         super.onViewCreated(view, savedInstanceState);
 
         grid_book = view.findViewById(R.id.grid_book);
-        
-        View btnFakeSearch = view.findViewById(R.id.btn_fake_search);
-        if (btnFakeSearch != null) {
-            btnFakeSearch.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(getContext(), com.davidkazad.chantlouange.ui.activities.GlobalSearchActivity.class));
-                }
-            });
-        }
+
+        // ── Verset biblique aléatoire des Psaumes ──────────────────────
+        tvVerseText = view.findViewById(R.id.tv_verse_text);
+        tvVerseReference = view.findViewById(R.id.tv_verse_reference);
+        PsalmVerses.init(requireContext());
+        displayRandomVerse();
 
         grid_book.setOnItemClickListener(this);
         grid_book.setAdapter(new BaseAdapter() {
@@ -124,6 +127,31 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
             }
         });
 
+    }
+
+    /**
+     * Affiche un verset aléatoire des Psaumes avec une animation de fondu.
+     */
+    private void displayRandomVerse() {
+        if (tvVerseText == null || tvVerseReference == null) return;
+
+        PsalmVerses.Verse verse = PsalmVerses.getRandomVerse();
+
+        tvVerseText.setAlpha(0f);
+        tvVerseReference.setAlpha(0f);
+
+        tvVerseText.setText(verse.text);
+        tvVerseReference.setText("\u2014 " + verse.reference);
+
+        ObjectAnimator fadeText = ObjectAnimator.ofFloat(tvVerseText, "alpha", 0f, 1f);
+        fadeText.setDuration(800);
+        fadeText.setStartDelay(200);
+        fadeText.start();
+
+        ObjectAnimator fadeRef = ObjectAnimator.ofFloat(tvVerseReference, "alpha", 0f, 0.75f);
+        fadeRef.setDuration(800);
+        fadeRef.setStartDelay(500);
+        fadeRef.start();
     }
 
     private void promptCollection() {

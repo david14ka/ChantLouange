@@ -1,95 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/home_bg_dark"
+    android:fillViewport="true"
+    android:overScrollMode="never"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
-    <!-- ── Hero Header ────────────────────────────────────────── -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingTop="24dp"
-        android:paddingBottom="8dp">
+        android:orientation="vertical">
 
-        <TextView
+        <!-- ── Hero Header ──────────────────────────────────────── -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bienvenue"
-            android:textColor="@color/home_cat_text"
-            android:textSize="44sp"
-            android:textStyle="bold"
-            android:letterSpacing="-0.03"
-            android:fontFamily="serif" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Que tout ce qui respire loue l’Éternel!
-Louez l’Éternel!"
-            android:textColor="@color/home_text_body"
-            android:textSize="18sp"
-            android:lineSpacingMultiplier="1.2"
-            android:fontFamily="sans-serif" />
-
-        <LinearLayout
-            android:id="@+id/btn_fake_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/search_pill_bg"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:paddingHorizontal="24dp"
-            android:paddingVertical="18dp"
-            android:gravity="center_vertical">
+            <!-- Background Image with Transparency -->
+            <!-- Transparence ajustable ici, 0.2 = 20% -->
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_search_black_24dp"
-                app:tint="@color/home_text_body" />
+                android:layout_width="421dp"
+                android:layout_height="257dp"
+                android:alpha="0.2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/audience2_868074_640" />
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:text="Rechercher un hymne, un numé..."
-                android:textColor="@color/home_text_body"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp">
 
-        <RelativeLayout
+                <!-- Titre de bienvenue -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenue"
+                    android:textColor="@color/home_cat_text"
+                    android:textSize="44sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.03"
+                    android:fontFamily="serif" />
+
+                <!-- Séparateur décoratif -->
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/bg_day"
+                    android:alpha="0.5" />
+
+                <!-- Verset biblique dynamique -->
+                <TextView
+                    android:id="@+id/tv_verse_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bg_day"
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"
+                    tools:text="Je lève les yeux vers les montagnes..." />
+
+                <!-- Référence du verset -->
+                <TextView
+                    android:id="@+id/tv_verse_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/home_cat_text"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:alpha="0.75"
+                    tools:text="— Psaume 121:1-2" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- ── 2-Column Book Grid (non-scrollable, hauteur complète) ── -->
+        <com.davidkazad.chantlouange.ui.fragment.FullHeightGridView
+            android:id="@+id/grid_book"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            android:numColumns="2"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:scrollbarStyle="insideInset"
+            android:nestedScrollingEnabled="false"
+            android:stretchMode="columnWidth" />
 
     </LinearLayout>
 
-    <!-- ── 2-Column Book Grid ─────────────────────────────────── -->
-    <GridView
-        android:id="@+id/grid_book"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:numColumns="2"
-        android:horizontalSpacing="8dp"
-        android:verticalSpacing="8dp"
-        android:paddingHorizontal="8dp"
-        android:paddingBottom="80dp"
-        android:clipToPadding="false"
-        android:scrollbarStyle="insideInset"
-        android:stretchMode="columnWidth" />
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
