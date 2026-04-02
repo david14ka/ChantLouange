@@ -54,7 +54,7 @@ public class ListActivity extends BaseActivity {
         TextView heroCount   = findViewById(R.id.hero_count_chip);
         TextView heroName    = findViewById(R.id.hero_book_name);
         ImageView btnBack    = findViewById(R.id.btn_back);
-        ImageView btnSearch  = findViewById(R.id.btn_search_icon);
+        ImageView btnSearch  = null; // Bouton recherche supprimé du header
 
         if (bookItem != null) {
             // Titre du livre dans la barre compacte

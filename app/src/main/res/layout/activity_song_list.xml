@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     android:background="#121212">
 
+    <!-- Image de fond -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/audience2_868074_640"
+        android:scaleType="centerCrop"
+        android:alpha="0.3" />
+
     <!-- ── Compact AppBar (pas d'images, pas de CollapsingToolbar) ── -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -61,14 +69,6 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/btn_search_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/gsearch_50px"
-                app:tint="#888888"
-                android:padding="8dp"
-                android:contentDescription="Rechercher" />
         </LinearLayout>
 
         <!-- Barre de recherche inline -->
