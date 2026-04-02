@@ -105,4 +105,8 @@
 
     <style name="AlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert" />
 
+    <style name="NavSubheaderTextAppearance" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

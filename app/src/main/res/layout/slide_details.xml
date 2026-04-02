@@ -140,6 +140,7 @@
         android:background="#121212"
         app:itemTextColor="@color/home_cat_text"
         app:itemIconTint="@color/home_cat_text"
+        app:subheaderTextAppearance="@style/NavSubheaderTextAppearance"
         app:headerLayout="@layout/layout_drawer_header"
         app:menu="@menu/menu_drawer" />
 
