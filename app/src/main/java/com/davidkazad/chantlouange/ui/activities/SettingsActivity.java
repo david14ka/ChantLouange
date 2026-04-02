@@ -19,10 +19,17 @@ public class SettingsActivity extends BaseActivity {
     private Switch switchDarkMode;
     private View btnFontSize, btnReset, btnPrivacy, btnTerms;
     private TextView txtFontSizeDesc;
-    private TextView tabFr, tabEn, tabSw;
+    private TextView tabFr, tabEn;
 
     private final int[] fontSizes = {14, 18, 22, 26};
-    private final String[] fontSizeLabels = {"Small (14px)", "Standard (18px)", "Large (22px)", "Extra Large (26px)"};
+    private String[] getFontSizeLabels() {
+        return new String[]{
+                getString(R.string.settings_font_size_petit),
+                getString(R.string.settings_font_size_standard),
+                getString(R.string.settings_font_size_grand),
+                getString(R.string.settings_font_size_extra)
+        };
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +43,12 @@ public class SettingsActivity extends BaseActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
         
-        // Remove navigation drawer link here since Settings usually exists on top
-
         switchDarkMode = findViewById(R.id.switch_dark_mode);
         btnFontSize = findViewById(R.id.btn_font_size);
         txtFontSizeDesc = findViewById(R.id.txt_font_size_desc);
         
         tabFr = findViewById(R.id.tab_lang_fr);
         tabEn = findViewById(R.id.tab_lang_en);
-        tabSw = findViewById(R.id.tab_lang_sw);
         
         btnReset = findViewById(R.id.btn_reset);
         btnPrivacy = findViewById(R.id.btn_privacy);
@@ -72,8 +76,8 @@ public class SettingsActivity extends BaseActivity {
             }
             
             new MaterialDialog.Builder(this)
-                    .title("Default Font Size")
-                    .items(fontSizeLabels)
+                    .title(R.string.settings_font_size_label)
+                    .items(getFontSizeLabels())
                     .itemsCallbackSingleChoice(selectedIndex, (dialog, view, which, text) -> {
                         Prefs.putFloat("TextSize", fontSizes[which]);
                         updateFontSizeDisplay(which);
@@ -86,7 +90,6 @@ public class SettingsActivity extends BaseActivity {
         switchDarkMode.setChecked(Prefs.getBoolean("night_mode", false));
         switchDarkMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             Prefs.putBoolean("night_mode", isChecked);
-            // In a real scenario we'd trigger recreate(), but the legacy app just triggers it on re-launch
         });
 
         // Load & bind language
@@ -95,11 +98,10 @@ public class SettingsActivity extends BaseActivity {
         
         tabFr.setOnClickListener(v -> setLanguage("fr"));
         tabEn.setOnClickListener(v -> setLanguage("en"));
-        tabSw.setOnClickListener(v -> setLanguage("sw"));
 
         // Links
-        btnPrivacy.setOnClickListener(v -> Toast.makeText(this, "Privacy Policy linked", Toast.LENGTH_SHORT).show());
-        btnTerms.setOnClickListener(v -> Toast.makeText(this, "Terms of Service linked", Toast.LENGTH_SHORT).show());
+        btnPrivacy.setOnClickListener(v -> Toast.makeText(this, R.string.settings_privacy_label, Toast.LENGTH_SHORT).show());
+        btnTerms.setOnClickListener(v -> Toast.makeText(this, R.string.settings_terms_label, Toast.LENGTH_SHORT).show());
         
         // Reset
         btnReset.setOnClickListener(v -> {
@@ -107,27 +109,32 @@ public class SettingsActivity extends BaseActivity {
             Prefs.putFloat("TextSize", 18);
             Prefs.putString("app_language", "fr");
             
-            Toast.makeText(this, "Settings Reset", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.settings_reset_confirm, Toast.LENGTH_SHORT).show();
             
-            // Reload UI
-            switchDarkMode.setChecked(false);
-            updateFontSizeDisplay(1);
-            updateLanguageTabs("fr");
+            recreate();
         });
     }
 
     private void updateFontSizeDisplay(int index) {
-        txtFontSizeDesc.setText(fontSizeLabels[index]);
+        txtFontSizeDesc.setText(getFontSizeLabels()[index]);
     }
     
     private void setLanguage(String code) {
+        String currentLang = Prefs.getString("app_language", "fr");
+        if (currentLang.equals(code)) return;
+        
         Prefs.putString("app_language", code);
         updateLanguageTabs(code);
+        
+        // Recreate to apply changes
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
     
     private void updateLanguageTabs(String activeLang) {
         tabFr.setBackgroundResource(activeLang.equals("fr") ? R.drawable.pill_active_bg : R.drawable.pill_inactive_bg);
         tabEn.setBackgroundResource(activeLang.equals("en") ? R.drawable.pill_active_bg : R.drawable.pill_inactive_bg);
-        tabSw.setBackgroundResource(activeLang.equals("sw") ? R.drawable.pill_active_bg : R.drawable.pill_inactive_bg);
     }
 }

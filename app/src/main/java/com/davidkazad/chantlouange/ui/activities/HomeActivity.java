@@ -48,11 +48,11 @@ public class HomeActivity extends BaseActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     showFragment(new BookFragment());
-                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText("Chant Louange");
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.app_name);
                     return true;
                 case R.id.navigation_songs:
                     showFragment(new AllSongsFragment());
-                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText("Nos Chants");
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.title_nos_chants);
                     return true;
                 case R.id.navigation_favorites:
                     showFragment(new FavFragment());

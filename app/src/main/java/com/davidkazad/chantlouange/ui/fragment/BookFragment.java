@@ -80,7 +80,7 @@ public class BookFragment extends Fragment {
             int songCount = currentBook.getPages() != null ? currentBook.getPages().size() : 0;
             if (songCount > 0) {
                 holder.bookCount.setVisibility(View.VISIBLE);
-                holder.bookCount.setText(songCount + " Chants");
+                holder.bookCount.setText(String.format(getString(R.string.song_count_label), songCount));
             } else {
                 holder.bookCount.setVisibility(View.GONE);
             }
@@ -104,7 +104,7 @@ public class BookFragment extends Fragment {
             holder.itemView.setOnClickListener(v -> {
                 ListActivity.bookItem = currentBook;
                 if (currentBook.isBookComingSoon()) {
-                    Toast.makeText(getContext(), "This book is Coming soon!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.book_coming_soon, Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(getContext(), ListActivity.class));
                 }

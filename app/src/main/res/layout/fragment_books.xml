@@ -40,11 +40,10 @@
                 android:paddingTop="24dp"
                 android:paddingBottom="16dp">
 
-                <!-- Titre de bienvenue -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bienvenue"
+                    android:text="@string/welcome_title"
                     android:textColor="@color/home_cat_text"
                     android:textSize="44sp"
                     android:textStyle="bold"

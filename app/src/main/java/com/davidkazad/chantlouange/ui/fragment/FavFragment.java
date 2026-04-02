@@ -58,7 +58,7 @@ public class FavFragment extends Fragment {
             @Override
             public void onBookmarkClick(Page page, Book book) {
                 page.toggleFavorite();
-                Toast.makeText(getContext(), page.isFavorite() ? "Added to Favorites" : "Removed from Favorites", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), page.isFavorite() ? R.string.fav_added : R.string.fav_removed, Toast.LENGTH_SHORT).show();
                 if (showingFavorites) {
                     loadFavorites(); // Refresh list to remove it smoothly
                 }
@@ -76,10 +76,10 @@ public class FavFragment extends Fragment {
             tabRecent.setBackgroundResource(isFav ? R.drawable.pill_inactive_bg : R.drawable.pill_active_bg);
             
             if (isFav) {
-                txtFavSubtitle.setText("Your curated collection");
+                txtFavSubtitle.setText(R.string.fav_curated_subtitle);
                 loadFavorites();
             } else {
-                txtFavSubtitle.setText("Recently viewed hymnals");
+                txtFavSubtitle.setText(R.string.recent_subtitle);
                 loadRecents();
             }
         };
@@ -120,7 +120,7 @@ public class FavFragment extends Fragment {
             }
         }
         
-        txtFavCount.setText(items.size() + " SAVED");
+        txtFavCount.setText(String.format(getString(R.string.saved_count_label), items.size()));
         adapter.updateData(items);
     }
     
@@ -140,7 +140,7 @@ public class FavFragment extends Fragment {
             }
         }
         
-        txtFavCount.setText(items.size() + " VIEWED");
+        txtFavCount.setText(String.format(getString(R.string.viewed_count_label), items.size()));
         adapter.updateData(items);
     }
 }

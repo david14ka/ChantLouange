@@ -38,10 +38,12 @@ public class PsalmVerses {
      * Doit être appelé une fois (par exemple, dans onCreate du fragment ou de l'activité).
      */
     public static void init(Context context) {
-        if (isLoaded) return;
         
+        String lang = com.pixplicity.easyprefs.library.Prefs.getString("app_language", "fr");
+        String fileName = lang.equals("en") ? "psaumes_kjv.json" : "psaumes_lsg.json";
+
         try {
-            InputStream is = context.getAssets().open("psaumes_lsg.json");
+            InputStream is = context.getAssets().open(fileName);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -50,6 +52,7 @@ public class PsalmVerses {
             String json = new String(buffer, StandardCharsets.UTF_8);
             JSONArray jsonArray = new JSONArray(json);
 
+            VERSES.clear();
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 String text = obj.getString("text");
@@ -57,7 +60,7 @@ public class PsalmVerses {
                 VERSES.add(new Verse(text, reference));
             }
             isLoaded = true;
-            Log.d(TAG, "Chargé " + VERSES.size() + " versets des Psaumes.");
+            Log.d(TAG, "Chargé " + VERSES.size() + " versets (" + fileName + ")");
         } catch (Exception e) {
             Log.e(TAG, "Erreur lors du chargement des Psaumes depuis les assets", e);
             // Fallback en cas d'erreur

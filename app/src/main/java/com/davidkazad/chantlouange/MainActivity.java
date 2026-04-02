@@ -62,7 +62,7 @@ public class MainActivity extends BaseActivity {
             }
 
             showFragment(newFragment, f);
-            toolbar.setTitle("List des chants");
+            toolbar.setTitle(R.string.title_song_list);
             //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
@@ -82,7 +82,7 @@ public class MainActivity extends BaseActivity {
                                 R.anim.slide_right)
                         .remove(frag)
                         .commitAllowingStateLoss();
-                toolbar.setTitle("Chant & Louange");
+                toolbar.setTitle(R.string.app_name);
                 Prefs.putBoolean("frag_book",false);
             }
         }

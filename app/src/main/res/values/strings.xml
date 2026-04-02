@@ -1,28 +1,21 @@
 <resources>
     <string name="app_name">Chants de Louange</string>
-    <string name="action_settings">Settings</string>
-    <string name="action_theme_light">Change Theme</string>
-    <string name="action_theme_night">Night Mode</string>
-    <string name="action_help">Help</string>
-    <string name="action_text_size">Text Size</string>
-    <string name="title_activity_songs">SongsActivity</string>
-    <string name="title_chant_list">Hymns</string>
-    <string name="title_chant_detail">Hymn Detail</string>
-    <string name="search">Search</string>
-    <string name="dashboard">Hymns</string>
-    <string name="title_book_list">Items</string>
-    <string name="title_book_detail">Book Detail</string>
-    <string name="title_song_list">Songs</string>
-    <string name="title_song_detail">Content</string>
-    <string name="find_song_text">Enter the song number to search</string>
-    <string name="sample">Replace with your own detail action</string>
-    <string name="number">Number</string>
-    <string name="email_number">Email or Phone number</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_theme_light">Changer de Thème</string>
+    <string name="action_theme_night">Thème nuit</string>
+    <string name="action_help">Aide</string>
+    <string name="action_text_size">Taille du text</string>
+    <string name="title_activity_songs">Corriger l\'erreur</string>
+    <string name="title_chant_list">Chants</string>
+    <string name="title_chant_detail">Texte du chant</string>
+    <string name="search">Recherche</string>
+    <string name="find_song_text">Saisir le numero de la chanson rechercher</string>
+    <string name="number">Numero</string>
     <string name="identification">Identification</string>
-    <string name="song_not_found">Error: this song does not exist !!</string>
-    <string name="research">Search</string>
-    <string name="error_search">Number not found !!</string>
-    <string name="error_search_2">Invalid number</string>
+    <string name="song_not_found">Error: cette chanson n\'existe pas !!</string>
+    <string name="research">Rechercher</string>
+    <string name="error_search">Numéro introuvable !!</string>
+    <string name="error_search_2">Numéro invalide</string>
     <string name="cc">Collection des Cantiques</string>
     <string name="cv">Chant de Victoire</string>
     <string name="nm">Nyimbo za Mungu</string>
@@ -33,164 +26,170 @@
     <string name="cs">Crois Seulement</string>
     <string name="bb">Bemba Songs - Inyimbo</string>
 
-    <string name="text_about">About</string>
+    <string name="text_about">Apropos</string>
 
-    <string name="about_developer">Chant &amp; Louange is an application developed by David Kazad.</string>
-    <string name="developer_name">David Kazad</string>
-    <string name="version" translatable="false">Version 6.2.0</string>
-    <string name="developed_by">developed by</string>
-    <string name="share_with">Share with</string>
-    <string name="contacts">** CONTACTS **</string>
+    <string name="dashboard">Receuils</string>
+    <string name="title_book_list">Items</string>
+    <string name="title_book_detail">Book Detail</string>
+    <string name="title_song_list">Liste de chants</string>
+    <string name="title_song_detail">Texte du chant</string>
+    <string name="sample">Replace with your own detail action</string>
+    <string name="email_number">Email or Phone number</string>
+    <string name="title_activity_home">Accueil</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_dashboard">Dashboard</string>
 
-    <string name="fav_preferences">fav%d%d</string>
-    <string name="like_preferences">like%d%d</string>
-    <string name="share_song">Share this song</string>
-
-    <string name="cancel">Cancel</string>
-    <string name="action_search">Rechercher...</string>
-    <string name="chant_fav">Favorite Hymns</string>
-    <string name="share">Share application</string>
-    <string name="signaler">Report a problem</string>
-    <string name="asset_statements" translatable="false">null</string>
-    <string name="title_activity_settings">Settings</string>
-
-    <string name="pref_header_general">General</string>
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
-    <string name="pref_title_display_name">Display name</string>
     <string name="pref_default_display_name">John Smith</string>
+
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
 
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Notifications</string>
     <string name="pref_title_new_message_notifications">New message notifications</string>
+
     <string name="pref_title_ringtone">Ringtone</string>
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_favoris">Favorites</string>
-    <string name="next">Next</string>
-    <string name="finiish">Finish</string>
-    <string name="text_size">Text Size</string>
-    <string name="number_ot_exists">This number does not exist !</string>
+
+    <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
+    <string name="developer_name">David Kazad</string>
+    <string name="developed_by">développée par</string>
+    <string name="share_with">Partager avec</string>
+    <string name="contacts">** CONTACTS **</string>
+    <string name="fav_preferences" formatted="false">fav%d%d</string>
+    <string name="like_preferences" formatted="false">like%d%d</string>
+    <string name="share_song">Partager ce chant</string>
+    <string name="cancel">Annuler</string>
+    <string name="action_search">Rechercher...</string>
+    <string name="chant_fav">Cantiques favorites</string>
+    <string name="share">Partager l\'application</string>
+    <string name="signaler">Signaler un probleme</string>
+    <string name="asset_statements" translatable="false">wix removed</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Surnom</string>
+
+    <string name="title_activity_favoris">Favoris</string>
+    <string name="next">Suivant</string>
+    <string name="finiish">Terminer</string>
+    <string name="text_size">Taille du Text</string>
+    <string name="number_ot_exists">Ce numero n\'exist pas !</string>
     <string name="comment">%d Comments</string>
     <string name="like">%d Likes</string>
-    <string name="write_a_post">Post to Community</string>
-    <string name="advance_research">Advanced search</string>
-    <string name="table_matieres">Table of Contents</string>
-    <string name="help">Help</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="write_a_post">Publier dans la communauté</string>
+    <string name="advance_research">Recherche avancée</string>
+    <string name="table_matieres">Table des Matières</string>
+    <string name="help">Aide</string>
     <string name="title_notifications">Notifications</string>
     <string name="txt_number">N° %s</string>
-    <string name="txt_number2">Number %s</string>
-    <string name="delete">Delete</string>
-    <string name="view">View</string>
-    <string name="home">Home</string>
-    <string name="discover">Audio Songs</string>
-    <string name="community">Community</string>
-    <string name="favorities">Favorites</string>
-    <string name="settings">Settings</string>
-    <string name="send_comment">Send feedback</string>
-    <string name="send_feedback">Send feedback</string>
-    <string name="about">About</string>
-    <string name="support_dev">Donation</string>
+    <string name="txt_number2">Numero %s</string>
+    <string name="delete">Supprimer</string>
+    <string name="view">Afficher</string>
+    <string name="home">Accueil</string>
+    <string name="discover">Audios</string>
+    <string name="community">Communauté</string>
+    <string name="favorities">Favoris</string>
+    <string name="settings">Paramètres</string>
+    <string name="send_comment">Envoyer des commentaires</string>
+    <string name="about">Apropos</string>
+    <string name="support_dev">Faire un don</string>
     <string name="note">note</string>
     <string name="songs">344B</string>
     <string name="c_v">C.V</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="mode_jour">Day Mode</string>
+    <string name="write_a_comment">Ecrire un commentaire</string>
+    <string name="night_mode">Mode Nuit</string>
+    <string name="mode_jour">Mode Jour</string>
     <string name="seek_progress">%d dp</string>
-    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) ...</string>
-    <string name="thanks">Thank you for your correction</string>
-    <string name="comment_activity">Comments</string>
-    <string name="write_a_comment">Write a comment</string>
-    <string name="display_name">Display name or Email</string>
-    <string name="sign_in">Sign In</string>
+    <string name="sample_text">1. Si riche, si profond, \n insondable,\n C\'est l\'Amour divin, \n L\'Amour rédempteur. \n\nref. Pour moi (2x) …</string>
+    <string name="thanks">Merci pour votre correction</string>
+    <string name="comment_activity">Commentaires</string>
+    <string name="display_name">Nom d\'affichage ou Email</string>
+    <string name="sign_in">Connexion</string>
 
-    <string name="time_ago_prefix"></string>
-    <string name="time_ago_suffix">ago</string>
-    <string name="time_ago_seconds">now</string>
-    <string name="time_ago_minute">about a minute</string>
+    <string name="time_ago_prefix" />
+    <string name="time_ago_suffix"/>
+    <string name="time_ago_seconds">mantenant</string>
+    <string name="time_ago_minute">1 minute</string>
     <string name="time_ago_minutes">%d minutes</string>
-    <string name="time_ago_hour">about an hour</string>
-    <string name="time_ago_hours">about %d hours</string>
-    <string name="time_ago_day">a day</string>
-    <string name="time_ago_days">%d days</string>
-    <string name="time_ago_month">about a month</string>
-    <string name="time_ago_months">%d months</string>
-    <string name="time_ago_year">about a year</string>
-    <string name="time_ago_years">%d years</string>
-    <string name="problems">Report a problem</string>
-    <string name="donation">Make a donation</string>
-
-    <string name="numero_introuvable">Number not found</string>
-    <string name="enregistrer">Save</string>
-    <string name="annuler">Cancel</string>
-    <string name="livres">Books</string>
-    <string name="apropos">About</string>
-    <string name="remerciement">** ACKNOWLEDGMENTS **</string>
-    <string name="home_title">Hymnals</string>
+    <string name="time_ago_hour">1 heure</string>
+    <string name="time_ago_hours">%d heures</string>
+    <string name="time_ago_day">1 jour</string>
+    <string name="time_ago_days">%d jours</string>
+    <string name="time_ago_month">1 mois</string>
+    <string name="time_ago_months">%d mois</string>
+    <string name="time_ago_year">1 année</string>
+    <string name="time_ago_years">%d ans</string>
+    <string name="problems">Signaler un problème</string>
+    <string name="numero_introuvable">Numero introuvable</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="annuler">Annuler</string>
+    <string name="livres">Livres</string>
+    <string name="apropos">Apropos</string>
+    <string name="remerciement">** REMERCIEMENTS **</string>
+    <string name="home_title">Recueils</string>
     <string name="alive_corp">http://alive-corporation.org</string>
-    <string name="list_of_songs">List of songs</string>
-    <string name="search_in">Search in</string>
-    <string name="add_to_favorites">Add to favorites</string>
-    <string name="corriger_erreur">Report error</string>
-    <string name="jaime">Like</string>
-    <string name="mode_jour_nuit">Day/Night Mode</string>
-    <string name="alphabet">Alphabetical</string>
-    <string name="numerotation">Numeration</string>
-    <string name="send">Send</string>
+    <string name="list_of_songs">Liste des chants</string>
+    <string name="search_in">Rechercher dans</string>
+
+    <string name="add_to_favorites">Ajouter au favorites</string>
+    <string name="corriger_erreur">Signaler une erreur</string>
+    <string name="jaime">J\'aime</string>
+    <string name="mode_jour_nuit">Mode Jour/Nuit</string>
+
+    <string name="alphabet">Alphabetique</string>
+    <string name="numerotation">Numerotation</string>
+    <string name="send">Envoyer</string>
     <string name="no_name">no-name</string>
+
     <string name="cc1a">1A.</string>
-    <string name="post">Post</string>
-    <string name="ok">Ok</string>
+    <string name="post">Envoyé</string>
+    <string name="ok">OK</string>
+    <string name="donation">Faire un don</string>
 
     <string name="account_number">00018005050200000004781</string>
-    <string name="swift_code">PRCBCDKI</string>
+    <string name="swift_code">BCDCDKI</string>
     <string name="bank_name">Equity Bank Congo(Procredit)</string>
-    <string name="country">Congo, Democratic Republic</string>
-    <string name="preach">Online Preaching</string>
-    <string name="slogan">Jesus Christ is the same yesterday today and forever.</string>
-    <string name="slogan2">Let everything that breathes praise the Lord! \nPraise the Lord!</string>
-    <string name="username">Username</string>
-    <string name="comment_is_empty">comment is empty!</string>
-    <string name="blessing">God bless you!</string>
-    <string name="default_notification_channel_id">fcm_default_channel</string>
-    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <string name="country">Congo, Republique Démocratique</string>
+    <string name="preach">Predication en ligne</string>
+    <string name="slogan">Jesus Christ est le meme hier aujourd\'hui et eternellement.</string>
+    <string name="slogan2">Que tout ce qui respire loue l\'Éternel!\nLouez l\'Eternel!</string>
+    <string name="username">Email ou Nom d\'utilisateur</string>
+    <string name="comment_is_empty">Ecrire un commentaire!</string>
+    <string name="blessing">Que Dieu vous bénisse!</string>
+    <string name="default_notification_channel_id">Recueil de cantiques</string>
+    <string name="default_notification_channel_name">Recueil de cantiques</string>
     <string name="recent">Recents</string>
-    <string name="item_music" translatable="false">Music</string>
-    <string name="title_activity_music">Music</string>
+    <string name="title_activity_music">Musique</string>
     <string name="tab_text_1">SONGS</string>
     <string name="tab_text_2">ALBUMS</string>
     <string name="tab_text_3">LOCAL</string>
-    <string name="likes">Likes</string>
-    <string name="comments">Comments</string>
-    <string name="posted_date">23 d</string>
-    <string name="join_group">Join group</string>
-    <string name="rechercher_dans">Search in</string>
-    <string name="splash_title">SONG OF WORSHIP</string>
-    <string name="splash_subtitle">For evangelism and edification meetings</string>
-    <string name="enter">Enter</string>
-    <string name="keep_screen_on">Keep screen on while reading</string>
-
-    <!-- Restoring missing strings for build -->
-    <string name="quickstart_message" translatable="false">Click the SUBSCRIBE TO WEATHER button below to subscribe to the weather topic.</string>
-    <string name="subscribe_to_weather" translatable="false">Subscribe To Weather</string>
-    <string name="log_token" translatable="false">Log Token</string>
-    <string name="msg_subscribed" translatable="false">Subscribed to weather topic</string>
-    <string name="msg_subscribe_failed" translatable="false">Failed to subscribe to weather topic</string>
-    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
-    <string name="action_hide" translatable="false">Hide Panel</string>
-    <string name="action_anchor_enable" translatable="false">Enable Anchor Point</string>
-    <string name="user_image" translatable="false">user image\n</string>
-    <string name="emoji" translatable="false">emoji</string>
-    <string name="under_line">underline</string>
-    <string name="collection_de_cantiques" translatable="false">Collection de cantiques</string>
+    <string name="likes">J\'aimes</string>
+    <string name="comments">Commentaires</string>
+    <string name="posted_date">23 j</string>
+    <string name="under_line">souligné</string>
+    <string name="join_group">Rejoindre le groupe</string>
+    <string name="rechercher_dans">Rechercher dans</string>
+    <string name="splash_title">RECUEIL DE CANTIQUES</string>
+    <string name="splash_subtitle">Pour reunion d\'évangelisation et d\'édification</string>
+    <string name="enter">Entrer</string>
+    <string name="keep_screen_on">Garder l\'écran allumé pendant la lecture</string>
+    <string name="send_feedback">Envoyer des commentaires</string>
     <string name="version_2">Version </string>
+    <string name="msg_subscribed">Abonné au sujet météo</string>
+    <string name="msg_subscribe_failed">Échec de l\'abonnement au sujet météo</string>
+    <string name="msg_token_fmt">Jeton InstanceID: %s</string>
+
+    <!-- Global Search French Translations -->
     <string name="no_results">Aucun résultat</string>
     <string name="result_count">%d résultats trouvés</string>
     <string name="search_all_books">Rechercher</string>
@@ -200,10 +199,65 @@
     <string name="search_in_other_books">Chercher dans d\'autres recueils</string>
     <string name="no_results_anywhere">Aucun résultat dans les recueils</string>
     <!-- Favorites screen editorial design -->
-    <string name="fav_subtitle">Your saved hymns, always within reach</string>
-    <string name="fav_section_label">Saved Songs</string>
+    <string name="fav_subtitle">Vos chants favoris, toujours à portée de main</string>
+    <string name="fav_section_label">Chants Sauvegardés</string>
 
-    <!-- Navigation Drawer -->
+    <!-- Restoring missing strings for build -->
+    <string name="quickstart_message" translatable="false">Cliquez sur le bouton pour vous abonner au sujet météo.</string>
+    <string name="subscribe_to_weather" translatable="false">S\'abonner à la Météo</string>
+    <string name="log_token" translatable="false">Journaliser le Jeton</string>
+    <string name="action_hide" translatable="false">Masquer le panneau</string>
+    <string name="action_anchor_enable" translatable="false">Activer le point d\'ancrage</string>
+    <string name="user_image" translatable="false">image utilisateur\n</string>
+    <string name="emoji" translatable="false">emoji</string>
+    <string name="collection_de_cantiques" translatable="false">Collection de cantiques</string>
+    <string name="version" translatable="false">Version 6.2.0</string>
+
+    <!-- Toolbar and Navigation Titles -->
+    <string name="title_nos_chants">Nos Chants</string>
+    <string name="hymnes_label">HYMNES</string>
+    <string name="letter_prefix">LETTRE </string>
+    <string name="book_prefix">RECUEIL: </string>
+    <string name="song_count_label">%d Chants</string>
+    <string name="book_coming_soon">Ce recueil sera bientôt disponible !</string>
+    <string name="fav_added">Ajouté aux favoris</string>
+    <string name="fav_removed">Retiré des favoris</string>
+    <string name="fav_curated_subtitle">Votre collection personnalisée</string>
+    <string name="recent_subtitle">Recueils consultés récemment</string>
+    <string name="saved_count_label">%d ENREGISTRÉS</string>
+    <string name="viewed_count_label">%d CONSULTÉS</string>
+    <string name="search_result_singular">1 RÉSULTAT</string>
+    <string name="search_results_plural">%d RÉSULTATS</string>
+
+    <!-- Navigation -->
     <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
     <string name="navigation_drawer_close">Fermer le menu de navigation</string>
+
+    <!-- Additional UI i18n -->
+    <string name="welcome_title">Bienvenue</string>
+    <string name="search_hint">Rechercher par titre ou numéro...</string>
+    <string name="search_lyrics_label">Rechercher dans les paroles (Lyrics)</string>
+    <string name="filter_az">A-Z</string>
+    <string name="filter_number">Par Numéro</string>
+    <string name="filter_book">Par Recueil</string>
+    <string name="filter_fav">Favoris</string>
+    
+    <!-- Settings Labels -->
+    <string name="settings_appearance">APPARENCE</string>
+    <string name="settings_localization">LOCALISATION</string>
+    <string name="settings_about">À PROPOS</string>
+    <string name="settings_app_language_label">Langue de l\'application</string>
+    <string name="settings_font_size_label">Taille du texte par défaut</string>
+    <string name="settings_font_size_petit">Petit (14px)</string>
+    <string name="settings_font_size_standard">Standard (18px)</string>
+    <string name="settings_font_size_grand">Grand (22px)</string>
+    <string name="settings_font_size_extra">Extra Grand (26px)</string>
+    <string name="settings_reset_label">✖ Réinitialiser les paramètres par défaut</string>
+    <string name="settings_reset_confirm">Paramètres réinitialisés</string>
+    <string name="settings_privacy_label">Politique de confidentialité</string>
+    <string name="settings_terms_label">Conditions d\'utilisation</string>
+    <string name="settings_subtitle">Personnalisez votre expérience sacrée</string>
+    <string name="settings_dark_mode_title">Mode Sombre</string>
+    <string name="settings_dark_mode_desc">Réduit l\'éblouissement en environnement sombre</string>
+    <string name="settings_interface_nav">Interface &amp; Navigation</string>
 </resources>

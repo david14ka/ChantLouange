@@ -200,7 +200,7 @@ public class AllSongsFragment extends Fragment {
             }
         }
         
-        txtSongCount.setText(String.format("%,d HYMNES", filtered.size()));
+        txtSongCount.setText(String.format(getString(R.string.song_count_label), filtered.size()));
 
         // 2. Sort
         if (currentFilter == FilterType.AZ || currentFilter == FilterType.FAVORIS) {
@@ -253,7 +253,7 @@ public class AllSongsFragment extends Fragment {
                     String firstChar = String.valueOf(title.charAt(0)).toUpperCase();
                     if (Character.isLetter(firstChar.charAt(0)) && !firstChar.equals(currentSection)) {
                         currentSection = firstChar;
-                        finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, "LETTRE " + currentSection));
+                        finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, getString(R.string.letter_prefix) + currentSection));
                     }
                 }
                 finalItems.add(item);
@@ -264,7 +264,7 @@ public class AllSongsFragment extends Fragment {
                     String firstChar = String.valueOf(title.charAt(0)).toUpperCase();
                     if (Character.isLetter(firstChar.charAt(0)) && !firstChar.equals(currentSection)) {
                         currentSection = firstChar;
-                        finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, "LETTRE " + currentSection));
+                        finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, getString(R.string.letter_prefix) + currentSection));
                     }
                 }
                 finalItems.add(item);            
@@ -273,7 +273,7 @@ public class AllSongsFragment extends Fragment {
                 String bookName = item.book.getName() != null ? item.book.getName() : "INCONNU";
                 if (!bookName.equals(currentSection)) {
                     currentSection = bookName;
-                    finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, "RECUEIL: " + currentSection.toUpperCase()));
+                    finalItems.add(new ListItem(AllSongsAdapter.TYPE_HEADER, getString(R.string.book_prefix) + currentSection.toUpperCase()));
                 }
                 finalItems.add(item);
             } else { // NUMERO

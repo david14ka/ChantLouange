@@ -208,9 +208,9 @@ public class GlobalSearchActivity extends BaseActivity {
                 HeaderViewHolder hvh = (HeaderViewHolder) holder;
                 hvh.txtTitle.setText(header.bookName);
                 if (header.count == 1) {
-                    hvh.txtCount.setText("1 RÉSULTAT");
+                    hvh.txtCount.setText(R.string.search_result_singular);
                 } else {
-                    hvh.txtCount.setText(header.count + " RÉSULTATS");
+                    hvh.txtCount.setText(String.format(getString(R.string.search_results_plural), header.count));
                 }
             } else {
                 SearchResult result = (SearchResult) listItem;

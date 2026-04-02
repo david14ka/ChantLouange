@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Settings"
+                android:text="@string/settings"
                 android:textColor="#FFFFFF"
                 android:textSize="36sp"
                 android:textStyle="bold"
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Personalize your sacred singing experience"
+                android:text="@string/settings_subtitle"
                 android:textColor="#999999"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp" />
@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="APPEARANCE"
+                        android:text="@string/settings_appearance"
                         android:textColor="#B3B3B3"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -106,7 +106,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dark Mode"
+                                android:text="@string/settings_dark_mode_title"
                                 android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
@@ -114,7 +114,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Reduce glare in dim environments"
+                                android:text="@string/settings_dark_mode_desc"
                                 android:textColor="#888888"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -155,7 +155,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Default Font Size"
+                                android:text="@string/settings_font_size_label"
                                 android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
@@ -198,7 +198,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="LOCALIZATION"
+                        android:text="@string/settings_localization"
                         android:textColor="#B3B3B3"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -230,7 +230,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="App Language"
+                                android:text="@string/settings_app_language_label"
                                 android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
@@ -238,7 +238,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Interface &amp; Navigation"
+                                android:text="@string/settings_interface_nav"
                                 android:textColor="#888888"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -258,7 +258,7 @@
                             android:background="@drawable/pill_active_bg"
                             android:gravity="center"
                             android:paddingVertical="10dp"
-                            android:text="French"
+                            android:text="Français"
                             android:textColor="#FFFFFF"
                             android:textSize="14sp" />
 
@@ -272,19 +272,6 @@
                             android:gravity="center"
                             android:paddingVertical="10dp"
                             android:text="English"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tab_lang_sw"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/pill_inactive_bg"
-                            android:gravity="center"
-                            android:paddingVertical="10dp"
-                            android:text="Swahili"
                             android:textColor="#FFFFFF"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -311,7 +298,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ABOUT"
+                        android:text="@string/settings_about"
                         android:textColor="#B3B3B3"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -370,7 +357,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Privacy Policy"
+                            android:text="@string/settings_privacy_label"
                             android:textColor="#EEEEEE"
                             android:textSize="14sp" />
 
@@ -394,7 +381,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Terms of Service"
+                            android:text="@string/settings_terms_label"
                             android:textColor="#EEEEEE"
                             android:textSize="14sp" />
 
@@ -442,7 +429,7 @@
                 android:background="@drawable/pill_inactive_bg"
                 android:gravity="center"
                 android:padding="20dp"
-                android:text="✖ Reset to Default Settings"
+                android:text="@string/settings_reset_label"
                 android:textColor="#E53935"
                 android:textSize="16sp" />
 

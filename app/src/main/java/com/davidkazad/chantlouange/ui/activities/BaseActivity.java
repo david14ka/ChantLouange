@@ -38,6 +38,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
+import android.content.Context;
+import com.davidkazad.chantlouange.utils.LocaleHelper;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.ArrayList;
@@ -47,6 +49,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     private static final String TAG = "BaseActivity";
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 0;
     public static final String EXTRA_COMMUNITY = "community";
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
