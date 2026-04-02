@@ -55,18 +55,23 @@
     <!-- ── Sacred Archive Design System ──────────────────────── -->
     <color name="surface">#131313</color>
     <color name="surface_container_lowest">#0F0F0F</color>
-    <color name="surface_container_low">#1A1A1A</color>
+    <color name="surface_container_low">#E0E0E0</color>
     <color name="surface_container_high">#99222222</color>
     <color name="surface_bright">#4DFFFFFF</color> <!-- 30% opacity input fields -->
     <color name="surface_glass">#D91A1A1A</color> <!-- 85% opacity surface-container for nav -->
     
     <color name="home_bg_dark">#1A1110</color>
     <color name="home_text_body">#C79577</color>
-    <color name="home_search_bg">#261C1A</color>
+    <color name="home_search_bg">#EFEBE9</color>
     <color name="home_cat_text">#F5E0B7</color>
     
     <color name="primary_container">#C62828</color>
     <color name="on_primary_container">#FFDAD6</color>
     <color name="tertiary_fixed">#F5E0B7</color>
 
+    <!-- Global Theme Semantic Colors (Light Mode) -->
+    <color name="background_color">#FDFAF7</color>
+    <color name="surface_color">#FFFFFF</color>
+    <color name="text_color_primary">#1A1A1A</color>
+    <color name="text_color_secondary">#5D4037</color>
 </resources>

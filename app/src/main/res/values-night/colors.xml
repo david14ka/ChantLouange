@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sacred Archive Dark Colors -->
+    <color name="background_color">#131313</color>
+    <color name="surface_color">#1A1A1A</color>
+    <color name="text_color_primary">#F5E0B7</color>
+    <color name="text_color_secondary">#C79577</color>
+    
+    <!-- Override existing colors for night mode if needed -->
+    <color name="home_bg_dark">#1A1110</color>
+    <color name="home_search_bg">#261C1A</color>
+    <color name="surface_container_low">#1A1A1A</color>
+</resources>

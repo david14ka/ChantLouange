@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="?android:attr/windowBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <!-- Image de fond (Piano) -->
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_nos_chants"
-                android:textColor="@color/home_cat_text"
+                android:textColor="@color/text_color_primary"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:letterSpacing="-0.03"
@@ -45,7 +45,7 @@
                 android:layout_alignBaseline="@+id/txt_nos_chants"
                 android:layout_alignParentEnd="true"
                 android:text="1,240 HYMNES"
-                android:textColor="@color/home_text_body"
+                android:textColor="@color/text_color_secondary"
                 android:textSize="10sp"
                 android:letterSpacing="0.1"
                 android:textStyle="bold"
@@ -59,7 +59,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/search_pill_bg"
-            android:backgroundTint="#1A1A1A"
+            android:backgroundTint="@color/surface_color"
             android:orientation="horizontal"
             android:paddingHorizontal="16dp"
             android:paddingVertical="12dp"
@@ -80,8 +80,8 @@
                 android:layout_marginStart="12dp"
                 android:background="@null"
                 android:hint="@string/search_hint"
-                android:textColorHint="@color/home_text_body"
-                android:textColor="@color/white"
+                android:textColorHint="@color/text_color_secondary"
+                android:textColor="@color/text_color_primary"
                 android:textSize="14sp"
                 android:imeOptions="actionSearch"
                 android:inputType="textNoSuggestions" />

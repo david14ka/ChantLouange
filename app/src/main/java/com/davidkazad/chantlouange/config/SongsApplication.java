@@ -8,6 +8,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.io.IOException;
@@ -26,6 +27,10 @@ public class SongsApplication extends Application {
                 .setMode(MODE_PRIVATE)
                 .setPrefsName("chant_louange")
                 .build();
+
+        // Apply dark mode by default
+        boolean isNight = Prefs.getBoolean("night_mode", true);
+        AppCompatDelegate.setDefaultNightMode(isNight ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
 
         // Pré-chargement du cache de tous les livres en arrière-plan.
         // Chaque livre peut contenir 200-650 chansons (fichiers de données > 300KB),

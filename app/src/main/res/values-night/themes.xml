@@ -1,4 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <style name="MyAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTansition</item>
+        <item name="actionModeBackground">@color/black</item>
+        <item name="actionModeSplitBackground">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorPrimary">#1A1A1A</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="windowActionBar">false</item>
+        <item name="textColor">@color/text_color_primary</item>
+        <item name="windowActionModeOverlay">true</item>
 
+        <!-- Semantic Colors for i18n/Theme (Dark Mode) -->
+        <item name="colorSurface">@color/background_color</item>
+        <item name="colorOnSurface">@color/text_color_primary</item>
+        <item name="cardBackgroundColor">@color/surface_color</item>
+    </style>
 </resources>

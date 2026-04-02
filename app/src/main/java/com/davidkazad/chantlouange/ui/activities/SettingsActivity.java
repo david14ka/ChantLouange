@@ -8,6 +8,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -87,9 +88,11 @@ public class SettingsActivity extends BaseActivity {
         });
 
         // Load & bind dark mode
-        switchDarkMode.setChecked(Prefs.getBoolean("night_mode", false));
+        switchDarkMode.setChecked(Prefs.getBoolean("night_mode", true));
         switchDarkMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             Prefs.putBoolean("night_mode", isChecked);
+            AppCompatDelegate.setDefaultNightMode(isChecked ? 
+                    AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
         });
 
         // Load & bind language

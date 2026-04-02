@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.activities.HomeActivity"
-        android:background="@color/home_bg_dark">
+        android:background="@color/background_color">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/surface_container_lowest"
+                android:background="@color/surface_color"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
                 
                 <TextView
@@ -65,8 +65,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/surface"
-        app:itemTextColor="@color/home_cat_text"
+        android:background="@color/surface_color"
+        app:itemTextColor="@color/text_color_primary"
         app:itemIconTint="@color/home_cat_text"
         app:subheaderTextAppearance="@style/NavSubheaderTextAppearance"
         app:headerLayout="@layout/layout_drawer_header"

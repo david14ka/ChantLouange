@@ -10,7 +10,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#121212">
+        android:background="?android:attr/windowBackground">
 
         <!-- Image de fond -->
         <ImageView
@@ -25,14 +25,14 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#121212"
+            android:background="?android:attr/windowBackground"
             app:elevation="0dp">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#121212"
+                android:background="?android:attr/windowBackground"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <LinearLayout
@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="serif"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_color_primary"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:maxLines="1"
@@ -87,7 +87,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/search_pill_bg"
-                android:backgroundTint="#1E1E1E"
+                android:backgroundTint="@color/surface_color"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginBottom="10dp"
                 android:paddingHorizontal="12dp">
@@ -106,8 +106,8 @@
                     android:layout_marginStart="10dp"
                     android:background="@null"
                     android:hint="Rechercher dans ce recueil..."
-                    android:textColorHint="#555555"
-                    android:textColor="#FFFFFF"
+                    android:textColorHint="@color/text_color_secondary"
+                    android:textColor="@color/text_color_primary"
                     android:textSize="14sp"
                     android:inputType="text"
                     android:maxLines="1"
@@ -132,9 +132,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="#121212"
-        app:itemTextColor="@color/home_cat_text"
-        app:itemIconTint="@color/home_cat_text"
+        android:background="@color/surface_color"
+        app:itemTextColor="@color/text_color_primary"
+        app:itemIconTint="@color/text_color_primary"
         app:subheaderTextAppearance="@style/NavSubheaderTextAppearance"
         app:headerLayout="@layout/layout_drawer_header"
         app:menu="@menu/menu_drawer" />

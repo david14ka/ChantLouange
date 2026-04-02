@@ -5,245 +5,256 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:fillViewport="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.activities.EditActivity">
 
-    <LinearLayout
-        android:id="@+id/lyrics_root_layout"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="80dp">
+        android:layout_height="wrap_content">
 
-        <!-- ── Hero Header ────────────────────────────────────────── -->
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- Background Image -->
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipChildren="false"
-            android:paddingHorizontal="24dp"
-            android:paddingTop="32dp"
-            android:paddingBottom="24dp">
+            android:layout_height="match_parent"
+            android:src="@drawable/bground"
+            android:scaleType="centerCrop"
+            android:alpha="0.2" />
 
-            <!-- Watermark Number (e.g. 042) -->
-            <TextView
-                android:id="@+id/txt_watermark_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-12dp"
-                android:layout_marginTop="-20dp"
-                android:fontFamily="serif"
-                android:includeFontPadding="false"
-                android:textColor="#33C62828"
-                android:textSize="140sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="042" />
-
-            <!-- Category Overline -->
-            <TextView
-                android:id="@+id/txt_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.2"
-                android:textAllCaps="true"
-                android:textColor="@color/primary_container"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="HYMNE D'ADORATION" />
-
-            <!-- Song Title -->
-            <TextView
-                android:id="@+id/txt_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="serif"
-                android:lineSpacingMultiplier="0.9"
-                android:textColor="?attr/textColor"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_category"
-                tools:text="Grand Dieu, nous te bénissons" />
-
-            <!-- Metadata Row (Author & Key) -->
-            <LinearLayout
-                android:id="@+id/layout_metadata"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_title">
-
-                <!-- Author Placeholder -->
-                <ImageView
-                    android:id="@+id/ic_author"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@drawable/user"
-                    app:tint="@color/ed_text_secondary" />
-
-                <TextView
-                    android:id="@+id/txt_author"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@color/ed_text_secondary"
-                    android:textSize="12sp"
-                    tools:text="Ignaz Franz" />
-
-                <!-- Separator / Key -->
-                <ImageView
-                    android:id="@+id/ic_key"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:layout_marginStart="24dp"
-                    android:src="@drawable/note"
-                    app:tint="@color/ed_text_secondary" />
-
-                <TextView
-                    android:id="@+id/txt_key"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@color/ed_text_secondary"
-                    android:textSize="12sp"
-                    tools:text="Key: G Major" />
-
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- ── Control Pill ────────────────────────────────────────── -->
         <LinearLayout
-            android:id="@+id/control_pill"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/pill_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp">
-
-            <TextView
-                android:id="@+id/btn_text_minus"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:gravity="center"
-                android:text="A-"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="24dp"
-                android:background="#33FFFFFF" />
-
-            <TextView
-                android:id="@+id/btn_text_plus"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:gravity="center"
-                android:text="A+"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="24dp"
-                android:background="#0CFFFFFF" />
-
-            <ImageButton
-                android:id="@+id/btn_theme"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_invert_theme"
-                app:tint="@color/white" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="24dp"
-                android:background="#33FFFFFF" />
-
-
-
-            <ImageButton
-                android:id="@+id/btn_share"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/share_24px"
-                app:tint="@color/white" />
-
-        </LinearLayout>
-
-        <!-- ── Parsed Lyrics Container ────────────────────────────── -->
-        <LinearLayout
-            android:id="@+id/lyrics_container"
+            android:id="@+id/lyrics_root_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="24dp" />
+            android:paddingBottom="80dp">
 
-        <!-- ── Hidden Original Text view (to not break legacy code if missing) -->
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
-
-        <!-- ── Hidden Edit Views for EditActivity ── -->
-        <EditText
-            android:id="@+id/edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:inputType="textMultiLine"
-            android:textColor="?attr/textColor"
-            android:textSize="18dp"
-            android:visibility="gone" />
-
-        <LinearLayout
-            android:id="@+id/layout_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="gone"
-            android:padding="24dp">
-            <Button
-                android:id="@+id/annuler"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <!-- ── Hero Header ────────────────────────────────────────── -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel"
-                android:textColor="@color/black"
-                android:background="@color/white"/>
-            <Button
-                android:id="@+id/envoyer"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:clipChildren="false"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="32dp"
+                android:paddingBottom="24dp">
+
+                <!-- Watermark Number (e.g. 042) -->
+                <TextView
+                    android:id="@+id/txt_watermark_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-12dp"
+                    android:layout_marginTop="-20dp"
+                    android:fontFamily="serif"
+                    android:includeFontPadding="false"
+                    android:textColor="#33C62828"
+                    android:textSize="140sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="042" />
+
+                <!-- Category Overline -->
+                <TextView
+                    android:id="@+id/txt_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_container"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="HYMNE D'ADORATION" />
+
+                <!-- Song Title -->
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="serif"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textColor="?attr/textColor"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_category"
+                    tools:text="Grand Dieu, nous te bénissons" />
+
+                <!-- Metadata Row (Author & Key) -->
+                <LinearLayout
+                    android:id="@+id/layout_metadata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_title">
+
+                    <!-- Author Placeholder -->
+                    <ImageView
+                        android:id="@+id/ic_author"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/user"
+                        app:tint="@color/ed_text_secondary" />
+
+                    <TextView
+                        android:id="@+id/txt_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/ed_text_secondary"
+                        android:textSize="12sp"
+                        tools:text="Ignaz Franz" />
+
+                    <!-- Separator / Key -->
+                    <ImageView
+                        android:id="@+id/ic_key"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/note"
+                        app:tint="@color/ed_text_secondary" />
+
+                    <TextView
+                        android:id="@+id/txt_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/ed_text_secondary"
+                        android:textSize="12sp"
+                        tools:text="Key: G Major" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- ── Control Pill ────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/control_pill"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/pill_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/btn_text_minus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="A-"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#33FFFFFF" />
+
+                <TextView
+                    android:id="@+id/btn_text_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="A+"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#0CFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_theme"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_invert_theme"
+                    app:tint="@color/white" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#33FFFFFF" />
+
+
+
+                <ImageButton
+                    android:id="@+id/btn_share"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/share_24px"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <!-- ── Parsed Lyrics Container ────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/lyrics_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/send"
-                android:textColor="@color/white"
-                android:background="?attr/colorAccent"/>
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp" />
+
+            <!-- ── Hidden Original Text view (to not break legacy code if missing) -->
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- ── Hidden Edit Views for EditActivity ── -->
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:inputType="textMultiLine"
+                android:textColor="?attr/textColor"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="24dp">
+                <Button
+                    android:id="@+id/annuler"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
+                <Button
+                    android:id="@+id/envoyer"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:background="?attr/colorAccent"/>
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-
+    </FrameLayout>
 </androidx.core.widget.NestedScrollView>

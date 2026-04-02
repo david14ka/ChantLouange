@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="?android:attr/windowBackground"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#121212"
+        android:background="?android:attr/windowBackground"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         <TextView
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/settings"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_color_primary"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:fontFamily="serif" />
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/settings_subtitle"
-                android:textColor="#999999"
+                android:textColor="@color/text_color_secondary"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                app:cardBackgroundColor="#222222"
+                app:cardBackgroundColor="@color/surface_color"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp">
 
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/settings_appearance"
-                        android:textColor="#B3B3B3"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.15" />
@@ -107,7 +107,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/settings_dark_mode_title"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_color_primary"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -115,7 +115,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/settings_dark_mode_desc"
-                                android:textColor="#888888"
+                                android:textColor="@color/text_color_secondary"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -156,7 +156,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/settings_font_size_label"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_color_primary"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -165,7 +165,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Standard (18px)"
-                                android:textColor="#888888"
+                                android:textColor="@color/text_color_secondary"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -185,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#222222"
+                app:cardBackgroundColor="@color/surface_color"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp">
 
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/settings_localization"
-                        android:textColor="#B3B3B3"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.15" />
@@ -231,7 +231,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/settings_app_language_label"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_color_primary"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -239,7 +239,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/settings_interface_nav"
-                                android:textColor="#888888"
+                                android:textColor="@color/text_color_secondary"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -299,7 +299,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/settings_about"
-                        android:textColor="#B3B3B3"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.15" />
