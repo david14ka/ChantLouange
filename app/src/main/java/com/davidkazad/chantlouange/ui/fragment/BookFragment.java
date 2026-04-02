@@ -10,55 +10,38 @@ import androidx.annotation.Nullable;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import com.davidkazad.chantlouange.ui.fragment.FullHeightGridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.davidkazad.chantlouange.datas.PsalmVerses;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.davidkazad.chantlouange.R;
-import com.davidkazad.chantlouange.datas.OB;
-import com.davidkazad.chantlouange.ui.activities.ListActivity;
+import com.davidkazad.chantlouange.datas.PsalmVerses;
 import com.davidkazad.chantlouange.models.Book;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.davidkazad.chantlouange.ui.activities.ListActivity;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
+public class BookFragment extends Fragment {
 
-public class BookFragment extends Fragment implements AdapterView.OnItemClickListener {
-
-    @BindView(R.id.grid_book)
-    FullHeightGridView grid_book;
+    private RecyclerView rvBooks;
 
     private TextView tvVerseText;
     private TextView tvVerseReference;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_books, container, false);
-        ButterKnife.bind(view);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_books, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        grid_book = view.findViewById(R.id.grid_book);
+        rvBooks = view.findViewById(R.id.rv_books);
 
         // ── Verset biblique aléatoire des Psaumes ──────────────────────
         tvVerseText = view.findViewById(R.id.tv_verse_text);
@@ -66,67 +49,85 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
         PsalmVerses.init(requireContext());
         displayRandomVerse();
 
-        grid_book.setOnItemClickListener(this);
-        grid_book.setAdapter(new BaseAdapter() {
-            @Override
-            public int getCount() {
-                return Book.bookList.size();
+        // ── Configuration du RecyclerView avec 2 colonnes ───────────────
+        rvBooks.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        rvBooks.setAdapter(new BookAdapter());
+    }
+
+    /**
+     * Adapter moderne pour la liste des recueils
+     */
+    private class BookAdapter extends RecyclerView.Adapter<BookViewHolder> {
+
+        @NonNull
+        @Override
+        public BookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_book, parent, false);
+            return new BookViewHolder(v);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
+            Book currentBook = Book.bookList.get(position);
+            
+            holder.bookName.setText(currentBook.getName());
+            
+            int bookImageRes = currentBook.getImage();
+            if (bookImageRes != 0) {
+                holder.bookImage.setImageResource(bookImageRes);
             }
 
-            @Override
-            public Object getItem(int position) {
-                return Book.bookList.get(position);
+            int songCount = currentBook.getPages() != null ? currentBook.getPages().size() : 0;
+            if (songCount > 0) {
+                holder.bookCount.setVisibility(View.VISIBLE);
+                holder.bookCount.setText(songCount + " Chants");
+            } else {
+                holder.bookCount.setVisibility(View.GONE);
             }
 
-            @Override
-            public long getItemId(int position) {
-                return 0;
-            }
+            // Animation d'entrée "WOW" (Fondue + Montée + Échelle avec Rebond)
+            holder.itemView.setAlpha(0f);
+            holder.itemView.setTranslationY(40f);
+            holder.itemView.setScaleX(0.95f);
+            holder.itemView.setScaleY(0.95f);
+            
+            holder.itemView.animate()
+                    .alpha(1f)
+                    .translationY(0f)
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .setDuration(600)
+                    .setInterpolator(new android.view.animation.OvershootInterpolator(1.2f))
+                    .setStartDelay(position * 60L)
+                    .start();
 
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                LayoutInflater inflater = LayoutInflater.from(getContext());
-
-                BookHolder holder = new BookHolder();
-
-                if (convertView == null) {
-                    convertView = inflater.inflate(R.layout.item_book, parent, false);
-                    holder.bookName = convertView.findViewById(R.id.book_name);
-                    holder.bookImage = convertView.findViewById(R.id.book_image);
-                    holder.bookCount = convertView.findViewById(R.id.book_count);
-
-                    convertView.setTag(holder);
-
+            holder.itemView.setOnClickListener(v -> {
+                ListActivity.bookItem = currentBook;
+                if (currentBook.isBookComingSoon()) {
+                    Toast.makeText(getContext(), "This book is Coming soon!", Toast.LENGTH_SHORT).show();
                 } else {
-
-                    holder = (BookHolder) convertView.getTag();
+                    startActivity(new Intent(getContext(), ListActivity.class));
                 }
+            });
+        }
 
+        @Override
+        public int getItemCount() {
+            return Book.bookList.size();
+        }
+    }
 
-                Book currentBook = Book.bookList.get(position);
-                String bookName = currentBook.getName();
-                int bookImage = currentBook.getImage();
-                int songCount = currentBook.getPages() != null ? currentBook.getPages().size() : 0;
+    private static class BookViewHolder extends RecyclerView.ViewHolder {
+        ImageView bookImage;
+        TextView bookName;
+        TextView bookCount;
 
-                Resources res = getResources();
-                Log.d("TAG BookImage : ", bookName + " : "+ bookImage);
-                Drawable drawableBookImage = ResourcesCompat.getDrawable(res, bookImage, null);
-
-                holder.bookName.setText(bookName);
-                holder.bookImage.setImageDrawable(drawableBookImage);
-
-                // Populate song count 
-                if (songCount > 0) {
-                    holder.bookCount.setVisibility(View.VISIBLE);
-                    holder.bookCount.setText(songCount + " Chants");
-                } else {
-                    holder.bookCount.setVisibility(View.GONE);
-                }
-
-                return convertView;
-            }
-        });
-
+        public BookViewHolder(@NonNull View itemView) {
+            super(itemView);
+            bookImage = itemView.findViewById(R.id.book_image);
+            bookName = itemView.findViewById(R.id.book_name);
+            bookCount = itemView.findViewById(R.id.book_count);
+        }
     }
 
     /**
@@ -153,43 +154,4 @@ public class BookFragment extends Fragment implements AdapterView.OnItemClickLis
         fadeRef.setStartDelay(500);
         fadeRef.start();
     }
-
-    private void promptCollection() {
-        new MaterialTapTargetPrompt.Builder(this)
-                .setTarget(R.id.book_name)
-                .setPrimaryText("Collection des cantiques")
-                .setSecondaryText("Nouvelle version du livre avec plus de 600 chansons")
-                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener() {
-                    @Override
-                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
-                    {
-                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
-                        {
-                            // User has pressed the prompt target
-                        }
-                    }
-                })
-                .show();
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        Book clickedBook = Book.bookList.get(position);
-        ListActivity.bookItem = clickedBook;
-        if (clickedBook.isBookComingSoon()){
-            Toast.makeText(getContext(), "This book is Coming soon!", Toast.LENGTH_SHORT).show();
-
-        }else {
-            startActivity(new Intent(getContext(), ListActivity.class));
-        }
-    }
-
-
-    private class BookHolder {
-        public ImageView bookImage;
-        public TextView bookName;
-        public TextView bookCount;
-    }
-
 }

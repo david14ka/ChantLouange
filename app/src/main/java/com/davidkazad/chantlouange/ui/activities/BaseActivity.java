@@ -58,6 +58,37 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
+    protected void setupBottomNavigation(int selectedItemId) {
+        com.google.android.material.bottomnavigation.BottomNavigationView navigation = findViewById(R.id.navigation);
+        if (navigation == null) return;
+
+        if (selectedItemId != 0) {
+            navigation.setSelectedItemId(selectedItemId);
+        }
+
+        navigation.setOnNavigationItemSelectedListener(item -> {
+            if (item.getItemId() == selectedItemId) return false;
+
+            if (this instanceof HomeActivity) {
+                return false; // Géré nativement par HomeActivity
+            }
+
+            Intent intent;
+            if (item.getItemId() == R.id.navigation_settings) {
+                intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            } else {
+                intent = new Intent(this, HomeActivity.class);
+                intent.putExtra("targetFragment", item.getItemId());
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+        });
+    }
+
     protected void navigationDrawer(Bundle savedInstanceState, Toolbar toolbar) {
         final IProfile userProfil = new ProfileDrawerItem()
                 .withName(R.string.app_name)

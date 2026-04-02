@@ -87,20 +87,15 @@
             </LinearLayout>
         </FrameLayout>
 
-        <!-- ── 2-Column Book Grid (non-scrollable, hauteur complète) ── -->
-        <com.davidkazad.chantlouange.ui.fragment.FullHeightGridView
-            android:id="@+id/grid_book"
+        <!-- ── 2-Column Book Grid (RecyclerView for performance) ── -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_books"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:numColumns="2"
-            android:horizontalSpacing="8dp"
-            android:verticalSpacing="8dp"
-            android:paddingHorizontal="8dp"
-            android:paddingBottom="80dp"
+            android:paddingHorizontal="4dp"
+            android:paddingBottom="100dp"
             android:clipToPadding="false"
-            android:scrollbarStyle="insideInset"
-            android:nestedScrollingEnabled="false"
-            android:stretchMode="columnWidth" />
+            android:nestedScrollingEnabled="false" />
 
     </LinearLayout>
 

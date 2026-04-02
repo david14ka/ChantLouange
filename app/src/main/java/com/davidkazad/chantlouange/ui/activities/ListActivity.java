@@ -120,6 +120,9 @@ public class ListActivity extends BaseActivity {
 
         // ── Pager (no TabLayout — single book view) ───────────────────────────
         initPager();
+
+        // ── Setup Bottom Navigation Global ────────────────────────────────────
+        setupBottomNavigation(R.id.navigation_home); // Considéré comme dans l'onglet Home
     }
 
     private void initPager() {

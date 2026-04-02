@@ -76,21 +76,37 @@ public class HomeActivity extends BaseActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_home);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        if (navigation != null) {
+            navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        }
 
         fm = getSupportFragmentManager();
-
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.container, new BookFragment()).commit();
 
         navigationDrawer(savedInstanceState, toolbar);
 
         firebaseSignIn();
 
         LogUtil.d();
-        // getNotification(toolbar); // Removed startup notification as requested
+        
+        handleIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        int targetId = intent.getIntExtra("targetFragment", R.id.navigation_home);
+        if (navigation != null) {
+            navigation.setSelectedItemId(targetId);
+        } else {
+            // Optionnel : cas où le menu n'est pas encore prêt.
+        }
     }
 
     private void showFragment(Fragment fragment) {

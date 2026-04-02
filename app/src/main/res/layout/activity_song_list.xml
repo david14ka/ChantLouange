@@ -163,4 +163,6 @@
         android:layout_height="0dp"
         android:visibility="gone" />
 
+    <include layout="@layout/layout_bottom_nav" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

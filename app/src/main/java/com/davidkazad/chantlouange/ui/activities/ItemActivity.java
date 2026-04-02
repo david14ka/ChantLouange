@@ -106,6 +106,9 @@ public class ItemActivity extends BaseActivity {
         } catch (Exception ex) {
             Log.e(TAG, "onViewCreated: ", ex);
         }
+
+        // Setup du menu en bas (aucun ne s'allume explicitement pour rester discret en mode lecture)
+        setupBottomNavigation(0);
     }
 
     private void initPageContent() {

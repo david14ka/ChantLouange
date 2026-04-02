@@ -247,9 +247,6 @@ public class AllSongsFragment extends Fragment {
         
         for (int i = 0; i < filtered.size(); i++) {
             if (currentFilter == FilterType.AZ) {
-                if (finalItems.size() == 7 && currentSearchQuery.isEmpty()) {
-                    finalItems.add(new ListItem(AllSongsAdapter.TYPE_FEATURED, ""));
-                }
                 ListItem item = filtered.get(i);
                 String title = item.page.getTitle() != null ? item.page.getTitle().trim() : "";
                 if (title.length() > 0) {

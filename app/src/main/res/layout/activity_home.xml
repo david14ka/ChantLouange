@@ -1,78 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.HomeActivity"
-    android:background="@color/home_bg_dark"
-    android:layout_gravity="center">
+    android:background="@color/home_bg_dark">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/surface_container_lowest"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
-                
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chant Louange"
-                    android:textColor="@color/primary_container"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:fontFamily="serif"
-                    android:layout_gravity="center" />
-                    
-            </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="27dp"
-            android:layout_gravity="center">
-
-            <include android:id="@+id/cc"
-                android:visibility="gone"
-                layout="@layout/item_book"
-                android:layout_width="160dp"
-                android:layout_height="200dp"
-                android:layout_margin="20dp" />
-
-
-        </FrameLayout>
-
-
-    </LinearLayout>
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:elevation="16dp"
-        app:itemTextColor="@color/nav_item_color"
-        app:itemIconTint="@color/nav_item_color"
-        app:itemBackground="@drawable/nav_item_bg"
-        android:background="@drawable/bg_bottom_nav"
-        app:menu="@menu/navigation"
-        android:visibility="visible"/>
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-</RelativeLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/surface_container_lowest"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chant Louange"
+                android:textColor="@color/primary_container"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_gravity="center" />
+                
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include android:id="@+id/cc"
+            android:visibility="gone"
+            layout="@layout/item_book"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp" />
+
+    </FrameLayout>
+
+    <include layout="@layout/layout_bottom_nav" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
