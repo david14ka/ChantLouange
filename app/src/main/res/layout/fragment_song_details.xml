@@ -204,6 +204,9 @@
 
             </LinearLayout>
 
+            <!-- ── Audio Player Card ── -->
+            <include layout="@layout/layout_audio_player" />
+
             <!-- ── Parsed Lyrics Container ────────────────────────────── -->
             <LinearLayout
                 android:id="@+id/lyrics_container"

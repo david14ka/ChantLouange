@@ -35,6 +35,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import android.os.Handler;
 import android.util.Log;
+import android.media.MediaPlayer;
+import android.widget.ProgressBar;
+import android.widget.ImageButton;
+import com.davidkazad.chantlouange.utils.AudioMapper;
+import java.util.List;
+import java.io.IOException;
 
 public class ItemFragment extends BaseFragment {
 
@@ -47,7 +53,38 @@ public class ItemFragment extends BaseFragment {
     private float currentTextSize = 18f;
 
     private Page currentPage;
-    
+
+    // Audio Player Fields
+    private View audioPlayerCard;
+    private TextView btnAudioVersion;
+    private ProgressBar audioLoading;
+    private ImageButton btnAudioPlay;
+    private TextView txtAudioCurrent;
+    private TextView txtAudioDuration;
+    private SeekBar audioSeekbar;
+    private MediaPlayer mediaPlayer;
+    private List<String> audioUrls;
+    private int currentAudioVersionIndex = 0;
+    private Handler audioHandler = new Handler();
+    private boolean isTrackingUserSeek = false;
+    private Runnable updateSeekbarTask = new Runnable() {
+        @Override
+        public void run() {
+            if (mediaPlayer != null && mediaPlayer.isPlaying() && !isTrackingUserSeek) {
+                int currentPos = mediaPlayer.getCurrentPosition();
+                audioSeekbar.setProgress(currentPos);
+                txtAudioCurrent.setText(formatTime(currentPos));
+            }
+            audioHandler.postDelayed(this, 1000);
+        }
+    };
+
+    private String formatTime(int ms) {
+        int sec = ms / 1000;
+        int m = sec / 60;
+        int s = sec % 60;
+        return String.format("%d:%02d", m, s);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,6 +158,17 @@ public class ItemFragment extends BaseFragment {
             });
         }
 
+        // --- Audio Player Initialization ---
+        audioPlayerCard = view.findViewById(R.id.audio_player_card);
+        btnAudioVersion = view.findViewById(R.id.btn_audio_version);
+        audioLoading = view.findViewById(R.id.audio_loading);
+        btnAudioPlay = view.findViewById(R.id.btn_audio_play);
+        txtAudioCurrent = view.findViewById(R.id.txt_audio_current);
+        txtAudioDuration = view.findViewById(R.id.txt_audio_duration);
+        audioSeekbar = view.findViewById(R.id.audio_seekbar);
+        
+        setupAudioPlayerUi();
+
         try {
 
             Bundle args = getArguments();
@@ -159,8 +207,172 @@ public class ItemFragment extends BaseFragment {
         txtKey.setVisibility(View.GONE);
         if(getView() != null) getView().findViewById(R.id.ic_key).setVisibility(View.GONE);
 
+        initAudio();
+
         parseAndRenderLyrics();
     }
+
+    private void initAudio() {
+        if (currentBook == null || currentPage == null) return;
+        
+        audioUrls = AudioMapper.getAudioUrls(currentBook.getId(), currentPage.getNumber());
+        if (audioUrls == null || audioUrls.isEmpty()) {
+            if (audioPlayerCard != null) audioPlayerCard.setVisibility(View.GONE);
+            return;
+        }
+        
+        if (audioPlayerCard != null) audioPlayerCard.setVisibility(View.VISIBLE);
+        currentAudioVersionIndex = 0;
+        updateVersionButtonText();
+        
+        resetPlayer();
+    }
+
+    private void setupAudioPlayerUi() {
+        if (audioPlayerCard == null) return;
+        
+        btnAudioPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlay();
+            }
+        });
+        
+        btnAudioVersion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (audioUrls != null && audioUrls.size() > 1) {
+                    currentAudioVersionIndex = (currentAudioVersionIndex + 1) % audioUrls.size();
+                    updateVersionButtonText();
+                    boolean wasPlaying = mediaPlayer != null && mediaPlayer.isPlaying();
+                    resetPlayer();
+                    if (wasPlaying) {
+                        togglePlay();
+                    }
+                } else {
+                    Toast.makeText(getContext(), "Seule cette version est disponible.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        
+        audioSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser && txtAudioCurrent != null) {
+                    txtAudioCurrent.setText(formatTime(progress));
+                }
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                isTrackingUserSeek = true;
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                isTrackingUserSeek = false;
+                if (mediaPlayer != null) {
+                    mediaPlayer.seekTo(seekBar.getProgress());
+                }
+            }
+        });
+    }
+
+    private void updateVersionButtonText() {
+        if (audioUrls != null && !audioUrls.isEmpty() && btnAudioVersion != null) {
+            String url = audioUrls.get(currentAudioVersionIndex).toLowerCase();
+            if (url.contains("piano")) {
+                btnAudioVersion.setText("🎹 Piano");
+            } else {
+                btnAudioVersion.setText("🎻 Orchestre");
+            }
+        }
+    }
+
+    private void resetPlayer() {
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        
+        if (btnAudioPlay != null) {
+            btnAudioPlay.setImageResource(android.R.drawable.ic_media_play);
+            btnAudioPlay.setVisibility(View.VISIBLE);
+        }
+        if (audioLoading != null) audioLoading.setVisibility(View.GONE);
+        if (audioSeekbar != null) {
+            audioSeekbar.setProgress(0);
+            audioSeekbar.setMax(0);
+        }
+        if (txtAudioCurrent != null) txtAudioCurrent.setText("0:00");
+        if (txtAudioDuration != null) txtAudioDuration.setText("0:00");
+        audioHandler.removeCallbacks(updateSeekbarTask);
+    }
+    
+    private void togglePlay() {
+        if (audioUrls == null || audioUrls.isEmpty() || getContext() == null) return;
+        
+        if (mediaPlayer == null) {
+            // Start loading and playing
+            btnAudioPlay.setVisibility(View.GONE);
+            audioLoading.setVisibility(View.VISIBLE);
+            
+            mediaPlayer = new MediaPlayer();
+            try {
+                mediaPlayer.setDataSource(audioUrls.get(currentAudioVersionIndex));
+                mediaPlayer.prepareAsync();
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        if (getActivity() == null) return;
+                        btnAudioPlay.setVisibility(View.VISIBLE);
+                        audioLoading.setVisibility(View.GONE);
+                        
+                        audioSeekbar.setMax(mp.getDuration());
+                        txtAudioDuration.setText(formatTime(mp.getDuration()));
+                        
+                        mp.start();
+                        btnAudioPlay.setImageResource(android.R.drawable.ic_media_pause);
+                        audioHandler.post(updateSeekbarTask);
+                    }
+                });
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        btnAudioPlay.setImageResource(android.R.drawable.ic_media_play);
+                        audioSeekbar.setProgress(0);
+                        txtAudioCurrent.setText("0:00");
+                        audioHandler.removeCallbacks(updateSeekbarTask);
+                    }
+                });
+                mediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                    @Override
+                    public boolean onError(MediaPlayer mp, int what, int extra) {
+                        if (getActivity() == null) return true;
+                        btnAudioPlay.setVisibility(View.VISIBLE);
+                        audioLoading.setVisibility(View.GONE);
+                        Toast.makeText(getContext(), "Erreur lors du chargement de l'audio.", Toast.LENGTH_SHORT).show();
+                        resetPlayer();
+                        return true;
+                    }
+                });
+            } catch (IOException e) {
+                LogUtil.e(e);
+                resetPlayer();
+                btnAudioPlay.setVisibility(View.VISIBLE);
+                audioLoading.setVisibility(View.GONE);
+                Toast.makeText(getContext(), "Erreur de lecture : " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                btnAudioPlay.setImageResource(android.R.drawable.ic_media_play);
+            } else {
+                mediaPlayer.start();
+                btnAudioPlay.setImageResource(android.R.drawable.ic_media_pause);
+            }
+        }
+    }
+
     
     private void parseAndRenderLyrics() {
         try {
@@ -250,6 +462,7 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        resetPlayer();
     }
 
     @Override

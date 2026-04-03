@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mini audio player card shown below the control pill for CV songs -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/audio_player_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/pill_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <!-- Top row: version toggle + play/pause + loading -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Version toggle button -->
+        <TextView
+            android:id="@+id/btn_audio_version"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/pill_background"
+            android:gravity="center"
+            android:text="🎹 Piano"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <!-- Loading indicator -->
+        <ProgressBar
+            android:id="@+id/audio_loading"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+        <!-- Play/Pause button -->
+        <ImageButton
+            android:id="@+id/btn_audio_play"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_play"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Progress bar row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_audio_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#AAFFFFFF"
+            android:textSize="11sp" />
+
+        <SeekBar
+            android:id="@+id/audio_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:progressTint="@color/white"
+            android:thumbTint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_audio_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#AAFFFFFF"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
