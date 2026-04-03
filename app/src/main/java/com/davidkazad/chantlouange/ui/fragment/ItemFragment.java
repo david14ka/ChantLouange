@@ -403,10 +403,10 @@ public class ItemFragment extends BaseFragment {
             if (stanza.isEmpty()) continue;
 
             String upperStanza = stanza.toUpperCase().replaceAll("Œ", "OE");
-            boolean isRefrain = upperStanza.startsWith("REFRAIN") || upperStanza.startsWith("CHOEUR") || upperStanza.startsWith("CHOUR") || upperStanza.startsWith("REF");
+            boolean isRefrain = upperStanza.startsWith("REFRAIN") || upperStanza.startsWith("CHOEUR") || upperStanza.startsWith("CHOUR") || upperStanza.startsWith("REF") || upperStanza.startsWith("CHORUS") || upperStanza.startsWith("CORO");
             
             if (isRefrain) {
-                String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR|CHOUR|CHŒUR|REF\\.?)\\s*:?\\s*", "").trim();
+                String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR|CHOUR|CHŒUR|REF\\.?|CHORUS|CORO)\\s*:?\\s*", "").trim();
                 
                 String htmlText = text.replaceAll(musicalTermsRegex, "<i><font color=\"" + hexHighlightColor + "\">$1</font></i>").replace("\n", "<br>");
                 
