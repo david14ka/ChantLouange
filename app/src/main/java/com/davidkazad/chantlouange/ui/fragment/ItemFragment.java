@@ -395,18 +395,26 @@ public class ItemFragment extends BaseFragment {
             String[] stanzas = content.split("\n\\s*\n");
             LayoutInflater inflater = LayoutInflater.from(getContext());
 
+            String musicalTermsRegex = "(?i)(\\b(?:bis|ter|quater|sol|solo|tous)\\b|\\(\\s*(?:bis|ter|quater|sol|solo|tous)\\s*\\))";
+            String hexHighlightColor = String.format("#%06X", (0xFFFFFF & (isNight ? colorLightSubtext : colorRedAccent)));
+
         for (String stanza : stanzas) {
             stanza = stanza.trim();
             if (stanza.isEmpty()) continue;
 
-            if (stanza.toUpperCase().startsWith("REFRAIN") || stanza.toUpperCase().startsWith("CHOEUR")) {
-                String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR)\\s*:?\\s*", "").trim();
+            String upperStanza = stanza.toUpperCase().replaceAll("Œ", "OE");
+            boolean isRefrain = upperStanza.startsWith("REFRAIN") || upperStanza.startsWith("CHOEUR") || upperStanza.startsWith("CHOUR") || upperStanza.startsWith("REF");
+            
+            if (isRefrain) {
+                String text = stanza.replaceAll("(?i)^(REFRAIN|CHOEUR|CHOUR|CHŒUR|REF\\.?)\\s*:?\\s*", "").trim();
+                
+                String htmlText = text.replaceAll(musicalTermsRegex, "<i><font color=\"" + hexHighlightColor + "\">$1</font></i>").replace("\n", "<br>");
                 
                 View refrainView = inflater.inflate(R.layout.item_lyric_refrain, lyricsContainer, false);
                 ((androidx.cardview.widget.CardView) refrainView).setCardBackgroundColor(refrainBgColor);
                 
                 TextView txtRefrain = refrainView.findViewById(R.id.txt_refrain_content);
-                txtRefrain.setText(text);
+                txtRefrain.setText(android.text.Html.fromHtml(htmlText));
                 txtRefrain.setTextSize(currentTextSize);
                 txtRefrain.setTextColor(refrainTextColor);
                 
@@ -422,15 +430,19 @@ public class ItemFragment extends BaseFragment {
                 TextView txtNumber = verseView.findViewById(R.id.txt_verse_number);
 
                 Matcher m = Pattern.compile("^(\\d+\\.)\\s*(.*)", Pattern.DOTALL).matcher(stanza);
+                String textToRender;
                 if (m.matches()) {
                     txtNumber.setText(m.group(1));
                     txtNumber.setVisibility(View.VISIBLE);
                     txtNumber.setTextColor(verseNumberColor);
-                    txtContent.setText(m.group(2).trim());
+                    textToRender = m.group(2).trim();
                 } else {
                     txtNumber.setVisibility(View.GONE);
-                    txtContent.setText(stanza);
+                    textToRender = stanza;
                 }
+                
+                String htmlText = textToRender.replaceAll(musicalTermsRegex, "<i><font color=\"" + hexHighlightColor + "\">$1</font></i>").replace("\n", "<br>");
+                txtContent.setText(android.text.Html.fromHtml(htmlText));
                 
                 txtContent.setTextSize(currentTextSize);
                 txtContent.setTextColor(colorPrimaryText);
