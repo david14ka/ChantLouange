@@ -91,21 +91,18 @@ public class AllSongsFragment extends Fragment {
         });
 
         mAdapter = new AllSongsAdapter(new ArrayList<>());
-        mAdapter.setOnItemClickListener(new AllSongsAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(ListItem item) {
-                if (item.type == AllSongsAdapter.TYPE_SONG) {
-                    ItemActivity.currentBook = item.book;
-                    ItemActivity.currentPage = item.page;
-                    startActivity(new Intent(getActivity(), ItemActivity.class));
-                }
+        mAdapter.setOnItemClickListener(item -> {
+            if (item.type == AllSongsAdapter.TYPE_SONG) {
+                ItemActivity.currentBook = item.book;
+                ItemActivity.currentPage = item.page;
+                startActivity(new Intent(getActivity(), ItemActivity.class));
             }
         });
         recyclerView.setAdapter(mAdapter);
 
         loadSongsCache();
-        setupFilters();
-        setupSearch();
+        setupFilters(view);
+        setupSearch(view);
         
         applyFiltersAndSort();
 
@@ -118,8 +115,9 @@ public class AllSongsFragment extends Fragment {
 
         for (Book b : books) {
             bookNames.put(b.getId(), b.getAbbreviation() != null ? b.getAbbreviation() : b.getName());
-            if(b.getPages() != null) {
-                for (Page p : b.getPages()) {
+            List<Page> pages = b.getPages();
+            if(pages != null) {
+                for (Page p : pages) {
                     if (p.getTitle() == null || p.getTitle().length() <= 1 || p.getId() < 0) continue;
                     allSongsRaw.add(new ListItem(AllSongsAdapter.TYPE_SONG, b, p, bookNames.get(b.getId())));
                 }
@@ -127,7 +125,28 @@ public class AllSongsFragment extends Fragment {
         }
     }
     
-    private void setupSearch() {
+    private void setupSearch(View root) {
+        View btnSearch = root.findViewById(R.id.btn_search_submit);
+        if (btnSearch != null) {
+            btnSearch.setOnClickListener(v -> {
+                currentSearchQuery = edtSearch.getText().toString().trim().toLowerCase();
+                applyFiltersAndSort();
+            });
+        }
+
+        edtSearch.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH) {
+                currentSearchQuery = edtSearch.getText().toString().trim().toLowerCase();
+                applyFiltersAndSort();
+                // Hide keyboard
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) 
+                        getContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(edtSearch.getWindowToken(), 0);
+                return true;
+            }
+            return false;
+        });
+
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -135,35 +154,34 @@ public class AllSongsFragment extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
+                // Auto trigger search while typing for premium feel
                 currentSearchQuery = s.toString().trim().toLowerCase();
                 applyFiltersAndSort();
             }
         });
     }
 
-    private void setupFilters() {
-        View.OnClickListener filterListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnAz.setBackgroundResource(R.drawable.pill_inactive_bg);
-                btnNumero.setBackgroundResource(R.drawable.pill_inactive_bg);
-                btnRecueil.setBackgroundResource(R.drawable.pill_inactive_bg);
-                btnFavoris.setBackgroundResource(R.drawable.pill_inactive_bg);
-                
-                v.setBackgroundResource(R.drawable.pill_active_bg);
 
-                int id = v.getId();
-                if (id == R.id.btn_filter_az) {
-                    currentFilter = FilterType.AZ;
-                } else if (id == R.id.btn_filter_numero) {
-                    currentFilter = FilterType.NUMERO;
-                } else if (id == R.id.btn_filter_recueil) {
-                    currentFilter = FilterType.RECUEIL;
-                } else if (id == R.id.btn_filter_favoris) {
-                    currentFilter = FilterType.FAVORIS;
-                }
-                applyFiltersAndSort();
+    private void setupFilters(View root) {
+        View.OnClickListener filterListener = v -> {
+            btnAz.setBackgroundResource(R.drawable.pill_inactive_bg);
+            btnNumero.setBackgroundResource(R.drawable.pill_inactive_bg);
+            btnRecueil.setBackgroundResource(R.drawable.pill_inactive_bg);
+            btnFavoris.setBackgroundResource(R.drawable.pill_inactive_bg);
+            
+            v.setBackgroundResource(R.drawable.pill_active_bg);
+
+            int id = v.getId();
+            if (id == R.id.btn_filter_az) {
+                currentFilter = FilterType.AZ;
+            } else if (id == R.id.btn_filter_numero) {
+                currentFilter = FilterType.NUMERO;
+            } else if (id == R.id.btn_filter_recueil) {
+                currentFilter = FilterType.RECUEIL;
+            } else if (id == R.id.btn_filter_favoris) {
+                currentFilter = FilterType.FAVORIS;
             }
+            applyFiltersAndSort();
         };
 
         btnAz.setOnClickListener(filterListener);
@@ -175,16 +193,27 @@ public class AllSongsFragment extends Fragment {
     private void applyFiltersAndSort() {
         List<ListItem> filtered = new ArrayList<>();
         
+        final String q = currentSearchQuery;
+        final boolean isNumQuery = com.davidkazad.chantlouange.utils.SearchUtils.isNumeric(q);
+
         // 1. Filter
         for (ListItem item : allSongsRaw) {
             boolean matchesSearch = true;
-            if (!currentSearchQuery.isEmpty()) {
-                String searchStr = (item.page.getNumber() + " " + item.page.getTitle() + " " + item.bookAbbr).toLowerCase();
-                if (searchLyricsEnabled && item.page.getContent() != null) {
-                    searchStr += " " + item.page.getContent().toLowerCase();
-                }
-                if (!searchStr.contains(currentSearchQuery)) {
-                    matchesSearch = false;
+            if (!q.isEmpty()) {
+                if (isNumQuery) {
+                    if (!item.page.getNormalizedNumber().contains(q)) matchesSearch = false;
+                } else {
+                    // Optimized Title + Book Abbr match
+                    boolean foundInTitle = item.page.getNormalizedTitle().contains(q) || 
+                                           item.bookAbbr.toLowerCase().contains(q);
+                    
+                    if (foundInTitle) {
+                        matchesSearch = true;
+                    } else if (searchLyricsEnabled) {
+                        matchesSearch = item.page.getNormalizedContent().contains(q);
+                    } else {
+                        matchesSearch = false;
+                    }
                 }
             }
             
@@ -199,6 +228,7 @@ public class AllSongsFragment extends Fragment {
                 filtered.add(item);
             }
         }
+
         
         txtSongCount.setText(String.format(getString(R.string.song_count_label), filtered.size()));
 

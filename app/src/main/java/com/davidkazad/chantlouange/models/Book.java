@@ -9,8 +9,10 @@ import com.davidkazad.chantlouange.datas.NB;
 import com.davidkazad.chantlouange.datas.NM;
 import com.davidkazad.chantlouange.datas.NW;
 import com.davidkazad.chantlouange.datas.OB;
+import com.davidkazad.chantlouange.utils.SearchUtils;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -92,31 +94,59 @@ public abstract class Book {
     }
 
     public List<Page> searchPage(String query, boolean titleOnly) {
-
-        if (!query.equals("")) {
-
-            List<Page> pageList = new ArrayList<>();
-            String tmp2 = query.toLowerCase();
-
-            for (Page page : this.getPages()) {
-                String number    = page.getNumber();
-                String titleLow  = page.getTitle().toLowerCase();
-                String searchStr = number + " " + titleLow;
-
-                if (!titleOnly && page.getContent() != null) {
-                    searchStr += " " + page.getContent().toLowerCase();
-                }
-
-                if (searchStr.contains(tmp2)) {
-                    pageList.add(page);
-                }
-            }
-
-            return pageList;
+        if (query == null || query.trim().isEmpty()) {
+            return getPages();
         }
 
-        return getPages();
+        final String q = query.trim().toLowerCase();
+        boolean numericMode = com.davidkazad.chantlouange.utils.SearchUtils.isNumeric(q);
+        List<PageScore> gradedResults = new ArrayList<>();
+
+        for (Page page : this.getPages()) {
+
+            double score = 0.0;
+
+            if (numericMode) {
+                if (page.getNormalizedNumber().contains(q)) {
+                    score = page.getNormalizedNumber().equals(q) ? 1.0 : 0.9;
+                }
+            } else {
+                double titleScore = com.davidkazad.chantlouange.utils.SearchUtils.getFuzzyScore(q, page.getTitle());
+                double numberScore = com.davidkazad.chantlouange.utils.SearchUtils.getFuzzyScore(q, page.getNumber());
+                double contentScore = 0.0;
+
+                if (!titleOnly) {
+                    if (page.getNormalizedContent().contains(q)) {
+                        contentScore = 0.85;
+                    }
+                }
+                score = Math.max(Math.max(titleScore * 1.5, numberScore * 2.0), contentScore * 0.8);
+            }
+
+            if (score > 0.4) {
+                gradedResults.add(new PageScore(page, score));
+            }
+        }
+
+
+        // Sort by score descending
+        Collections.sort(gradedResults, (r1, r2) -> Double.compare(r2.score, r1.score));
+
+        // Convert back to List<Page>
+        List<Page> results = new ArrayList<>();
+        for (PageScore ps : gradedResults) {
+            results.add(ps.page);
+        }
+
+        return results;
     }
+
+    private static class PageScore {
+        final Page page;
+        final double score;
+        PageScore(Page page, double score) { this.page = page; this.score = score; }
+    }
+
 
     public List<Page> find(String query) {
 

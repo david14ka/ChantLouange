@@ -14,23 +14,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
+import com.davidkazad.chantlouange.utils.SearchUtils;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GlobalSearchActivity extends BaseActivity {
 
-    private SearchView searchView;
+    private android.widget.EditText searchViewInner;
+    private android.widget.ImageView btnSearchSubmit;
     private RecyclerView recyclerResults;
     private View emptyView;
+    private android.widget.ProgressBar searchProgress;
+    private Thread searchThread;
     private ImageView btnBack;
+
 
     private TextView chipAll, chipTitles, chipNumbers, chipLyrics;
 
@@ -46,10 +52,13 @@ public class GlobalSearchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_global_search);
 
-        searchView = findViewById(R.id.search_view);
+        searchViewInner = findViewById(R.id.search_view_inner);
+        btnSearchSubmit = findViewById(R.id.btn_search_submit);
         recyclerResults = findViewById(R.id.recycler_results);
         emptyView = findViewById(R.id.empty_view);
+        searchProgress = findViewById(R.id.search_progress);
         btnBack = findViewById(R.id.btn_back);
+
 
         chipAll = findViewById(R.id.chip_all);
         chipTitles = findViewById(R.id.chip_titles);
@@ -64,23 +73,36 @@ public class GlobalSearchActivity extends BaseActivity {
         adapter = new SearchAdapter();
         recyclerResults.setAdapter(adapter);
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                performSearch(query);
-                searchView.clearFocus();
-                return true;
-            }
+        // Removed btnSearchSubmit listener since search is now automatic
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                performSearch(newText);
+
+        searchViewInner.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH) {
+                performSearch(searchViewInner.getText().toString());
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) 
+                        getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(searchViewInner.getWindowToken(), 0);
                 return true;
             }
+            return false;
         });
 
-        searchView.requestFocus();
+        searchViewInner.addTextChangedListener(new android.text.TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override
+            public void afterTextChanged(android.text.Editable s) {
+                String query = s.toString();
+                performSearch(query);
+            }
+
+        });
+
+        searchViewInner.requestFocus();
     }
+
 
     private void setupChips() {
         View.OnClickListener listener = v -> {
@@ -90,8 +112,9 @@ public class GlobalSearchActivity extends BaseActivity {
             else if (v == chipLyrics) currentFilter = 3;
 
             updateChipUI();
-            performSearch(searchView.getQuery().toString());
+            performSearch(searchViewInner.getText().toString());
         };
+
 
         chipAll.setOnClickListener(listener);
         chipTitles.setOnClickListener(listener);
@@ -114,63 +137,121 @@ public class GlobalSearchActivity extends BaseActivity {
 
     private void performSearch(String query) {
         currentQuery = query == null ? "" : query.trim();
-        allItems.clear();
-
-        if (currentQuery.length() >= 2) {
-            for (Book book : Book.bookList) {
-                List<Page> bookMatches = new ArrayList<>();
-                
-                // Fetch matches based on current filter
-                // (Note: The existing searchPage method only searched titles/content.
-                // We'll mimic the logic per the filter required).
-                
-                for (Page page : book.getPages()) {
-                    boolean matches = false;
-                    String title = page.getTitle() != null ? page.getTitle().toLowerCase() : "";
-                    String content = page.getContent() != null ? page.getContent().toLowerCase() : "";
-                    String number = page.getNumber() != null ? page.getNumber().toLowerCase() : "";
-                    String q = currentQuery.toLowerCase();
-
-                    switch (currentFilter) {
-                        case 0: // Tout
-                            matches = title.contains(q) || number.contains(q) || content.contains(q);
-                            break;
-                        case 1: // Titres
-                            matches = title.contains(q);
-                            break;
-                        case 2: // Numéros
-                            matches = number.contains(q);
-                            break;
-                        case 3: // Paroles
-                            matches = content.contains(q);
-                            break;
-                    }
-
-                    if (matches) {
-                        bookMatches.add(page);
-                    }
-                }
-
-                if (!bookMatches.isEmpty()) {
-                    // Add header
-                    allItems.add(new HeaderItem(book.getName(), bookMatches.size()));
-                    
-                    // Add items
-                    for (Page p : bookMatches) {
-                        allItems.add(new SearchResult(book, p));
-                    }
-                }
-            }
+        final String q = currentQuery.toLowerCase();
+        
+        // Cancel existing search thread
+        if (searchThread != null && searchThread.isAlive()) {
+            searchThread.interrupt();
         }
 
-        adapter.notifyDataSetChanged();
-        
-        boolean hasQuery = currentQuery.length() >= 2;
-        boolean hasResults = !allItems.isEmpty();
+        if (q.length() < 2) {
+            allItems.clear();
+            adapter.notifyDataSetChanged();
+            emptyView.setVisibility(View.GONE);
+            recyclerResults.setVisibility(View.GONE);
+            searchProgress.setVisibility(View.GONE);
+            return;
+        }
 
-        emptyView.setVisibility(hasQuery && !hasResults ? View.VISIBLE : View.GONE);
-        recyclerResults.setVisibility(hasResults ? View.VISIBLE : View.GONE);
+        searchProgress.setVisibility(View.VISIBLE);
+        emptyView.setVisibility(View.GONE);
+
+        searchThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                List<SearchResultScore> allScores = new ArrayList<>();
+
+                for (Book book : Book.bookList) {
+                    if (Thread.interrupted()) return;
+                    for (Page page : book.getPages()) {
+                        if (Thread.interrupted()) return;
+                        
+                        boolean numericMode = SearchUtils.isNumeric(q);
+                        double score = 0.0;
+
+                        if (numericMode) {
+                            // FAST TRACK: Numeric only
+                            if (page.getNormalizedNumber().contains(q)) {
+                                score = page.getNormalizedNumber().equals(q) ? 1.0 : 0.9;
+                            }
+                        } else {
+                            // Phase-based search
+                            switch (currentFilter) {
+                                case 0: // Tout
+                                {
+                                    double ts = SearchUtils.getFuzzyScore(q, page.getTitle());
+                                    double ns = SearchUtils.getFuzzyScore(q, page.getNumber());
+                                    double cs = 0.0;
+                                    
+                                    // Index content search - prioritization: Title/Number > Content
+                                    if (page.getNormalizedContent().contains(q)) {
+                                        cs = 0.6; // Lower base score for lyrics in "Tout" mode
+                                    }
+                                    
+                                    // Title * 2.0, Number * 2.0, Content * 0.5 to ensure Titles always win.
+                                    score = Math.max(Math.max(ts * 2.0, ns * 2.0), cs * 0.5);
+
+                                    break;
+                                }
+                                case 1: // Titres
+                                    score = SearchUtils.getFuzzyScore(q, page.getTitle());
+                                    break;
+                                case 2: // Numéros
+                                    score = SearchUtils.getFuzzyScore(q, page.getNumber());
+                                    break;
+                                case 3: // Paroles
+                                    if (page.getNormalizedContent().contains(q)) {
+                                        score = 0.85;
+                                    }
+                                    break;
+                            }
+                        }
+
+
+                        if (score > 0.4) {
+                            allScores.add(new SearchResultScore(book, page, score));
+                        }
+                    }
+                }
+
+                if (Thread.interrupted()) return;
+
+                final List<ListItem> results = new ArrayList<>();
+                for (Book book : Book.bookList) {
+                    List<SearchResultScore> bookMatches = new ArrayList<>();
+                    for (SearchResultScore srs : allScores) {
+                        if (srs.book == book) bookMatches.add(srs);
+                    }
+
+                    if (!bookMatches.isEmpty()) {
+                        java.util.Collections.sort(bookMatches, (r1, r2) -> Double.compare(r2.score, r1.score));
+                        results.add(new HeaderItem(book.getName(), bookMatches.size()));
+                        for (SearchResultScore r : bookMatches) {
+                            results.add(new SearchResult(r.book, r.page));
+                        }
+                    }
+                }
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (Thread.interrupted()) return;
+                        
+                        allItems.clear();
+                        allItems.addAll(results);
+                        adapter.notifyDataSetChanged();
+                        
+                        searchProgress.setVisibility(View.GONE);
+                        boolean hasResults = !allItems.isEmpty();
+                        emptyView.setVisibility(hasResults ? View.GONE : View.VISIBLE);
+                        recyclerResults.setVisibility(hasResults ? View.VISIBLE : View.GONE);
+                    }
+                });
+            }
+        });
+        searchThread.start();
     }
+
 
     // --- Adapter ---
 
@@ -314,4 +395,18 @@ public class GlobalSearchActivity extends BaseActivity {
             this.page = page;
         }
     }
+
+    private static class SearchResultScore {
+        final Book book;
+        final Page page;
+        final double score;
+
+        SearchResultScore(Book book, Page page, double score) {
+            this.book = book;
+            this.page = page;
+            this.score = score;
+        }
+    }
 }
+
+

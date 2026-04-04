@@ -2,109 +2,118 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/audio_player_card"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="72dp"
     android:layout_marginHorizontal="24dp"
-    android:layout_marginBottom="24dp"
+    android:layout_marginBottom="32dp"
     android:background="@drawable/player_bg_glass"
-    android:orientation="vertical"
-    android:paddingVertical="4dp">
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="10dp"
+    android:paddingEnd="20dp"
+    android:elevation="4dp">
 
-    <!-- Decorative dashes above -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="4dp"
-        android:orientation="horizontal">
-        <View android:layout_width="20dp" android:layout_height="2dp" android:background="#44FFFFFF" />
-        <View android:layout_width="8dp" android:layout_height="2dp" android:layout_marginStart="4dp" android:background="#44FFFFFF" />
-        <View android:layout_width="8dp" android:layout_height="2dp" android:layout_marginStart="4dp" android:background="#44FFFFFF" />
-    </LinearLayout>
-
+    <!-- Play Button with Red Circle -->
     <FrameLayout
-        android:id="@+id/player_container"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_gravity="center_horizontal">
+        android:id="@+id/btn_audio_play_container"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_circle_red"
+        android:elevation="6dp">
 
-        <!-- Keeping circular progress for visual flair behind play button -->
         <ProgressBar
-            android:id="@+id/audio_progress_circle"
-            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/audio_loading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_audio_play"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:max="100"
-            android:progress="0"
-            android:progressDrawable="@drawable/circular_progress" />
-
-        <RelativeLayout
-            android:id="@+id/btn_audio_play_container"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bg_circle_red">
-
-            <ProgressBar
-                android:id="@+id/audio_loading"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_centerInParent="true"
-                android:indeterminateTint="@color/white"
-                android:visibility="gone" />
-
-            <ImageButton
-                android:id="@+id/btn_audio_play"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/ic_media_play"
-                app:tint="@color/white" />
-        </RelativeLayout>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_play"
+            android:padding="14dp"
+            app:tint="@color/white"
+            android:scaleType="fitCenter" />
     </FrameLayout>
 
-    <!-- NEW: Seekbar and Time Labels -->
+    <!-- Content Area: Title, Time and Seekbar -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="32dp">
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
 
-        <SeekBar
-            android:id="@+id/audio_seekbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:progress="0"
-            android:max="100"
-            android:paddingHorizontal="0dp"
-            android:progressDrawable="@drawable/seekbar_progress_premium"
-            android:thumbTint="#E53935"
-            app:thumbRadius="6dp" />
-
+        <!-- Top Row: Title and Time -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
+            android:layout_marginBottom="4dp">
 
             <TextView
-                android:id="@+id/txt_audio_current_time"
+                android:id="@+id/txt_audio_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:text="0:00"
-                android:textColor="#BCBCBC"
-                android:textSize="11sp" />
+                android:layout_toStartOf="@+id/layout_time"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="TITRE DU CHANT"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/txt_audio_duration"
+            <LinearLayout
+                android:id="@+id/layout_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="0:00"
-                android:textColor="#BCBCBC"
-                android:textSize="11sp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_audio_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#BCBCBC"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:textColor="#88BCBCBC"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_audio_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#BCBCBC"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </RelativeLayout>
+
+        <!-- Minimalist Seekbar -->
+        <SeekBar
+            android:id="@+id/audio_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/seekbar_progress_premium"
+            android:thumb="@null"
+            android:splitTrack="false"
+            android:max="100"
+            android:progress="0" />
 
     </LinearLayout>
 
 </LinearLayout>
+

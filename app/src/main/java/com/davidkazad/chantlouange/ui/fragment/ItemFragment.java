@@ -65,12 +65,13 @@ public class ItemFragment extends BaseFragment {
 
     // Audio Player Fields
     private View audioPlayerCard;
-    private ProgressBar audioProgressCircle;
+    private TextView txtAudioTitle;
     private SeekBar audioSeekbar;
     private TextView txtAudioCurrentTime;
     private TextView txtAudioDuration;
     private ProgressBar audioLoading;
     private ImageButton btnAudioPlay;
+
     private MediaPlayer mediaPlayer;
     private List<String> audioUrls;
     private int currentAudioVersionIndex = 0;
@@ -81,9 +82,6 @@ public class ItemFragment extends BaseFragment {
         public void run() {
             if (mediaPlayer != null && mediaPlayer.isPlaying() && !isTrackingUserSeek) {
                 int currentPos = mediaPlayer.getCurrentPosition();
-                if (audioProgressCircle != null) {
-                    audioProgressCircle.setProgress(currentPos);
-                }
                 if (audioSeekbar != null) {
                     audioSeekbar.setProgress(currentPos);
                 }
@@ -92,6 +90,7 @@ public class ItemFragment extends BaseFragment {
                 }
             }
             audioHandler.postDelayed(this, 1000);
+
         }
     };
 
@@ -199,12 +198,13 @@ public class ItemFragment extends BaseFragment {
 
         // --- Audio Player Initialization ---
         audioPlayerCard = view.findViewById(R.id.audio_player_card);
-        audioProgressCircle = view.findViewById(R.id.audio_progress_circle);
+        txtAudioTitle = view.findViewById(R.id.txt_audio_title);
         audioSeekbar = view.findViewById(R.id.audio_seekbar);
         txtAudioCurrentTime = view.findViewById(R.id.txt_audio_current_time);
         txtAudioDuration = view.findViewById(R.id.txt_audio_duration);
         audioLoading = view.findViewById(R.id.audio_loading);
         btnAudioPlay = view.findViewById(R.id.btn_audio_play);
+
         
         setupAudioPlayerUi();
 
@@ -325,7 +325,12 @@ public class ItemFragment extends BaseFragment {
         txtKey.setVisibility(View.GONE);
         if(getView() != null) getView().findViewById(R.id.ic_key).setVisibility(View.GONE);
 
+        if (txtAudioTitle != null) {
+            txtAudioTitle.setText(currentPage.getTitle() != null ? currentPage.getTitle().toUpperCase() : "");
+        }
+
         initAudio();
+
 
         parseAndRenderLyrics();
     }
@@ -400,10 +405,7 @@ public class ItemFragment extends BaseFragment {
             btnAudioPlay.setVisibility(View.VISIBLE);
         }
         if (audioLoading != null) audioLoading.setVisibility(View.GONE);
-        if (audioProgressCircle != null) {
-            audioProgressCircle.setProgress(0);
-            audioProgressCircle.setMax(0);
-        }
+
         if (audioSeekbar != null) {
             audioSeekbar.setProgress(0);
             audioSeekbar.setMax(0);
@@ -432,15 +434,13 @@ public class ItemFragment extends BaseFragment {
                         btnAudioPlay.setVisibility(View.VISIBLE);
                         audioLoading.setVisibility(View.GONE);
                         
-                        if (audioProgressCircle != null) {
-                            audioProgressCircle.setMax(mp.getDuration());
-                        }
                         if (audioSeekbar != null) {
                             audioSeekbar.setMax(mp.getDuration());
                         }
                         if (txtAudioDuration != null) {
                             txtAudioDuration.setText(formatTime(mp.getDuration()));
                         }
+
                         
                         mp.start();
                         btnAudioPlay.setImageResource(android.R.drawable.ic_media_pause);
@@ -451,8 +451,8 @@ public class ItemFragment extends BaseFragment {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
                         btnAudioPlay.setImageResource(android.R.drawable.ic_media_play);
-                        if (audioProgressCircle != null) {
-                            audioProgressCircle.setProgress(0);
+                        if (audioSeekbar != null) {
+                            audioSeekbar.setProgress(0);
                         }
                         audioHandler.removeCallbacks(updateSeekbarTask);
                     }

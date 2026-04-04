@@ -1,4 +1,6 @@
 package com.davidkazad.chantlouange.models;
+import com.davidkazad.chantlouange.utils.SearchUtils;
+
 
 public class Page {
     private int id;
@@ -116,7 +118,33 @@ public class Page {
         this.originalTitle = originalTitle;
     }
 
+    private String normalizedTitle;
+    private String normalizedNumber;
+    private String normalizedContent;
+
+    public String getNormalizedTitle() {
+        if (normalizedTitle == null) {
+            normalizedTitle = SearchUtils.normalize(title);
+        }
+        return normalizedTitle;
+    }
+
+    public String getNormalizedNumber() {
+        if (normalizedNumber == null) {
+            normalizedNumber = SearchUtils.normalize(number);
+        }
+        return normalizedNumber;
+    }
+
+    public String getNormalizedContent() {
+        if (normalizedContent == null) {
+            normalizedContent = SearchUtils.normalize(content);
+        }
+        return normalizedContent;
+    }
+
     public void setReference(String reference) {
         this.reference = reference;
     }
 }
+

@@ -85,6 +85,18 @@
                 android:textSize="14sp"
                 android:imeOptions="actionSearch"
                 android:inputType="textNoSuggestions" />
+
+            <ImageView
+                android:id="@+id/btn_search_submit"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_search_black_24dp"
+                app:tint="@color/red"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"/>
+
         </LinearLayout>
 
         <CheckBox
