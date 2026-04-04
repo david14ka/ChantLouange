@@ -1,66 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
-    android:paddingHorizontal="24dp"
-    android:paddingVertical="16dp"
-    android:gravity="center_vertical"
-    android:background="?android:attr/selectableItemBackground">
-
-    <TextView
-        android:id="@+id/txt_number"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:textColor="#A0332D"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:fontFamily="serif"
-        android:gravity="start|center_vertical"
-        android:letterSpacing="-0.02"
-        android:includeFontPadding="false"
-        tools:text="042" />
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginStart="8dp">
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/song_item_bg_glass">
 
         <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="match_parent"
+            android:id="@+id/txt_number"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/home_cat_text"
-            android:textSize="18sp"
+            android:textColor="#A0332D"
+            android:textSize="32sp"
             android:textStyle="bold"
             android:fontFamily="serif"
+            android:gravity="start|center_vertical"
+            android:letterSpacing="-0.02"
             android:includeFontPadding="false"
-            tools:text="Grand Dieu, nous te bénissons" />
+            tools:text="042" />
 
-        <TextView
-            android:id="@+id/txt_subtitle"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/home_text_body"
-            android:textSize="13sp"
-            android:fontFamily="sans-serif"
-            tools:text="Adoration &amp; Louange" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:includeFontPadding="false"
+                tools:text="Grand Dieu, nous te bénissons" />
+
+            <TextView
+                android:id="@+id/txt_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColorHint="#9E9E9E"
+                android:textColor="?attr/textColor"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif"
+                tools:text="Adoration &amp; Louange" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_fav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/star_filed"
+            app:tint="@color/home_cat_text"
+            android:layout_marginStart="16dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
     </LinearLayout>
+</androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/img_fav"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/star_filed"
-        app:tint="@color/home_cat_text"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_marginStart="16dp"
-        android:visibility="gone"
-        tools:visibility="visible" />
-
-</LinearLayout>
