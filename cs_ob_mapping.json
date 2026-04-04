@@ -1,0 +1,2609 @@
+[
+  {
+    "cs_num": 1,
+    "cs_title": "1. CROIS  SEULEMENT.   C",
+    "cs_clean": "CROIS SEULEMENT",
+    "ob_num": 1,
+    "ob_title": "ONLY BELIEVE (C)",
+    "ob_clean": "ONLY BELIEVE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 2,
+    "cs_title": "GRACE ETONNANTE ! Ab",
+    "cs_clean": "GRACE ETONNANTE",
+    "ob_num": 2,
+    "ob_title": "AMAZING GRACE (Ab)",
+    "ob_clean": "AMAZING GRACE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Amazing_Grace_file.mid"
+    ]
+  },
+  {
+    "cs_num": 3,
+    "cs_title": "ILS VIENNENT. Eb",
+    "cs_clean": "ILS VIENNENT",
+    "ob_num": 3,
+    "ob_title": "THEY COME (Eb)",
+    "ob_clean": "THEY COME",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+    ]
+  },
+  {
+    "cs_num": 4,
+    "cs_title": "JE L’AIME. C",
+    "cs_clean": "JE L AIME",
+    "ob_num": 100,
+    "ob_title": "THEN JESUS CAME (C)",
+    "ob_clean": "THEN JESUS CAME",
+    "method": "fuzzy",
+    "score": 58.33333333333333,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+    ]
+  },
+  {
+    "cs_num": 5,
+    "cs_title": "MOMENT DE PRIERE. Eb",
+    "cs_clean": "MOMENT DE PRIERE",
+    "ob_num": 5,
+    "ob_title": "SWEET HOUR OF PRAYER (Eb)",
+    "ob_clean": "SWEET HOUR OF PRAYER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
+    ]
+  },
+  {
+    "cs_num": 6,
+    "cs_title": "OH! COMBIEN J’AIME JESUS ! Ab",
+    "cs_clean": "OH COMBIEN J AIME JESUS",
+    "ob_num": 110,
+    "ob_title": "OH, IT IS JESUS (C)",
+    "ob_clean": "OH IT IS JESUS",
+    "method": "fuzzy",
+    "score": 64.86486486486487,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ]
+  },
+  {
+    "cs_num": 7,
+    "cs_title": "QUAND LES RACHETES S' Y ASSEMBLERONT G",
+    "cs_clean": "QUAND LES RACHETES S Y ASSEMBLERONT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 8,
+    "cs_title": "OH! JE DESIRE LE VOIR! Ab",
+    "cs_clean": "OH JE DESIRE LE VOIR",
+    "ob_num": 8,
+    "ob_title": "OH, I WANT TO SEE HIM (Ab)",
+    "ob_clean": "OH I WANT TO SEE HIM",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+    ]
+  },
+  {
+    "cs_num": 9,
+    "cs_title": "NOUS NOUS SENTONS SI BIEN F",
+    "cs_clean": "NOUS NOUS SENTONS SI BIEN",
+    "ob_num": 9,
+    "ob_title": "FEELING SO MUCH BETTER (F)",
+    "ob_clean": "FEELING SO MUCH BETTER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 10,
+    "cs_title": "APPRENDS-MOI SEIGNEUR, A ATTENDRE F",
+    "cs_clean": "APPRENDS MOI SEIGNEUR A ATTENDRE",
+    "ob_num": 10,
+    "ob_title": "TEACH ME, LORD, TO WAIT (F)",
+    "ob_clean": "TEACH ME LORD TO WAIT",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+    ]
+  },
+  {
+    "cs_num": 11,
+    "cs_title": "ALLELUIA, NOUS RESSUSCITERONS Bb",
+    "cs_clean": "ALLELUIA NOUS RESSUSCITERONS",
+    "ob_num": 11,
+    "ob_title": "HALLELUJAH, WE SHALL RISE(Bb)",
+    "ob_clean": "HALLELUJAH WE SHALL RISE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Hymn_for_Easter.mid"
+    ]
+  },
+  {
+    "cs_num": 12,
+    "cs_title": "PORTER UNE COURONNE! Ab",
+    "cs_clean": "PORTER UNE COURONNE",
+    "ob_num": 12,
+    "ob_title": "WEAR A CROWN (Ab)",
+    "ob_clean": "WEAR A CROWN",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 13,
+    "cs_title": "MERVEILLEUSE GRACE. F",
+    "cs_clean": "MERVEILLEUSE GRACE",
+    "ob_num": 13,
+    "ob_title": "MARVELOUS GRACE (F)",
+    "ob_clean": "MARVELOUS GRACE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 14,
+    "cs_title": "MONT SION. Ab",
+    "cs_clean": "MONT SION",
+    "ob_num": 66,
+    "ob_title": "SHINE ON ME (Ab)",
+    "ob_clean": "SHINE ON ME",
+    "method": "fuzzy",
+    "score": 70.0,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 15,
+    "cs_title": "NOUS MARCHONS VERS SION. G",
+    "cs_clean": "NOUS MARCHONS VERS SION",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 16,
+    "cs_title": "PURIFIE-MOI. F",
+    "cs_clean": "PURIFIE MOI",
+    "ob_num": 16,
+    "ob_title": "CLEANSE ME (F)",
+    "ob_clean": "CLEANSE ME",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+    ]
+  },
+  {
+    "cs_num": 17,
+    "cs_title": "MES BREBIS CONNAISSENT MA VOIX Bb",
+    "cs_clean": "MES BREBIS CONNAISSENT MA VOIX",
+    "ob_num": 17,
+    "ob_title": "MY SHEEP KNOW MY VOICE(Bb)",
+    "ob_clean": "MY SHEEP KNOW MY VOICE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 18,
+    "cs_title": "EN AVANT SOLDATS CHRETIENS ! Eb",
+    "cs_clean": "EN AVANT SOLDATS CHRETIENS",
+    "ob_num": 18,
+    "ob_title": "ONWARD, CHRISTIAN SOLDIER (Eb)",
+    "ob_clean": "ONWARD CHRISTIAN SOLDIER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/493-Onward_Christian_8zvMAyv.mid"
+    ]
+  },
+  {
+    "cs_num": 19,
+    "cs_title": "PARLONS DE JESUS Bb",
+    "cs_clean": "PARLONS DE JESUS",
+    "ob_num": 128,
+    "ob_title": "JESUS LOVES ME (Eb)",
+    "ob_clean": "JESUS LOVES ME",
+    "method": "fuzzy",
+    "score": 60.0,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 20,
+    "cs_title": "QUAND NOTRE SEIGNEUR REVIENDRA. G",
+    "cs_clean": "QUAND NOTRE SEIGNEUR REVIENDRA",
+    "ob_num": 20,
+    "ob_title": "WHEN OUR LORD SHALL COME(G)",
+    "ob_clean": "WHEN OUR LORD SHALL COME",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/the_Lord_is_coming_by_and_by.mid"
+    ]
+  },
+  {
+    "cs_num": 21,
+    "cs_title": "C’EST LA BATAILLE C",
+    "cs_clean": "C EST LA BATAILLE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 22,
+    "cs_title": "VICTOIRE EN JESUS Ab",
+    "cs_clean": "VICTOIRE EN JESUS",
+    "ob_num": 22,
+    "ob_title": "VICTORY IN JESUS (Ab)",
+    "ob_clean": "VICTORY IN JESUS",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/More_Like_Jesus_Stillman.mid"
+    ]
+  },
+  {
+    "cs_num": 23,
+    "cs_title": "MA FOI REGARDE A TOI. Eb",
+    "cs_clean": "MA FOI REGARDE A TOI",
+    "ob_num": 23,
+    "ob_title": "MY FAITH LOOKS UP TO THEE(Eb)",
+    "ob_clean": "MY FAITH LOOKS UP TO THEE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/my_faith_looks_up_to_thee.mid"
+    ]
+  },
+  {
+    "cs_num": 24,
+    "cs_title": "VIVANT PAR LA FOI. Eb",
+    "cs_clean": "VIVANT PAR LA FOI",
+    "ob_num": 24,
+    "ob_title": "LIVING BY FAITH (Eb)",
+    "ob_clean": "LIVING BY FAITH",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Tenderness.mid"
+    ]
+  },
+  {
+    "cs_num": 25,
+    "cs_title": "J’ABANDONNE TOUT Eb",
+    "cs_clean": "J ABANDONNE TOUT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 26,
+    "cs_title": "QUAND J’ATTEINDRAI CETTE CITE Ab",
+    "cs_clean": "QUAND J ATTEINDRAI CETTE CITE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 27,
+    "cs_title": "PLUS TARD. F",
+    "cs_clean": "PLUS TARD",
+    "ob_num": 27,
+    "ob_title": "FARTHER ALONG (F)",
+    "ob_clean": "FARTHER ALONG",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Farther_Along.mid"
+    ]
+  },
+  {
+    "cs_num": 28,
+    "cs_title": "REMPLIS-MOI D’AMOUR. Ab",
+    "cs_clean": "REMPLIS MOI D AMOUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 29,
+    "cs_title": "J’AI RESOLU Bb",
+    "cs_clean": "J AI RESOLU",
+    "ob_num": 29,
+    "ob_title": "I AM RESOLVED (Bb)",
+    "ob_clean": "I AM RESOLVED",
+    "method": "fuzzy",
+    "score": 66.66666666666667,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+    ]
+  },
+  {
+    "cs_num": 30,
+    "cs_title": "LIEUX PLUS HAUTS G",
+    "cs_clean": "LIEUX PLUS HAUTS",
+    "ob_num": 30,
+    "ob_title": "HIGHER GROUND (G)",
+    "ob_clean": "HIGHER GROUND",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/484.mid"
+    ]
+  },
+  {
+    "cs_num": 31,
+    "cs_title": "DEBOUT SUR LES PROMESSES Bb",
+    "cs_clean": "DEBOUT SUR LES PROMESSES",
+    "ob_num": 31,
+    "ob_title": "STANDING ON THE PROMISES(Bb)",
+    "ob_clean": "STANDING ON THE PROMISES",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/banner_of_the_cross.mid"
+    ]
+  },
+  {
+    "cs_num": 32,
+    "cs_title": "DANS PEU DE TEMPS, LE MATIN VIENDRA F",
+    "cs_clean": "DANS PEU DE TEMPS LE MATIN VIENDRA",
+    "ob_num": 32,
+    "ob_title": "BY AND BY, MORNING COMES(F)",
+    "ob_clean": "BY AND BY MORNING COMES",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 33,
+    "cs_title": "ROCHER D’AGES Bb",
+    "cs_clean": "ROCHER D AGES",
+    "ob_num": 33,
+    "ob_title": "ROCK OF AGES (Bb)",
+    "ob_clean": "ROCK OF AGES",
+    "method": "fuzzy",
+    "score": 72.0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 34,
+    "cs_title": "QUAND JE VERRAI LE SANG C",
+    "cs_clean": "QUAND JE VERRAI LE SANG",
+    "ob_num": 34,
+    "ob_title": "WHEN I SEE THE BLOOD ( C )",
+    "ob_clean": "WHEN I SEE THE BLOOD",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Praise_Ye_the_Lord.mid"
+    ]
+  },
+  {
+    "cs_num": 35,
+    "cs_title": "L’AMOUR M’A SAUVE Bb",
+    "cs_clean": "L AMOUR M A SAUVE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 36,
+    "cs_title": "PLUIES DE BENEDICTION Bb",
+    "cs_clean": "PLUIES DE BENEDICTION",
+    "ob_num": 36,
+    "ob_title": "SHOWERS OF BLESSING (Bb)",
+    "ob_clean": "SHOWERS OF BLESSING",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Even_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 37,
+    "cs_title": "COMME TU VEUX, SEIGNEUR Eb",
+    "cs_clean": "COMME TU VEUX SEIGNEUR",
+    "ob_num": 37,
+    "ob_title": "HAVE THINE OWN WAY, LORD(Eb)",
+    "ob_clean": "HAVE THINE OWN WAY LORD",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Have_Thine_Own_Way_Lord.mid"
+    ]
+  },
+  {
+    "cs_num": 38,
+    "cs_title": "ATTIRE-MOI PLUS PRES Ab",
+    "cs_clean": "ATTIRE MOI PLUS PRES",
+    "ob_num": 38,
+    "ob_title": "DRAW ME NEARER (Ab)",
+    "ob_clean": "DRAW ME NEARER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/290-I_Am_Thine_O_Lord_1.mid"
+    ]
+  },
+  {
+    "cs_num": 39,
+    "cs_title": "JE SUIS MARQUE Ab",
+    "cs_clean": "JE SUIS MARQUE",
+    "ob_num": 39,
+    "ob_title": "I AM MARKED (Ab)",
+    "ob_clean": "I AM MARKED",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+    ]
+  },
+  {
+    "cs_num": 40,
+    "cs_title": "NE SERAIT-CE PAS MERVEILLEUX ? Bb",
+    "cs_clean": "NE SERAIT CE PAS MERVEILLEUX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 41,
+    "cs_title": "SUR LES AILES D’UNE COLOMBE Eb",
+    "cs_clean": "SUR LES AILES D UNE COLOMBE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 42,
+    "cs_title": "J’AI ENVIE D’Y ALLER G",
+    "cs_clean": "J AI ENVIE D Y ALLER",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 43,
+    "cs_title": "VIENS DINER C",
+    "cs_clean": "VIENS DINER",
+    "ob_num": 43,
+    "ob_title": "COME AND DINE (C)",
+    "ob_clean": "COME AND DINE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 44,
+    "cs_title": "DIEU NOUS CONDUIT Eb",
+    "cs_clean": "DIEU NOUS CONDUIT",
+    "ob_num": 44,
+    "ob_title": "GOD LEADS US ALONG (Eb)",
+    "ob_clean": "GOD LEADS US ALONG",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/God_leads_us_along.mid"
+    ]
+  },
+  {
+    "cs_num": 45,
+    "cs_title": "REPOSANT SUR LES BRAS ETERNELS Eb",
+    "cs_clean": "REPOSANT SUR LES BRAS ETERNELS",
+    "ob_num": 45,
+    "ob_title": "LEANING ON LASTING ARMS(Eb)",
+    "ob_clean": "LEANING ON LASTING ARMS",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Leaning_On_the_Everlasting_Arms.mid"
+    ]
+  },
+  {
+    "cs_num": 46,
+    "cs_title": "LUMIERE Eb",
+    "cs_clean": "LUMIERE",
+    "ob_num": 46,
+    "ob_title": "SUNLIGHT (Eb)",
+    "ob_clean": "SUNLIGHT",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/grenada.mid"
+    ]
+  },
+  {
+    "cs_num": 47,
+    "cs_title": "JE SAIS EN QUI J’AI CRU Eb",
+    "cs_clean": "JE SAIS EN QUI J AI CRU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 48,
+    "cs_title": "APPORTANT LES FRUITS Bb",
+    "cs_clean": "APPORTANT LES FRUITS",
+    "ob_num": 48,
+    "ob_title": "BRINGING IN THE SHEAVES(Bb)",
+    "ob_clean": "BRINGING IN THE SHEAVES",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Bringing_in_the_Sheaves_Shaw.mid"
+    ]
+  },
+  {
+    "cs_num": 49,
+    "cs_title": "UN MATIN DORE Ab",
+    "cs_clean": "UN MATIN DORE",
+    "ob_num": 49,
+    "ob_title": "SOME GOLDEN DAYBREAK (Ab)",
+    "ob_clean": "SOME GOLDEN DAYBREAK",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 50,
+    "cs_title": "POURRONS-NOUS A LA RIVIERE Ab",
+    "cs_clean": "POURRONS NOUS A LA RIVIERE",
+    "ob_num": 50,
+    "ob_title": "SHALL WE GATHER AT RIVER(Ab)",
+    "ob_clean": "SHALL WE GATHER AT RIVER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 51,
+    "cs_title": "GLOIRE A SON NOM ! Ab",
+    "cs_clean": "GLOIRE A SON NOM",
+    "ob_num": 51,
+    "ob_title": "GLORY TO HIS NAME (Ab)",
+    "ob_clean": "GLORY TO HIS NAME",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/140.mid"
+    ]
+  },
+  {
+    "cs_num": 52,
+    "cs_title": "IL M’A SORTI Eb",
+    "cs_clean": "IL M A SORTI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 53,
+    "cs_title": "BIENTOT DANS LA DOUCEUR G",
+    "cs_clean": "BIENTOT DANS LA DOUCEUR",
+    "ob_num": 53,
+    "ob_title": "SWEET BY AND BY (G)",
+    "ob_clean": "SWEET BY AND BY",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/515.mid"
+    ]
+  },
+  {
+    "cs_num": 54,
+    "cs_title": "’Y A UNE FONTAINE C",
+    "cs_clean": "Y A UNE FONTAINE",
+    "ob_num": 54,
+    "ob_title": "THERE IS A FOUNTAIN (C)",
+    "ob_clean": "THERE IS A FOUNTAIN",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/338-How_Firm_a.mid"
+    ]
+  },
+  {
+    "cs_num": 55,
+    "cs_title": "OH! QUEL PRECIEUX AMOUR! F",
+    "cs_clean": "OH QUEL PRECIEUX AMOUR",
+    "ob_num": 55,
+    "ob_title": "OH, WHAT PRECIOUS LOVE (F)",
+    "ob_clean": "OH WHAT PRECIOUS LOVE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/he_is_so_precious.mid"
+    ]
+  },
+  {
+    "cs_num": 56,
+    "cs_title": "JESUS NE FAILLIT. Ab",
+    "cs_clean": "JESUS NE FAILLIT",
+    "ob_num": 56,
+    "ob_title": "JESUS NEVER FAILS (Ab)",
+    "ob_clean": "JESUS NEVER FAILS",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Jesus_never_fails.mid"
+    ]
+  },
+  {
+    "cs_num": 57,
+    "cs_title": "HYMNE DE BATAILLE DE LA REPUBLIQUE Bb",
+    "cs_clean": "HYMNE DE BATAILLE DE LA REPUBLIQUE",
+    "ob_num": 57,
+    "ob_title": "BATTLE HYMN OF REPUBLIC(Bb)",
+    "ob_clean": "BATTLE HYMN OF REPUBLIC",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/633-Mine_Eyes_Have.mid"
+    ]
+  },
+  {
+    "cs_num": 58,
+    "cs_title": "AMEN ! F",
+    "cs_clean": "AMEN",
+    "ob_num": 58,
+    "ob_title": "AMEN (F)",
+    "ob_clean": "AMEN",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Laura_B._Davis.mid"
+    ]
+  },
+  {
+    "cs_num": 59,
+    "cs_title": "L' ITINERANT PREDICATEUR Bb",
+    "cs_clean": "L ITINERANT PREDICATEUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 60,
+    "cs_title": "CHAQUE PAS SUR LA ROUTE F",
+    "cs_clean": "CHAQUE PAS SUR LA ROUTE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 61,
+    "cs_title": "JE NE CHANCELLE PAS. Ab",
+    "cs_clean": "JE NE CHANCELLE PAS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 62,
+    "cs_title": "HIER, AUJOURD’HUI, POUR TOUJOURS Bb",
+    "cs_clean": "HIER AUJOURD HUI POUR TOUJOURS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 63,
+    "cs_title": "L’ANCIEN EVANGILE. Ab",
+    "cs_clean": "L ANCIEN EVANGILE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 64,
+    "cs_title": "EMBARQUEZ Ab",
+    "cs_clean": "EMBARQUEZ",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 65,
+    "cs_title": "LA DE L’AUTRE COTE Ab",
+    "cs_clean": "LA DE L AUTRE COTE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 66,
+    "cs_title": "ECLAIRE-MOI Ab",
+    "cs_clean": "ECLAIRE MOI",
+    "ob_num": 212,
+    "ob_title": "I BELIEVE GOD (Bb)",
+    "ob_clean": "I BELIEVE GOD",
+    "method": "fuzzy",
+    "score": 58.33333333333333,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 67,
+    "cs_title": "ETRE COMME LUI. Ab",
+    "cs_clean": "ETRE COMME LUI",
+    "ob_num": 3,
+    "ob_title": "THEY COME (Eb)",
+    "ob_clean": "THEY COME",
+    "method": "fuzzy",
+    "score": 60.86956521739131,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+    ]
+  },
+  {
+    "cs_num": 68,
+    "cs_title": "TA FIDELITE EST GRANDE Eb",
+    "cs_clean": "TA FIDELITE EST GRANDE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 69,
+    "cs_title": "OUVRE MES YEUX POUR QUE JE VOIE Ab",
+    "cs_clean": "OUVRE MES YEUX POUR QUE JE VOIE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 70,
+    "cs_title": "Il EST TOUTE CHOSE POUR MOI F",
+    "cs_clean": "IL EST TOUTE CHOSE POUR MOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 71,
+    "cs_title": "JE SAIS C’ETAIT LE SANG F",
+    "cs_clean": "JE SAIS C ETAIT LE SANG",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 72,
+    "cs_title": "OH! VEUX-TU VEILLER AVEC MOI? Bb",
+    "cs_clean": "OH VEUX TU VEILLER AVEC MOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 73,
+    "cs_title": "OH! OUI, JE TRIOMPHE ! Bb",
+    "cs_clean": "OH OUI JE TRIOMPHE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 74,
+    "cs_title": "ESPRIT DU DIEU VIVANT. F",
+    "cs_clean": "ESPRIT DU DIEU VIVANT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 75,
+    "cs_title": "LA BEAUTE DE JESUS Eb",
+    "cs_clean": "LA BEAUTE DE JESUS",
+    "ob_num": 75,
+    "ob_title": "THE BEAUTY OF JESUS (Eb)",
+    "ob_clean": "THE BEAUTY OF JESUS",
+    "method": "fuzzy",
+    "score": 64.86486486486487,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
+    ]
+  },
+  {
+    "cs_num": 76,
+    "cs_title": "ENFERME AVEC DIEU C",
+    "cs_clean": "ENFERME AVEC DIEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 77,
+    "cs_title": "TOURNE TON REGARD VERS JESUS F",
+    "cs_clean": "TOURNE TON REGARD VERS JESUS",
+    "ob_num": 222,
+    "ob_title": "TAKE THE NAME OF JESUS(Ab)",
+    "ob_clean": "TAKE THE NAME OF JESUS",
+    "method": "fuzzy",
+    "score": 56.00000000000001,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/dummy_E6EyaNM.mid"
+    ]
+  },
+  {
+    "cs_num": 78,
+    "cs_title": "NOUS RENDRONS GLOIRE A JESUS Bb",
+    "cs_clean": "NOUS RENDRONS GLOIRE A JESUS",
+    "ob_num": 78,
+    "ob_title": "WE’LL GIVE GLORY TO JESUS(Bb)",
+    "ob_clean": "WE LL GIVE GLORY TO JESUS",
+    "method": "fuzzy",
+    "score": 56.60377358490566,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ]
+  },
+  {
+    "cs_num": 79,
+    "cs_title": "INONDE MON AME. Ab",
+    "cs_clean": "INONDE MON AME",
+    "ob_num": 66,
+    "ob_title": "SHINE ON ME (Ab)",
+    "ob_clean": "SHINE ON ME",
+    "method": "fuzzy",
+    "score": 56.00000000000001,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 80,
+    "cs_title": "AMI DE JESUS. Eb",
+    "cs_clean": "AMI DE JESUS",
+    "ob_num": 100,
+    "ob_title": "THEN JESUS CAME (C)",
+    "ob_clean": "THEN JESUS CAME",
+    "method": "fuzzy",
+    "score": 66.66666666666667,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+    ]
+  },
+  {
+    "cs_num": 81,
+    "cs_title": "JESUS EST LE SEUL. F",
+    "cs_clean": "JESUS EST LE SEUL",
+    "ob_num": 108,
+    "ob_title": "JESUS SET ME FREE (Ab)",
+    "ob_clean": "JESUS SET ME FREE",
+    "method": "fuzzy",
+    "score": 70.58823529411764,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Jesus_only_let_me_see.mid"
+    ]
+  },
+  {
+    "cs_num": 82,
+    "cs_title": "IL VIENT DE NOUVEAU. F",
+    "cs_clean": "IL VIENT DE NOUVEAU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 83,
+    "cs_title": "LE LYS DE LA VALLEE F",
+    "cs_clean": "LE LYS DE LA VALLEE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 84,
+    "cs_title": "IL PREND SOIN DE TOI. F",
+    "cs_clean": "IL PREND SOIN DE TOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 85,
+    "cs_title": "QUAND J’ATTEINDRAI LA FIN C",
+    "cs_clean": "QUAND J ATTEINDRAI LA FIN",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 86,
+    "cs_title": "PLACE A LA CROIX Ab",
+    "cs_clean": "PLACE A LA CROIX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 87,
+    "cs_title": "QUAND L’APPEL RETENTIRA Ab",
+    "cs_clean": "QUAND L APPEL RETENTIRA",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 88,
+    "cs_title": "LE PORT DE REPOS. Ab",
+    "cs_clean": "LE PORT DE REPOS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 89,
+    "cs_title": "JESUS DOIT-IL SEUL PORTER LA CROIX ? Ab",
+    "cs_clean": "JESUS DOIT IL SEUL PORTER LA CROIX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 90,
+    "cs_title": "BENI SOIT LE NOM. Ab",
+    "cs_clean": "BENI SOIT LE NOM",
+    "ob_num": 90,
+    "ob_title": "BLESSED BE THE NAME (Ab)",
+    "ob_clean": "BLESSED BE THE NAME",
+    "method": "fuzzy",
+    "score": 57.14285714285714,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Blessed_Be_the_Name.mid"
+    ]
+  },
+  {
+    "cs_num": 91,
+    "cs_title": "J’IRAI JUSQU'AU BOUT. Ab",
+    "cs_clean": "J IRAI JUSQU AU BOUT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 92,
+    "cs_title": "PARLE, MON SEIGNEUR. G",
+    "cs_clean": "PARLE MON SEIGNEUR",
+    "ob_num": 66,
+    "ob_title": "SHINE ON ME (Ab)",
+    "ob_clean": "SHINE ON ME",
+    "method": "fuzzy",
+    "score": 55.172413793103445,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 93,
+    "cs_title": "L’AMOUR DE DIEU. Eb",
+    "cs_clean": "L AMOUR DE DIEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 94,
+    "cs_title": "LA RENCONTRE DANS LES AIRS Ab",
+    "cs_clean": "LA RENCONTRE DANS LES AIRS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 95,
+    "cs_title": "IL RUISSELLE DE SANG. F",
+    "cs_clean": "IL RUISSELLE DE SANG",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 96,
+    "cs_title": "SAINT, SAINT, SAINT F",
+    "cs_clean": "SAINT SAINT SAINT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 97,
+    "cs_title": "CE MONDE NE PEUT ME LIER Ab",
+    "cs_clean": "CE MONDE NE PEUT ME LIER",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 98,
+    "cs_title": "LE RETOUR DE NOTRE SEIGNEUR G",
+    "cs_clean": "LE RETOUR DE NOTRE SEIGNEUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 99,
+    "cs_title": "JE LE RECONNAITRAI. F",
+    "cs_clean": "JE LE RECONNAITRAI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 100,
+    "cs_title": "PUIS JESUS VINT C",
+    "cs_clean": "PUIS JESUS VINT",
+    "ob_num": 202,
+    "ob_title": "I MUST TELL JESUS (Eb)",
+    "ob_clean": "I MUST TELL JESUS",
+    "method": "fuzzy",
+    "score": 62.5,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/455.mid"
+    ]
+  },
+  {
+    "cs_num": 101,
+    "cs_title": "QUAND JE CONTEMPLE LA CROIX F",
+    "cs_clean": "QUAND JE CONTEMPLE LA CROIX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 102,
+    "cs_title": "PAR L’EAU F",
+    "cs_clean": "PAR L EAU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 103,
+    "cs_title": "N’OUBLIEZ PAS LA PRIERE EN FAMILLE F",
+    "cs_clean": "N OUBLIEZ PAS LA PRIERE EN FAMILLE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 104,
+    "cs_title": "ETRE SUR CE ROC F",
+    "cs_clean": "ETRE SUR CE ROC",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 105,
+    "cs_title": "OH ! J'AIME CET HOMME DE GALILEE F",
+    "cs_clean": "OH J AIME CET HOMME DE GALILEE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 106,
+    "cs_title": "TENDS LA MAIN ET TOUCHE LE SEIGNEUR F",
+    "cs_clean": "TENDS LA MAIN ET TOUCHE LE SEIGNEUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 107,
+    "cs_title": "DANS CETTE CITE, L’AGNEAU EST LA LUMIERE Bb",
+    "cs_clean": "DANS CETTE CITE L AGNEAU EST LA LUMIERE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 108,
+    "cs_title": "JESUS M’A AFFRANCHI Ab",
+    "cs_clean": "JESUS M A AFFRANCHI",
+    "ob_num": 145,
+    "ob_title": "ALL HAIL JESUS’ NAME (G)",
+    "ob_clean": "ALL HAIL JESUS NAME",
+    "method": "fuzzy",
+    "score": 63.1578947368421,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/PsH_470.mid"
+    ]
+  },
+  {
+    "cs_num": 109,
+    "cs_title": "QUAND JE M’EN IRAI",
+    "cs_clean": "QUAND JE M EN IRAI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 110,
+    "cs_title": "OH! C’EST JESUS ! C",
+    "cs_clean": "OH C EST JESUS",
+    "ob_num": 110,
+    "ob_title": "OH, IT IS JESUS (C)",
+    "ob_clean": "OH IT IS JESUS",
+    "method": "fuzzy",
+    "score": 78.57142857142857,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ]
+  },
+  {
+    "cs_num": 111,
+    "cs_title": "ET ALORS ? F",
+    "cs_clean": "ET ALORS",
+    "ob_num": 180,
+    "ob_title": "CLOSE TO THEE (G)",
+    "ob_clean": "CLOSE TO THEE",
+    "method": "fuzzy",
+    "score": 57.14285714285714,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/464.mid"
+    ]
+  },
+  {
+    "cs_num": 112,
+    "cs_title": "LA FOI EN JEHOVAH F",
+    "cs_clean": "LA FOI EN JEHOVAH",
+    "ob_num": 112,
+    "ob_title": "FAITH IN JEHOVAH (F)",
+    "ob_clean": "FAITH IN JEHOVAH",
+    "method": "fuzzy",
+    "score": 60.60606060606061,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 113,
+    "cs_title": "LAISSE-LES G",
+    "cs_clean": "LAISSE LES",
+    "ob_num": 16,
+    "ob_title": "CLEANSE ME (F)",
+    "ob_clean": "CLEANSE ME",
+    "method": "fuzzy",
+    "score": 60.0,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+    ]
+  },
+  {
+    "cs_num": 114,
+    "cs_title": "JE PEUX CROIRE, JE CROIRAI JE CROIS G",
+    "cs_clean": "JE PEUX CROIRE JE CROIRAI JE CROIS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 115,
+    "cs_title": "N’EST-IL PAS MERVEILLEUX ? Bb",
+    "cs_clean": "N EST IL PAS MERVEILLEUX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 116,
+    "cs_title": "LE BATEAU DE SAUVETAGE. G",
+    "cs_clean": "LE BATEAU DE SAUVETAGE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 117,
+    "cs_title": "IL COULERA COMME UNE RIVIERE C",
+    "cs_clean": "IL COULERA COMME UNE RIVIERE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 118,
+    "cs_title": "LE GRAND JUGEMENT C",
+    "cs_clean": "LE GRAND JUGEMENT",
+    "ob_num": 118,
+    "ob_title": "THE GREAT JUDGEMENT (C)",
+    "ob_clean": "THE GREAT JUDGEMENT",
+    "method": "fuzzy",
+    "score": 77.77777777777779,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/i_dreamed_that_the_great_judgment_morning.mid"
+    ]
+  },
+  {
+    "cs_num": 119,
+    "cs_title": "J’AI TRAVERSE LE VOILE FENDU Ab",
+    "cs_clean": "J AI TRAVERSE LE VOILE FENDU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 120,
+    "cs_title": "IL Y A DE LA PLACE A LA FONTAINE Eb",
+    "cs_clean": "IL Y A DE LA PLACE A LA FONTAINE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 121,
+    "cs_title": "VIENS, ALLONS Ab",
+    "cs_clean": "VIENS ALLONS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 122,
+    "cs_title": "JUSTE UN AUTRE TOUCHER, SEIGNEUR Eb",
+    "cs_clean": "JUSTE UN AUTRE TOUCHER SEIGNEUR",
+    "ob_num": 122,
+    "ob_title": "JUST ANOTHER TOUCH, LORD(Eb)",
+    "ob_clean": "JUST ANOTHER TOUCH LORD",
+    "method": "fuzzy",
+    "score": 59.25925925925925,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 123,
+    "cs_title": "LA CITE BLANCHE DE PERLES Eb",
+    "cs_clean": "LA CITE BLANCHE DE PERLES",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 124,
+    "cs_title": "MARCHER PLUS PRES DE TOI. C",
+    "cs_clean": "MARCHER PLUS PRES DE TOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 125,
+    "cs_title": "LE MESSAGE DE SA VENUE C",
+    "cs_clean": "LE MESSAGE DE SA VENUE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 126,
+    "cs_title": "LES BREBIS DE SON PRE F",
+    "cs_clean": "LES BREBIS DE SON PRE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 127,
+    "cs_title": "ES-TU LAVE DANS LE SANG? Ab",
+    "cs_clean": "ES TU LAVE DANS LE SANG",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 128,
+    "cs_title": "JESUS M’AIME Eb",
+    "cs_clean": "JESUS M AIME",
+    "ob_num": 100,
+    "ob_title": "THEN JESUS CAME (C)",
+    "ob_clean": "THEN JESUS CAME",
+    "method": "fuzzy",
+    "score": 74.07407407407408,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+    ]
+  },
+  {
+    "cs_num": 129,
+    "cs_title": "BAPTISE DANS LE CORPS G",
+    "cs_clean": "BAPTISE DANS LE CORPS",
+    "ob_num": 129,
+    "ob_title": "BAPTIZED INTO THE BODY (G)",
+    "ob_clean": "BAPTIZED INTO THE BODY",
+    "method": "fuzzy",
+    "score": 55.81395348837209,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 130,
+    "cs_title": "C’EST COMME LE CIEL POUR MOI F",
+    "cs_clean": "C EST COMME LE CIEL POUR MOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 131,
+    "cs_title": "QUE DONNERAS-TU EN ECHANGE? G",
+    "cs_clean": "QUE DONNERAS TU EN ECHANGE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 133,
+    "cs_title": "QUAND IL TENDIT SA MAIN VERS MOI C",
+    "cs_clean": "QUAND IL TENDIT SA MAIN VERS MOI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 134,
+    "cs_title": "RAMENE-LES Ab",
+    "cs_clean": "RAMENE LES",
+    "ob_num": 16,
+    "ob_title": "CLEANSE ME (F)",
+    "ob_clean": "CLEANSE ME",
+    "method": "fuzzy",
+    "score": 60.0,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+    ]
+  },
+  {
+    "cs_num": 135,
+    "cs_title": "QUE TU ES GRAND ! Bb",
+    "cs_clean": "QUE TU ES GRAND",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 136,
+    "cs_title": "L’ANCIENNE PUISSANCE F",
+    "cs_clean": "L ANCIENNE PUISSANCE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 137,
+    "cs_title": "IL Y A FORCE DANS LE SANG Bb",
+    "cs_clean": "IL Y A FORCE DANS LE SANG",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 138,
+    "cs_title": "LE ROC SOLIDE G",
+    "cs_clean": "LE ROC SOLIDE",
+    "ob_num": 138,
+    "ob_title": "THE SOLID ROCK (G)",
+    "ob_clean": "THE SOLID ROCK",
+    "method": "fuzzy",
+    "score": 74.07407407407408,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 139,
+    "cs_title": "IL DEMEURE Ab",
+    "cs_clean": "IL DEMEURE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 140,
+    "cs_title": "RACHETE Ab",
+    "cs_clean": "RACHETE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 141,
+    "cs_title": "RIEN QUE LE SANG DE JESUS G",
+    "cs_clean": "RIEN QUE LE SANG DE JESUS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 142,
+    "cs_title": "JESUS LA LUMIERE DU MONDE Ab",
+    "cs_clean": "JESUS LA LUMIERE DU MONDE",
+    "ob_num": 128,
+    "ob_title": "JESUS LOVES ME (Eb)",
+    "ob_clean": "JESUS LOVES ME",
+    "method": "fuzzy",
+    "score": 56.41025641025641,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 144,
+    "cs_title": "PLUS BLANC QUE LA NEIGE Eb",
+    "cs_clean": "PLUS BLANC QUE LA NEIGE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 145,
+    "cs_title": "ACCLAMEZ TOUS LA PUISSANCE DU NOM DE JESUS G",
+    "cs_clean": "ACCLAMEZ TOUS LA PUISSANCE DU NOM DE JESUS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 146,
+    "cs_title": "A LA CROIX Eb",
+    "cs_clean": "A LA CROIX",
+    "ob_num": 12,
+    "ob_title": "WEAR A CROWN (Ab)",
+    "ob_clean": "WEAR A CROWN",
+    "method": "fuzzy",
+    "score": 63.63636363636363,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 147,
+    "cs_title": "LE GRAND JE SUIS Ab",
+    "cs_clean": "LE GRAND JE SUIS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 148,
+    "cs_title": "PRESQUE PERSUADE G",
+    "cs_clean": "PRESQUE PERSUADE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 149,
+    "cs_title": "POINT DE DECEPTION Eb",
+    "cs_clean": "POINT DE DECEPTION",
+    "ob_num": 161,
+    "ob_title": "THE DAY OF REDEMPTION (Ab)",
+    "ob_clean": "THE DAY OF REDEMPTION",
+    "method": "fuzzy",
+    "score": 56.41025641025641,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/303.mid"
+    ]
+  },
+  {
+    "cs_num": 150,
+    "cs_title": "QUEL BEAU JOUR G",
+    "cs_clean": "QUEL BEAU JOUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 151,
+    "cs_title": "L’UN D’ENTRE EUX Ab",
+    "cs_clean": "L UN D ENTRE EUX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 152,
+    "cs_title": "JE SERAI QUELQUE PART POUR ENTENDRE Ab",
+    "cs_clean": "JE SERAI QUELQUE PART POUR ENTENDRE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 153,
+    "cs_title": "LA SEMAINE DE RETOUR A LA MAISON G",
+    "cs_clean": "LA SEMAINE DE RETOUR A LA MAISON",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 154,
+    "cs_title": "TEL QUE JE SUIS Eb",
+    "cs_clean": "TEL QUE JE SUIS",
+    "ob_num": 202,
+    "ob_title": "I MUST TELL JESUS (Eb)",
+    "ob_clean": "I MUST TELL JESUS",
+    "method": "fuzzy",
+    "score": 62.5,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/455.mid"
+    ]
+  },
+  {
+    "cs_num": 155,
+    "cs_title": "PAIX DANS LA VALLEE Eb",
+    "cs_clean": "PAIX DANS LA VALLEE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 156,
+    "cs_title": "GRAND EST LE SEIGNEUR ! Bb",
+    "cs_clean": "GRAND EST LE SEIGNEUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 157,
+    "cs_title": "MON ANCRE EST EN JESUS Bb",
+    "cs_clean": "MON ANCRE EST EN JESUS",
+    "ob_num": 157,
+    "ob_title": "I’VE ANCHORED IN JESUS (Bb)",
+    "ob_clean": "I VE ANCHORED IN JESUS",
+    "method": "fuzzy",
+    "score": 63.63636363636363,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+    ]
+  },
+  {
+    "cs_num": 158,
+    "cs_title": "LE SOLEIL COUCHE Eb",
+    "cs_clean": "LE SOLEIL COUCHE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 159,
+    "cs_title": "UN ENFANT DU ROI F",
+    "cs_clean": "UN ENFANT DU ROI",
+    "ob_num": 218,
+    "ob_title": "HOW GREAT IS OUR GOD! (F)",
+    "ob_clean": "HOW GREAT IS OUR GOD",
+    "method": "fuzzy",
+    "score": 55.55555555555556,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/How_Great_Is_Our_God.mid"
+    ]
+  },
+  {
+    "cs_num": 160,
+    "cs_title": "TIENS L’IMMUABLE MAIN DE DIEU. G",
+    "cs_clean": "TIENS L IMMUABLE MAIN DE DIEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 161,
+    "cs_title": "LE JOUR DE LA REDEMPTION Ab",
+    "cs_clean": "LE JOUR DE LA REDEMPTION",
+    "ob_num": 161,
+    "ob_title": "THE DAY OF REDEMPTION (Ab)",
+    "ob_clean": "THE DAY OF REDEMPTION",
+    "method": "fuzzy",
+    "score": 62.22222222222222,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/303.mid"
+    ]
+  },
+  {
+    "cs_num": 163,
+    "cs_title": "UN JOUR ! C",
+    "cs_clean": "UN JOUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 164,
+    "cs_title": "DESCENDS, DOUX CHARIOT F",
+    "cs_clean": "DESCENDS DOUX CHARIOT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 165,
+    "cs_title": "QUAND SONNERONT LES CLOCHES F",
+    "cs_clean": "QUAND SONNERONT LES CLOCHES",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 166,
+    "cs_title": "QUAND TOUS NOUS SERONS AU CIEL C",
+    "cs_clean": "QUAND TOUS NOUS SERONS AU CIEL",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 167,
+    "cs_title": "LA VIEILLE CROIX RUGUEUSE. Bb",
+    "cs_clean": "LA VIEILLE CROIX RUGUEUSE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 168,
+    "cs_title": "OU IL ME CONDUIT F",
+    "cs_clean": "OU IL ME CONDUIT",
+    "ob_num": 189,
+    "ob_title": "I’LL MEET YOU (Eb)",
+    "ob_clean": "I LL MEET YOU",
+    "method": "fuzzy",
+    "score": 62.06896551724138,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/fill_me_now.mid"
+    ]
+  },
+  {
+    "cs_num": 169,
+    "cs_title": "MERVEILLEUX Ab",
+    "cs_clean": "MERVEILLEUX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 170,
+    "cs_title": "OU IRAI-JE? G",
+    "cs_clean": "OU IRAI JE",
+    "ob_num": 110,
+    "ob_title": "OH, IT IS JESUS (C)",
+    "ob_clean": "OH IT IS JESUS",
+    "method": "fuzzy",
+    "score": 58.33333333333333,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ]
+  },
+  {
+    "cs_num": 171,
+    "cs_title": "MERVEILLEUSE PAIX. Ab",
+    "cs_clean": "MERVEILLEUSE PAIX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 172,
+    "cs_title": "LE SOLEIL NE SE COUCHERA JAMAIS F",
+    "cs_clean": "LE SOLEIL NE SE COUCHERA JAMAIS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 173,
+    "cs_title": "JE ME MIS A GENOUX ET CRIAI «SAINT» Bb",
+    "cs_clean": "JE ME MIS A GENOUX ET CRIAI SAINT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 174,
+    "cs_title": "QUAND LES SAINTS ENTRERONT Eb",
+    "cs_clean": "QUAND LES SAINTS ENTRERONT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 175,
+    "cs_title": "JE VEUX ETRE CHRETIEN Eb",
+    "cs_clean": "JE VEUX ETRE CHRETIEN",
+    "ob_num": 143,
+    "ob_title": "WHEN WE SEE CHRIST (Eb)",
+    "ob_clean": "WHEN WE SEE CHRIST",
+    "method": "fuzzy",
+    "score": 56.41025641025641,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 176,
+    "cs_title": "ASSURANCE BENIE Eb",
+    "cs_clean": "ASSURANCE BENIE",
+    "ob_num": 176,
+    "ob_title": "BLESSED ASSURANCE (Eb)",
+    "ob_clean": "BLESSED ASSURANCE",
+    "method": "fuzzy",
+    "score": 81.25,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/426.mid"
+    ]
+  },
+  {
+    "cs_num": 177,
+    "cs_title": "LA NUEE ET LE FEU Eb",
+    "cs_clean": "LA NUEE ET LE FEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 178,
+    "cs_title": "JE NE PASSERAI LE JOURDAIN SEUL Eb",
+    "cs_clean": "JE NE PASSERAI LE JOURDAIN SEUL",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 179,
+    "cs_title": "DOUCEMENT ET TENDREMENT Ab",
+    "cs_clean": "DOUCEMENT ET TENDREMENT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 180,
+    "cs_title": "PRES DE TOI G",
+    "cs_clean": "PRES DE TOI",
+    "ob_num": 136,
+    "ob_title": "OLD-TIME POWER (F)",
+    "ob_clean": "OLD TIME POWER",
+    "method": "fuzzy",
+    "score": 56.00000000000001,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/hold_the_fort.mid"
+    ]
+  },
+  {
+    "cs_num": 181,
+    "cs_title": "Y A-T-IL POUR TOI DES RIVIERES? Ab",
+    "cs_clean": "Y A T IL POUR TOI DES RIVIERES",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 182,
+    "cs_title": "LA-BAS NOUS NE VIEILLIRONS JAMAIS Eb",
+    "cs_clean": "LA BAS NOUS NE VIEILLIRONS JAMAIS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 183,
+    "cs_title": "ELEVEZ-LE Ab",
+    "cs_clean": "ELEVEZ LE",
+    "ob_num": 1,
+    "ob_title": "ONLY BELIEVE (C)",
+    "ob_clean": "ONLY BELIEVE",
+    "method": "fuzzy",
+    "score": 66.66666666666667,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 184,
+    "cs_title": "TERRE EPOUSE G",
+    "cs_clean": "TERRE EPOUSE",
+    "ob_num": 180,
+    "ob_title": "CLOSE TO THEE (G)",
+    "ob_clean": "CLOSE TO THEE",
+    "method": "fuzzy",
+    "score": 56.00000000000001,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/464.mid"
+    ]
+  },
+  {
+    "cs_num": 185,
+    "cs_title": "LE SEIGNEUR M’A SAUVE Eb",
+    "cs_clean": "LE SEIGNEUR M A SAUVE",
+    "ob_num": 25,
+    "ob_title": "I SURRENDER ALL (Eb)",
+    "ob_clean": "I SURRENDER ALL",
+    "method": "fuzzy",
+    "score": 55.55555555555556,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/275-I_Surrender_All.mid"
+    ]
+  },
+  {
+    "cs_num": 186,
+    "cs_title": "RASSEMBLANT LES GERBES Bb",
+    "cs_clean": "RASSEMBLANT LES GERBES",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 187,
+    "cs_title": "QUEL AMOUR MERVEILLEUX ! Ab",
+    "cs_clean": "QUEL AMOUR MERVEILLEUX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 188,
+    "cs_title": "IL DESCENDIT DE SA GLOIRE F",
+    "cs_clean": "IL DESCENDIT DE SA GLOIRE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 189,
+    "cs_title": "JE TE RENCONTRERAI A L’AUBE Eb",
+    "cs_clean": "JE TE RENCONTRERAI A L AUBE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 190,
+    "cs_title": "IL T’OBSERVE F",
+    "cs_clean": "IL T OBSERVE",
+    "ob_num": 217,
+    "ob_title": "IT IS NO SECRET (C)",
+    "ob_clean": "IT IS NO SECRET",
+    "method": "fuzzy",
+    "score": 59.25925925925925,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/It_Is_No_Secret_What_God_Can_Do_LgWiBdB.mid"
+    ]
+  },
+  {
+    "cs_num": 191,
+    "cs_title": "DERRIERE LE RIDEAU DU TEMPS Eb",
+    "cs_clean": "DERRIERE LE RIDEAU DU TEMPS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 192,
+    "cs_title": "DU MIEL SUR LE ROC F",
+    "cs_clean": "DU MIEL SUR LE ROC",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 193,
+    "cs_title": "LE CHRIST DEVOILE Eb",
+    "cs_clean": "LE CHRIST DEVOILE",
+    "ob_num": 193,
+    "ob_title": "THE UNVEILED CHRIST (Eb)",
+    "ob_clean": "THE UNVEILED CHRIST",
+    "method": "fuzzy",
+    "score": 66.66666666666667,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
+    ]
+  },
+  {
+    "cs_num": 194,
+    "cs_title": "JESUS BRISE TOUTE CHAINE Bb",
+    "cs_clean": "JESUS BRISE TOUTE CHAINE",
+    "ob_num": 110,
+    "ob_title": "OH, IT IS JESUS (C)",
+    "ob_clean": "OH IT IS JESUS",
+    "method": "fuzzy",
+    "score": 63.1578947368421,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ]
+  },
+  {
+    "cs_num": 195,
+    "cs_title": "C’EST LE SEIGNEUR DE GLOIRE Eb",
+    "cs_clean": "C EST LE SEIGNEUR DE GLOIRE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 196,
+    "cs_title": "JE LE LOUERAI Eb",
+    "cs_clean": "JE LE LOUERAI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 197,
+    "cs_title": "Il Y A UN GRAND JOUR QUI VIENT G",
+    "cs_clean": "IL Y A UN GRAND JOUR QUI VIENT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 198,
+    "cs_title": "IL VIENT BIENTOT Ab",
+    "cs_clean": "IL VIENT BIENTOT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 199,
+    "cs_title": "QUEL AMI ! F",
+    "cs_clean": "QUEL AMI",
+    "ob_num": 29,
+    "ob_title": "I AM RESOLVED (Bb)",
+    "ob_clean": "I AM RESOLVED",
+    "method": "fuzzy",
+    "score": 57.14285714285714,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+    ]
+  },
+  {
+    "cs_num": 200,
+    "cs_title": "JE VAIS A LA TERRE PROMISE. F",
+    "cs_clean": "JE VAIS A LA TERRE PROMISE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 201,
+    "cs_title": "LE GRAND MEDECIN Eb",
+    "cs_clean": "LE GRAND MEDECIN",
+    "ob_num": 43,
+    "ob_title": "COME AND DINE (C)",
+    "ob_clean": "COME AND DINE",
+    "method": "fuzzy",
+    "score": 62.06896551724138,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 202,
+    "cs_title": "JE DOIS DIRE A JESUS Eb",
+    "cs_clean": "JE DOIS DIRE A JESUS",
+    "ob_num": 157,
+    "ob_title": "I’VE ANCHORED IN JESUS (Bb)",
+    "ob_clean": "I VE ANCHORED IN JESUS",
+    "method": "fuzzy",
+    "score": 57.14285714285714,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+    ]
+  },
+  {
+    "cs_num": 203,
+    "cs_title": "RIEN NE SEPARE G",
+    "cs_clean": "RIEN NE SEPARE",
+    "ob_num": 186,
+    "ob_title": "GATHERING SHEAVES (Bb)",
+    "ob_clean": "GATHERING SHEAVES",
+    "method": "fuzzy",
+    "score": 58.06451612903225,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+    ]
+  },
+  {
+    "cs_num": 204,
+    "cs_title": "QUEL JOUR CE SERA ! Ab",
+    "cs_clean": "QUEL JOUR CE SERA",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 205,
+    "cs_title": "PRES DE LA CROIX F",
+    "cs_clean": "PRES DE LA CROIX",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 206,
+    "cs_title": "NE M’OUBLIE PAS Ab",
+    "cs_clean": "NE M OUBLIE PAS",
+    "ob_num": 206,
+    "ob_title": "PASS ME NOT (Ab)",
+    "ob_clean": "PASS ME NOT",
+    "method": "fuzzy",
+    "score": 61.53846153846154,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/308.mid"
+    ]
+  },
+  {
+    "cs_num": 207,
+    "cs_title": "JE VOIS UN FLOT CRAMOISI Eb",
+    "cs_clean": "JE VOIS UN FLOT CRAMOISI",
+    "ob_num": 193,
+    "ob_title": "THE UNVEILED CHRIST (Eb)",
+    "ob_clean": "THE UNVEILED CHRIST",
+    "method": "fuzzy",
+    "score": 55.81395348837209,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
+    ]
+  },
+  {
+    "cs_num": 208,
+    "cs_title": "VIENS AU FESTIN Bb",
+    "cs_clean": "VIENS AU FESTIN",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 209,
+    "cs_title": "SEIGNEUR, JE REVIENS A LA MAISON Ab",
+    "cs_clean": "SEIGNEUR JE REVIENS A LA MAISON",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 210,
+    "cs_title": "LA PORTE DE L’EST Ab",
+    "cs_clean": "LA PORTE DE L EST",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 211,
+    "cs_title": "JESUS PAYA LE TOUT Eb",
+    "cs_clean": "JESUS PAYA LE TOUT",
+    "ob_num": 128,
+    "ob_title": "JESUS LOVES ME (Eb)",
+    "ob_clean": "JESUS LOVES ME",
+    "method": "fuzzy",
+    "score": 56.25,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+    ]
+  },
+  {
+    "cs_num": 212,
+    "cs_title": "JE CROIS EN DIEU. Bb",
+    "cs_clean": "JE CROIS EN DIEU",
+    "ob_num": 143,
+    "ob_title": "WHEN WE SEE CHRIST (Eb)",
+    "ob_clean": "WHEN WE SEE CHRIST",
+    "method": "fuzzy",
+    "score": 58.82352941176471,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 213,
+    "cs_title": "NOUS TRAVAILLERONS JUSQU’A CE QUE JESUS VIENNE F",
+    "cs_clean": "NOUS TRAVAILLERONS JUSQU A CE QUE JESUS VIENNE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 214,
+    "cs_title": "LES FENETRES DU CIEL Eb",
+    "cs_clean": "LES FENETRES DU CIEL",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 215,
+    "cs_title": "PRECIEUX SOUVENIRS Ab",
+    "cs_clean": "PRECIEUX SOUVENIRS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 216,
+    "cs_title": "LE TEMPS DE LA FIN F",
+    "cs_clean": "LE TEMPS DE LA FIN",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 217,
+    "cs_title": "CE N’EST PAS SECRET C",
+    "cs_clean": "CE N EST PAS SECRET",
+    "ob_num": 217,
+    "ob_title": "IT IS NO SECRET (C)",
+    "ob_clean": "IT IS NO SECRET",
+    "method": "fuzzy",
+    "score": 64.70588235294117,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/It_Is_No_Secret_What_God_Can_Do_LgWiBdB.mid"
+    ]
+  },
+  {
+    "cs_num": 218,
+    "cs_title": "QU’IL EST GRAND NOTRE DIEU! F",
+    "cs_clean": "QU IL EST GRAND NOTRE DIEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 219,
+    "cs_title": "AINSI SOIS FIDELE Eb",
+    "cs_clean": "AINSI SOIS FIDELE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 220,
+    "cs_title": "BENI SOIT LE LIEN QUI UNIT F",
+    "cs_clean": "BENI SOIT LE LIEN QUI UNIT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 221,
+    "cs_title": "DIEU SOIT AVEC VOUS C",
+    "cs_clean": "DIEU SOIT AVEC VOUS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 222,
+    "cs_title": "PRENDS AVEC TOI LE NOM DE JESUS. Ab",
+    "cs_clean": "PRENDS AVEC TOI LE NOM DE JESUS",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 223,
+    "cs_title": "JE M' ENVOLERAI G",
+    "cs_clean": "JE M ENVOLERAI",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 224,
+    "cs_title": "PLUS PRES DE TOI, MON DIEU Eb",
+    "cs_clean": "PLUS PRES DE TOI MON DIEU",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 225,
+    "cs_title": "PRENDS MA MAIN, CHER SEIGNEUR Bb",
+    "cs_clean": "PRENDS MA MAIN CHER SEIGNEUR",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  },
+  {
+    "cs_num": 226,
+    "cs_title": "MA RICHESSE, MA GLOIRE Ab",
+    "cs_clean": "MA RICHESSE MA GLOIRE",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": []
+  }
+]

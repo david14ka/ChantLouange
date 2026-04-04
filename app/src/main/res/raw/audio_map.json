@@ -1,184 +1,484 @@
 {
-  "2_4": [
-    "https://www.cantiquest.org/CGG/CGG1_109-mono-piano-Je_veux_chanter_la_grace.mid",
-    "https://www.cantiquest.org/CGG/CGG1_109-polyinstru-Je_veux_chanter_la_grace.mid",
-    "https://www.cantiquest.org/CV/CV_112-mono-piano-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
-    "https://www.cantiquest.org/CV/CV_112-polyinstru-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid"
+  "1_103": [
+    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
+    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
   ],
-  "2_5": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_005-Jesus_Jesus_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_005-Jesus_Jesus_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid"
+  "1_108b": [
+    "https://www.cantiquest.org/SST/SST_219-mono-piano-Qu_est_ce_que_l_Homme.mid",
+    "https://www.cantiquest.org/SST/SST_219-polyinstru-Qu_est_ce_que_l_Homme.mid"
   ],
-  "2_6": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_006-mono-piano-A_Dieu_soit_la_gloire.mid",
-    "https://www.cantiquest.org/CV/CV_006-polyinstru-A_Dieu_soit_la_gloire.mid"
+  "1_110": [
+    "https://www.cantiquest.org/VAM/VaM_075-mono-piano-L_Eternel_est_mon_Berger.mid",
+    "https://www.cantiquest.org/VAM/VaM_075-polyinstru-L_Eternel_est_mon_Berger.mid"
   ],
-  "2_8": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_008-Le_nom_de_Jesus_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_008-Le_nom_de_Jesus_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_008-mono-piano-Le_nom_de_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_008-polyinstru-Le_nom_de_Jesus.mid"
+  "1_124": [
+    "https://www.cantiquest.org/CJ/CJ_092-mono-piano-Beau_pays_de_lumiere.mid",
+    "https://www.cantiquest.org/CJ/CJ_092-polyinstru-Beau_pays_de_lumiere.mid"
   ],
-  "2_11": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_011-Adorable_mystere_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_011-Adorable_mystere_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_011-mono-piano-Adorable_mystere.mid",
-    "https://www.cantiquest.org/CV/CV_011-polyinstru-Adorable_mystere.mid"
+  "1_14": [
+    "https://www.cantiquest.org/VAM/VaM_108-mono-piano-Dieu_de_fidelite.mid",
+    "https://www.cantiquest.org/VAM/VaM_108-polyinstru-Dieu_de_fidelite.mid"
   ],
-  "2_17": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
-    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
+  "1_142": [
+    "https://www.cantiquest.org/CGG/CGG1_267-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/CGG/CGG1_267-polyinstru-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/VAM/VaM_141-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/VAM/VaM_141-polyinstru-Dans_mon_coeur_chante_une_melodie.mid"
   ],
-  "2_18": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_018-mono-piano-Vers_toi_monte_notre_hommage.mid",
-    "https://www.cantiquest.org/CV/CV_018-polyinstru-Vers_toi_monte_notre_hommage.mid",
-    "https://www.cantiquest.org/VAM/VaM_259-mono-piano-Vers_toi_monte_notre_hommage.mid",
-    "https://www.cantiquest.org/VAM/VaM_259-polyinstru-Vers_toi_monte_notre_hommage.mid"
+  "1_148": [
+    "https://www.cantiquest.org/HeC/HeC_235-mono-piano-Jour_apres_jour_Seigneur.mid",
+    "https://www.cantiquest.org/HeC/HeC_235-polyinstru-Jour_apres_jour_Seigneur.mid"
   ],
-  "2_19": [
+  "1_150": [
+    "https://www.cantiquest.org/SST/SST_331-mono-piano-Ton_amour_souverain.mid",
+    "https://www.cantiquest.org/SST/SST_331-polyinstru-Ton_amour_souverain.mid"
+  ],
+  "1_156a": [
+    "https://www.cantiquest.org/CGG/CGG1_083-mono-piano-La_croix_du_Calvaire.mid",
+    "https://www.cantiquest.org/CGG/CGG1_083-polyinstru-La_croix_du_Calvaire.mid"
+  ],
+  "1_164": [
+    "https://www.cantiquest.org/CV/CV_211-mono-piano-Tout_est_bien.mid",
+    "https://www.cantiquest.org/CV/CV_211-polyinstru-Tout_est_bien.mid"
+  ],
+  "1_166a": [
+    "https://www.cantiquest.org/HeC/HeC_030-mono-piano-O_Jesus_sainte_Victime.mid",
+    "https://www.cantiquest.org/HeC/HeC_030-polyinstru-O_Jesus_sainte_Victime.mid"
+  ],
+  "1_167a": [
+    "https://www.cantiquest.org/CV/CV_148-mono-piano-Jesus_est_au_milieu_de_nous.mid",
+    "https://www.cantiquest.org/CV/CV_148-polyinstru-Jesus_est_au_milieu_de_nous.mid"
+  ],
+  "1_171": [
+    "https://www.cantiquest.org/HeC/HeC_005-mono-piano-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.cantiquest.org/HeC/HeC_005-polyinstru-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.cantiquest.org/VAM/VaM_116-mono-piano-Mon_Dieu_est_si_bon.mid",
+    "https://www.cantiquest.org/VAM/VaM_116-polyinstru-Mon_Dieu_est_si_bon.mid"
+  ],
+  "1_179": [
+    "https://www.cantiquest.org/VAM/VaM_255-mono-piano-L_amour_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_255-polyinstru-L_amour_de_Dieu.mid"
+  ],
+  "1_183": [
+    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
+    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid",
+    "https://www.cantiquest.org/VAM/VaM_166-mono-piano-Dans_tes_mains.mid",
+    "https://www.cantiquest.org/VAM/VaM_166-polyinstru-Dans_tes_mains.mid"
+  ],
+  "1_184": [
+    "https://www.cantiquest.org/CV/CV_279-mono-piano-Beni_soit_le_lien.mid",
+    "https://www.cantiquest.org/CV/CV_279-polyinstru-Beni_soit_le_lien.mid"
+  ],
+  "1_188": [
+    "https://www.cantiquest.org/SST/SST_101-mono-piano-Ce_n_est_point_o_Seigneur.mid",
+    "https://www.cantiquest.org/SST/SST_101-polyinstru-Ce_n_est_point_o_Seigneur.mid"
+  ],
+  "1_19": [
     "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
     "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid"
   ],
-  "2_20": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_020-mono-piano-Oh_quel_bonheur_de_le_connaitre.mid",
-    "https://www.cantiquest.org/CV/CV_020-polyinstru-Oh_quel_bonheur_de_le_connaitre.mid"
+  "1_190": [
+    "https://www.cantiquest.org/CJ/CJ_189-mono-piano-Chantons_du_Seigneur.mid",
+    "https://www.cantiquest.org/CJ/CJ_189-polyinstru-Chantons_du_Seigneur.mid"
   ],
-  "2_24": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_024-mono-piano-Par_tous_les_saints_glorifie.mid",
-    "https://www.cantiquest.org/CV/CV_024-polyinstru-Par_tous_les_saints_glorifie.mid"
+  "1_193": [
+    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
+    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
   ],
-  "2_26": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_026-mono-piano-Les_rayons_de_l_amour_divin.mid",
-    "https://www.cantiquest.org/CV/CV_026-polyinstru-Les_rayons_de_l_amour_divin.mid"
+  "1_195": [
+    "https://www.cantiquest.org/CJ/CJ_189-mono-piano-Chantons_du_Seigneur.mid",
+    "https://www.cantiquest.org/CJ/CJ_189-polyinstru-Chantons_du_Seigneur.mid"
   ],
-  "2_28": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_028-mono-piano-Oh_que_toute_la_terre_entonne.mid",
-    "https://www.cantiquest.org/CV/CV_028-polyinstru-Oh_que_toute_la_terre_entonne.mid"
+  "1_197b": [
+    "https://www.cantiquest.org/CV/CV_299-mono-piano-Je_suis_la_lumiere.mid",
+    "https://www.cantiquest.org/CV/CV_299-polyinstru-Je_suis_la_lumiere.mid"
   ],
-  "2_29": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_029-Redempteur_adorable_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_029-Redempteur_adorable_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_029-mono-piano-Redempteur_adorable.mid",
-    "https://www.cantiquest.org/CV/CV_029-polyinstru-Redempteur_adorable.mid"
+  "1_1a": [
+    "https://www.cantiquest.org/CJ/CJ_187-mono-piano-O_Christ_eternel_Rocher.mid",
+    "https://www.cantiquest.org/CJ/CJ_187-polyinstru-O_Christ_eternel_Rocher.mid"
   ],
-  "2_30": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_030-mono-piano-Ma_richesse_ma_gloire.mid",
-    "https://www.cantiquest.org/CV/CV_030-polyinstru-Ma_richesse_ma_gloire.mid",
-    "https://www.cantiquest.org/VAM/VaM_043-mono-piano-Ma_richesse_ma_gloire.mid",
-    "https://www.cantiquest.org/VAM/VaM_043-polyinstru-Ma_richesse_ma_gloire.mid"
+  "1_209": [
+    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid"
   ],
-  "2_34": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_034-Ah_si_ton_sang_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_034-mono-piano-Ah_si_ton_sang.mid",
-    "https://www.cantiquest.org/CV/CV_034-polyinstru-Ah_si_ton_sang.mid",
-    "https://www.cantiquest.org/VAM/VaM_105-mono-piano-Ah_si_ton_sang.mid",
-    "https://www.cantiquest.org/VAM/VaM_105-polyinstru-Ah_si_ton_sang.mid"
+  "1_210": [
+    "https://www.cantiquest.org/HeC/HeC_005-mono-piano-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.cantiquest.org/HeC/HeC_005-polyinstru-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.cantiquest.org/HeC/HeC_024-mono-piano-Agneau_Victime_expiatoire.mid",
+    "https://www.cantiquest.org/HeC/HeC_024-polyinstru-Agneau_Victime_expiatoire.mid"
   ],
-  "2_41": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_polyinstru.mp3",
-    "https://www.cantiquest.org/CGG/CGG1_030-mono-piano-Roi_couvert_de_blessures.mid",
-    "https://www.cantiquest.org/CGG/CGG1_030-polyinstru-Roi_couvert_de_blessures.mid",
-    "https://www.cantiquest.org/CV/CV_041-mono-piano-Roi_couvert_de_blessures.mid",
-    "https://www.cantiquest.org/CV/CV_041-polyinstru-Roi_couvert_de_blessures.mid"
+  "1_222": [
+    "https://www.cantiquest.org/CGG/CGG1_267-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/CGG/CGG1_267-polyinstru-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/VAM/VaM_141-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/VAM/VaM_141-polyinstru-Dans_mon_coeur_chante_une_melodie.mid"
   ],
-  "2_42": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_042-Agneau_de_Dieu_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_042-Agneau_de_Dieu_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_042-mono-piano-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/CV/CV_042-polyinstru-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_011-mono-piano-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_011-polyinstru-Agneau_de_Dieu.mid"
+  "1_224": [
+    "https://www.cantiquest.org/CGG/CGG1_242-mono-piano-Par_la_foi_nous_marcherons_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_242-polyinstru-Par_la_foi_nous_marcherons_midkar.mid"
   ],
-  "2_46": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_046-Viens_mon_ame_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_046-Viens_mon_ame_polyinstru.mp3",
+  "1_22a": [
+    "https://www.cantiquest.org/CGG/CGG1_096-mono-piano-Entends_tu_le_chant_joyeux_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_096-polyinstru-Entends_tu_le_chant_joyeux_midkar.mid",
+    "https://www.cantiquest.org/VAM/VaM_016-mono-piano-Entends-tu_le_chant_joyeux.mid",
+    "https://www.cantiquest.org/VAM/VaM_016-polyinstru-Entends-tu_le_chant_joyeux.mid"
+  ],
+  "1_232": [
+    "https://www.cantiquest.org/CV/CV_226-mono-piano-Ne_crains_rien.mid",
+    "https://www.cantiquest.org/CV/CV_226-polyinstru-Ne_crains_rien.mid"
+  ],
+  "1_235": [
+    "https://www.cantiquest.org/CGG/CGG1_287-mono-piano-Nous_allons_bon_pas.mid",
+    "https://www.cantiquest.org/CGG/CGG1_287-polyinstru-Nous_allons_bon_pas.mid"
+  ],
+  "1_238": [
+    "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
+    "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
+  ],
+  "1_238a": [
+    "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
+    "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
+  ],
+  "1_243": [
+    "https://www.cantiquest.org/HeC/HeC_186-mono-piano-Amour_de_mon_Sauveur.mid",
+    "https://www.cantiquest.org/HeC/HeC_186-polyinstru-Amour_de_mon_Sauveur.mid"
+  ],
+  "1_248a": [
+    "https://www.cantiquest.org/VAM/VaM_081-mono-piano-Je_me_confie_en_toi.mid",
+    "https://www.cantiquest.org/VAM/VaM_081-polyinstru-Je_me_confie_en_toi.mid"
+  ],
+  "1_249": [
+    "https://www.cantiquest.org/VAM/VaM_155-mono-piano-Un_Sauveur_merveilleux.mid",
+    "https://www.cantiquest.org/VAM/VaM_155-polyinstru-Un_Sauveur_merveilleux.mid"
+  ],
+  "1_250": [
+    "https://www.cantiquest.org/CV/CV_180-mono-piano-La_voix_du_Seigneur_m_appelle.mid",
+    "https://www.cantiquest.org/CV/CV_180-polyinstru-La_voix_du_Seigneur_m_appelle.mid"
+  ],
+  "1_251": [
+    "https://www.cantiquest.org/VAM/VaM_026-mono-piano-Deux_maitres.mid",
+    "https://www.cantiquest.org/VAM/VaM_026-polyinstru-Deux_maitres.mid"
+  ],
+  "1_257": [
+    "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
+    "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
+  ],
+  "1_257a": [
+    "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
+    "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
+  ],
+  "1_267": [
+    "https://www.cantiquest.org/CGG/CGG1_172-mono-piano-Oh_prends_mon_ame.mid",
+    "https://www.cantiquest.org/CGG/CGG1_172-polyinstru-Oh_prends_mon_ame.mid"
+  ],
+  "1_278": [
+    "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid",
+    "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid"
+  ],
+  "1_279": [
+    "https://www.cantiquest.org/CJ/CJ_047-mono-piano-Au_pied_de_ta_sainte_croix.mid",
+    "https://www.cantiquest.org/CJ/CJ_047-polyinstru-Au_pied_de_ta_sainte_croix.mid"
+  ],
+  "1_28": [
+    "https://www.cantiquest.org/CGG/CGG1_057-mono-piano-Viens_et_vois.mid",
+    "https://www.cantiquest.org/CGG/CGG1_057-polyinstru-Viens_et_vois.mid",
+    "https://www.cantiquest.org/VAM/VaM_036-mono-piano-Viens_et_vois.mid",
+    "https://www.cantiquest.org/VAM/VaM_036-polyinstru-Viens_et_vois.mid"
+  ],
+  "1_283": [
+    "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
+    "https://www.cantiquest.org/CV/CV_253-polyinstru-La_trompette_a_retenti.mid"
+  ],
+  "1_287": [
+    "https://www.cantiquest.org/CV/CV_257-mono-piano-Je_ne_sais_pas_le_jour.mid",
+    "https://www.cantiquest.org/CV/CV_257-polyinstru-Je_ne_sais_pas_le_jour.mid",
+    "https://www.cantiquest.org/VAM/VaM_276-mono-piano-Je_ne_sais_pas_le_jour.mid",
+    "https://www.cantiquest.org/VAM/VaM_276-polyinstru-Je_ne_sais_pas_le_jour.mid"
+  ],
+  "1_298": [
+    "https://www.cantiquest.org/VAM/VaM_034-mono-piano-Car_Dieu_a_tant_aime_le_monde.mid",
+    "https://www.cantiquest.org/VAM/VaM_034-polyinstru-Car_Dieu_a_tant_aime_le_monde.mid"
+  ],
+  "1_303": [
+    "https://www.cantiquest.org/CGG/CGG1_259-mono-piano-Flots_mugissants.mid",
+    "https://www.cantiquest.org/CGG/CGG1_259-polyinstru-Flots_mugissants.mid",
+    "https://www.cantiquest.org/VAM/VaM_227-mono-piano-Flots_mugissants.mid",
+    "https://www.cantiquest.org/VAM/VaM_227-polyinstru-Flots_mugissants.mid"
+  ],
+  "1_317": [
+    "https://www.cantiquest.org/CV/CV_261-mono-piano-Nombreux_comme_le_sable.mid",
+    "https://www.cantiquest.org/CV/CV_261-polyinstru-Nombreux_comme_le_sable.mid"
+  ],
+  "1_318a": [
+    "https://www.cantiquest.org/VAM/VaM_109-mono-piano-Jesus_est_mon_divin_Berger.mid",
+    "https://www.cantiquest.org/VAM/VaM_109-polyinstru-Jesus_est_mon_divin_Berger.mid"
+  ],
+  "1_319": [
+    "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid",
+    "https://www.cantiquest.org/VAM/VaM_148-mono-piano-Mon_Sauveur_m_aime.mid",
+    "https://www.cantiquest.org/VAM/VaM_148-polyinstru-Mon_Sauveur_m_aime.mid"
+  ],
+  "1_324": [
+    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
+    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
+  ],
+  "1_325": [
+    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
+    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
+  ],
+  "1_329a": [
+    "https://www.cantiquest.org/VAM/VaM_052-mono-piano-Lorsque_le_ciel_retentit.mid",
+    "https://www.cantiquest.org/VAM/VaM_052-polyinstru-Lorsque_le_ciel_retentit.mid"
+  ],
+  "1_339a": [
+    "https://www.cantiquest.org/VAM/VaM_022-mono-piano-Regarde_a_la_croix.mid",
+    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid"
+  ],
+  "1_340": [
+    "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid"
+  ],
+  "1_349": [
+    "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid",
+    "https://www.cantiquest.org/VAM/VaM_148-mono-piano-Mon_Sauveur_m_aime.mid",
+    "https://www.cantiquest.org/VAM/VaM_148-polyinstru-Mon_Sauveur_m_aime.mid"
+  ],
+  "1_364": [
+    "https://www.cantiquest.org/HeC/HeC_194-mono-piano-Voici_je_viens_bientot.mid",
+    "https://www.cantiquest.org/HeC/HeC_194-polyinstru-Voici_je_viens_bientot.mid"
+  ],
+  "1_384a": [
+    "https://www.cantiquest.org/CJ/CJ_188-mono-piano-Jerusalem_cite_de_Dieu.mid",
+    "https://www.cantiquest.org/CJ/CJ_188-polyinstru-Jerusalem_cite_de_Dieu.mid"
+  ],
+  "1_387a": [
+    "https://www.cantiquest.org/VAM/VaM_185-mono-piano-Sur_le_chemin.mid",
+    "https://www.cantiquest.org/VAM/VaM_185-polyinstru-Sur_le_chemin.mid"
+  ],
+  "1_388": [
+    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
+    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_never_fails.mid"
+  ],
+  "1_389a": [
+    "https://www.cantiquest.org/CV/CV_254-mono-piano-Il_va_venir_le_Seigneur_que_jadore.mid",
+    "https://www.cantiquest.org/CV/CV_254-polyinstru-Il_va_venir_le_Seigneur_que_jadore.mid"
+  ],
+  "1_391": [
+    "https://www.cantiquest.org/HeC/HeC_109-mono-piano-L_Eglise_est_etrangere.mid",
+    "https://www.cantiquest.org/HeC/HeC_109-polyinstru-L_Eglise_est_etrangere.mid"
+  ],
+  "1_4": [
+    "https://www.cantiquest.org/CV/CV_112-mono-piano-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
+    "https://www.cantiquest.org/CV/CV_112-polyinstru-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid"
+  ],
+  "1_400": [
+    "https://www.cantiquest.org/SST/SST_335-mono-piano-Oh_quel_bonheur.mid",
+    "https://www.cantiquest.org/SST/SST_335-polyinstru-Oh_quel_bonheur.mid"
+  ],
+  "1_401": [
+    "https://www.cantiquest.org/VAM/VaM_093-mono-piano-Christ_est_mon_rocher.mid",
+    "https://www.cantiquest.org/VAM/VaM_093-polyinstru-Christ_est_mon_rocher.mid"
+  ],
+  "1_419": [
+    "https://www.cantiquest.org/CGG/CGG1_043-mono-piano-Brisant_les_liens_funebres.mid",
+    "https://www.cantiquest.org/CGG/CGG1_043-polyinstru_Brisant_les_liens_funebres.mid"
+  ],
+  "1_424a": [
+    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
+    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid"
+  ],
+  "1_428": [
+    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
+    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid"
+  ],
+  "1_433": [
+    "https://www.cantiquest.org/HeC/HeC_084-mono-piano-Seigneur_tu_diriges.mid",
+    "https://www.cantiquest.org/HeC/HeC_084-polyinstru-Seigneur_tu_diriges.mid"
+  ],
+  "1_450": [
+    "https://www.cantiquest.org/CJ/CJ_218-mono-piano-Espere_en_Dieu.mid",
+    "https://www.cantiquest.org/CJ/CJ_218-polyinstru-Espere_en_Dieu.mid"
+  ],
+  "1_454a": [
+    "https://www.cantiquest.org/CV/CV_299-mono-piano-Je_suis_la_lumiere.mid",
+    "https://www.cantiquest.org/CV/CV_299-polyinstru-Je_suis_la_lumiere.mid"
+  ],
+  "1_455": [
+    "https://www.cantiquest.org/CGG/CGG1_296-mono-piano-Notre_Dieu_regne_encore.mid",
+    "https://www.cantiquest.org/CGG/CGG1_296-polyinstru-Notre_Dieu_regne_encore.mid"
+  ],
+  "1_46": [
     "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
-    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid",
-    "https://www.cantiquest.org/CV/CV_046-mono-piano-Viens_mon_ame.mid",
-    "https://www.cantiquest.org/CV/CV_046-polyinstru-Viens_mon_ame.mid"
+    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid"
   ],
-  "2_47": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_047-C_est_toi_Jesus_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_047-C_est_toi_Jesus_polyinstru.mp3",
-    "https://www.cantiquest.org/CGG/CGG1_045-mono-piano-C_est_toi_Jesus_pain_de_vie.mid",
-    "https://www.cantiquest.org/CGG/CGG1_045-polyinstru-C_est_toi_Jesus_pain_de_vie.mid",
-    "https://www.cantiquest.org/CV/CV_047-mono-piano-C_est_toi_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_047-polyinstru-C_est_toi_Jesus.mid",
-    "https://www.cantiquest.org/VAM/VaM_085-mono-piano-C_est_toi_Jesus_Pain_de_vie.mid",
-    "https://www.cantiquest.org/VAM/VaM_085-polyinstru-C_est_toi_Jesus_Pain_de_vie.mid"
+  "1_465": [
+    "https://www.cantiquest.org/VAM/VaM_123-mono-piano-Toutes_choses_concourent_au_bien.mid",
+    "https://www.cantiquest.org/VAM/VaM_123-polyinstru-Toutes_choses_concourent_au_bien.mid"
   ],
-  "2_56": [
+  "1_466": [
+    "https://www.cantiquest.org/CJ/CJ_152-mono-piano-Deux_mains_pour_servir.mid",
+    "https://www.cantiquest.org/CJ/CJ_152-polyinstru-Deux_mains_pour_servir.mid",
+    "https://www.cantiquest.org/CV/CV_226-mono-piano-Ne_crains_rien.mid",
+    "https://www.cantiquest.org/CV/CV_226-polyinstru-Ne_crains_rien.mid"
+  ],
+  "1_469": [
+    "https://www.cantiquest.org/VAM/VaM_149-mono-piano-Jesus-Christ_est_le_meme.mid",
+    "https://www.cantiquest.org/VAM/VaM_149-polyinstru-Jesus-Christ_est_le_meme.mid"
+  ],
+  "1_474": [
+    "https://www.cantiquest.org/VAM/VaM_116-mono-piano-Mon_Dieu_est_si_bon.mid",
+    "https://www.cantiquest.org/VAM/VaM_116-polyinstru-Mon_Dieu_est_si_bon.mid"
+  ],
+  "1_478": [
+    "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid",
+    "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid"
+  ],
+  "1_501": [
+    "https://www.cantiquest.org/SST/SST_369-mono-piano-Le_sang_de_Jesus_rachete.mid",
+    "https://www.cantiquest.org/SST/SST_369-polyinstru-Le_sang_de_Jesus_rachete.mid"
+  ],
+  "1_506": [
+    "https://www.cantiquest.org/VAM/VaM_149-mono-piano-Jesus-Christ_est_le_meme.mid",
+    "https://www.cantiquest.org/VAM/VaM_149-polyinstru-Jesus-Christ_est_le_meme.mid",
+    "https://www.hymnallibrary.org/media/midi_files/O_Jesus_Christ_to_You.mid"
+  ],
+  "1_516": [
+    "https://www.cantiquest.org/CV/CV_107-mono-piano-Une_bonne_nouvelle.mid",
+    "https://www.cantiquest.org/CV/CV_107-polyinstru-Une_bonne_nouvelle.mid"
+  ],
+  "1_523": [
+    "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid"
+  ],
+  "1_528": [
+    "https://www.cantiquest.org/HeC/HeC_051-mono-piano-Gloire_d_age_en_age.mid",
+    "https://www.cantiquest.org/HeC/HeC_051-polyinstru-Gloire_d_age_en_age.mid"
+  ],
+  "1_544": [
+    "https://www.cantiquest.org/CJ/CJ_033-mono-piano-Jesus_mon_esperance.mid",
+    "https://www.cantiquest.org/CJ/CJ_033-polyinstru-Jesus_mon_esperance.mid"
+  ],
+  "1_554": [
+    "https://www.cantiquest.org/VAM/VaM_215-mono-piano-Mon_ame_en_silence.mid",
+    "https://www.cantiquest.org/VAM/VaM_215-polyinstru-Mon_ame_en_silence.mid"
+  ],
+  "1_555": [
+    "https://www.cantiquest.org/VAM/VaM_156-mono-piano-O_grace_infinie.mid",
+    "https://www.cantiquest.org/VAM/VaM_156-polyinstru-O_grace_infinie.mid"
+  ],
+  "1_56": [
     "https://www.cantiquest.org/CJ/CJ_254-mono-piano-Dans_mon_ame_un_beau_soleil_brille.mid",
     "https://www.cantiquest.org/CJ/CJ_254-polyinstru-Dans_mon_ame_un_beau_soleil_brille.mid"
   ],
-  "2_57": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_057-Viens_a_la_croix_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_057-Viens_a_la_croix_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
-    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid",
-    "https://www.cantiquest.org/CV/CV_090-mono-piano-Viens_ame_perdue.mid",
-    "https://www.cantiquest.org/CV/CV_090-polyinstru-Viens_ame_perdue.mid"
+  "1_560": [
+    "https://www.cantiquest.org/VAM/VaM_046-mono-piano-Seigneur_Jesus_tu_nous_aimas.mid",
+    "https://www.cantiquest.org/VAM/VaM_046-polyinstru-Seigneur_Jesus_tu_nous_aimas.mid"
   ],
-  "2_70": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_070-Coeurs_fatigues_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_070-Coeurs_fatigues_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_070-mono-piano-Coeurs_fatigues.mid",
-    "https://www.cantiquest.org/CV/CV_070-polyinstru-Coeurs_fatigues.mid"
+  "1_566a": [
+    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
+    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid"
   ],
-  "2_71a": [
+  "1_570": [
+    "https://www.cantiquest.org/CGG/CGG1_103_304-mono-piano-Immense_grace_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_103_304-polyinstru-Immense_grace_midkar.mid"
+  ],
+  "1_579": [
+    "https://www.cantiquest.org/SST/SST_064-mono-piano-Scenes_de_gloire.mid",
+    "https://www.cantiquest.org/SST/SST_064-polyinstru-Scenes_de_gloire.mid"
+  ],
+  "1_585": [
+    "https://www.cantiquest.org/VAM/VaM_266-mono-piano-L_appel_supreme.mid",
+    "https://www.cantiquest.org/VAM/VaM_266-polyinstru-L_appel_supreme.mid"
+  ],
+  "1_601": [
+    "https://www.cantiquest.org/CGG/CGG1_247-mono-piano-Cest_par_la_foi.mid",
+    "https://www.cantiquest.org/CGG/CGG1_247-polyinstru-Cest_par_la_foi.mid"
+  ],
+  "1_602": [
+    "https://www.cantiquest.org/SST/SST_328-mono-piano-Seigneur_Jesus_ton_amour_reste.mid",
+    "https://www.cantiquest.org/SST/SST_328-polyinstru-Seigneur_Jesus_ton_amour_reste.mid"
+  ],
+  "1_608": [
+    "https://www.cantiquest.org/VAM/VaM_147-mono-piano-Nous_sommes_au_Seigneur.mid",
+    "https://www.cantiquest.org/VAM/VaM_147-polyinstru-Nous_sommes_au_Seigneur.mid"
+  ],
+  "1_614": [
+    "https://www.cantiquest.org/VAM/VaM_095-mono-piano-Dieu_voit_ma_vie_entiere.mid",
+    "https://www.cantiquest.org/VAM/VaM_095-polyinstru-Dieu_voit_ma_vie_entiere.mid"
+  ],
+  "1_618": [
+    "https://www.cantiquest.org/VAM/VaM_130-mono-piano-Il_est_un_seul_chemin.mid",
+    "https://www.cantiquest.org/VAM/VaM_130-polyinstru-Il_est_un_seul_chemin.mid"
+  ],
+  "1_624": [
+    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
+    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Hymn_for_Easter.mid"
+  ],
+  "1_626": [
+    "https://www.cantiquest.org/SST/SST_274-mono-piano-Ton_amour_est_si_pur.mid",
+    "https://www.cantiquest.org/SST/SST_274-polyinstru-Ton_amour_est_si_pur.mid"
+  ],
+  "1_639": [
+    "https://www.cantiquest.org/CV/CV_208-mono-piano-Compte_les_bienfaits_de_Dieu.mid",
+    "https://www.cantiquest.org/CV/CV_208-polyinstru-Compte_les_bienfaits_de_Dieu.mid"
+  ],
+  "1_640": [
+    "https://www.cantiquest.org/CV/CV_234-mono-piano-Quel_ami_fidele_et_tendre.mid",
+    "https://www.cantiquest.org/CV/CV_234-polyinstru-Quel_ami_fidele_et_tendre.mid"
+  ],
+  "1_71a": [
     "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
     "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
   ],
-  "2_71b": [
-    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
+  "1_77a": [
+    "https://www.cantiquest.org/CV/CV_306-mono-piano-Chaque_jour_de_ma_vie.mid",
+    "https://www.cantiquest.org/CV/CV_306-polyinstru-Chaque_jour_de_ma_vie.mid"
   ],
-  "2_74": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_074-mono-piano-Arrete_o_pecheur_arrete.mid",
-    "https://www.cantiquest.org/CV/CV_074-polyinstru-Arrete_o_pecheur_arrete.mid"
+  "1_78": [
+    "https://www.cantiquest.org/CV/CV_293-mono-piano-Tout_joyeux_benissons.mid",
+    "https://www.cantiquest.org/CV/CV_293-polyinstru-Tout_joyeux_benissons.mid"
   ],
-  "2_75": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_075-mono-piano-Comme_un_phare_sur_la_plage.mid",
-    "https://www.cantiquest.org/CV/CV_075-polyinstru-Comme_un_phare_sur_la_plage.mid",
-    "https://www.cantiquest.org/VAM/VaM_030-mono-piano-Comme_un_phare_sur_la_plage.mid",
-    "https://www.cantiquest.org/VAM/VaM_030-polyinstru-Comme_un_phare_sur_la_plage.mid"
+  "1_84a": [
+    "https://www.cantiquest.org/CGG/CGG1_009-mono-piano-Seigneur_que_n_ai_je_mille_voix.mid",
+    "https://www.cantiquest.org/CGG/CGG1_009-polyinstru-Seigneur_que_n_ai_je_mille_voix.mid"
   ],
-  "2_79": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_079-mono-piano-Il_est_un_roc_seculaire.mid",
-    "https://www.cantiquest.org/CV/CV_079-polyinstru-Il_est_un_roc_seculaire.mid",
-    "https://www.cantiquest.org/HeC/HeC_267-mono-piano-Il_est_un_roc_seculaire.mid",
-    "https://www.cantiquest.org/HeC/HeC_267-polyinstru-Il_est_un_roc_seculaire.mid"
+  "1_89": [
+    "https://www.cantiquest.org/VAM/VaM_224-mono-piano-Au_jour_d_angoisse.mid",
+    "https://www.cantiquest.org/VAM/VaM_224-polyinstru-Au_jour_d_angoisse.mid"
   ],
-  "2_94": [
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_mono-piano.mp3",
-    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_polyinstru.mp3",
-    "https://www.cantiquest.org/CV/CV_094-mono-piano-Par_ce_chemin_solitaire.mid",
-    "https://www.cantiquest.org/CV/CV_094-polyinstru-Par_ce_chemin_solitaire.mid"
+  "1_90a": [
+    "https://www.cantiquest.org/CGG/CGG1_018-mono-piano-Dans_ton_amour_divin_Sauveur_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_018-polyinstru-Dans_ton_amour_divin_Sauveur.mid"
+  ],
+  "1_95a": [
+    "https://www.cantiquest.org/SST/SST_027-028-mono-piano-L_Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/SST/SST_027-028-polyinstru-L_Agneau_de_Dieu.mid"
+  ],
+  "1_95b": [
+    "https://www.cantiquest.org/SST/SST_027-028-mono-piano-L_Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/SST/SST_027-028-polyinstru-L_Agneau_de_Dieu.mid"
+  ],
+  "1_99": [
+    "https://www.cantiquest.org/HeC/HeC_265-mono-piano-Dans_les_cieux_et_sur_la_terre.mid",
+    "https://www.cantiquest.org/HeC/HeC_265-polyinstru-Dans_les_cieux_et_sur_la_terre.mid"
+  ],
+  "2_1": [
+    "https://www.cantiquest.org/HeC/HeC_098-mono-piano-Grand_Dieu_nous_t_adorons.mid",
+    "https://www.cantiquest.org/HeC/HeC_098-polyinstru-Grand_Dieu_nous_t_adorons.mid"
+  ],
+  "2_100": [
+    "https://www.cantiquest.org/HeC/HeC_261-mono-piano-Si_vous_saviez_quel_Sauveur_je_possede.mid",
+    "https://www.cantiquest.org/HeC/HeC_261-polyinstru-Si_vous_saviez_quel_Sauveur_je_possede.mid"
+  ],
+  "2_102": [
+    "https://www.cantiquest.org/CV/CV_102-mono-piano-Viens_au_Pere.mid",
+    "https://www.cantiquest.org/CV/CV_102-polyinstru-Viens_au_Pere.mid",
+    "https://www.cantiquest.org/VAM/VaM_005-mono-piano-Viens_au_Pere.mid",
+    "https://www.cantiquest.org/VAM/VaM_005-polyinstru-Viens_au_Pere.mid"
   ],
   "2_104": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_104-Bientot_le_Seigneur_va_venir_mono-piano.mp3",
@@ -191,11 +491,29 @@
     "https://www.cantiquest.org/CV/CV_105-mono-piano-Pecheur_je_voudrais_te_guerir.mid",
     "https://www.cantiquest.org/CV/CV_105-polyinstru-Pecheur_je_voudrais_te_guerir.mid"
   ],
+  "2_106": [
+    "https://www.cantiquest.org/HeC/HeC_266-mono-piano-Venez_au_Prince_de_la_vie.mid",
+    "https://www.cantiquest.org/HeC/HeC_266-polyinstru-Venez_au_Prince_de_la_vie.mid"
+  ],
   "2_107": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_107-Une_bonne_nouvelle_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_107-Une_bonne_nouvelle_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_107-mono-piano-Une_bonne_nouvelle.mid",
     "https://www.cantiquest.org/CV/CV_107-polyinstru-Une_bonne_nouvelle.mid"
+  ],
+  "2_108": [
+    "https://www.cantiquest.org/CV/CV_108-mono-piano-Dis_tout_a_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_108-polyinstru-Dis_tout_a_Jesus.mid"
+  ],
+  "2_11": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_011-Adorable_mystere_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_011-Adorable_mystere_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_011-mono-piano-Adorable_mystere.mid",
+    "https://www.cantiquest.org/CV/CV_011-polyinstru-Adorable_mystere.mid"
+  ],
+  "2_110": [
+    "https://www.cantiquest.org/VAM/VaM_075-mono-piano-L_Eternel_est_mon_Berger.mid",
+    "https://www.cantiquest.org/VAM/VaM_075-polyinstru-L_Eternel_est_mon_Berger.mid"
   ],
   "2_111": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_111-Publiez_bien_haut_mono-piano.mp3",
@@ -229,6 +547,10 @@
     "https://www.cantiquest.org/CV/CV_122-mono-piano-Source_feconde.mid",
     "https://www.cantiquest.org/CV/CV_122-polyinstru-Source_feconde.mid"
   ],
+  "2_124": [
+    "https://www.cantiquest.org/HeC/HeC_258-mono-piano-Tel_que_je_suis_sans_rien_a_moi.mid",
+    "https://www.cantiquest.org/HeC/HeC_258-polyinstru-Tel_que_je_suis_sans_rien_a_moi.mid"
+  ],
   "2_126": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_126-Roc_seculaire_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_126-Roc_seculaire_polyinstru.mp3",
@@ -257,11 +579,49 @@
     "https://www.cantiquest.org/VAM/VaM_006-mono-piano-Misericorde_insondable.mid",
     "https://www.cantiquest.org/VAM/VaM_006-polyinstru-Misericorde_insondable.mid"
   ],
+  "2_132": [
+    "https://www.cantiquest.org/CV/CV_132-mono-piano-Torrents_d_amour.mid",
+    "https://www.cantiquest.org/CV/CV_132-polyinstru-Torrents_d_amour.mid",
+    "https://www.cantiquest.org/VAM/VaM_009-mono-piano-Torrents_d_amour_et_de_grace.mid",
+    "https://www.cantiquest.org/VAM/VaM_009-polyinstru-Torrents_d_amour_et_de_grace.mid"
+  ],
+  "2_133": [
+    "https://www.cantiquest.org/HeC/HeC_096-mono-piano-O_Seigneur_quand_je_pense.mid",
+    "https://www.cantiquest.org/HeC/HeC_096-polyinstru-O_Seigneur_quand_je_pense.mid"
+  ],
   "2_135": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_135-Veux_tu_briser_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_135-Veux_tu_briser_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_135-mono-piano-Veux_tu_briser.mid",
     "https://www.cantiquest.org/CV/CV_135-polyinstru-Veux_tu_briser.mid"
+  ],
+  "2_137a": [
+    "https://www.cantiquest.org/SST/SST_086-mono-piano-Seigneur_Tu_es_deja_assis.mid",
+    "https://www.cantiquest.org/SST/SST_086-polyinstru-Seigneur_Tu_es_deja_assis.mid"
+  ],
+  "2_140": [
+    "https://www.cantiquest.org/VAM/VaM_192-mono-piano-A_tes_pieds_o_divin_Maitre.mid",
+    "https://www.cantiquest.org/VAM/VaM_192-polyinstru-A_tes_pieds_o_divin_Maitre.mid"
+  ],
+  "2_142": [
+    "https://www.cantiquest.org/VAM/VaM_215-mono-piano-Mon_ame_en_silence.mid",
+    "https://www.cantiquest.org/VAM/VaM_215-polyinstru-Mon_ame_en_silence.mid"
+  ],
+  "2_143": [
+    "https://www.cantiquest.org/CV/CV_143-mono-piano-Comme_une_terre_alteree.mid",
+    "https://www.cantiquest.org/CV/CV_143-polyinstru-Comme_une_terre_alteree.mid"
+  ],
+  "2_147": [
+    "https://www.cantiquest.org/CV/CV_147a-mono-piano-Jesus_ta_sainte_presence.mid",
+    "https://www.cantiquest.org/CV/CV_147a-polyinstru-Jesus_ta_sainte_presence.mid"
+  ],
+  "2_147a": [
+    "https://www.cantiquest.org/VAM/VaM_056-mono-piano-Jesus_ta_sainte_presence.mid",
+    "https://www.cantiquest.org/VAM/VaM_056-polyinstru-Jesus_ta_sainte_presence.mid"
+  ],
+  "2_147b": [
+    "https://www.cantiquest.org/SST/SST_107-mono-piano-Seigneur_c_est_une_joie.mid",
+    "https://www.cantiquest.org/SST/SST_107-polyinstru-Seigneur_c_est_une_joie.mid"
   ],
   "2_148": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_148-Jesus_est_au_milieu_de_nous_mono-piano.mp3",
@@ -271,9 +631,35 @@
     "https://www.cantiquest.org/HeC/HeC_235-mono-piano-Jour_apres_jour_Seigneur.mid",
     "https://www.cantiquest.org/HeC/HeC_235-polyinstru-Jour_apres_jour_Seigneur.mid"
   ],
+  "2_149": [
+    "https://www.cantiquest.org/CV/CV_149a-mono-piano-Toi_qui_disposes.mid",
+    "https://www.cantiquest.org/CV/CV_149a-polyinstru-Toi_qui_disposes.mid"
+  ],
+  "2_149a": [
+    "https://www.cantiquest.org/CV/CV_149a-mono-piano-Toi_qui_disposes.mid",
+    "https://www.cantiquest.org/CV/CV_149a-polyinstru-Toi_qui_disposes.mid"
+  ],
+  "2_149b": [
+    "https://www.cantiquest.org/VAM/VaM_156-mono-piano-O_grace_infinie.mid",
+    "https://www.cantiquest.org/VAM/VaM_156-polyinstru-O_grace_infinie.mid"
+  ],
+  "2_151": [
+    "https://www.cantiquest.org/SST/SST_172-mono-piano-Enseigne_nous_par_Ta_grace.mid",
+    "https://www.cantiquest.org/SST/SST_172-polyinstru-Enseigne_nous_par_Ta_grace.mid",
+    "https://www.cantiquest.org/VAM/VaM_183-mono-piano-Enseigne-nous_par_ta_grace.mid",
+    "https://www.cantiquest.org/VAM/VaM_183-polyinstru-Enseigne-nous_par_ta_grace.mid"
+  ],
+  "2_152": [
+    "https://www.cantiquest.org/SST/SST_164-mono-piano-Seigneur_nous_voyons_Ta_trace.mid",
+    "https://www.cantiquest.org/SST/SST_164-polyinstru-Seigneur_nous_voyons_Ta_trace.mid"
+  ],
   "2_156a": [
     "https://www.cantiquest.org/CGG/CGG1_083-mono-piano-La_croix_du_Calvaire.mid",
     "https://www.cantiquest.org/CGG/CGG1_083-polyinstru-La_croix_du_Calvaire.mid"
+  ],
+  "2_157": [
+    "https://www.cantiquest.org/VAM/VaM_015-mono-piano-La_voix_de_Christ_nous_appelle.mid",
+    "https://www.cantiquest.org/VAM/VaM_015-polyinstru-La_voix_de_Christ_nous_appelle.mid"
   ],
   "2_161": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_161-Ecoutez_l_appel_du_Berger_mono-piano.mp3",
@@ -281,9 +667,43 @@
     "https://www.cantiquest.org/CV/CV_161-mono-piano-Ecoutez_l_appel_du_Berger.mid",
     "https://www.cantiquest.org/CV/CV_161-polyinstru-Ecoutez_l_appel_du_Berger.mid"
   ],
+  "2_162": [
+    "https://www.cantiquest.org/CV/CV_162-mono-piano-Ah_que_je_ne_sois_pas.mid",
+    "https://www.cantiquest.org/CV/CV_162-polyinstru-Ah_que_je_ne_sois_pas.mid"
+  ],
+  "2_166": [
+    "https://www.cantiquest.org/CV/CV_166-mono-piano-Qu_il_fait_bon_a_ton_service.mid",
+    "https://www.cantiquest.org/CV/CV_166-polyinstru-Qu_il_fait_bon_a_ton_service.mid"
+  ],
+  "2_167": [
+    "https://www.cantiquest.org/CV/CV_167-mono-piano-C_est_mon_joyeux_service.mid",
+    "https://www.cantiquest.org/CV/CV_167-polyinstru-C_est_mon_joyeux_service.mid"
+  ],
   "2_167a": [
     "https://www.cantiquest.org/CV/CV_148-mono-piano-Jesus_est_au_milieu_de_nous.mid",
     "https://www.cantiquest.org/CV/CV_148-polyinstru-Jesus_est_au_milieu_de_nous.mid"
+  ],
+  "2_17": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
+    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
+  ],
+  "2_170": [
+    "https://www.cantiquest.org/VAM/VaM_112-mono-piano-A_mon_Dieu_j_abandonne.mid",
+    "https://www.cantiquest.org/VAM/VaM_112-polyinstru-A_mon_Dieu_j_abandonne.mid"
+  ],
+  "2_171": [
+    "https://www.cantiquest.org/VAM/VaM_131-mono-piano-Seigneur_si_je_chante.mid",
+    "https://www.cantiquest.org/VAM/VaM_131-polyinstru-Seigneur_si_je_chante.mid"
+  ],
+  "2_172": [
+    "https://www.cantiquest.org/CV/CV_172a-mono-piano-Entre_tes_mains_j_abandonne.mid",
+    "https://www.cantiquest.org/CV/CV_172a-polyinstru-Entre_tes_mains_j_abandonne.mid"
+  ],
+  "2_172a": [
+    "https://www.cantiquest.org/CV/CV_172a-mono-piano-Entre_tes_mains_j_abandonne.mid",
+    "https://www.cantiquest.org/CV/CV_172a-polyinstru-Entre_tes_mains_j_abandonne.mid"
   ],
   "2_174": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_174-Seul_refuge_de_mon_ame_mono-piano.mp3",
@@ -297,11 +717,27 @@
     "https://www.cantiquest.org/CV/CV_175-mono-piano-L_amour_de_Jesus-Christ_nous_presse.mid",
     "https://www.cantiquest.org/CV/CV_175-polyinstru-L_amour_de_Jesus-Christ_nous_presse.mid"
   ],
+  "2_179": [
+    "https://www.cantiquest.org/SST/SST_193-mono-piano-Tu_m_appartiens_Jesus_mon_Sauveur.mid",
+    "https://www.cantiquest.org/SST/SST_193-polyinstru-Tu_m_appartiens_Jesus_mon_Sauveur.mid"
+  ],
+  "2_18": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_018-mono-piano-Vers_toi_monte_notre_hommage.mid",
+    "https://www.cantiquest.org/CV/CV_018-polyinstru-Vers_toi_monte_notre_hommage.mid",
+    "https://www.cantiquest.org/VAM/VaM_259-mono-piano-Vers_toi_monte_notre_hommage.mid",
+    "https://www.cantiquest.org/VAM/VaM_259-polyinstru-Vers_toi_monte_notre_hommage.mid"
+  ],
   "2_180": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_180-La_voix_du_Seigneur_m_appelle_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_180-La_voix_du_Seigneur_m_appelle_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_180-mono-piano-La_voix_du_Seigneur_m_appelle.mid",
     "https://www.cantiquest.org/CV/CV_180-polyinstru-La_voix_du_Seigneur_m_appelle.mid"
+  ],
+  "2_183": [
+    "https://www.cantiquest.org/CGG/CGG1_128-mono-piano-Mon_ame_est_heureuse_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_128-polyinstru-Mon_ame_est_heureuse_midkar.mid"
   ],
   "2_184": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_184-Viens_mon_ame_te_reclame_mono-piano.mp3",
@@ -323,6 +759,14 @@
     "https://www.cantiquest.org/CV/CV_188-mono-piano-Plus_que_vainqueurs.mid",
     "https://www.cantiquest.org/CV/CV_188-polyinstru-Plus_que_vainqueurs.mid"
   ],
+  "2_19": [
+    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
+    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid"
+  ],
+  "2_191": [
+    "https://www.cantiquest.org/CV/CV_191-mono-piano-Jusqu_a_ta_venue.mid",
+    "https://www.cantiquest.org/CV/CV_191-polyinstru-Jusqu_a_ta_venue.mid"
+  ],
   "2_193": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_193-Le_signal_de_la_victoire_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_193-Le_signal_de_la_victoire_polyinstru.mp3",
@@ -337,6 +781,20 @@
     "https://www.cantiquest.org/CV/CV_194-mono-piano-Sans_attendre.mid",
     "https://www.cantiquest.org/CV/CV_194-polyinstru-Sans_attendre.mid"
   ],
+  "2_197": [
+    "https://www.cantiquest.org/HeC/HeC_122-mono-piano-Tes_saints_dans_la_lutte.mid",
+    "https://www.cantiquest.org/HeC/HeC_122-polyinstru-Tes_saints_dans_la_lutte.mid"
+  ],
+  "2_2": [
+    "https://www.cantiquest.org/VAM/VaM_244-mono-piano-Je_chanterai_Seigneur.mid",
+    "https://www.cantiquest.org/VAM/VaM_244-polyinstru-Je_chanterai_Seigneur.mid"
+  ],
+  "2_20": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_020-mono-piano-Oh_quel_bonheur_de_le_connaitre.mid",
+    "https://www.cantiquest.org/CV/CV_020-polyinstru-Oh_quel_bonheur_de_le_connaitre.mid"
+  ],
   "2_200": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_200-Veille_toujours_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_200-Veille_toujours_polyinstru.mp3",
@@ -349,6 +807,10 @@
     "https://www.cantiquest.org/CV/CV_201-mono-piano-A_celui_qui_sera_vainqueur.mid",
     "https://www.cantiquest.org/CV/CV_201-polyinstru-A_celui_qui_sera_vainqueur.mid"
   ],
+  "2_202": [
+    "https://www.cantiquest.org/CV/CV_202-mono-piano-Vous_qui_gardez_les_murs.mid",
+    "https://www.cantiquest.org/CV/CV_202-polyinstru-Vous_qui_gardez_les_murs.mid"
+  ],
   "2_203": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_203-Sentinelle_vigilante_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_203-Sentinelle_vigilante_polyinstru.mp3",
@@ -357,11 +819,23 @@
     "https://www.cantiquest.org/VAM/VAM_029-mono-piano-Sentinelle_vigilante.mid",
     "https://www.cantiquest.org/VAM/VAM_029-polyinstru-Sentinelle_vigilante.mid"
   ],
+  "2_204": [
+    "https://www.cantiquest.org/CV/CV_204a-mono-piano-Debout_sainte_cohorte.mid",
+    "https://www.cantiquest.org/CV/CV_204a-polyinstru-Debout_sainte_cohorte.mid"
+  ],
+  "2_204a": [
+    "https://www.cantiquest.org/CV/CV_204a-mono-piano-Debout_sainte_cohorte.mid",
+    "https://www.cantiquest.org/CV/CV_204a-polyinstru-Debout_sainte_cohorte.mid"
+  ],
   "2_205": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_205-Travaillons_et_luttons_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_205-Travaillons_et_luttons_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_205-mono-piano-Travaillons_et_luttons.mid",
     "https://www.cantiquest.org/CV/CV_205-polyinstru-Travaillons_et_luttons.mid"
+  ],
+  "2_206": [
+    "https://www.cantiquest.org/HeC/HeC_264-mono-piano-Viens_ame_qui_pleure.mid",
+    "https://www.cantiquest.org/HeC/HeC_264-polyinstru-Viens_ame_qui_pleure.mid"
   ],
   "2_207": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_207-Maitre_entends-tu_la_tempete_mono-piano.mp3",
@@ -378,6 +852,10 @@
     "https://www.cantiquest.org/CV/CV_208-polyinstru-Compte_les_bienfaits_de_Dieu.mid",
     "https://www.cantiquest.org/VAM/VaM_226-mono-piano-Quand_le_vol_de_la_tempete.mid",
     "https://www.cantiquest.org/VAM/VaM_226-polyinstru-Quand_le_vol_de_la_tempete.mid"
+  ],
+  "2_21": [
+    "https://www.cantiquest.org/SST/SST_436-mono-piano-Nous_T_adorons_Dieu_notre_Pere.mid",
+    "https://www.cantiquest.org/SST/SST_436-polyinstru-Nous_T_adorons_Dieu_notre_Pere.mid"
   ],
   "2_210": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_210-Une_nacelle_en_silence_mono-piano.mp3",
@@ -401,11 +879,27 @@
     "https://www.cantiquest.org/CV/CV_213-mono-piano-Invoque-moi.mid",
     "https://www.cantiquest.org/CV/CV_213-polyinstru-Invoque-moi.mid"
   ],
+  "2_214a": [
+    "https://www.cantiquest.org/HeC/HeC_210-mono-piano-Reste_avec_nous_Seigneur.mid",
+    "https://www.cantiquest.org/HeC/HeC_210-polyinstru-Reste_avec_nous_Seigneur.mid"
+  ],
+  "2_215": [
+    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
+    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
+  ],
+  "2_215a": [
+    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
+    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
+  ],
   "2_219": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_219-Dans_ce_triste_monde_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_219-Dans_ce_triste_monde_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_219-mono-piano-Dans_ce_triste_monde.mid",
     "https://www.cantiquest.org/CV/CV_219-polyinstru-Dans_ce_triste_monde.mid"
+  ],
+  "2_22": [
+    "https://www.cantiquest.org/CV/CV_022-mono-piano-Je_l_ai_trouve_le_bonheur_ineffable.mid",
+    "https://www.cantiquest.org/CV/CV_022-polyinstru-Je_l_ai_trouve_le_bonheur_ineffable.mid"
   ],
   "2_221": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_221-Tiens_dans_ta_main_mono-piano.mp3",
@@ -443,6 +937,14 @@
     "https://www.cantiquest.org/VAM/VaM_067-mono-piano-Ne_crains_point_je_t_aime.mid",
     "https://www.cantiquest.org/VAM/VaM_067-polyinstru-Ne_crains_point_je_t_aime.mid"
   ],
+  "2_229": [
+    "https://www.cantiquest.org/HeC/HeC_103-mono-piano-Jamais_Dieu_ne_delaisse.mid",
+    "https://www.cantiquest.org/HeC/HeC_103-polyinstru-Jamais_Dieu_ne_delaisse.mid"
+  ],
+  "2_22a": [
+    "https://www.cantiquest.org/VAM/VaM_016-mono-piano-Entends-tu_le_chant_joyeux.mid",
+    "https://www.cantiquest.org/VAM/VaM_016-polyinstru-Entends-tu_le_chant_joyeux.mid"
+  ],
   "2_230": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_230-Un_chretien_je_croyait_etre_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_230-Un_chretien_je_croyait_etre_polyinstru.mp3",
@@ -450,6 +952,20 @@
     "https://www.cantiquest.org/CV/CV_230-polyinstru-Un_chretien_je_croyait_etre.mid",
     "https://www.cantiquest.org/VAM/VaM_132-mono-piano-Un_chretien_je_croyais_etre.mid",
     "https://www.cantiquest.org/VAM/VaM_132-polyinstru-Un_chretien_je_croyais_etre.mid"
+  ],
+  "2_231": [
+    "https://www.cantiquest.org/VAM/VaM_098-mono-piano-Non_rien_en_ma_personne.mid",
+    "https://www.cantiquest.org/VAM/VaM_098-polyinstru-Non_rien_en_ma_personne.mid"
+  ],
+  "2_232": [
+    "https://www.cantiquest.org/VAM/VaM_205-mono-piano-Quand_je_craindrais_sur_la_route.mid",
+    "https://www.cantiquest.org/VAM/VaM_205-polyinstru-Quand_je_craindrais_sur_la_route.mid"
+  ],
+  "2_233": [
+    "https://www.cantiquest.org/CV/CV_233-mono-piano-Je_sais.mid",
+    "https://www.cantiquest.org/CV/CV_233-polyinstru-Je_sais.mid",
+    "https://www.cantiquest.org/VAM/VaM_140-mono-piano-Je_sais.mid",
+    "https://www.cantiquest.org/VAM/VaM_140-polyinstru-Je_sais.mid"
   ],
   "2_234": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_234-Quel_ami_fidele_et_tendre_mono-piano.mp3",
@@ -477,9 +993,19 @@
     "https://www.cantiquest.org/CV/CV_237-mono-piano-Aux_jours_d_angoisse_et_de_souffrance.mid",
     "https://www.cantiquest.org/CV/CV_237-polyinstru-Aux_jours_d_angoisse_et_de_souffrance.mid"
   ],
+  "2_238": [
+    "https://www.cantiquest.org/CV/CV_238-mono-piano-Oui_selon_ta_promesse.mid",
+    "https://www.cantiquest.org/CV/CV_238-polyinstru-Oui_selon_ta_promesse.mid"
+  ],
   "2_238a": [
     "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
     "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
+  ],
+  "2_24": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_024-mono-piano-Par_tous_les_saints_glorifie.mid",
+    "https://www.cantiquest.org/CV/CV_024-polyinstru-Par_tous_les_saints_glorifie.mid"
   ],
   "2_240": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_240-Un_seul_pas_a_la_fois_mono-piano.mp3",
@@ -495,11 +1021,19 @@
     "https://www.cantiquest.org/CV/CV_241-mono-piano-Saisis_ma_main_craintive.mid",
     "https://www.cantiquest.org/CV/CV_241-polyinstru-Saisis_ma_main_craintive.mid"
   ],
+  "2_242": [
+    "https://www.cantiquest.org/VAM/VaM_092-mono-piano-Mon_salut_ma_nourriture.mid",
+    "https://www.cantiquest.org/VAM/VaM_092-polyinstru-Mon_salut_ma_nourriture.mid"
+  ],
   "2_243": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_243-Quel_repos_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_243-Quel_repos_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_243-mono-piano-Quel_repos.mid",
     "https://www.cantiquest.org/CV/CV_243-polyinstru-Quel_repos.mid"
+  ],
+  "2_245": [
+    "https://www.cantiquest.org/HeC/HeC_248-mono-piano-Mon_Dieu_plus_pres_de_toi.mid",
+    "https://www.cantiquest.org/HeC/HeC_248-polyinstru-Mon_Dieu_plus_pres_de_toi.mid"
   ],
   "2_246": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_246-A_lombre_de_tes_ailes_mono-piano.mp3",
@@ -535,6 +1069,10 @@
     "https://www.cantiquest.org/VAM/VaM_273-mono-piano-Voir_mon_Sauveur_face_a_face.mid",
     "https://www.cantiquest.org/VAM/VaM_273-polyinstru-Voir_mon_Sauveur_face_a_face.mid"
   ],
+  "2_253": [
+    "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
+    "https://www.cantiquest.org/CV/CV_253-polyinstru-La_trompette_a_retenti.mid"
+  ],
   "2_254": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_254-Il_va_venir_le_Seigneur_que_jadore_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_254-Il_va_venir_le_Seigneur_que_jadore_polyinstru.mp3",
@@ -543,9 +1081,23 @@
     "https://www.cantiquest.org/VAM/VaM_270-mono-piano-Il_va_venir_le_Seigneur_que_jadore.mid",
     "https://www.cantiquest.org/VAM/VaM_270-polyinstru-Il_va_venir_le_Seigneur_que_jadore.mid"
   ],
+  "2_255": [
+    "https://www.cantiquest.org/HeC/HeC_125-mono-piano-Or_vers_minuit_se_fit_entendre.mid",
+    "https://www.cantiquest.org/HeC/HeC_125-polyinstru-Or_vers_minuit_se_fit_entendre.mid"
+  ],
+  "2_257": [
+    "https://www.cantiquest.org/CV/CV_257-mono-piano-Je_ne_sais_pas_le_jour.mid",
+    "https://www.cantiquest.org/CV/CV_257-polyinstru-Je_ne_sais_pas_le_jour.mid"
+  ],
   "2_257a": [
     "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
     "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
+  ],
+  "2_26": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_026-mono-piano-Les_rayons_de_l_amour_divin.mid",
+    "https://www.cantiquest.org/CV/CV_026-polyinstru-Les_rayons_de_l_amour_divin.mid"
   ],
   "2_261": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_261-Nombreux_comme_le_sable_mono-piano.mp3",
@@ -579,6 +1131,18 @@
     "https://www.cantiquest.org/VAM/VaM_102-mono-piano-Pelerin_sur_cette_terre.mid",
     "https://www.cantiquest.org/VAM/VaM_102-polyinstru-Pelerin_sur_cette_terre.mid"
   ],
+  "2_269": [
+    "https://www.cantiquest.org/CV/CV_274-mono-piano-Au_ciel_est_la_maison_du_Pere.mid",
+    "https://www.cantiquest.org/CV/CV_274-polyinstru-Au_ciel_est_la_maison_du_Pere.mid"
+  ],
+  "2_27": [
+    "https://www.cantiquest.org/HeC/HeC_134-mono-piano-Etre_a_tes_pieds_comme_Marie.mid",
+    "https://www.cantiquest.org/HeC/HeC_134-polyinstru-Etre_a_tes_pieds_comme_Marie.mid"
+  ],
+  "2_272": [
+    "https://www.cantiquest.org/CV/CV_272-mono-piano-Connais_tu_cette_cite-soprano.mid",
+    "https://www.cantiquest.org/CV/CV_272-polyinstru-Connais_tu_cette_cite-soprano.mid"
+  ],
   "2_273": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_273-Contempler_mon_Dieu_sur_son_trone_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_273-Contempler_mon_Dieu_sur_son_trone_polyinstru.mp3",
@@ -597,6 +1161,10 @@
     "https://www.cantiquest.org/CV/CV_275-mono-piano-Nous_attendons_le_Sauveur_glorieux.mid",
     "https://www.cantiquest.org/CV/CV_275-polyinstru-Nous_attendons_le_Sauveur_glorieux.mid"
   ],
+  "2_277": [
+    "https://www.cantiquest.org/HeC/HeC_102-mono-piano-Avancons_nous_joyeux.mid",
+    "https://www.cantiquest.org/HeC/HeC_102-polyinstru-Avancons_nous_joyeux.mid"
+  ],
   "2_279": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_279-Beni_soit_le_lien_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_279-Beni_soit_le_lien_polyinstru.mp3",
@@ -604,6 +1172,12 @@
     "https://www.cantiquest.org/CV/CV_279-polyinstru-Beni_soit_le_lien.mid",
     "https://www.cantiquest.org/VAM/VaM_184-mono-piano-Beni_soit_le_lien.mid",
     "https://www.cantiquest.org/VAM/VaM_184-polyinstru-Beni_soit_le_lien.mid"
+  ],
+  "2_28": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_028-mono-piano-Oh_que_toute_la_terre_entonne.mid",
+    "https://www.cantiquest.org/CV/CV_028-polyinstru-Oh_que_toute_la_terre_entonne.mid"
   ],
   "2_283": [
     "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
@@ -625,11 +1199,21 @@
     "https://www.cantiquest.org/CV/CV_288-mono-piano-Le_Chant_du_Reveil.mid",
     "https://www.cantiquest.org/CV/CV_288-polyinstru-Le_Chant_du_Reveil.mid"
   ],
+  "2_29": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_029-Redempteur_adorable_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_029-Redempteur_adorable_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_029-mono-piano-Redempteur_adorable.mid",
+    "https://www.cantiquest.org/CV/CV_029-polyinstru-Redempteur_adorable.mid"
+  ],
   "2_290": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_290-Christ_est_ma_portion_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_290-Christ_est_ma_portion_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_290-mono-piano-Christ_est_ma_portion.mid",
     "https://www.cantiquest.org/CV/CV_290-polyinstru-Christ_est_ma_portion.mid"
+  ],
+  "2_291": [
+    "https://www.cantiquest.org/SST/SST_328-mono-piano-Seigneur_Jesus_ton_amour_reste.mid",
+    "https://www.cantiquest.org/SST/SST_328-polyinstru-Seigneur_Jesus_ton_amour_reste.mid"
   ],
   "2_292": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_292-Suivez_l_Agneau_mono-piano.mp3",
@@ -669,6 +1253,14 @@
     "https://www.cantiquest.org/CV/CV_299-mono-piano-Je_suis_la_lumiere.mid",
     "https://www.cantiquest.org/CV/CV_299-polyinstru-Je_suis_la_lumiere.mid"
   ],
+  "2_30": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_030-mono-piano-Ma_richesse_ma_gloire.mid",
+    "https://www.cantiquest.org/CV/CV_030-polyinstru-Ma_richesse_ma_gloire.mid",
+    "https://www.cantiquest.org/VAM/VaM_043-mono-piano-Ma_richesse_ma_gloire.mid",
+    "https://www.cantiquest.org/VAM/VaM_043-polyinstru-Ma_richesse_ma_gloire.mid"
+  ],
   "2_301": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_301-Bon_Sauveur_berger_fidele_mono-piano.mp3",
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_301-Bon_Sauveur_berger_fidele_polyinstru.mp3",
@@ -698,6 +1290,10 @@
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_305-Rayon_de_soleil_polyinstru.mp3",
     "https://www.cantiquest.org/CV/CV_305-mono-piano-Rayon_de_soleil.mid",
     "https://www.cantiquest.org/CV/CV_305-polyinstru-Rayon_de_soleil.mid"
+  ],
+  "2_306": [
+    "https://www.cantiquest.org/CV/CV_306-mono-piano-Chaque_jour_de_ma_vie.mid",
+    "https://www.cantiquest.org/CV/CV_306-polyinstru-Chaque_jour_de_ma_vie.mid"
   ],
   "2_307": [
     "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_307-Il_est_un_pays_magnifique_mono-piano.mp3",
@@ -733,13 +1329,42 @@
     "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid",
     "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid"
   ],
+  "2_31a": [
+    "https://www.cantiquest.org/VAM/VaM_033-mono-piano-Portant_sa_croix.mid",
+    "https://www.cantiquest.org/VAM/VaM_033-polyinstru-Portant_sa_croix.mid"
+  ],
   "2_325": [
     "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
     "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
   ],
+  "2_33a": [
+    "https://www.cantiquest.org/HeC/HeC_050-mono-piano-Jesus_est_notre_ami_supreme.mid",
+    "https://www.cantiquest.org/HeC/HeC_050-polyinstru-Jesus_est_notre_ami_supreme.mid"
+  ],
+  "2_33b": [
+    "https://www.cantiquest.org/HeC/HeC_094-mono-piano-L_amour_eternel_insondable.mid",
+    "https://www.cantiquest.org/HeC/HeC_094-polyinstru-L_amour_eternel_insondable.mid"
+  ],
+  "2_34": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_034-Ah_si_ton_sang_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_034-mono-piano-Ah_si_ton_sang.mid",
+    "https://www.cantiquest.org/CV/CV_034-polyinstru-Ah_si_ton_sang.mid",
+    "https://www.cantiquest.org/VAM/VaM_105-mono-piano-Ah_si_ton_sang.mid",
+    "https://www.cantiquest.org/VAM/VaM_105-polyinstru-Ah_si_ton_sang.mid"
+  ],
+  "2_37": [
+    "https://www.cantiquest.org/HeC/HeC_265-mono-piano-Dans_les_cieux_et_sur_la_terre.mid",
+    "https://www.cantiquest.org/HeC/HeC_265-polyinstru-Dans_les_cieux_et_sur_la_terre.mid"
+  ],
   "2_378": [
     "https://www.cantiquest.org/HeC/HeC_110-mono-piano-De_Canaan_quand_verrons_nous.mid",
     "https://www.cantiquest.org/HeC/HeC_110-polyinstru-De_Canaan_quand_verrons_nous.mid"
+  ],
+  "2_38": [
+    "https://www.cantiquest.org/CV/CV_042-mono-piano-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/CV/CV_042-polyinstru-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_011-mono-piano-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_011-polyinstru-Agneau_de_Dieu.mid"
   ],
   "2_389a": [
     "https://www.cantiquest.org/CV/CV_254-mono-piano-Il_va_venir_le_Seigneur_que_jadore.mid",
@@ -749,75 +1374,135 @@
     "https://www.cantiquest.org/HeC/HeC_109-mono-piano-L_Eglise_est_etrangere.mid",
     "https://www.cantiquest.org/HeC/HeC_109-polyinstru-L_Eglise_est_etrangere.mid"
   ],
-  "2_450": [
-    "https://www.cantiquest.org/CJ/CJ_218-mono-piano-Espere_en_Dieu.mid",
-    "https://www.cantiquest.org/CJ/CJ_218-polyinstru-Espere_en_Dieu.mid"
+  "2_4": [
+    "https://www.cantiquest.org/CGG/CGG1_109-mono-piano-Je_veux_chanter_la_grace.mid",
+    "https://www.cantiquest.org/CGG/CGG1_109-polyinstru-Je_veux_chanter_la_grace.mid",
+    "https://www.cantiquest.org/CV/CV_112-mono-piano-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
+    "https://www.cantiquest.org/CV/CV_112-polyinstru-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid"
   ],
-  "2_466": [
-    "https://www.cantiquest.org/CJ/CJ_152-mono-piano-Deux_mains_pour_servir.mid",
-    "https://www.cantiquest.org/CJ/CJ_152-polyinstru-Deux_mains_pour_servir.mid"
-  ],
-  "2_566a": [
-    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
-    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid"
-  ],
-  "2_639": [
-    "https://www.cantiquest.org/CV/CV_208-mono-piano-Compte_les_bienfaits_de_Dieu.mid",
-    "https://www.cantiquest.org/CV/CV_208-polyinstru-Compte_les_bienfaits_de_Dieu.mid"
-  ],
-  "2_640": [
-    "https://www.cantiquest.org/CV/CV_234-mono-piano-Quel_ami_fidele_et_tendre.mid",
-    "https://www.cantiquest.org/CV/CV_234-polyinstru-Quel_ami_fidele_et_tendre.mid"
-  ],
-  "2_22a": [
-    "https://www.cantiquest.org/VAM/VaM_016-mono-piano-Entends-tu_le_chant_joyeux.mid",
-    "https://www.cantiquest.org/VAM/VaM_016-polyinstru-Entends-tu_le_chant_joyeux.mid"
-  ],
-  "2_102": [
-    "https://www.cantiquest.org/CV/CV_102-mono-piano-Viens_au_Pere.mid",
-    "https://www.cantiquest.org/CV/CV_102-polyinstru-Viens_au_Pere.mid",
-    "https://www.cantiquest.org/VAM/VaM_005-mono-piano-Viens_au_Pere.mid",
-    "https://www.cantiquest.org/VAM/VaM_005-polyinstru-Viens_au_Pere.mid"
-  ],
-  "2_110": [
-    "https://www.cantiquest.org/VAM/VaM_075-mono-piano-L_Eternel_est_mon_Berger.mid",
-    "https://www.cantiquest.org/VAM/VaM_075-polyinstru-L_Eternel_est_mon_Berger.mid"
-  ],
-  "2_147": [
-    "https://www.cantiquest.org/CV/CV_147a-mono-piano-Jesus_ta_sainte_presence.mid",
-    "https://www.cantiquest.org/CV/CV_147a-polyinstru-Jesus_ta_sainte_presence.mid"
-  ],
-  "2_149": [
-    "https://www.cantiquest.org/CV/CV_149a-mono-piano-Toi_qui_disposes.mid",
-    "https://www.cantiquest.org/CV/CV_149a-polyinstru-Toi_qui_disposes.mid"
-  ],
-  "2_172": [
-    "https://www.cantiquest.org/CV/CV_172a-mono-piano-Entre_tes_mains_j_abandonne.mid",
-    "https://www.cantiquest.org/CV/CV_172a-polyinstru-Entre_tes_mains_j_abandonne.mid"
-  ],
-  "2_204": [
-    "https://www.cantiquest.org/CV/CV_204a-mono-piano-Debout_sainte_cohorte.mid",
-    "https://www.cantiquest.org/CV/CV_204a-polyinstru-Debout_sainte_cohorte.mid"
-  ],
-  "2_215": [
-    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
-    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
+  "2_40": [
+    "https://www.cantiquest.org/HeC/HeC_151-mono-piano-Tu_m_as_aime_Seigneur.mid",
+    "https://www.cantiquest.org/HeC/HeC_151-polyinstru-Tu_m_as_aime_Seigneur.mid"
   ],
   "2_401": [
     "https://www.cantiquest.org/VAM/VaM_093-mono-piano-Christ_est_mon_rocher.mid",
     "https://www.cantiquest.org/VAM/VaM_093-polyinstru-Christ_est_mon_rocher.mid"
   ],
+  "2_41": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_polyinstru.mp3",
+    "https://www.cantiquest.org/CGG/CGG1_030-mono-piano-Roi_couvert_de_blessures.mid",
+    "https://www.cantiquest.org/CGG/CGG1_030-polyinstru-Roi_couvert_de_blessures.mid",
+    "https://www.cantiquest.org/CV/CV_041-mono-piano-Roi_couvert_de_blessures.mid",
+    "https://www.cantiquest.org/CV/CV_041-polyinstru-Roi_couvert_de_blessures.mid"
+  ],
+  "2_42": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_042-Agneau_de_Dieu_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_042-Agneau_de_Dieu_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_042-mono-piano-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/CV/CV_042-polyinstru-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_011-mono-piano-Agneau_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_011-polyinstru-Agneau_de_Dieu.mid"
+  ],
+  "2_43": [
+    "https://www.cantiquest.org/CV/CV_043-mono-piano-Jesus_Christ_est_ma_sagesse.mid",
+    "https://www.cantiquest.org/CV/CV_043-polyinstru-Jesus_Christ_est_ma_sagesse.mid",
+    "https://www.cantiquest.org/VAM/VaM_153-mono-piano-Jesus_Christ_est_ma_sagesse.mid",
+    "https://www.cantiquest.org/VAM/VaM_153-polyinstru-Jesus_Christ_est_ma_sagesse.mid"
+  ],
+  "2_44": [
+    "https://www.cantiquest.org/CV/CV_006-mono-piano-A_Dieu_soit_la_gloire.mid",
+    "https://www.cantiquest.org/CV/CV_006-polyinstru-A_Dieu_soit_la_gloire.mid"
+  ],
+  "2_450": [
+    "https://www.cantiquest.org/CJ/CJ_218-mono-piano-Espere_en_Dieu.mid",
+    "https://www.cantiquest.org/CJ/CJ_218-polyinstru-Espere_en_Dieu.mid"
+  ],
+  "2_45a": [
+    "https://www.cantiquest.org/CV/CV_045a-mono-piano-Venez_contempler_au_Calvaire.mid",
+    "https://www.cantiquest.org/CV/CV_045a-polyinstru-Venez_contempler_au_Calvaire.mid"
+  ],
+  "2_46": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_046-Viens_mon_ame_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_046-Viens_mon_ame_polyinstru.mp3",
+    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
+    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid",
+    "https://www.cantiquest.org/CV/CV_046-mono-piano-Viens_mon_ame.mid",
+    "https://www.cantiquest.org/CV/CV_046-polyinstru-Viens_mon_ame.mid"
+  ],
+  "2_466": [
+    "https://www.cantiquest.org/CJ/CJ_152-mono-piano-Deux_mains_pour_servir.mid",
+    "https://www.cantiquest.org/CJ/CJ_152-polyinstru-Deux_mains_pour_servir.mid"
+  ],
+  "2_47": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_047-C_est_toi_Jesus_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_047-C_est_toi_Jesus_polyinstru.mp3",
+    "https://www.cantiquest.org/CGG/CGG1_045-mono-piano-C_est_toi_Jesus_pain_de_vie.mid",
+    "https://www.cantiquest.org/CGG/CGG1_045-polyinstru-C_est_toi_Jesus_pain_de_vie.mid",
+    "https://www.cantiquest.org/CV/CV_047-mono-piano-C_est_toi_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_047-polyinstru-C_est_toi_Jesus.mid",
+    "https://www.cantiquest.org/VAM/VaM_085-mono-piano-C_est_toi_Jesus_Pain_de_vie.mid",
+    "https://www.cantiquest.org/VAM/VaM_085-polyinstru-C_est_toi_Jesus_Pain_de_vie.mid"
+  ],
   "2_478": [
     "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid",
     "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid"
+  ],
+  "2_49": [
+    "https://www.cantiquest.org/HeC/HeC_040-mono-piano-Cest_toi_Jesus.mid",
+    "https://www.cantiquest.org/HeC/HeC_040-polyinstru-Cest_toi_Jesus.mid"
+  ],
+  "2_5": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_005-Jesus_Jesus_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_005-Jesus_Jesus_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid"
   ],
   "2_523": [
     "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid",
     "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid"
   ],
+  "2_54": [
+    "https://www.cantiquest.org/HeC/HeC_257-mono-piano-Entends_tu_Jesus_tappelle.mid",
+    "https://www.cantiquest.org/HeC/HeC_257-polyinstru-Entends_tu_Jesus_tappelle.mid"
+  ],
+  "2_56": [
+    "https://www.cantiquest.org/CJ/CJ_254-mono-piano-Dans_mon_ame_un_beau_soleil_brille.mid",
+    "https://www.cantiquest.org/CJ/CJ_254-polyinstru-Dans_mon_ame_un_beau_soleil_brille.mid"
+  ],
+  "2_566a": [
+    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
+    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid"
+  ],
+  "2_56b": [
+    "https://www.cantiquest.org/HeC/HeC_050-mono-piano-Jesus_est_notre_ami_supreme.mid",
+    "https://www.cantiquest.org/HeC/HeC_050-polyinstru-Jesus_est_notre_ami_supreme.mid"
+  ],
+  "2_57": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_057-Viens_a_la_croix_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_057-Viens_a_la_croix_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
+    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid",
+    "https://www.cantiquest.org/CV/CV_090-mono-piano-Viens_ame_perdue.mid",
+    "https://www.cantiquest.org/CV/CV_090-polyinstru-Viens_ame_perdue.mid"
+  ],
   "2_585": [
     "https://www.cantiquest.org/VAM/VaM_266-mono-piano-L_appel_supreme.mid",
     "https://www.cantiquest.org/VAM/VaM_266-polyinstru-L_appel_supreme.mid"
+  ],
+  "2_6": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_006-mono-piano-A_Dieu_soit_la_gloire.mid",
+    "https://www.cantiquest.org/CV/CV_006-polyinstru-A_Dieu_soit_la_gloire.mid"
+  ],
+  "2_60": [
+    "https://www.cantiquest.org/HeC/HeC_252-mono-piano-O_vous_qui_n_avez_pas_la_paix.mid",
+    "https://www.cantiquest.org/HeC/HeC_252-polyinstru-O_vous_qui_n_avez_pas_la_paix.mid"
+  ],
+  "2_61": [
+    "https://www.cantiquest.org/HeC/HeC_254-mono-piano-Jesus_est_la_qui_tappelle.mid",
+    "https://www.cantiquest.org/HeC/HeC_254-polyinstru-Jesus_est_la_qui_tappelle.mid"
   ],
   "2_614": [
     "https://www.cantiquest.org/VAM/VaM_095-mono-piano-Dieu_voit_ma_vie_entiere.mid",
@@ -831,241 +1516,19 @@
     "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
     "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
   ],
-  "1_4": [
-    "https://www.cantiquest.org/CV/CV_112-mono-piano-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
-    "https://www.cantiquest.org/CV/CV_112-polyinstru-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid"
-  ],
-  "1_19": [
-    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
-    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid"
-  ],
-  "1_22a": [
-    "https://www.cantiquest.org/CGG/CGG1_096-mono-piano-Entends_tu_le_chant_joyeux_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_096-polyinstru-Entends_tu_le_chant_joyeux_midkar.mid",
-    "https://www.cantiquest.org/VAM/VaM_016-mono-piano-Entends-tu_le_chant_joyeux.mid",
-    "https://www.cantiquest.org/VAM/VaM_016-polyinstru-Entends-tu_le_chant_joyeux.mid"
-  ],
-  "1_46": [
-    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
-    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid"
-  ],
-  "1_56": [
-    "https://www.cantiquest.org/CJ/CJ_254-mono-piano-Dans_mon_ame_un_beau_soleil_brille.mid",
-    "https://www.cantiquest.org/CJ/CJ_254-polyinstru-Dans_mon_ame_un_beau_soleil_brille.mid"
-  ],
-  "1_71a": [
-    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
-  ],
-  "1_110": [
-    "https://www.cantiquest.org/VAM/VaM_075-mono-piano-L_Eternel_est_mon_Berger.mid",
-    "https://www.cantiquest.org/VAM/VaM_075-polyinstru-L_Eternel_est_mon_Berger.mid"
-  ],
-  "1_148": [
-    "https://www.cantiquest.org/HeC/HeC_235-mono-piano-Jour_apres_jour_Seigneur.mid",
-    "https://www.cantiquest.org/HeC/HeC_235-polyinstru-Jour_apres_jour_Seigneur.mid"
-  ],
-  "1_156a": [
-    "https://www.cantiquest.org/CGG/CGG1_083-mono-piano-La_croix_du_Calvaire.mid",
-    "https://www.cantiquest.org/CGG/CGG1_083-polyinstru-La_croix_du_Calvaire.mid"
-  ],
-  "1_167a": [
-    "https://www.cantiquest.org/CV/CV_148-mono-piano-Jesus_est_au_milieu_de_nous.mid",
-    "https://www.cantiquest.org/CV/CV_148-polyinstru-Jesus_est_au_milieu_de_nous.mid"
-  ],
-  "1_184": [
-    "https://www.cantiquest.org/CV/CV_279-mono-piano-Beni_soit_le_lien.mid",
-    "https://www.cantiquest.org/CV/CV_279-polyinstru-Beni_soit_le_lien.mid"
-  ],
-  "1_193": [
-    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
-    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
-  ],
-  "1_210": [
-    "https://www.cantiquest.org/HeC/HeC_005-mono-piano-O_Dieu_dont_l_amour_nous_rassemble.mid",
-    "https://www.cantiquest.org/HeC/HeC_005-polyinstru-O_Dieu_dont_l_amour_nous_rassemble.mid",
-    "https://www.cantiquest.org/HeC/HeC_024-mono-piano-Agneau_Victime_expiatoire.mid",
-    "https://www.cantiquest.org/HeC/HeC_024-polyinstru-Agneau_Victime_expiatoire.mid"
-  ],
-  "1_224": [
-    "https://www.cantiquest.org/CGG/CGG1_242-mono-piano-Par_la_foi_nous_marcherons_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_242-polyinstru-Par_la_foi_nous_marcherons_midkar.mid"
-  ],
-  "1_235": [
-    "https://www.cantiquest.org/CGG/CGG1_287-mono-piano-Nous_allons_bon_pas.mid",
-    "https://www.cantiquest.org/CGG/CGG1_287-polyinstru-Nous_allons_bon_pas.mid"
-  ],
-  "1_238a": [
-    "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
-    "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
-  ],
-  "1_249": [
-    "https://www.cantiquest.org/VAM/VaM_155-mono-piano-Un_Sauveur_merveilleux.mid",
-    "https://www.cantiquest.org/VAM/VaM_155-polyinstru-Un_Sauveur_merveilleux.mid"
-  ],
-  "1_250": [
-    "https://www.cantiquest.org/CV/CV_180-mono-piano-La_voix_du_Seigneur_m_appelle.mid",
-    "https://www.cantiquest.org/CV/CV_180-polyinstru-La_voix_du_Seigneur_m_appelle.mid"
-  ],
-  "1_257a": [
-    "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
-    "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
-  ],
-  "1_267": [
-    "https://www.cantiquest.org/CGG/CGG1_172-mono-piano-Oh_prends_mon_ame.mid",
-    "https://www.cantiquest.org/CGG/CGG1_172-polyinstru-Oh_prends_mon_ame.mid"
-  ],
-  "1_283": [
-    "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
-    "https://www.cantiquest.org/CV/CV_253-polyinstru-La_trompette_a_retenti.mid"
-  ],
-  "1_303": [
-    "https://www.cantiquest.org/CGG/CGG1_259-mono-piano-Flots_mugissants.mid",
-    "https://www.cantiquest.org/CGG/CGG1_259-polyinstru-Flots_mugissants.mid",
-    "https://www.cantiquest.org/VAM/VaM_227-mono-piano-Flots_mugissants.mid",
-    "https://www.cantiquest.org/VAM/VaM_227-polyinstru-Flots_mugissants.mid"
-  ],
-  "1_317": [
-    "https://www.cantiquest.org/CV/CV_261-mono-piano-Nombreux_comme_le_sable.mid",
-    "https://www.cantiquest.org/CV/CV_261-polyinstru-Nombreux_comme_le_sable.mid"
-  ],
-  "1_319": [
-    "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid",
-    "https://www.cantiquest.org/VAM/VaM_148-mono-piano-Mon_Sauveur_m_aime.mid",
-    "https://www.cantiquest.org/VAM/VaM_148-polyinstru-Mon_Sauveur_m_aime.mid"
-  ],
-  "1_324": [
-    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
-    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
-  ],
-  "1_389a": [
-    "https://www.cantiquest.org/CV/CV_254-mono-piano-Il_va_venir_le_Seigneur_que_jadore.mid",
-    "https://www.cantiquest.org/CV/CV_254-polyinstru-Il_va_venir_le_Seigneur_que_jadore.mid"
-  ],
-  "1_391": [
-    "https://www.cantiquest.org/HeC/HeC_109-mono-piano-L_Eglise_est_etrangere.mid",
-    "https://www.cantiquest.org/HeC/HeC_109-polyinstru-L_Eglise_est_etrangere.mid"
-  ],
-  "1_401": [
-    "https://www.cantiquest.org/VAM/VaM_093-mono-piano-Christ_est_mon_rocher.mid",
-    "https://www.cantiquest.org/VAM/VaM_093-polyinstru-Christ_est_mon_rocher.mid"
-  ],
-  "1_450": [
-    "https://www.cantiquest.org/CJ/CJ_218-mono-piano-Espere_en_Dieu.mid",
-    "https://www.cantiquest.org/CJ/CJ_218-polyinstru-Espere_en_Dieu.mid"
-  ],
-  "1_466": [
-    "https://www.cantiquest.org/CJ/CJ_152-mono-piano-Deux_mains_pour_servir.mid",
-    "https://www.cantiquest.org/CJ/CJ_152-polyinstru-Deux_mains_pour_servir.mid",
-    "https://www.cantiquest.org/CV/CV_226-mono-piano-Ne_crains_rien.mid",
-    "https://www.cantiquest.org/CV/CV_226-polyinstru-Ne_crains_rien.mid"
-  ],
-  "1_478": [
-    "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid",
-    "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid"
-  ],
-  "1_523": [
-    "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid"
-  ],
-  "1_566a": [
-    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
-    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid"
-  ],
-  "1_585": [
-    "https://www.cantiquest.org/VAM/VaM_266-mono-piano-L_appel_supreme.mid",
-    "https://www.cantiquest.org/VAM/VaM_266-polyinstru-L_appel_supreme.mid"
-  ],
-  "1_614": [
-    "https://www.cantiquest.org/VAM/VaM_095-mono-piano-Dieu_voit_ma_vie_entiere.mid",
-    "https://www.cantiquest.org/VAM/VaM_095-polyinstru-Dieu_voit_ma_vie_entiere.mid"
-  ],
-  "1_618": [
-    "https://www.cantiquest.org/VAM/VaM_130-mono-piano-Il_est_un_seul_chemin.mid",
-    "https://www.cantiquest.org/VAM/VaM_130-polyinstru-Il_est_un_seul_chemin.mid"
-  ],
-  "1_624": [
-    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
-    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
-  ],
-  "1_639": [
+  "2_639": [
     "https://www.cantiquest.org/CV/CV_208-mono-piano-Compte_les_bienfaits_de_Dieu.mid",
     "https://www.cantiquest.org/CV/CV_208-polyinstru-Compte_les_bienfaits_de_Dieu.mid"
   ],
-  "1_640": [
+  "2_640": [
     "https://www.cantiquest.org/CV/CV_234-mono-piano-Quel_ami_fidele_et_tendre.mid",
     "https://www.cantiquest.org/CV/CV_234-polyinstru-Quel_ami_fidele_et_tendre.mid"
   ],
-  "1_78": [
-    "https://www.cantiquest.org/CV/CV_293-mono-piano-Tout_joyeux_benissons.mid",
-    "https://www.cantiquest.org/CV/CV_293-polyinstru-Tout_joyeux_benissons.mid"
-  ],
-  "1_171": [
-    "https://www.cantiquest.org/HeC/HeC_005-mono-piano-O_Dieu_dont_l_amour_nous_rassemble.mid",
-    "https://www.cantiquest.org/HeC/HeC_005-polyinstru-O_Dieu_dont_l_amour_nous_rassemble.mid",
-    "https://www.cantiquest.org/VAM/VaM_116-mono-piano-Mon_Dieu_est_si_bon.mid",
-    "https://www.cantiquest.org/VAM/VaM_116-polyinstru-Mon_Dieu_est_si_bon.mid"
-  ],
-  "1_183": [
-    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
-    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid",
-    "https://www.cantiquest.org/VAM/VaM_166-mono-piano-Dans_tes_mains.mid",
-    "https://www.cantiquest.org/VAM/VaM_166-polyinstru-Dans_tes_mains.mid"
-  ],
-  "1_238": [
-    "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
-    "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
-  ],
-  "1_257": [
-    "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
-    "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
-  ],
-  "1_325": [
-    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid",
-    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid"
-  ],
-  "1_384a": [
-    "https://www.cantiquest.org/CJ/CJ_188-mono-piano-Jerusalem_cite_de_Dieu.mid",
-    "https://www.cantiquest.org/CJ/CJ_188-polyinstru-Jerusalem_cite_de_Dieu.mid"
-  ],
-  "1_388": [
-    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
-    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
-  ],
-  "2_22": [
-    "https://www.cantiquest.org/CV/CV_022-mono-piano-Je_l_ai_trouve_le_bonheur_ineffable.mid",
-    "https://www.cantiquest.org/CV/CV_022-polyinstru-Je_l_ai_trouve_le_bonheur_ineffable.mid"
-  ],
-  "2_27": [
-    "https://www.cantiquest.org/HeC/HeC_134-mono-piano-Etre_a_tes_pieds_comme_Marie.mid",
-    "https://www.cantiquest.org/HeC/HeC_134-polyinstru-Etre_a_tes_pieds_comme_Marie.mid"
-  ],
-  "2_33a": [
-    "https://www.cantiquest.org/HeC/HeC_050-mono-piano-Jesus_est_notre_ami_supreme.mid",
-    "https://www.cantiquest.org/HeC/HeC_050-polyinstru-Jesus_est_notre_ami_supreme.mid"
-  ],
-  "2_33b": [
-    "https://www.cantiquest.org/HeC/HeC_094-mono-piano-L_amour_eternel_insondable.mid",
-    "https://www.cantiquest.org/HeC/HeC_094-polyinstru-L_amour_eternel_insondable.mid"
-  ],
-  "2_37": [
-    "https://www.cantiquest.org/HeC/HeC_265-mono-piano-Dans_les_cieux_et_sur_la_terre.mid",
-    "https://www.cantiquest.org/HeC/HeC_265-polyinstru-Dans_les_cieux_et_sur_la_terre.mid"
-  ],
-  "2_43": [
-    "https://www.cantiquest.org/CV/CV_043-mono-piano-Jesus_Christ_est_ma_sagesse.mid",
-    "https://www.cantiquest.org/CV/CV_043-polyinstru-Jesus_Christ_est_ma_sagesse.mid",
-    "https://www.cantiquest.org/VAM/VaM_153-mono-piano-Jesus_Christ_est_ma_sagesse.mid",
-    "https://www.cantiquest.org/VAM/VaM_153-polyinstru-Jesus_Christ_est_ma_sagesse.mid"
-  ],
-  "2_45a": [
-    "https://www.cantiquest.org/CV/CV_045a-mono-piano-Venez_contempler_au_Calvaire.mid",
-    "https://www.cantiquest.org/CV/CV_045a-polyinstru-Venez_contempler_au_Calvaire.mid"
-  ],
-  "2_54": [
-    "https://www.cantiquest.org/HeC/HeC_257-mono-piano-Entends_tu_Jesus_tappelle.mid",
-    "https://www.cantiquest.org/HeC/HeC_257-polyinstru-Entends_tu_Jesus_tappelle.mid"
+  "2_70": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_070-Coeurs_fatigues_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_070-Coeurs_fatigues_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_070-mono-piano-Coeurs_fatigues.mid",
+    "https://www.cantiquest.org/CV/CV_070-polyinstru-Coeurs_fatigues.mid"
   ],
   "2_71": [
     "https://www.cantiquest.org/CGG/CGG1_057-mono-piano-Viens_et_vois.mid",
@@ -1075,9 +1538,49 @@
     "https://www.cantiquest.org/VAM/VaM_036-mono-piano-Viens_et_vois.mid",
     "https://www.cantiquest.org/VAM/VaM_036-polyinstru-Viens_et_vois.mid"
   ],
+  "2_71a": [
+    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
+  ],
+  "2_71b": [
+    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
+  ],
+  "2_74": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_074-mono-piano-Arrete_o_pecheur_arrete.mid",
+    "https://www.cantiquest.org/CV/CV_074-polyinstru-Arrete_o_pecheur_arrete.mid"
+  ],
+  "2_75": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_075-mono-piano-Comme_un_phare_sur_la_plage.mid",
+    "https://www.cantiquest.org/CV/CV_075-polyinstru-Comme_un_phare_sur_la_plage.mid",
+    "https://www.cantiquest.org/VAM/VaM_030-mono-piano-Comme_un_phare_sur_la_plage.mid",
+    "https://www.cantiquest.org/VAM/VaM_030-polyinstru-Comme_un_phare_sur_la_plage.mid"
+  ],
   "2_77": [
     "https://www.cantiquest.org/CV/CV_077-mono-piano-Reviens_a_ton_Pere.mid",
     "https://www.cantiquest.org/CV/CV_077-polyinstru-Reviens_a_ton_Pere.mid"
+  ],
+  "2_79": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_079-mono-piano-Il_est_un_roc_seculaire.mid",
+    "https://www.cantiquest.org/CV/CV_079-polyinstru-Il_est_un_roc_seculaire.mid",
+    "https://www.cantiquest.org/HeC/HeC_267-mono-piano-Il_est_un_roc_seculaire.mid",
+    "https://www.cantiquest.org/HeC/HeC_267-polyinstru-Il_est_un_roc_seculaire.mid"
+  ],
+  "2_8": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_008-Le_nom_de_Jesus_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_008-Le_nom_de_Jesus_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_008-mono-piano-Le_nom_de_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_008-polyinstru-Le_nom_de_Jesus.mid"
+  ],
+  "2_80": [
+    "https://www.cantiquest.org/VAM/VaM_023-mono-piano-O_toi_qui_souffres.mid",
+    "https://www.cantiquest.org/VAM/VaM_023-polyinstru-O_toi_qui_souffres.mid"
   ],
   "2_84": [
     "https://www.cantiquest.org/CV/CV_084-mono-piano-Nous_voguons_vers_un_beau_rivage.mid",
@@ -1103,557 +1606,526 @@
     "https://www.cantiquest.org/CV/CV_090-mono-piano-Viens_ame_perdue.mid",
     "https://www.cantiquest.org/CV/CV_090-polyinstru-Viens_ame_perdue.mid"
   ],
-  "2_100": [
-    "https://www.cantiquest.org/HeC/HeC_261-mono-piano-Si_vous_saviez_quel_Sauveur_je_possede.mid",
-    "https://www.cantiquest.org/HeC/HeC_261-polyinstru-Si_vous_saviez_quel_Sauveur_je_possede.mid"
-  ],
-  "2_108": [
-    "https://www.cantiquest.org/CV/CV_108-mono-piano-Dis_tout_a_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_108-polyinstru-Dis_tout_a_Jesus.mid"
-  ],
-  "2_132": [
-    "https://www.cantiquest.org/CV/CV_132-mono-piano-Torrents_d_amour.mid",
-    "https://www.cantiquest.org/CV/CV_132-polyinstru-Torrents_d_amour.mid",
-    "https://www.cantiquest.org/VAM/VaM_009-mono-piano-Torrents_d_amour_et_de_grace.mid",
-    "https://www.cantiquest.org/VAM/VaM_009-polyinstru-Torrents_d_amour_et_de_grace.mid"
-  ],
-  "2_140": [
-    "https://www.cantiquest.org/VAM/VaM_192-mono-piano-A_tes_pieds_o_divin_Maitre.mid",
-    "https://www.cantiquest.org/VAM/VaM_192-polyinstru-A_tes_pieds_o_divin_Maitre.mid"
-  ],
-  "2_142": [
-    "https://www.cantiquest.org/VAM/VaM_215-mono-piano-Mon_ame_en_silence.mid",
-    "https://www.cantiquest.org/VAM/VaM_215-polyinstru-Mon_ame_en_silence.mid"
-  ],
-  "2_143": [
-    "https://www.cantiquest.org/CV/CV_143-mono-piano-Comme_une_terre_alteree.mid",
-    "https://www.cantiquest.org/CV/CV_143-polyinstru-Comme_une_terre_alteree.mid"
-  ],
-  "2_147a": [
-    "https://www.cantiquest.org/VAM/VaM_056-mono-piano-Jesus_ta_sainte_presence.mid",
-    "https://www.cantiquest.org/VAM/VaM_056-polyinstru-Jesus_ta_sainte_presence.mid"
-  ],
-  "2_149a": [
-    "https://www.cantiquest.org/CV/CV_149a-mono-piano-Toi_qui_disposes.mid",
-    "https://www.cantiquest.org/CV/CV_149a-polyinstru-Toi_qui_disposes.mid"
-  ],
-  "2_162": [
-    "https://www.cantiquest.org/CV/CV_162-mono-piano-Ah_que_je_ne_sois_pas.mid",
-    "https://www.cantiquest.org/CV/CV_162-polyinstru-Ah_que_je_ne_sois_pas.mid"
-  ],
-  "2_166": [
-    "https://www.cantiquest.org/CV/CV_166-mono-piano-Qu_il_fait_bon_a_ton_service.mid",
-    "https://www.cantiquest.org/CV/CV_166-polyinstru-Qu_il_fait_bon_a_ton_service.mid"
-  ],
-  "2_167": [
-    "https://www.cantiquest.org/CV/CV_167-mono-piano-C_est_mon_joyeux_service.mid",
-    "https://www.cantiquest.org/CV/CV_167-polyinstru-C_est_mon_joyeux_service.mid"
-  ],
-  "2_191": [
-    "https://www.cantiquest.org/CV/CV_191-mono-piano-Jusqu_a_ta_venue.mid",
-    "https://www.cantiquest.org/CV/CV_191-polyinstru-Jusqu_a_ta_venue.mid"
-  ],
-  "2_197": [
-    "https://www.cantiquest.org/HeC/HeC_122-mono-piano-Tes_saints_dans_la_lutte.mid",
-    "https://www.cantiquest.org/HeC/HeC_122-polyinstru-Tes_saints_dans_la_lutte.mid"
-  ],
-  "2_202": [
-    "https://www.cantiquest.org/CV/CV_202-mono-piano-Vous_qui_gardez_les_murs.mid",
-    "https://www.cantiquest.org/CV/CV_202-polyinstru-Vous_qui_gardez_les_murs.mid"
-  ],
-  "2_204a": [
-    "https://www.cantiquest.org/CV/CV_204a-mono-piano-Debout_sainte_cohorte.mid",
-    "https://www.cantiquest.org/CV/CV_204a-polyinstru-Debout_sainte_cohorte.mid"
-  ],
-  "2_206": [
-    "https://www.cantiquest.org/HeC/HeC_264-mono-piano-Viens_ame_qui_pleure.mid",
-    "https://www.cantiquest.org/HeC/HeC_264-polyinstru-Viens_ame_qui_pleure.mid"
-  ],
-  "2_215a": [
-    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
-    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid"
-  ],
-  "2_229": [
-    "https://www.cantiquest.org/HeC/HeC_103-mono-piano-Jamais_Dieu_ne_delaisse.mid",
-    "https://www.cantiquest.org/HeC/HeC_103-polyinstru-Jamais_Dieu_ne_delaisse.mid"
-  ],
-  "2_231": [
-    "https://www.cantiquest.org/VAM/VaM_098-mono-piano-Non_rien_en_ma_personne.mid",
-    "https://www.cantiquest.org/VAM/VaM_098-polyinstru-Non_rien_en_ma_personne.mid"
-  ],
-  "2_233": [
-    "https://www.cantiquest.org/CV/CV_233-mono-piano-Je_sais.mid",
-    "https://www.cantiquest.org/CV/CV_233-polyinstru-Je_sais.mid",
-    "https://www.cantiquest.org/VAM/VaM_140-mono-piano-Je_sais.mid",
-    "https://www.cantiquest.org/VAM/VaM_140-polyinstru-Je_sais.mid"
-  ],
-  "2_238": [
-    "https://www.cantiquest.org/CV/CV_238-mono-piano-Oui_selon_ta_promesse.mid",
-    "https://www.cantiquest.org/CV/CV_238-polyinstru-Oui_selon_ta_promesse.mid"
-  ],
-  "2_242": [
-    "https://www.cantiquest.org/VAM/VaM_092-mono-piano-Mon_salut_ma_nourriture.mid",
-    "https://www.cantiquest.org/VAM/VaM_092-polyinstru-Mon_salut_ma_nourriture.mid"
-  ],
-  "2_245": [
-    "https://www.cantiquest.org/HeC/HeC_248-mono-piano-Mon_Dieu_plus_pres_de_toi.mid",
-    "https://www.cantiquest.org/HeC/HeC_248-polyinstru-Mon_Dieu_plus_pres_de_toi.mid"
-  ],
-  "2_253": [
-    "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
-    "https://www.cantiquest.org/CV/CV_253-polyinstru-La_trompette_a_retenti.mid"
-  ],
-  "2_257": [
-    "https://www.cantiquest.org/CV/CV_257-mono-piano-Je_ne_sais_pas_le_jour.mid",
-    "https://www.cantiquest.org/CV/CV_257-polyinstru-Je_ne_sais_pas_le_jour.mid"
-  ],
-  "2_272": [
-    "https://www.cantiquest.org/CV/CV_272-mono-piano-Connais_tu_cette_cite-soprano.mid",
-    "https://www.cantiquest.org/CV/CV_272-polyinstru-Connais_tu_cette_cite-soprano.mid"
-  ],
-  "2_277": [
-    "https://www.cantiquest.org/HeC/HeC_102-mono-piano-Avancons_nous_joyeux.mid",
-    "https://www.cantiquest.org/HeC/HeC_102-polyinstru-Avancons_nous_joyeux.mid"
-  ],
-  "2_306": [
-    "https://www.cantiquest.org/CV/CV_306-mono-piano-Chaque_jour_de_ma_vie.mid",
-    "https://www.cantiquest.org/CV/CV_306-polyinstru-Chaque_jour_de_ma_vie.mid"
-  ],
-  "1_1a": [
-    "https://www.cantiquest.org/CJ/CJ_187-mono-piano-O_Christ_eternel_Rocher.mid",
-    "https://www.cantiquest.org/CJ/CJ_187-polyinstru-O_Christ_eternel_Rocher.mid"
-  ],
-  "1_14": [
-    "https://www.cantiquest.org/VAM/VaM_108-mono-piano-Dieu_de_fidelite.mid",
-    "https://www.cantiquest.org/VAM/VaM_108-polyinstru-Dieu_de_fidelite.mid"
-  ],
-  "1_28": [
-    "https://www.cantiquest.org/CGG/CGG1_057-mono-piano-Viens_et_vois.mid",
-    "https://www.cantiquest.org/CGG/CGG1_057-polyinstru-Viens_et_vois.mid",
-    "https://www.cantiquest.org/VAM/VaM_036-mono-piano-Viens_et_vois.mid",
-    "https://www.cantiquest.org/VAM/VaM_036-polyinstru-Viens_et_vois.mid"
-  ],
-  "1_77a": [
-    "https://www.cantiquest.org/CV/CV_306-mono-piano-Chaque_jour_de_ma_vie.mid",
-    "https://www.cantiquest.org/CV/CV_306-polyinstru-Chaque_jour_de_ma_vie.mid"
-  ],
-  "1_84a": [
-    "https://www.cantiquest.org/CGG/CGG1_009-mono-piano-Seigneur_que_n_ai_je_mille_voix.mid",
-    "https://www.cantiquest.org/CGG/CGG1_009-polyinstru-Seigneur_que_n_ai_je_mille_voix.mid"
-  ],
-  "1_89": [
-    "https://www.cantiquest.org/VAM/VaM_224-mono-piano-Au_jour_d_angoisse.mid",
-    "https://www.cantiquest.org/VAM/VaM_224-polyinstru-Au_jour_d_angoisse.mid"
-  ],
-  "1_90a": [
-    "https://www.cantiquest.org/CGG/CGG1_018-mono-piano-Dans_ton_amour_divin_Sauveur_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_018-polyinstru-Dans_ton_amour_divin_Sauveur.mid"
-  ],
-  "1_95a": [
-    "https://www.cantiquest.org/SST/SST_027-028-mono-piano-L_Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/SST/SST_027-028-polyinstru-L_Agneau_de_Dieu.mid"
-  ],
-  "1_95b": [
-    "https://www.cantiquest.org/SST/SST_027-028-mono-piano-L_Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/SST/SST_027-028-polyinstru-L_Agneau_de_Dieu.mid"
-  ],
-  "1_99": [
-    "https://www.cantiquest.org/HeC/HeC_265-mono-piano-Dans_les_cieux_et_sur_la_terre.mid",
-    "https://www.cantiquest.org/HeC/HeC_265-polyinstru-Dans_les_cieux_et_sur_la_terre.mid"
-  ],
-  "1_103": [
-    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
-    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
-  ],
-  "1_108b": [
-    "https://www.cantiquest.org/SST/SST_219-mono-piano-Qu_est_ce_que_l_Homme.mid",
-    "https://www.cantiquest.org/SST/SST_219-polyinstru-Qu_est_ce_que_l_Homme.mid"
-  ],
-  "1_124": [
-    "https://www.cantiquest.org/CJ/CJ_092-mono-piano-Beau_pays_de_lumiere.mid",
-    "https://www.cantiquest.org/CJ/CJ_092-polyinstru-Beau_pays_de_lumiere.mid"
-  ],
-  "1_142": [
-    "https://www.cantiquest.org/CGG/CGG1_267-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/CGG/CGG1_267-polyinstru-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/VAM/VaM_141-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/VAM/VaM_141-polyinstru-Dans_mon_coeur_chante_une_melodie.mid"
-  ],
-  "1_150": [
-    "https://www.cantiquest.org/SST/SST_331-mono-piano-Ton_amour_souverain.mid",
-    "https://www.cantiquest.org/SST/SST_331-polyinstru-Ton_amour_souverain.mid"
-  ],
-  "1_164": [
-    "https://www.cantiquest.org/CV/CV_211-mono-piano-Tout_est_bien.mid",
-    "https://www.cantiquest.org/CV/CV_211-polyinstru-Tout_est_bien.mid"
-  ],
-  "1_166a": [
-    "https://www.cantiquest.org/HeC/HeC_030-mono-piano-O_Jesus_sainte_Victime.mid",
-    "https://www.cantiquest.org/HeC/HeC_030-polyinstru-O_Jesus_sainte_Victime.mid"
-  ],
-  "1_179": [
-    "https://www.cantiquest.org/VAM/VaM_255-mono-piano-L_amour_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_255-polyinstru-L_amour_de_Dieu.mid"
-  ],
-  "1_188": [
-    "https://www.cantiquest.org/SST/SST_101-mono-piano-Ce_n_est_point_o_Seigneur.mid",
-    "https://www.cantiquest.org/SST/SST_101-polyinstru-Ce_n_est_point_o_Seigneur.mid"
-  ],
-  "1_190": [
-    "https://www.cantiquest.org/CJ/CJ_189-mono-piano-Chantons_du_Seigneur.mid",
-    "https://www.cantiquest.org/CJ/CJ_189-polyinstru-Chantons_du_Seigneur.mid"
-  ],
-  "1_195": [
-    "https://www.cantiquest.org/CJ/CJ_189-mono-piano-Chantons_du_Seigneur.mid",
-    "https://www.cantiquest.org/CJ/CJ_189-polyinstru-Chantons_du_Seigneur.mid"
-  ],
-  "1_197b": [
-    "https://www.cantiquest.org/CV/CV_299-mono-piano-Je_suis_la_lumiere.mid",
-    "https://www.cantiquest.org/CV/CV_299-polyinstru-Je_suis_la_lumiere.mid"
-  ],
-  "1_209": [
-    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid"
-  ],
-  "1_222": [
-    "https://www.cantiquest.org/CGG/CGG1_267-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/CGG/CGG1_267-polyinstru-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/VAM/VaM_141-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
-    "https://www.cantiquest.org/VAM/VaM_141-polyinstru-Dans_mon_coeur_chante_une_melodie.mid"
-  ],
-  "1_232": [
-    "https://www.cantiquest.org/CV/CV_226-mono-piano-Ne_crains_rien.mid",
-    "https://www.cantiquest.org/CV/CV_226-polyinstru-Ne_crains_rien.mid"
-  ],
-  "1_243": [
-    "https://www.cantiquest.org/HeC/HeC_186-mono-piano-Amour_de_mon_Sauveur.mid",
-    "https://www.cantiquest.org/HeC/HeC_186-polyinstru-Amour_de_mon_Sauveur.mid"
-  ],
-  "1_248a": [
-    "https://www.cantiquest.org/VAM/VaM_081-mono-piano-Je_me_confie_en_toi.mid",
-    "https://www.cantiquest.org/VAM/VaM_081-polyinstru-Je_me_confie_en_toi.mid"
-  ],
-  "1_251": [
-    "https://www.cantiquest.org/VAM/VaM_026-mono-piano-Deux_maitres.mid",
-    "https://www.cantiquest.org/VAM/VaM_026-polyinstru-Deux_maitres.mid"
-  ],
-  "1_278": [
-    "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid",
-    "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid"
-  ],
-  "1_279": [
-    "https://www.cantiquest.org/CJ/CJ_047-mono-piano-Au_pied_de_ta_sainte_croix.mid",
-    "https://www.cantiquest.org/CJ/CJ_047-polyinstru-Au_pied_de_ta_sainte_croix.mid"
-  ],
-  "1_287": [
-    "https://www.cantiquest.org/CV/CV_257-mono-piano-Je_ne_sais_pas_le_jour.mid",
-    "https://www.cantiquest.org/CV/CV_257-polyinstru-Je_ne_sais_pas_le_jour.mid",
-    "https://www.cantiquest.org/VAM/VaM_276-mono-piano-Je_ne_sais_pas_le_jour.mid",
-    "https://www.cantiquest.org/VAM/VaM_276-polyinstru-Je_ne_sais_pas_le_jour.mid"
-  ],
-  "1_298": [
-    "https://www.cantiquest.org/VAM/VaM_034-mono-piano-Car_Dieu_a_tant_aime_le_monde.mid",
-    "https://www.cantiquest.org/VAM/VaM_034-polyinstru-Car_Dieu_a_tant_aime_le_monde.mid"
-  ],
-  "1_318a": [
-    "https://www.cantiquest.org/VAM/VaM_109-mono-piano-Jesus_est_mon_divin_Berger.mid",
-    "https://www.cantiquest.org/VAM/VaM_109-polyinstru-Jesus_est_mon_divin_Berger.mid"
-  ],
-  "1_329a": [
-    "https://www.cantiquest.org/VAM/VaM_052-mono-piano-Lorsque_le_ciel_retentit.mid",
-    "https://www.cantiquest.org/VAM/VaM_052-polyinstru-Lorsque_le_ciel_retentit.mid"
-  ],
-  "1_339a": [
-    "https://www.cantiquest.org/VAM/VaM_022-mono-piano-Regarde_a_la_croix.mid",
-    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid"
-  ],
-  "1_340": [
-    "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid"
-  ],
-  "1_349": [
-    "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid",
-    "https://www.cantiquest.org/VAM/VaM_148-mono-piano-Mon_Sauveur_m_aime.mid",
-    "https://www.cantiquest.org/VAM/VaM_148-polyinstru-Mon_Sauveur_m_aime.mid"
-  ],
-  "1_364": [
-    "https://www.cantiquest.org/HeC/HeC_194-mono-piano-Voici_je_viens_bientot.mid",
-    "https://www.cantiquest.org/HeC/HeC_194-polyinstru-Voici_je_viens_bientot.mid"
-  ],
-  "1_387a": [
-    "https://www.cantiquest.org/VAM/VaM_185-mono-piano-Sur_le_chemin.mid",
-    "https://www.cantiquest.org/VAM/VaM_185-polyinstru-Sur_le_chemin.mid"
-  ],
-  "1_400": [
-    "https://www.cantiquest.org/SST/SST_335-mono-piano-Oh_quel_bonheur.mid",
-    "https://www.cantiquest.org/SST/SST_335-polyinstru-Oh_quel_bonheur.mid"
-  ],
-  "1_419": [
-    "https://www.cantiquest.org/CGG/CGG1_043-mono-piano-Brisant_les_liens_funebres.mid",
-    "https://www.cantiquest.org/CGG/CGG1_043-polyinstru_Brisant_les_liens_funebres.mid"
-  ],
-  "1_424a": [
-    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
-    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid"
-  ],
-  "1_428": [
-    "https://www.cantiquest.org/CV/CV_057-mono-piano-Viens_a_la_croix.mid",
-    "https://www.cantiquest.org/CV/CV_057-polyinstru-Viens_a_la_croix.mid"
-  ],
-  "1_433": [
-    "https://www.cantiquest.org/HeC/HeC_084-mono-piano-Seigneur_tu_diriges.mid",
-    "https://www.cantiquest.org/HeC/HeC_084-polyinstru-Seigneur_tu_diriges.mid"
-  ],
-  "1_454a": [
-    "https://www.cantiquest.org/CV/CV_299-mono-piano-Je_suis_la_lumiere.mid",
-    "https://www.cantiquest.org/CV/CV_299-polyinstru-Je_suis_la_lumiere.mid"
-  ],
-  "1_455": [
-    "https://www.cantiquest.org/CGG/CGG1_296-mono-piano-Notre_Dieu_regne_encore.mid",
-    "https://www.cantiquest.org/CGG/CGG1_296-polyinstru-Notre_Dieu_regne_encore.mid"
-  ],
-  "1_465": [
-    "https://www.cantiquest.org/VAM/VaM_123-mono-piano-Toutes_choses_concourent_au_bien.mid",
-    "https://www.cantiquest.org/VAM/VaM_123-polyinstru-Toutes_choses_concourent_au_bien.mid"
-  ],
-  "1_469": [
-    "https://www.cantiquest.org/VAM/VaM_149-mono-piano-Jesus-Christ_est_le_meme.mid",
-    "https://www.cantiquest.org/VAM/VaM_149-polyinstru-Jesus-Christ_est_le_meme.mid"
-  ],
-  "1_474": [
-    "https://www.cantiquest.org/VAM/VaM_116-mono-piano-Mon_Dieu_est_si_bon.mid",
-    "https://www.cantiquest.org/VAM/VaM_116-polyinstru-Mon_Dieu_est_si_bon.mid"
-  ],
-  "1_501": [
-    "https://www.cantiquest.org/SST/SST_369-mono-piano-Le_sang_de_Jesus_rachete.mid",
-    "https://www.cantiquest.org/SST/SST_369-polyinstru-Le_sang_de_Jesus_rachete.mid"
-  ],
-  "1_506": [
-    "https://www.cantiquest.org/VAM/VaM_149-mono-piano-Jesus-Christ_est_le_meme.mid",
-    "https://www.cantiquest.org/VAM/VaM_149-polyinstru-Jesus-Christ_est_le_meme.mid"
-  ],
-  "1_516": [
-    "https://www.cantiquest.org/CV/CV_107-mono-piano-Une_bonne_nouvelle.mid",
-    "https://www.cantiquest.org/CV/CV_107-polyinstru-Une_bonne_nouvelle.mid"
-  ],
-  "1_528": [
-    "https://www.cantiquest.org/HeC/HeC_051-mono-piano-Gloire_d_age_en_age.mid",
-    "https://www.cantiquest.org/HeC/HeC_051-polyinstru-Gloire_d_age_en_age.mid"
-  ],
-  "1_544": [
-    "https://www.cantiquest.org/CJ/CJ_033-mono-piano-Jesus_mon_esperance.mid",
-    "https://www.cantiquest.org/CJ/CJ_033-polyinstru-Jesus_mon_esperance.mid"
-  ],
-  "1_554": [
-    "https://www.cantiquest.org/VAM/VaM_215-mono-piano-Mon_ame_en_silence.mid",
-    "https://www.cantiquest.org/VAM/VaM_215-polyinstru-Mon_ame_en_silence.mid"
-  ],
-  "1_555": [
-    "https://www.cantiquest.org/VAM/VaM_156-mono-piano-O_grace_infinie.mid",
-    "https://www.cantiquest.org/VAM/VaM_156-polyinstru-O_grace_infinie.mid"
-  ],
-  "1_560": [
-    "https://www.cantiquest.org/VAM/VaM_046-mono-piano-Seigneur_Jesus_tu_nous_aimas.mid",
-    "https://www.cantiquest.org/VAM/VaM_046-polyinstru-Seigneur_Jesus_tu_nous_aimas.mid"
-  ],
-  "1_570": [
-    "https://www.cantiquest.org/CGG/CGG1_103_304-mono-piano-Immense_grace_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_103_304-polyinstru-Immense_grace_midkar.mid"
-  ],
-  "1_579": [
-    "https://www.cantiquest.org/SST/SST_064-mono-piano-Scenes_de_gloire.mid",
-    "https://www.cantiquest.org/SST/SST_064-polyinstru-Scenes_de_gloire.mid"
-  ],
-  "1_601": [
-    "https://www.cantiquest.org/CGG/CGG1_247-mono-piano-Cest_par_la_foi.mid",
-    "https://www.cantiquest.org/CGG/CGG1_247-polyinstru-Cest_par_la_foi.mid"
-  ],
-  "1_602": [
-    "https://www.cantiquest.org/SST/SST_328-mono-piano-Seigneur_Jesus_ton_amour_reste.mid",
-    "https://www.cantiquest.org/SST/SST_328-polyinstru-Seigneur_Jesus_ton_amour_reste.mid"
-  ],
-  "1_608": [
-    "https://www.cantiquest.org/VAM/VaM_147-mono-piano-Nous_sommes_au_Seigneur.mid",
-    "https://www.cantiquest.org/VAM/VaM_147-polyinstru-Nous_sommes_au_Seigneur.mid"
-  ],
-  "1_626": [
-    "https://www.cantiquest.org/SST/SST_274-mono-piano-Ton_amour_est_si_pur.mid",
-    "https://www.cantiquest.org/SST/SST_274-polyinstru-Ton_amour_est_si_pur.mid"
-  ],
-  "2_1": [
-    "https://www.cantiquest.org/HeC/HeC_098-mono-piano-Grand_Dieu_nous_t_adorons.mid",
-    "https://www.cantiquest.org/HeC/HeC_098-polyinstru-Grand_Dieu_nous_t_adorons.mid"
-  ],
-  "2_2": [
-    "https://www.cantiquest.org/VAM/VaM_244-mono-piano-Je_chanterai_Seigneur.mid",
-    "https://www.cantiquest.org/VAM/VaM_244-polyinstru-Je_chanterai_Seigneur.mid"
-  ],
-  "2_21": [
-    "https://www.cantiquest.org/SST/SST_436-mono-piano-Nous_T_adorons_Dieu_notre_Pere.mid",
-    "https://www.cantiquest.org/SST/SST_436-polyinstru-Nous_T_adorons_Dieu_notre_Pere.mid"
-  ],
-  "2_31a": [
-    "https://www.cantiquest.org/VAM/VaM_033-mono-piano-Portant_sa_croix.mid",
-    "https://www.cantiquest.org/VAM/VaM_033-polyinstru-Portant_sa_croix.mid"
-  ],
-  "2_38": [
-    "https://www.cantiquest.org/CV/CV_042-mono-piano-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/CV/CV_042-polyinstru-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_011-mono-piano-Agneau_de_Dieu.mid",
-    "https://www.cantiquest.org/VAM/VaM_011-polyinstru-Agneau_de_Dieu.mid"
-  ],
-  "2_40": [
-    "https://www.cantiquest.org/HeC/HeC_151-mono-piano-Tu_m_as_aime_Seigneur.mid",
-    "https://www.cantiquest.org/HeC/HeC_151-polyinstru-Tu_m_as_aime_Seigneur.mid"
-  ],
-  "2_44": [
-    "https://www.cantiquest.org/CV/CV_006-mono-piano-A_Dieu_soit_la_gloire.mid",
-    "https://www.cantiquest.org/CV/CV_006-polyinstru-A_Dieu_soit_la_gloire.mid"
-  ],
-  "2_49": [
-    "https://www.cantiquest.org/HeC/HeC_040-mono-piano-Cest_toi_Jesus.mid",
-    "https://www.cantiquest.org/HeC/HeC_040-polyinstru-Cest_toi_Jesus.mid"
-  ],
-  "2_56b": [
-    "https://www.cantiquest.org/HeC/HeC_050-mono-piano-Jesus_est_notre_ami_supreme.mid",
-    "https://www.cantiquest.org/HeC/HeC_050-polyinstru-Jesus_est_notre_ami_supreme.mid"
-  ],
-  "2_60": [
-    "https://www.cantiquest.org/HeC/HeC_252-mono-piano-O_vous_qui_n_avez_pas_la_paix.mid",
-    "https://www.cantiquest.org/HeC/HeC_252-polyinstru-O_vous_qui_n_avez_pas_la_paix.mid"
-  ],
-  "2_61": [
-    "https://www.cantiquest.org/HeC/HeC_254-mono-piano-Jesus_est_la_qui_tappelle.mid",
-    "https://www.cantiquest.org/HeC/HeC_254-polyinstru-Jesus_est_la_qui_tappelle.mid"
-  ],
-  "2_80": [
-    "https://www.cantiquest.org/VAM/VaM_023-mono-piano-O_toi_qui_souffres.mid",
-    "https://www.cantiquest.org/VAM/VaM_023-polyinstru-O_toi_qui_souffres.mid"
+  "2_94": [
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_mono-piano.mp3",
+    "https://cantiques.yapper.fr/media/hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_polyinstru.mp3",
+    "https://www.cantiquest.org/CV/CV_094-mono-piano-Par_ce_chemin_solitaire.mid",
+    "https://www.cantiquest.org/CV/CV_094-polyinstru-Par_ce_chemin_solitaire.mid"
   ],
   "2_97": [
     "https://www.cantiquest.org/HeC/HeC_153-mono-piano-Ecoutez_tous_une_bonne_nouvelle.mid",
     "https://www.cantiquest.org/HeC/HeC_153-polyinstru-Ecoutez_tous_une_bonne_nouvelle.mid"
   ],
-  "2_106": [
-    "https://www.cantiquest.org/HeC/HeC_266-mono-piano-Venez_au_Prince_de_la_vie.mid",
-    "https://www.cantiquest.org/HeC/HeC_266-polyinstru-Venez_au_Prince_de_la_vie.mid"
+  "7_10": [
+    "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
   ],
-  "2_124": [
-    "https://www.cantiquest.org/HeC/HeC_258-mono-piano-Tel_que_je_suis_sans_rien_a_moi.mid",
-    "https://www.cantiquest.org/HeC/HeC_258-polyinstru-Tel_que_je_suis_sans_rien_a_moi.mid"
-  ],
-  "2_133": [
-    "https://www.cantiquest.org/HeC/HeC_096-mono-piano-O_Seigneur_quand_je_pense.mid",
-    "https://www.cantiquest.org/HeC/HeC_096-polyinstru-O_Seigneur_quand_je_pense.mid"
-  ],
-  "2_137a": [
-    "https://www.cantiquest.org/SST/SST_086-mono-piano-Seigneur_Tu_es_deja_assis.mid",
-    "https://www.cantiquest.org/SST/SST_086-polyinstru-Seigneur_Tu_es_deja_assis.mid"
-  ],
-  "2_147b": [
-    "https://www.cantiquest.org/SST/SST_107-mono-piano-Seigneur_c_est_une_joie.mid",
-    "https://www.cantiquest.org/SST/SST_107-polyinstru-Seigneur_c_est_une_joie.mid"
-  ],
-  "2_149b": [
-    "https://www.cantiquest.org/VAM/VaM_156-mono-piano-O_grace_infinie.mid",
-    "https://www.cantiquest.org/VAM/VaM_156-polyinstru-O_grace_infinie.mid"
-  ],
-  "2_151": [
-    "https://www.cantiquest.org/SST/SST_172-mono-piano-Enseigne_nous_par_Ta_grace.mid",
-    "https://www.cantiquest.org/SST/SST_172-polyinstru-Enseigne_nous_par_Ta_grace.mid",
-    "https://www.cantiquest.org/VAM/VaM_183-mono-piano-Enseigne-nous_par_ta_grace.mid",
-    "https://www.cantiquest.org/VAM/VaM_183-polyinstru-Enseigne-nous_par_ta_grace.mid"
-  ],
-  "2_152": [
-    "https://www.cantiquest.org/SST/SST_164-mono-piano-Seigneur_nous_voyons_Ta_trace.mid",
-    "https://www.cantiquest.org/SST/SST_164-polyinstru-Seigneur_nous_voyons_Ta_trace.mid"
-  ],
-  "2_157": [
-    "https://www.cantiquest.org/VAM/VaM_015-mono-piano-La_voix_de_Christ_nous_appelle.mid",
-    "https://www.cantiquest.org/VAM/VaM_015-polyinstru-La_voix_de_Christ_nous_appelle.mid"
-  ],
-  "2_170": [
-    "https://www.cantiquest.org/VAM/VaM_112-mono-piano-A_mon_Dieu_j_abandonne.mid",
-    "https://www.cantiquest.org/VAM/VaM_112-polyinstru-A_mon_Dieu_j_abandonne.mid"
-  ],
-  "2_171": [
-    "https://www.cantiquest.org/VAM/VaM_131-mono-piano-Seigneur_si_je_chante.mid",
-    "https://www.cantiquest.org/VAM/VaM_131-polyinstru-Seigneur_si_je_chante.mid"
-  ],
-  "2_172a": [
-    "https://www.cantiquest.org/CV/CV_172a-mono-piano-Entre_tes_mains_j_abandonne.mid",
-    "https://www.cantiquest.org/CV/CV_172a-polyinstru-Entre_tes_mains_j_abandonne.mid"
-  ],
-  "2_179": [
-    "https://www.cantiquest.org/SST/SST_193-mono-piano-Tu_m_appartiens_Jesus_mon_Sauveur.mid",
-    "https://www.cantiquest.org/SST/SST_193-polyinstru-Tu_m_appartiens_Jesus_mon_Sauveur.mid"
-  ],
-  "2_183": [
-    "https://www.cantiquest.org/CGG/CGG1_128-mono-piano-Mon_ame_est_heureuse_midkar.mid",
-    "https://www.cantiquest.org/CGG/CGG1_128-polyinstru-Mon_ame_est_heureuse_midkar.mid"
-  ],
-  "2_214a": [
-    "https://www.cantiquest.org/HeC/HeC_210-mono-piano-Reste_avec_nous_Seigneur.mid",
-    "https://www.cantiquest.org/HeC/HeC_210-polyinstru-Reste_avec_nous_Seigneur.mid"
-  ],
-  "2_232": [
-    "https://www.cantiquest.org/VAM/VaM_205-mono-piano-Quand_je_craindrais_sur_la_route.mid",
-    "https://www.cantiquest.org/VAM/VaM_205-polyinstru-Quand_je_craindrais_sur_la_route.mid"
-  ],
-  "2_255": [
-    "https://www.cantiquest.org/HeC/HeC_125-mono-piano-Or_vers_minuit_se_fit_entendre.mid",
-    "https://www.cantiquest.org/HeC/HeC_125-polyinstru-Or_vers_minuit_se_fit_entendre.mid"
-  ],
-  "2_269": [
-    "https://www.cantiquest.org/CV/CV_274-mono-piano-Au_ciel_est_la_maison_du_Pere.mid",
-    "https://www.cantiquest.org/CV/CV_274-polyinstru-Au_ciel_est_la_maison_du_Pere.mid"
-  ],
-  "2_291": [
-    "https://www.cantiquest.org/SST/SST_328-mono-piano-Seigneur_Jesus_ton_amour_reste.mid",
-    "https://www.cantiquest.org/SST/SST_328-polyinstru-Seigneur_Jesus_ton_amour_reste.mid"
-  ],
-  "7_81": [
-    "https://www.cantiquest.org/CJ/CJ_086-mono-piano-Jesus_te_confie.mid",
-    "https://www.cantiquest.org/CJ/CJ_086-polyinstru-Jesus_te_confie.mid",
-    "https://www.cantiquest.org/VAM/VaM_031-mono-piano-Jesus_te_confie.mid",
-    "https://www.cantiquest.org/VAM/VaM_031-polyinstru-Jesus_te_confie.mid"
-  ],
-  "7_93": [
-    "https://www.cantiquest.org/SSO/SSO_002-mono-piano-Twas_Thy_love_O_God.mid",
-    "https://www.cantiquest.org/SSO/SSO_002-polyinstru-Twas_Thy_love_O_God.mid"
+  "7_100": [
+    "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
   ],
   "7_101": [
     "https://www.cantiquest.org/SSO/SSO_283-mono-piano-When_I_survey_the_wondrous_cross.mid",
     "https://www.cantiquest.org/SSO/SSO_283-polyinstru-When_I_survey_the_wondrous_cross.mid"
   ],
-  "8_35": [
-    "https://www.cantiquest.org/VAM/VaM_143-mono-piano-L_amour_du_Sauveur.mid",
-    "https://www.cantiquest.org/VAM/VaM_143-polyinstru-L_amour_du_Sauveur.mid"
+  "7_102": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Master_Has_Come.mid"
   ],
-  "8_45": [
-    "https://www.cantiquest.org/HeC/HeC_196-mono-piano-Dans_tes_bras_eternels.mid",
-    "https://www.cantiquest.org/HeC/HeC_196-polyinstru-Dans_tes_bras_eternels.mid"
+  "7_103": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
   ],
-  "8_61": [
-    "https://www.cantiquest.org/CV/CV_309-mono-piano-Jesus_ne_change_pas.mid",
-    "https://www.cantiquest.org/CV/CV_309-polyinstru-Jesus_ne_change_pas.mid"
+  "7_104": [
+    "https://www.hymnallibrary.org/media/midi_files/351-Built_on_the_Rock.mid"
   ],
-  "8_81": [
-    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
-    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid"
+  "7_105": [
+    "https://www.hymnallibrary.org/media/midi_files/A_Man_There_Lived_in_Galilee.mid"
   ],
-  "8_86": [
-    "https://www.cantiquest.org/VAM/VaM_022-mono-piano-Regarde_a_la_croix.mid",
-    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid"
+  "7_106": [
+    "https://www.hymnallibrary.org/media/midi_files/I_sought_the_Lord.mid"
   ],
-  "8_90": [
-    "https://www.cantiquest.org/VAM/VaM_184-mono-piano-Beni_soit_le_lien.mid",
-    "https://www.cantiquest.org/VAM/VaM_184-polyinstru-Beni_soit_le_lien.mid"
+  "7_108": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_only_let_me_see.mid"
   ],
-  "8_93": [
-    "https://www.cantiquest.org/SST/SST_406-mono-piano-L_amour_du_Pere.mid",
-    "https://www.cantiquest.org/SST/SST_406-polyinstru-L_amour_du_Pere.mid"
+  "7_11": [
+    "https://www.hymnallibrary.org/media/midi_files/Hymn_for_Easter.mid"
+  ],
+  "7_110": [
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "7_111": [
+    "https://www.hymnallibrary.org/media/midi_files/Hes_the_One.mid"
+  ],
+  "7_113": [
+    "https://www.hymnallibrary.org/media/midi_files/meet_me_there.mid"
+  ],
+  "7_115": [
+    "https://www.hymnallibrary.org/media/midi_files/Isnt_He_Wonderful_Chorus.mid"
+  ],
+  "7_118": [
+    "https://www.hymnallibrary.org/media/midi_files/i_dreamed_that_the_great_judgment_morning.mid"
+  ],
+  "7_120": [
+    "https://www.hymnallibrary.org/media/midi_files/Go_Tell_It_on_the_Mountain.mid"
+  ],
+  "7_121": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+  ],
+  "7_123": [
+    "https://www.hymnallibrary.org/media/midi_files/the_pearly_white_city.mid"
+  ],
+  "7_124": [
+    "https://www.hymnallibrary.org/media/midi_files/448-Just_a_Closer.mid"
+  ],
+  "7_125": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_gVPAB86.mid"
+  ],
+  "7_127": [
+    "https://www.hymnallibrary.org/media/midi_files/Are_You_Washed_in_the_Blood.mid"
+  ],
+  "7_128": [
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "7_132": [
+    "https://www.hymnallibrary.org/media/midi_files/God_Be_Merciful_to_Me.mid"
+  ],
+  "7_134": [
+    "https://www.hymnallibrary.org/media/midi_files/bring_them_in.mid"
+  ],
+  "7_135": [
+    "https://www.hymnallibrary.org/media/midi_files/010-How_Great_Thou.mid"
+  ],
+  "7_136": [
+    "https://www.hymnallibrary.org/media/midi_files/hold_the_fort.mid"
+  ],
+  "7_140": [
+    "https://www.hymnallibrary.org/media/midi_files/Until_He_Come.mid"
+  ],
+  "7_141": [
+    "https://www.hymnallibrary.org/media/midi_files/362.mid"
+  ],
+  "7_142": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_has_lifted_me.mid"
+  ],
+  "7_144": [
+    "https://www.hymnallibrary.org/media/midi_files/Father_We_Thank_Thee.mid"
+  ],
+  "7_145": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_470.mid"
+  ],
+  "7_146": [
+    "https://www.hymnallibrary.org/media/midi_files/Kneel_at_the_Cross.mid"
+  ],
+  "7_147": [
+    "https://www.hymnallibrary.org/media/midi_files/188_2.mid"
+  ],
+  "7_148": [
+    "https://www.hymnallibrary.org/media/midi_files/almost_persuaded.mid"
+  ],
+  "7_150": [
+    "https://www.hymnallibrary.org/media/midi_files/439.mid"
+  ],
+  "7_151": [
+    "https://www.hymnallibrary.org/media/midi_files/464.mid"
+  ],
+  "7_152": [
+    "https://www.hymnallibrary.org/media/midi_files/i_shall_see_the_King.mid"
+  ],
+  "7_153": [
+    "https://www.hymnallibrary.org/media/midi_files/At_Home_In_Heaven.mid"
+  ],
+  "7_154": [
+    "https://www.hymnallibrary.org/media/midi_files/justthinowmtobe_mCt3vWe.mid"
+  ],
+  "7_155": [
+    "https://www.hymnallibrary.org/media/midi_files/189.mid"
+  ],
+  "7_156": [
+    "https://www.hymnallibrary.org/media/midi_files/the_earth_is_the_Lords.mid"
+  ],
+  "7_157": [
+    "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+  ],
+  "7_158": [
+    "https://www.hymnallibrary.org/media/midi_files/Beyond_the_Sunset_-_piano_instrumental_hymn_cover_with_lyrics.mid"
+  ],
+  "7_159": [
+    "https://www.hymnallibrary.org/media/midi_files/A_Child_of_the_King.mid"
+  ],
+  "7_16": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+  ],
+  "7_160": [
+    "https://www.hymnallibrary.org/media/midi_files/Behold_Our_God.mid"
+  ],
+  "7_161": [
+    "https://www.hymnallibrary.org/media/midi_files/303.mid"
+  ],
+  "7_162": [
+    "https://www.hymnallibrary.org/media/midi_files/317_1.mid"
+  ],
+  "7_163": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Stranger_of_Galilee.mid"
+  ],
+  "7_165": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "7_167": [
+    "https://www.hymnallibrary.org/media/midi_files/504.mid"
+  ],
+  "7_168": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+  ],
+  "7_169": [
+    "https://www.hymnallibrary.org/media/midi_files/lovingly_tenderly_calling_omSj3mm.mid"
+  ],
+  "7_170": [
+    "https://www.hymnallibrary.org/media/midi_files/Here_O_my_Lord_I_see_Thee_face_to_face.mid"
+  ],
+  "7_171": [
+    "https://www.hymnallibrary.org/media/midi_files/lovingly_tenderly_calling_omSj3mm.mid"
+  ],
+  "7_175": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+  ],
+  "7_176": [
+    "https://www.hymnallibrary.org/media/midi_files/426.mid"
+  ],
+  "7_177": [
+    "https://www.hymnallibrary.org/media/midi_files/My_Lord_and_I_Stephens.mid"
+  ],
+  "7_178": [
+    "https://www.hymnallibrary.org/media/midi_files/Words_and_Music_by_BRIAN_PETAK_-_IN_THE_CROSS_ALONE_I_GLORY.mid"
+  ],
+  "7_18": [
+    "https://www.hymnallibrary.org/media/midi_files/493-Onward_Christian_8zvMAyv.mid"
+  ],
+  "7_180": [
+    "https://www.hymnallibrary.org/media/midi_files/464.mid"
+  ],
+  "7_183": [
+    "https://www.hymnallibrary.org/media/midi_files/lift_Him_up_oatman.mid"
+  ],
+  "7_184": [
+    "https://www.hymnallibrary.org/media/midi_files/beulah_land.mid"
+  ],
+  "7_185": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_2ZRQHND.mid"
+  ],
+  "7_186": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "7_187": [
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "7_188": [
+    "https://www.hymnallibrary.org/media/midi_files/220.mid"
+  ],
+  "7_189": [
+    "https://www.hymnallibrary.org/media/midi_files/fill_me_now.mid"
+  ],
+  "7_19": [
+    "https://www.hymnallibrary.org/media/midi_files/600.mid"
+  ],
+  "7_190": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "7_192": [
+    "https://www.hymnallibrary.org/media/midi_files/honey_in_the_rock.mid"
+  ],
+  "7_193": [
+    "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
+  ],
+  "7_194": [
+    "https://www.hymnallibrary.org/media/midi_files/Kathy_Getty_and_Margaret_Becker_-_Jesus_Draw_Me_Ever_Nearer.mid"
+  ],
+  "7_195": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Hear_the_Words_of_Love.mid"
+  ],
+  "7_196": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Will_Praise_Him.mid"
+  ],
+  "7_197": [
+    "https://www.hymnallibrary.org/media/midi_files/Hes_a_friend_of_mine.mid"
+  ],
+  "7_198": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Coming_Again.mid"
+  ],
+  "7_199": [
+    "https://www.hymnallibrary.org/media/midi_files/185-Jesus_What_a.mid"
+  ],
+  "7_2": [
+    "https://www.hymnallibrary.org/media/midi_files/Amazing_Grace_file.mid"
+  ],
+  "7_20": [
+    "https://www.hymnallibrary.org/media/midi_files/the_Lord_is_coming_by_and_by.mid"
+  ],
+  "7_201": [
+    "https://www.hymnallibrary.org/media/midi_files/188_2.mid"
+  ],
+  "7_202": [
+    "https://www.hymnallibrary.org/media/midi_files/455.mid"
+  ],
+  "7_203": [
+    "https://www.hymnallibrary.org/media/midi_files/nothing_between_tindley.mid"
+  ],
+  "7_205": [
+    "https://www.hymnallibrary.org/media/midi_files/280-Jesus_Keep_Me.mid"
+  ],
+  "7_206": [
+    "https://www.hymnallibrary.org/media/midi_files/308.mid"
+  ],
+  "7_208": [
+    "https://www.hymnallibrary.org/media/midi_files/all_things_are_ready.mid"
+  ],
+  "7_209": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Im_Coming_Home.mid"
+  ],
+  "7_21": [
+    "https://www.hymnallibrary.org/media/midi_files/the_fight_is_on.mid"
+  ],
+  "7_210": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Master_Has_Come.mid"
+  ],
+  "7_211": [
+    "https://www.hymnallibrary.org/media/midi_files/134-Jesus_Paid_It_All.mid"
+  ],
+  "7_213": [
+    "https://www.hymnallibrary.org/media/midi_files/608.mid"
+  ],
+  "7_214": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "7_216": [
+    "https://www.hymnallibrary.org/media/midi_files/in_love_kindness.mid"
+  ],
+  "7_217": [
+    "https://www.hymnallibrary.org/media/midi_files/It_Is_No_Secret_What_God_Can_Do_LgWiBdB.mid"
+  ],
+  "7_218": [
+    "https://www.hymnallibrary.org/media/midi_files/How_Great_Is_Our_God.mid"
+  ],
+  "7_219": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Brother_Be_Faithful.mid"
+  ],
+  "7_22": [
+    "https://www.hymnallibrary.org/media/midi_files/More_Like_Jesus_Stillman.mid"
+  ],
+  "7_220": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_315.mid"
+  ],
+  "7_221": [
+    "https://www.hymnallibrary.org/media/midi_files/God_Be_With_You_Till_We_Meet_Again.mid"
+  ],
+  "7_222": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_E6EyaNM.mid"
+  ],
+  "7_23": [
+    "https://www.hymnallibrary.org/media/midi_files/my_faith_looks_up_to_thee.mid"
+  ],
+  "7_24": [
+    "https://www.hymnallibrary.org/media/midi_files/Tenderness.mid"
+  ],
+  "7_25": [
+    "https://www.hymnallibrary.org/media/midi_files/275-I_Surrender_All.mid"
+  ],
+  "7_27": [
+    "https://www.hymnallibrary.org/media/midi_files/Farther_Along.mid"
+  ],
+  "7_28": [
+    "https://www.hymnallibrary.org/media/midi_files/His_Way_With_Thee.mid"
+  ],
+  "7_29": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+  ],
+  "7_3": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "7_30": [
+    "https://www.hymnallibrary.org/media/midi_files/484.mid"
+  ],
+  "7_31": [
+    "https://www.hymnallibrary.org/media/midi_files/banner_of_the_cross.mid"
+  ],
+  "7_34": [
+    "https://www.hymnallibrary.org/media/midi_files/Praise_Ye_the_Lord.mid"
+  ],
+  "7_35": [
+    "https://www.hymnallibrary.org/media/midi_files/546-Love-Lifted_Me.mid"
+  ],
+  "7_36": [
+    "https://www.hymnallibrary.org/media/midi_files/Even_Me.mid"
+  ],
+  "7_37": [
+    "https://www.hymnallibrary.org/media/midi_files/Have_Thine_Own_Way_Lord.mid"
+  ],
+  "7_38": [
+    "https://www.hymnallibrary.org/media/midi_files/290-I_Am_Thine_O_Lord_1.mid"
+  ],
+  "7_39": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+  ],
+  "7_4": [
+    "https://www.hymnallibrary.org/media/midi_files/gone_from_my_heart.mid"
+  ],
+  "7_40": [
+    "https://www.hymnallibrary.org/media/midi_files/oh_it_is_wonderful.mid"
+  ],
+  "7_41": [
+    "https://www.hymnallibrary.org/media/midi_files/i_will_sing_of_Jesus_love.mid"
+  ],
+  "7_43": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+  ],
+  "7_44": [
+    "https://www.hymnallibrary.org/media/midi_files/God_leads_us_along.mid"
+  ],
+  "7_45": [
+    "https://www.hymnallibrary.org/media/midi_files/Leaning_On_the_Everlasting_Arms.mid"
+  ],
+  "7_46": [
+    "https://www.hymnallibrary.org/media/midi_files/grenada.mid"
+  ],
+  "7_47": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Know_Whom_I_Have_Believed.mid"
+  ],
+  "7_48": [
+    "https://www.hymnallibrary.org/media/midi_files/Bringing_in_the_Sheaves_Shaw.mid"
+  ],
+  "7_5": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
+  ],
+  "7_51": [
+    "https://www.hymnallibrary.org/media/midi_files/140.mid"
+  ],
+  "7_53": [
+    "https://www.hymnallibrary.org/media/midi_files/515.mid"
+  ],
+  "7_54": [
+    "https://www.hymnallibrary.org/media/midi_files/338-How_Firm_a.mid"
+  ],
+  "7_55": [
+    "https://www.hymnallibrary.org/media/midi_files/he_is_so_precious.mid"
+  ],
+  "7_56": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_never_fails.mid"
+  ],
+  "7_57": [
+    "https://www.hymnallibrary.org/media/midi_files/633-Mine_Eyes_Have.mid"
+  ],
+  "7_58": [
+    "https://www.hymnallibrary.org/media/midi_files/Laura_B._Davis.mid"
+  ],
+  "7_6": [
+    "https://www.hymnallibrary.org/media/midi_files/170.mid"
+  ],
+  "7_60": [
+    "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+  ],
+  "7_63": [
+    "https://www.hymnallibrary.org/media/midi_files/old_time_religion.mid"
+  ],
+  "7_65": [
+    "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
+  ],
+  "7_66": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+  ],
+  "7_67": [
+    "https://www.hymnallibrary.org/media/midi_files/o_to_be_like_Thee_1.mid"
+  ],
+  "7_68": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH-556.mid"
+  ],
+  "7_69": [
+    "https://www.hymnallibrary.org/media/midi_files/502.mid"
+  ],
+  "7_7": [
+    "https://www.hymnallibrary.org/media/midi_files/Let_the_Redeemed_Say_So.mid"
+  ],
+  "7_70": [
+    "https://www.hymnallibrary.org/media/midi_files/Christ_liveth_in_me.mid"
+  ],
+  "7_71": [
+    "https://www.hymnallibrary.org/media/midi_files/135-i-know-that-i-am-saved.mid"
+  ],
+  "7_74": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Spirit_of_the_Living_God.mid"
+  ],
+  "7_75": [
+    "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
+  ],
+  "7_76": [
+    "https://www.hymnallibrary.org/media/midi_files/is_thy_heart_right_with_God.mid"
+  ],
+  "7_77": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_hl5Zqv4.mid"
+  ],
+  "7_78": [
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "7_79": [
+    "https://www.hymnallibrary.org/media/midi_files/faithalive_PsH_578_1.mid"
+  ],
+  "7_8": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+  ],
+  "7_80": [
+    "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+  ],
+  "7_81": [
+    "https://www.cantiquest.org/CJ/CJ_086-mono-piano-Jesus_te_confie.mid",
+    "https://www.cantiquest.org/CJ/CJ_086-polyinstru-Jesus_te_confie.mid",
+    "https://www.cantiquest.org/VAM/VaM_031-mono-piano-Jesus_te_confie.mid",
+    "https://www.cantiquest.org/VAM/VaM_031-polyinstru-Jesus_te_confie.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Here_Lowry.mid"
+  ],
+  "7_82": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Coming_Again.mid"
+  ],
+  "7_83": [
+    "https://www.hymnallibrary.org/media/midi_files/189.mid"
+  ],
+  "7_84": [
+    "https://www.hymnallibrary.org/media/midi_files/Go_Forth_for_God.mid"
+  ],
+  "7_85": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "7_86": [
+    "https://www.hymnallibrary.org/media/midi_files/Kneel_at_the_Cross.mid"
+  ],
+  "7_87": [
+    "https://www.hymnallibrary.org/media/midi_files/In_the_Hollow_of_His_Hand_Schuler.mid"
+  ],
+  "7_88": [
+    "https://www.hymnallibrary.org/media/midi_files/the_haven_of_rest.mid"
+  ],
+  "7_89": [
+    "https://www.hymnallibrary.org/media/midi_files/must_jesus_bear_the_cross_alone.mid"
+  ],
+  "7_90": [
+    "https://www.hymnallibrary.org/media/midi_files/Blessed_Be_the_Name.mid"
+  ],
+  "7_91": [
+    "https://www.hymnallibrary.org/media/midi_files/Im_Going_Home.mid"
+  ],
+  "7_92": [
+    "https://www.hymnallibrary.org/media/midi_files/Lead_Me_Lord.mid"
+  ],
+  "7_93": [
+    "https://www.cantiquest.org/SSO/SSO_002-mono-piano-Twas_Thy_love_O_God.mid",
+    "https://www.cantiquest.org/SSO/SSO_002-polyinstru-Twas_Thy_love_O_God.mid",
+    "https://www.hymnallibrary.org/media/midi_files/the_love_of_God.mid"
+  ],
+  "7_94": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "7_96": [
+    "https://www.hymnallibrary.org/media/midi_files/136.mid"
+  ],
+  "7_98": [
+    "https://www.hymnallibrary.org/media/midi_files/the_crowning_day_whittle.mid"
+  ],
+  "7_99": [
+    "https://www.hymnallibrary.org/media/midi_files/528_PIk4C7z.mid"
   ],
   "8_101": [
     "https://www.cantiquest.org/VAM/VaM_169-mono-piano-Quand_je_contemple.mid",
@@ -1661,11 +2133,13 @@
   ],
   "8_124": [
     "https://www.cantiquest.org/HeC/HeC_248-mono-piano-Mon_Dieu_plus_pres_de_toi.mid",
-    "https://www.cantiquest.org/HeC/HeC_248-polyinstru-Mon_Dieu_plus_pres_de_toi.mid"
+    "https://www.cantiquest.org/HeC/HeC_248-polyinstru-Mon_Dieu_plus_pres_de_toi.mid",
+    "https://www.hymnallibrary.org/media/midi_files/448-Just_a_Closer.mid"
   ],
   "8_144": [
     "https://www.cantiquest.org/CV/CV_120-mono-piano-Jesus_par_ton_sang_precieux.mid",
-    "https://www.cantiquest.org/CV/CV_120-polyinstru-Jesus_par_ton_sang_precieux.mid"
+    "https://www.cantiquest.org/CV/CV_120-polyinstru-Jesus_par_ton_sang_precieux.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Father_We_Thank_Thee.mid"
   ],
   "8_166": [
     "https://www.cantiquest.org/HeC/HeC_011-mono-piano-Quand_nous_voyons_au_ciel.mid",
@@ -1673,22 +2147,755 @@
   ],
   "8_185": [
     "https://www.cantiquest.org/CV/CV_302-mono-piano-Le_Seigneur_m_aime.mid",
-    "https://www.cantiquest.org/CV/CV_302-polyinstru-Le_Seigneur_m_aime.mid"
+    "https://www.cantiquest.org/CV/CV_302-polyinstru-Le_Seigneur_m_aime.mid",
+    "https://www.hymnallibrary.org/media/midi_files/dummy_2ZRQHND.mid",
+    "https://www.hymnallibrary.org/media/midi_files/275-I_Surrender_All.mid"
   ],
   "8_205": [
     "https://www.cantiquest.org/VAM/VaM_022-mono-piano-Regarde_a_la_croix.mid",
-    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid"
+    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid",
+    "https://www.hymnallibrary.org/media/midi_files/280-Jesus_Keep_Me.mid"
   ],
   "8_220": [
     "https://www.cantiquest.org/VAM/VaM_184-mono-piano-Beni_soit_le_lien.mid",
-    "https://www.cantiquest.org/VAM/VaM_184-polyinstru-Beni_soit_le_lien.mid"
+    "https://www.cantiquest.org/VAM/VaM_184-polyinstru-Beni_soit_le_lien.mid",
+    "https://www.hymnallibrary.org/media/midi_files/PsH_315.mid"
   ],
   "8_221": [
     "https://www.cantiquest.org/VAM/VaM_066-mono-piano-Jesus_soit_avec_vous_a_jamais.mid",
-    "https://www.cantiquest.org/VAM/VaM_066-polyinstru-Jesus_soit_avec_vous_a_jamais.mid"
+    "https://www.cantiquest.org/VAM/VaM_066-polyinstru-Jesus_soit_avec_vous_a_jamais.mid",
+    "https://www.hymnallibrary.org/media/midi_files/God_Be_With_You_Till_We_Meet_Again.mid"
   ],
   "8_226": [
     "https://www.cantiquest.org/VAM/VaM_043-mono-piano-Ma_richesse_ma_gloire.mid",
     "https://www.cantiquest.org/VAM/VaM_043-polyinstru-Ma_richesse_ma_gloire.mid"
+  ],
+  "8_35": [
+    "https://www.cantiquest.org/VAM/VaM_143-mono-piano-L_amour_du_Sauveur.mid",
+    "https://www.cantiquest.org/VAM/VaM_143-polyinstru-L_amour_du_Sauveur.mid",
+    "https://www.hymnallibrary.org/media/midi_files/546-Love-Lifted_Me.mid"
+  ],
+  "8_45": [
+    "https://www.cantiquest.org/HeC/HeC_196-mono-piano-Dans_tes_bras_eternels.mid",
+    "https://www.cantiquest.org/HeC/HeC_196-polyinstru-Dans_tes_bras_eternels.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Leaning_On_the_Everlasting_Arms.mid"
+  ],
+  "8_61": [
+    "https://www.cantiquest.org/CV/CV_309-mono-piano-Jesus_ne_change_pas.mid",
+    "https://www.cantiquest.org/CV/CV_309-polyinstru-Jesus_ne_change_pas.mid"
+  ],
+  "8_81": [
+    "https://www.cantiquest.org/CV/CV_005-mono-piano-Jesus_Jesus.mid",
+    "https://www.cantiquest.org/CV/CV_005-polyinstru-Jesus_Jesus.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Here_Lowry.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_only_let_me_see.mid"
+  ],
+  "8_86": [
+    "https://www.cantiquest.org/VAM/VaM_022-mono-piano-Regarde_a_la_croix.mid",
+    "https://www.cantiquest.org/VAM/VaM_022-polyinstru-Regarde_a_la_croix.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Kneel_at_the_Cross.mid"
+  ],
+  "8_90": [
+    "https://www.cantiquest.org/VAM/VaM_184-mono-piano-Beni_soit_le_lien.mid",
+    "https://www.cantiquest.org/VAM/VaM_184-polyinstru-Beni_soit_le_lien.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Blessed_Be_the_Name.mid"
+  ],
+  "8_93": [
+    "https://www.cantiquest.org/SST/SST_406-mono-piano-L_amour_du_Pere.mid",
+    "https://www.cantiquest.org/SST/SST_406-polyinstru-L_amour_du_Pere.mid",
+    "https://www.hymnallibrary.org/media/midi_files/the_love_of_God.mid"
+  ],
+  "1_93A": [
+    "https://www.hymnallibrary.org/media/midi_files/Here_O_my_Lord_I_see_Thee_face_to_face.mid"
+  ],
+  "1_161": [
+    "https://www.hymnallibrary.org/media/midi_files/170.mid"
+  ],
+  "1_197A": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_has_lifted_me.mid"
+  ],
+  "1_207": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_rose_of_sharon.mid"
+  ],
+  "1_384A": [
+    "https://www.hymnallibrary.org/media/midi_files/Jerusalem_The_Golden.mid"
+  ],
+  "1_454A": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Here_Lowry.mid"
+  ],
+  "1_456": [
+    "https://www.hymnallibrary.org/media/midi_files/come_unto_Me_hewitt.mid"
+  ],
+  "1_477A": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Here_Lowry.mid"
+  ],
+  "1_545": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Coming.mid"
+  ],
+  "1_551": [
+    "https://www.hymnallibrary.org/media/midi_files/702-ChristBeBeside_accomp.mid"
+  ],
+  "1_621": [
+    "https://www.hymnallibrary.org/media/midi_files/362.mid"
+  ],
+  "8_4": [
+    "https://www.cantiquest.org/CV/CV_112-mono-piano-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
+    "https://www.cantiquest.org/CV/CV_112-polyinstru-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui.mid",
+    "https://www.hymnallibrary.org/media/midi_files/gone_from_my_heart.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+  ],
+  "8_19": [
+    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
+    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid",
+    "https://www.hymnallibrary.org/media/midi_files/600.mid",
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "8_22a": [
+    "https://www.cantiquest.org/VAM/VaM_016-mono-piano-Entends-tu_le_chant_joyeux.mid",
+    "https://www.cantiquest.org/VAM/VaM_016-polyinstru-Entends-tu_le_chant_joyeux.mid"
+  ],
+  "8_46": [
+    "https://www.cantiquest.org/CJ/CJ_134-mono-piano-On_frappe.mid",
+    "https://www.cantiquest.org/CJ/CJ_134-polyinstru-On_frappe.mid",
+    "https://www.hymnallibrary.org/media/midi_files/grenada.mid"
+  ],
+  "8_56": [
+    "https://www.cantiquest.org/CJ/CJ_254-mono-piano-Dans_mon_ame_un_beau_soleil_brille.mid",
+    "https://www.cantiquest.org/CJ/CJ_254-polyinstru-Dans_mon_ame_un_beau_soleil_brille.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_never_fails.mid"
+  ],
+  "8_71a": [
+    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
+  ],
+  "8_71b": [
+    "https://www.cantiquest.org/VAM/VaM_126-mono-piano-Quel_bonheur_de_marcher_avec_lui.mid",
+    "https://www.cantiquest.org/VAM/VaM_126-polyinstru-Quel_bonheur_de_marcher_avec_lui.mid",
+    "https://www.cantiquest.org/CGG/CGG1_316-polyinstru-Quel_bonheur_de_marcher_avec_Lui_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_316-mono-piano-Quel_bonheur_de_marcher_avec_Lui_midkar.mid"
+  ],
+  "8_110": [
+    "https://www.cantiquest.org/VAM/VaM_075-polyinstru-L_Eternel_est_mon_Berger.mid",
+    "https://www.cantiquest.org/VAM/VaM_075-mono-piano-L_Eternel_est_mon_Berger.mid",
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "8_148": [
+    "https://www.cantiquest.org/HeC/HeC_235-mono-piano-Jour_apres_jour_Seigneur.mid",
+    "https://www.cantiquest.org/HeC/HeC_235-polyinstru-Jour_apres_jour_Seigneur.mid",
+    "https://www.hymnallibrary.org/media/midi_files/almost_persuaded.mid"
+  ],
+  "8_156a": [
+    "https://www.cantiquest.org/CGG/CGG1_083-mono-piano-La_croix_du_Calvaire.mid",
+    "https://www.cantiquest.org/CGG/CGG1_083-polyinstru-La_croix_du_Calvaire.mid"
+  ],
+  "8_167a": [
+    "https://www.cantiquest.org/CV/CV_148-polyinstru-Jesus_est_au_milieu_de_nous.mid",
+    "https://www.cantiquest.org/CV/CV_148-mono-piano-Jesus_est_au_milieu_de_nous.mid"
+  ],
+  "8_184": [
+    "https://www.cantiquest.org/CV/CV_279-polyinstru-Beni_soit_le_lien.mid",
+    "https://www.cantiquest.org/CV/CV_279-mono-piano-Beni_soit_le_lien.mid",
+    "https://www.hymnallibrary.org/media/midi_files/beulah_land.mid",
+    "https://www.hymnallibrary.org/media/midi_files/464.mid"
+  ],
+  "8_193": [
+    "https://www.cantiquest.org/CV/CV_215a-mono-piano-Oh_quelle_paix_parfaite.mid",
+    "https://www.cantiquest.org/CV/CV_215a-polyinstru-Oh_quelle_paix_parfaite.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
+  ],
+  "8_210": [
+    "https://www.cantiquest.org/HeC/HeC_005-polyinstru-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.cantiquest.org/HeC/HeC_005-mono-piano-O_Dieu_dont_l_amour_nous_rassemble.mid",
+    "https://www.hymnallibrary.org/media/midi_files/The_Master_Has_Come.mid"
+  ],
+  "8_222": [
+    "https://www.cantiquest.org/CGG/CGG1_267-polyinstru-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.cantiquest.org/CGG/CGG1_267-mono-piano-Dans_mon_coeur_chante_une_melodie.mid",
+    "https://www.hymnallibrary.org/media/midi_files/dummy_E6EyaNM.mid"
+  ],
+  "8_224": [
+    "https://www.cantiquest.org/CGG/CGG1_242-polyinstru-Par_la_foi_nous_marcherons_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_242-mono-piano-Par_la_foi_nous_marcherons_midkar.mid"
+  ],
+  "8_235": [
+    "https://www.cantiquest.org/CGG/CGG1_287-mono-piano-Nous_allons_bon_pas.mid",
+    "https://www.cantiquest.org/CGG/CGG1_287-polyinstru-Nous_allons_bon_pas.mid"
+  ],
+  "8_236": [
+    "https://www.cantiquest.org/CV/CV_043-polyinstru-Jesus_Christ_est_ma_sagesse.mid",
+    "https://www.cantiquest.org/CV/CV_043-mono-piano-Jesus_Christ_est_ma_sagesse.mid"
+  ],
+  "8_238a": [
+    "https://www.cantiquest.org/CV/CV_207-mono-piano-Maitre_entends-tu_la_tempete.mid",
+    "https://www.cantiquest.org/CV/CV_207-polyinstru-Maitre_entends-tu_la_tempete.mid"
+  ],
+  "8_249": [
+    "https://www.cantiquest.org/VAM/VaM_155-mono-piano-Un_Sauveur_merveilleux.mid",
+    "https://www.cantiquest.org/VAM/VaM_155-polyinstru-Un_Sauveur_merveilleux.mid"
+  ],
+  "8_250": [
+    "https://www.cantiquest.org/CV/CV_180-mono-piano-La_voix_du_Seigneur_m_appelle.mid",
+    "https://www.cantiquest.org/CV/CV_180-polyinstru-La_voix_du_Seigneur_m_appelle.mid"
+  ],
+  "8_257a": [
+    "https://www.cantiquest.org/CV/CV_174-mono-piano-Seul_refuge_de_mon_ame.mid",
+    "https://www.cantiquest.org/CV/CV_174-polyinstru-Seul_refuge_de_mon_ame.mid"
+  ],
+  "8_267": [
+    "https://www.cantiquest.org/CGG/CGG1_172-mono-piano-Oh_prends_mon_ame.mid",
+    "https://www.cantiquest.org/CGG/CGG1_172-polyinstru-Oh_prends_mon_ame.mid"
+  ],
+  "8_283": [
+    "https://www.cantiquest.org/CV/CV_253-mono-piano-La_trompette_a_retenti.mid",
+    "https://www.cantiquest.org/CV/CV_253-polyinstru-La_trompette_a_retenti.mid"
+  ],
+  "8_303": [
+    "https://www.cantiquest.org/VAM/VaM_227-mono-piano-Flots_mugissants.mid",
+    "https://www.cantiquest.org/CGG/CGG1_259-polyinstru-Flots_mugissants.mid",
+    "https://www.cantiquest.org/CGG/CGG1_259-mono-piano-Flots_mugissants.mid",
+    "https://www.cantiquest.org/VAM/VaM_227-polyinstru-Flots_mugissants.mid"
+  ],
+  "8_317": [
+    "https://www.cantiquest.org/CV/CV_261-mono-piano-Nombreux_comme_le_sable.mid",
+    "https://www.cantiquest.org/CV/CV_261-polyinstru-Nombreux_comme_le_sable.mid"
+  ],
+  "8_319": [
+    "https://www.cantiquest.org/VAM/VaM_148-mono-piano-Mon_Sauveur_m_aime.mid",
+    "https://www.cantiquest.org/VAM/VaM_148-polyinstru-Mon_Sauveur_m_aime.mid",
+    "https://www.cantiquest.org/CGG/CGG1_140-polyinstru-Mon_Sauveur_m_aime_midkar.mid",
+    "https://www.cantiquest.org/CGG/CGG1_140-mono-piano-Mon_Sauveur_m_aime_midkar.mid"
+  ],
+  "8_325": [
+    "https://www.cantiquest.org/CV/CV_017-polyinstru-A_celui_qui_nous_a_laves.mid",
+    "https://www.cantiquest.org/CV/CV_017-mono-piano-A_celui_qui_nous_a_laves.mid"
+  ],
+  "8_378": [
+    "https://www.cantiquest.org/HeC/HeC_110-mono-piano-De_Canaan_quand_verrons_nous.mid",
+    "https://www.cantiquest.org/HeC/HeC_110-polyinstru-De_Canaan_quand_verrons_nous.mid"
+  ],
+  "8_389a": [
+    "https://www.cantiquest.org/CV/CV_254-polyinstru-Il_va_venir_le_Seigneur_que_jadore.mid",
+    "https://www.cantiquest.org/CV/CV_254-mono-piano-Il_va_venir_le_Seigneur_que_jadore.mid"
+  ],
+  "8_391": [
+    "https://www.cantiquest.org/HeC/HeC_109-mono-piano-L_Eglise_est_etrangere.mid",
+    "https://www.cantiquest.org/HeC/HeC_109-polyinstru-L_Eglise_est_etrangere.mid"
+  ],
+  "8_401": [
+    "https://www.cantiquest.org/VAM/VaM_093-mono-piano-Christ_est_mon_rocher.mid",
+    "https://www.cantiquest.org/VAM/VaM_093-polyinstru-Christ_est_mon_rocher.mid"
+  ],
+  "8_450": [
+    "https://www.cantiquest.org/CJ/CJ_218-mono-piano-Espere_en_Dieu.mid",
+    "https://www.cantiquest.org/CJ/CJ_218-polyinstru-Espere_en_Dieu.mid"
+  ],
+  "8_466": [
+    "https://www.cantiquest.org/CJ/CJ_152-mono-piano-Deux_mains_pour_servir.mid",
+    "https://www.cantiquest.org/CJ/CJ_152-polyinstru-Deux_mains_pour_servir.mid"
+  ],
+  "8_478": [
+    "https://www.cantiquest.org/VAM/VaM_078-polyinstru-Chaque_instant.mid",
+    "https://www.cantiquest.org/VAM/VaM_078-mono-piano-Chaque_instant.mid"
+  ],
+  "8_523": [
+    "https://www.cantiquest.org/VAM/VaM_263-polyinstru-Le_Fils_de_Dieu.mid",
+    "https://www.cantiquest.org/VAM/VaM_263-mono-piano-Le_Fils_de_Dieu.mid"
+  ],
+  "8_566a": [
+    "https://www.cantiquest.org/CV/CV_304-mono-piano-Jesus_quitta_le_trone.mid",
+    "https://www.cantiquest.org/CV/CV_304-polyinstru-Jesus_quitta_le_trone.mid"
+  ],
+  "8_585": [
+    "https://www.cantiquest.org/VAM/VaM_266-polyinstru-L_appel_supreme.mid",
+    "https://www.cantiquest.org/VAM/VaM_266-mono-piano-L_appel_supreme.mid"
+  ],
+  "8_614": [
+    "https://www.cantiquest.org/VAM/VaM_095-polyinstru-Dieu_voit_ma_vie_entiere.mid",
+    "https://www.cantiquest.org/VAM/VaM_095-mono-piano-Dieu_voit_ma_vie_entiere.mid"
+  ],
+  "8_618": [
+    "https://www.cantiquest.org/VAM/VaM_130-mono-piano-Il_est_un_seul_chemin.mid",
+    "https://www.cantiquest.org/VAM/VaM_130-polyinstru-Il_est_un_seul_chemin.mid"
+  ],
+  "8_624": [
+    "https://www.cantiquest.org/VAM/VaM_260-mono-piano-Alleluia.mid",
+    "https://www.cantiquest.org/VAM/VaM_260-polyinstru-Alleluia.mid"
+  ],
+  "8_639": [
+    "https://www.cantiquest.org/CV/CV_208-polyinstru-Compte_les_bienfaits_de_Dieu.mid",
+    "https://www.cantiquest.org/CV/CV_208-mono-piano-Compte_les_bienfaits_de_Dieu.mid"
+  ],
+  "8_640": [
+    "https://www.cantiquest.org/CV/CV_234-polyinstru-Quel_ami_fidele_et_tendre.mid",
+    "https://www.cantiquest.org/CV/CV_234-mono-piano-Quel_ami_fidele_et_tendre.mid"
+  ],
+  "8_2": [
+    "https://www.hymnallibrary.org/media/midi_files/Amazing_Grace_file.mid"
+  ],
+  "8_3": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "8_5": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
+  ],
+  "8_6": [
+    "https://www.hymnallibrary.org/media/midi_files/170.mid",
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "8_7": [
+    "https://www.hymnallibrary.org/media/midi_files/Let_the_Redeemed_Say_So.mid"
+  ],
+  "8_8": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+  ],
+  "8_10": [
+    "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+  ],
+  "8_11": [
+    "https://www.hymnallibrary.org/media/midi_files/Hymn_for_Easter.mid"
+  ],
+  "8_16": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+  ],
+  "8_18": [
+    "https://www.hymnallibrary.org/media/midi_files/493-Onward_Christian_8zvMAyv.mid"
+  ],
+  "8_20": [
+    "https://www.hymnallibrary.org/media/midi_files/the_Lord_is_coming_by_and_by.mid"
+  ],
+  "8_21": [
+    "https://www.hymnallibrary.org/media/midi_files/the_fight_is_on.mid"
+  ],
+  "8_22": [
+    "https://www.hymnallibrary.org/media/midi_files/More_Like_Jesus_Stillman.mid"
+  ],
+  "8_23": [
+    "https://www.hymnallibrary.org/media/midi_files/my_faith_looks_up_to_thee.mid"
+  ],
+  "8_24": [
+    "https://www.hymnallibrary.org/media/midi_files/Tenderness.mid"
+  ],
+  "8_25": [
+    "https://www.hymnallibrary.org/media/midi_files/275-I_Surrender_All.mid"
+  ],
+  "8_27": [
+    "https://www.hymnallibrary.org/media/midi_files/Farther_Along.mid"
+  ],
+  "8_28": [
+    "https://www.hymnallibrary.org/media/midi_files/His_Way_With_Thee.mid"
+  ],
+  "8_29": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+  ],
+  "8_30": [
+    "https://www.hymnallibrary.org/media/midi_files/484.mid"
+  ],
+  "8_31": [
+    "https://www.hymnallibrary.org/media/midi_files/banner_of_the_cross.mid"
+  ],
+  "8_34": [
+    "https://www.hymnallibrary.org/media/midi_files/Praise_Ye_the_Lord.mid"
+  ],
+  "8_36": [
+    "https://www.hymnallibrary.org/media/midi_files/Even_Me.mid"
+  ],
+  "8_37": [
+    "https://www.hymnallibrary.org/media/midi_files/Have_Thine_Own_Way_Lord.mid"
+  ],
+  "8_38": [
+    "https://www.hymnallibrary.org/media/midi_files/290-I_Am_Thine_O_Lord_1.mid"
+  ],
+  "8_39": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+  ],
+  "8_40": [
+    "https://www.hymnallibrary.org/media/midi_files/oh_it_is_wonderful.mid"
+  ],
+  "8_41": [
+    "https://www.hymnallibrary.org/media/midi_files/i_will_sing_of_Jesus_love.mid"
+  ],
+  "8_43": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+  ],
+  "8_44": [
+    "https://www.hymnallibrary.org/media/midi_files/God_leads_us_along.mid"
+  ],
+  "8_47": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Know_Whom_I_Have_Believed.mid"
+  ],
+  "8_48": [
+    "https://www.hymnallibrary.org/media/midi_files/Bringing_in_the_Sheaves_Shaw.mid"
+  ],
+  "8_51": [
+    "https://www.hymnallibrary.org/media/midi_files/140.mid"
+  ],
+  "8_53": [
+    "https://www.hymnallibrary.org/media/midi_files/515.mid"
+  ],
+  "8_54": [
+    "https://www.hymnallibrary.org/media/midi_files/338-How_Firm_a.mid"
+  ],
+  "8_55": [
+    "https://www.hymnallibrary.org/media/midi_files/he_is_so_precious.mid"
+  ],
+  "8_57": [
+    "https://www.hymnallibrary.org/media/midi_files/633-Mine_Eyes_Have.mid"
+  ],
+  "8_58": [
+    "https://www.hymnallibrary.org/media/midi_files/Laura_B._Davis.mid"
+  ],
+  "8_60": [
+    "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+  ],
+  "8_63": [
+    "https://www.hymnallibrary.org/media/midi_files/old_time_religion.mid"
+  ],
+  "8_65": [
+    "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
+  ],
+  "8_66": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+  ],
+  "8_67": [
+    "https://www.hymnallibrary.org/media/midi_files/o_to_be_like_Thee_1.mid",
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "8_68": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH-556.mid"
+  ],
+  "8_69": [
+    "https://www.hymnallibrary.org/media/midi_files/502.mid"
+  ],
+  "8_70": [
+    "https://www.hymnallibrary.org/media/midi_files/Christ_liveth_in_me.mid"
+  ],
+  "8_71": [
+    "https://www.hymnallibrary.org/media/midi_files/135-i-know-that-i-am-saved.mid"
+  ],
+  "8_74": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Spirit_of_the_Living_God.mid"
+  ],
+  "8_75": [
+    "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
+  ],
+  "8_76": [
+    "https://www.hymnallibrary.org/media/midi_files/is_thy_heart_right_with_God.mid"
+  ],
+  "8_77": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_hl5Zqv4.mid",
+    "https://www.hymnallibrary.org/media/midi_files/dummy_E6EyaNM.mid"
+  ],
+  "8_78": [
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "8_79": [
+    "https://www.hymnallibrary.org/media/midi_files/faithalive_PsH_578_1.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+  ],
+  "8_80": [
+    "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+  ],
+  "8_82": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Coming_Again.mid"
+  ],
+  "8_83": [
+    "https://www.hymnallibrary.org/media/midi_files/189.mid"
+  ],
+  "8_84": [
+    "https://www.hymnallibrary.org/media/midi_files/Go_Forth_for_God.mid"
+  ],
+  "8_85": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "8_87": [
+    "https://www.hymnallibrary.org/media/midi_files/In_the_Hollow_of_His_Hand_Schuler.mid"
+  ],
+  "8_88": [
+    "https://www.hymnallibrary.org/media/midi_files/the_haven_of_rest.mid"
+  ],
+  "8_89": [
+    "https://www.hymnallibrary.org/media/midi_files/must_jesus_bear_the_cross_alone.mid"
+  ],
+  "8_91": [
+    "https://www.hymnallibrary.org/media/midi_files/Im_Going_Home.mid"
+  ],
+  "8_92": [
+    "https://www.hymnallibrary.org/media/midi_files/Lead_Me_Lord.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+  ],
+  "8_94": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "8_96": [
+    "https://www.hymnallibrary.org/media/midi_files/136.mid"
+  ],
+  "8_98": [
+    "https://www.hymnallibrary.org/media/midi_files/the_crowning_day_whittle.mid"
+  ],
+  "8_99": [
+    "https://www.hymnallibrary.org/media/midi_files/528_PIk4C7z.mid"
+  ],
+  "8_100": [
+    "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid",
+    "https://www.hymnallibrary.org/media/midi_files/455.mid"
+  ],
+  "8_102": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Master_Has_Come.mid"
+  ],
+  "8_103": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
+  ],
+  "8_104": [
+    "https://www.hymnallibrary.org/media/midi_files/351-Built_on_the_Rock.mid"
+  ],
+  "8_105": [
+    "https://www.hymnallibrary.org/media/midi_files/A_Man_There_Lived_in_Galilee.mid"
+  ],
+  "8_106": [
+    "https://www.hymnallibrary.org/media/midi_files/I_sought_the_Lord.mid"
+  ],
+  "8_108": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_only_let_me_see.mid",
+    "https://www.hymnallibrary.org/media/midi_files/PsH_470.mid"
+  ],
+  "8_111": [
+    "https://www.hymnallibrary.org/media/midi_files/Hes_the_One.mid",
+    "https://www.hymnallibrary.org/media/midi_files/464.mid"
+  ],
+  "8_113": [
+    "https://www.hymnallibrary.org/media/midi_files/meet_me_there.mid",
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+  ],
+  "8_115": [
+    "https://www.hymnallibrary.org/media/midi_files/Isnt_He_Wonderful_Chorus.mid"
+  ],
+  "8_118": [
+    "https://www.hymnallibrary.org/media/midi_files/i_dreamed_that_the_great_judgment_morning.mid"
+  ],
+  "8_120": [
+    "https://www.hymnallibrary.org/media/midi_files/Go_Tell_It_on_the_Mountain.mid"
+  ],
+  "8_121": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+  ],
+  "8_123": [
+    "https://www.hymnallibrary.org/media/midi_files/the_pearly_white_city.mid"
+  ],
+  "8_125": [
+    "https://www.hymnallibrary.org/media/midi_files/dummy_gVPAB86.mid"
+  ],
+  "8_127": [
+    "https://www.hymnallibrary.org/media/midi_files/Are_You_Washed_in_the_Blood.mid"
+  ],
+  "8_128": [
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid",
+    "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+  ],
+  "8_132": [
+    "https://www.hymnallibrary.org/media/midi_files/God_Be_Merciful_to_Me.mid"
+  ],
+  "8_134": [
+    "https://www.hymnallibrary.org/media/midi_files/bring_them_in.mid",
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
+  ],
+  "8_135": [
+    "https://www.hymnallibrary.org/media/midi_files/010-How_Great_Thou.mid"
+  ],
+  "8_136": [
+    "https://www.hymnallibrary.org/media/midi_files/hold_the_fort.mid"
+  ],
+  "8_140": [
+    "https://www.hymnallibrary.org/media/midi_files/Until_He_Come.mid"
+  ],
+  "8_141": [
+    "https://www.hymnallibrary.org/media/midi_files/362.mid"
+  ],
+  "8_142": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_has_lifted_me.mid",
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "8_145": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_470.mid"
+  ],
+  "8_146": [
+    "https://www.hymnallibrary.org/media/midi_files/Kneel_at_the_Cross.mid"
+  ],
+  "8_147": [
+    "https://www.hymnallibrary.org/media/midi_files/188_2.mid"
+  ],
+  "8_150": [
+    "https://www.hymnallibrary.org/media/midi_files/439.mid"
+  ],
+  "8_151": [
+    "https://www.hymnallibrary.org/media/midi_files/464.mid"
+  ],
+  "8_152": [
+    "https://www.hymnallibrary.org/media/midi_files/i_shall_see_the_King.mid"
+  ],
+  "8_153": [
+    "https://www.hymnallibrary.org/media/midi_files/At_Home_In_Heaven.mid"
+  ],
+  "8_154": [
+    "https://www.hymnallibrary.org/media/midi_files/justthinowmtobe_mCt3vWe.mid",
+    "https://www.hymnallibrary.org/media/midi_files/455.mid"
+  ],
+  "8_155": [
+    "https://www.hymnallibrary.org/media/midi_files/189.mid"
+  ],
+  "8_156": [
+    "https://www.hymnallibrary.org/media/midi_files/the_earth_is_the_Lords.mid"
+  ],
+  "8_157": [
+    "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+  ],
+  "8_158": [
+    "https://www.hymnallibrary.org/media/midi_files/Beyond_the_Sunset_-_piano_instrumental_hymn_cover_with_lyrics.mid"
+  ],
+  "8_159": [
+    "https://www.hymnallibrary.org/media/midi_files/A_Child_of_the_King.mid",
+    "https://www.hymnallibrary.org/media/midi_files/How_Great_Is_Our_God.mid"
+  ],
+  "8_160": [
+    "https://www.hymnallibrary.org/media/midi_files/Behold_Our_God.mid"
+  ],
+  "8_161": [
+    "https://www.hymnallibrary.org/media/midi_files/303.mid"
+  ],
+  "8_162": [
+    "https://www.hymnallibrary.org/media/midi_files/317_1.mid"
+  ],
+  "8_163": [
+    "https://www.hymnallibrary.org/media/midi_files/The_Stranger_of_Galilee.mid"
+  ],
+  "8_165": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "8_167": [
+    "https://www.hymnallibrary.org/media/midi_files/504.mid"
+  ],
+  "8_168": [
+    "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid",
+    "https://www.hymnallibrary.org/media/midi_files/fill_me_now.mid"
+  ],
+  "8_169": [
+    "https://www.hymnallibrary.org/media/midi_files/lovingly_tenderly_calling_omSj3mm.mid"
+  ],
+  "8_170": [
+    "https://www.hymnallibrary.org/media/midi_files/Here_O_my_Lord_I_see_Thee_face_to_face.mid",
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "8_171": [
+    "https://www.hymnallibrary.org/media/midi_files/lovingly_tenderly_calling_omSj3mm.mid"
+  ],
+  "8_175": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+  ],
+  "8_176": [
+    "https://www.hymnallibrary.org/media/midi_files/426.mid"
+  ],
+  "8_177": [
+    "https://www.hymnallibrary.org/media/midi_files/My_Lord_and_I_Stephens.mid"
+  ],
+  "8_178": [
+    "https://www.hymnallibrary.org/media/midi_files/Words_and_Music_by_BRIAN_PETAK_-_IN_THE_CROSS_ALONE_I_GLORY.mid"
+  ],
+  "8_180": [
+    "https://www.hymnallibrary.org/media/midi_files/464.mid",
+    "https://www.hymnallibrary.org/media/midi_files/hold_the_fort.mid"
+  ],
+  "8_183": [
+    "https://www.hymnallibrary.org/media/midi_files/lift_Him_up_oatman.mid"
+  ],
+  "8_186": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "8_187": [
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "8_188": [
+    "https://www.hymnallibrary.org/media/midi_files/220.mid"
+  ],
+  "8_189": [
+    "https://www.hymnallibrary.org/media/midi_files/fill_me_now.mid"
+  ],
+  "8_190": [
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid",
+    "https://www.hymnallibrary.org/media/midi_files/It_Is_No_Secret_What_God_Can_Do_LgWiBdB.mid"
+  ],
+  "8_192": [
+    "https://www.hymnallibrary.org/media/midi_files/honey_in_the_rock.mid"
+  ],
+  "8_194": [
+    "https://www.hymnallibrary.org/media/midi_files/Kathy_Getty_and_Margaret_Becker_-_Jesus_Draw_Me_Ever_Nearer.mid",
+    "https://www.hymnallibrary.org/media/midi_files/451.mid"
+  ],
+  "8_195": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Hear_the_Words_of_Love.mid"
+  ],
+  "8_196": [
+    "https://www.hymnallibrary.org/media/midi_files/I_Will_Praise_Him.mid"
+  ],
+  "8_197": [
+    "https://www.hymnallibrary.org/media/midi_files/Hes_a_friend_of_mine.mid"
+  ],
+  "8_198": [
+    "https://www.hymnallibrary.org/media/midi_files/Jesus_Is_Coming_Again.mid"
+  ],
+  "8_199": [
+    "https://www.hymnallibrary.org/media/midi_files/185-Jesus_What_a.mid",
+    "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
+  ],
+  "8_201": [
+    "https://www.hymnallibrary.org/media/midi_files/188_2.mid",
+    "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
+  ],
+  "8_202": [
+    "https://www.hymnallibrary.org/media/midi_files/455.mid",
+    "https://www.hymnallibrary.org/media/midi_files/anywhere_with_Jesus.mid"
+  ],
+  "8_203": [
+    "https://www.hymnallibrary.org/media/midi_files/nothing_between_tindley.mid",
+    "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+  ],
+  "8_206": [
+    "https://www.hymnallibrary.org/media/midi_files/308.mid"
+  ],
+  "8_208": [
+    "https://www.hymnallibrary.org/media/midi_files/all_things_are_ready.mid"
+  ],
+  "8_209": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Im_Coming_Home.mid"
+  ],
+  "8_211": [
+    "https://www.hymnallibrary.org/media/midi_files/134-Jesus_Paid_It_All.mid",
+    "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
+  ],
+  "8_213": [
+    "https://www.hymnallibrary.org/media/midi_files/608.mid"
+  ],
+  "8_214": [
+    "https://www.hymnallibrary.org/media/midi_files/The_King_of_the_Ages.mid"
+  ],
+  "8_216": [
+    "https://www.hymnallibrary.org/media/midi_files/in_love_kindness.mid"
+  ],
+  "8_217": [
+    "https://www.hymnallibrary.org/media/midi_files/It_Is_No_Secret_What_God_Can_Do_LgWiBdB.mid"
+  ],
+  "8_218": [
+    "https://www.hymnallibrary.org/media/midi_files/How_Great_Is_Our_God.mid"
+  ],
+  "8_219": [
+    "https://www.hymnallibrary.org/media/midi_files/O_Brother_Be_Faithful.mid"
+  ],
+  "8_14": [
+    "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
+  ],
+  "8_149": [
+    "https://www.hymnallibrary.org/media/midi_files/303.mid"
+  ],
+  "8_207": [
+    "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
   ]
 }

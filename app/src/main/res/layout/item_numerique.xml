@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Item allégé : LinearLayout simple au lieu de CardView+ConstraintLayout.
-    L'inflation est ~3x plus rapide. Séparateur via un View fin en bas.
--->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,45 +8,42 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="6dp"
     app:cardBackgroundColor="@android:color/transparent"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="14dp"
     app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="14dp"
         android:background="@drawable/song_item_bg_glass">
 
-        <!-- Accent gauche favori -->
+        <!-- Accent gauche (Indicateur rouge pour audio/sélection) -->
         <View
             android:id="@+id/accent_bar"
-            android:layout_width="4dp"
-            android:layout_height="32dp"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
             android:background="@drawable/bg_left_accent"
             android:visibility="gone"
             tools:visibility="visible" />
 
-        <!-- Numéro box -->
+        <!-- Numéro box - Premium Rounded Square -->
         <FrameLayout
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="4dp"
-            android:background="@drawable/pill_active_bg"
-            android:backgroundTint="#2D1515">
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/pill_active_bg">
 
             <TextView
                 android:id="@+id/txt_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="#F5E0B7"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:fontFamily="serif"
-                android:textStyle="italic"
-                tools:text="01" />
+                android:textStyle="italic|bold"
+                tools:text="05" />
         </FrameLayout>
 
         <!-- Titre + sous-titre -->
@@ -66,42 +59,44 @@
                 android:id="@+id/txt_tittle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/textColor"
-                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
                 android:maxLines="2"
                 android:ellipsize="end"
-                tools:text="Gloire à Dieu dans les cieux" />
+                tools:text="Grâce infinie" />
 
             <TextView
                 android:id="@+id/txt_original_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textColor="#9E9E9E"
-                android:textSize="10sp"
+                android:textColor="#BDBDBD"
+                android:textSize="11sp"
                 android:textAllCaps="true"
                 android:letterSpacing="0.04"
                 android:visibility="gone"
                 tools:visibility="visible"
-                tools:text="GLORIA IN EXCELSIS" />
+                tools:text="AMAZING GRACE" />
         </LinearLayout>
 
         <!-- Icônes droites -->
+        <!-- Play Icon (Red circular style as in image) -->
         <ImageView
             android:id="@+id/note"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginEnd="12dp"
             android:src="@drawable/ic_play_red"
             android:visibility="gone"
             tools:visibility="visible" />
 
+        <!-- Bookmark/Fav -->
         <ImageView
             android:id="@+id/fav"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="12dp"
             android:src="@drawable/ic_bookmark"
             app:tint="#E53935"
             android:visibility="gone"
@@ -111,12 +106,12 @@
             android:id="@+id/chevron"
             android:layout_width="16dp"
             android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/forward_24px"
             app:tint="#66FFFFFF" />
 
     </LinearLayout>
 
-    <!-- Stub pour txt_letter qui était utilisé pour le mode alphabétique -->
     <TextView
         android:id="@+id/txt_letter"
         android:layout_width="0dp"
@@ -124,10 +119,3 @@
         android:visibility="gone" />
 
 </androidx.cardview.widget.CardView>
-
-<!-- Séparateur fin entre les items -->
-<!--
-NOTE: Le séparateur est mieux géré via ItemDecoration dans Java
-(DividerItemDecoration), mais pour un résultat clé-en-main sans
-toucher au Java, un ItemDecoration suffit dans ListFragment.
--->

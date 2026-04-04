@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/primary_container" />
-    <corners android:radius="16dp" />
+    <!-- Darker, almost opaque square for the song number -->
+    <solid android:color="#CC1A1A1A" />
+    <corners android:radius="10dp" />
+    <stroke android:width="0.5dp" android:color="#1AFFFFFF" />
 </shape>

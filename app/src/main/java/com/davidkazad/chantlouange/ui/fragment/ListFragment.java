@@ -369,8 +369,10 @@ public class ListFragment extends BaseFragment {
                 boolean isFav = mPage.isFavorite();
                 fav.setVisibility(isFav ? View.VISIBLE : View.GONE);
                 if (accentBar != null) {
-                    accentBar.setVisibility(isFav ? View.VISIBLE : View.GONE);
+                    boolean hasAudio = AudioMapper.hasAudio(itemView.getContext(), mPage.getBookId(), mPage.getNumber());
+                    accentBar.setVisibility(hasAudio ? View.VISIBLE : View.GONE);
                 }
+
             }
 
             private void highlightText(TextView tv, String text, String query) {

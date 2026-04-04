@@ -14,6 +14,7 @@ public class AudioMapper {
     private static final String BASE_URL = "https://cantiques.yapper.fr/media/";
     public static final int CC_BOOK_ID = 1;
     public static final int CV_BOOK_ID = 2;
+    public static final int CS_BOOK_ID = 8;
 
     private static Map<String, List<String>> UNIFIED_AUDIO_MAP;
 
