@@ -395,7 +395,7 @@ public class ItemFragment extends BaseFragment {
             String[] stanzas = content.split("\n\\s*\n");
             LayoutInflater inflater = LayoutInflater.from(getContext());
 
-            String musicalTermsRegex = "(?i)(\\b(?:bis|ter|quater|sol|solo|tous)\\b|\\(\\s*(?:bis|ter|quater|sol|solo|tous)\\s*\\))";
+            String musicalTermsRegex = "(?i)(\\b(?:bis|ter|quater|sol|solo)\\b|\\(\\s*(?:bis|ter|quater|sol|solo|tous)\\s*\\))";
             String hexHighlightColor = String.format("#%06X", (0xFFFFFF & (isNight ? colorLightSubtext : colorRedAccent)));
 
         for (String stanza : stanzas) {
