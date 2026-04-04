@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
+import com.davidkazad.chantlouange.utils.AudioMapper;
 
 import java.util.List;
 
@@ -82,6 +83,12 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
                  if (listener != null) listener.onBookmarkClick(item.page, item.book);
              });
         }
+
+        if (AudioMapper.hasAudio(holder.itemView.getContext(), item.book.getId(), item.page.getNumber())) {
+            holder.imgAudio.setVisibility(View.VISIBLE);
+        } else {
+            holder.imgAudio.setVisibility(View.GONE);
+        }
         
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) listener.onItemClick(item.page, item.book);
@@ -95,7 +102,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtBookName, txtSongTitle, txtLyricsPreview, txtKeyInfo, txtWatermark;
-        ImageView icBookmark;
+        ImageView icBookmark, imgAudio;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -105,6 +112,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
             txtKeyInfo = itemView.findViewById(R.id.txt_key_info);
             txtWatermark = itemView.findViewById(R.id.txt_watermark_number);
             icBookmark = itemView.findViewById(R.id.ic_bookmark);
+            imgAudio = itemView.findViewById(R.id.img_audio_icon);
         }
     }
 }

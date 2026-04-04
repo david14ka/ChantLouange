@@ -51,17 +51,23 @@ public class ItemFragment extends BaseFragment {
     private LinearLayout lyricsContainer;
     private TextView txtTitle, txtWatermark, txtCategory, txtAuthor, txtKey;
     private float currentTextSize = 18f;
+    private androidx.core.widget.NestedScrollView scrollView;
 
     private Page currentPage;
+    
+    // Auto-Scroll Fields
+    private boolean isAutoScrolling = false;
+    private Handler autoScrollHandler = new Handler();
+    private int scrollSpeed = 1; // pixels
+    private int scrollDelay = 30; // ms
+    private long lastPauseTime = 0;
+    private boolean isPaused = false;
 
     // Audio Player Fields
     private View audioPlayerCard;
-    private TextView btnAudioVersion;
+    private ProgressBar audioProgressCircle;
     private ProgressBar audioLoading;
     private ImageButton btnAudioPlay;
-    private TextView txtAudioCurrent;
-    private TextView txtAudioDuration;
-    private SeekBar audioSeekbar;
     private MediaPlayer mediaPlayer;
     private List<String> audioUrls;
     private int currentAudioVersionIndex = 0;
@@ -72,8 +78,9 @@ public class ItemFragment extends BaseFragment {
         public void run() {
             if (mediaPlayer != null && mediaPlayer.isPlaying() && !isTrackingUserSeek) {
                 int currentPos = mediaPlayer.getCurrentPosition();
-                audioSeekbar.setProgress(currentPos);
-                txtAudioCurrent.setText(formatTime(currentPos));
+                if (audioProgressCircle != null) {
+                    audioProgressCircle.setProgress(currentPos);
+                }
             }
             audioHandler.postDelayed(this, 1000);
         }
@@ -145,6 +152,15 @@ public class ItemFragment extends BaseFragment {
                 }
             });
         }
+        // Auto-Scroll Button
+        View btnAutoScroll = view.findViewById(R.id.btn_auto_scroll);
+        if (btnAutoScroll != null) btnAutoScroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleAutoScroll();
+            }
+        });
+
         // Theme Pill Button
         final View btnTheme = view.findViewById(R.id.btn_theme);
         if (btnTheme != null) {
@@ -157,15 +173,26 @@ public class ItemFragment extends BaseFragment {
                 }
             });
         }
+        
+        // Keep Screen On Pill Button
+        final ImageButton btnKeepScreenOn = view.findViewById(R.id.btn_keep_screen_on);
+        if (btnKeepScreenOn != null) {
+            updateKeepScreenOnIcon(btnKeepScreenOn);
+            btnKeepScreenOn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    toggleKeepScreenOn(btnKeepScreenOn);
+                }
+            });
+        }
+        
+        scrollView = view.findViewById(R.id.layout);
 
         // --- Audio Player Initialization ---
         audioPlayerCard = view.findViewById(R.id.audio_player_card);
-        btnAudioVersion = view.findViewById(R.id.btn_audio_version);
+        audioProgressCircle = view.findViewById(R.id.audio_progress_circle);
         audioLoading = view.findViewById(R.id.audio_loading);
         btnAudioPlay = view.findViewById(R.id.btn_audio_play);
-        txtAudioCurrent = view.findViewById(R.id.txt_audio_current);
-        txtAudioDuration = view.findViewById(R.id.txt_audio_duration);
-        audioSeekbar = view.findViewById(R.id.audio_seekbar);
         
         setupAudioPlayerUi();
 
@@ -185,6 +212,85 @@ public class ItemFragment extends BaseFragment {
         initTheme();
 
         LogUtil.d();
+    }
+
+    private void toggleKeepScreenOn(ImageButton btn) {
+        boolean current = Prefs.getBoolean("keep_screen_on", false);
+        Prefs.putBoolean("keep_screen_on", !current);
+        
+        updateKeepScreenOnIcon(btn);
+        
+        if (getActivity() != null) {
+            if (!current) {
+                getActivity().getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                Toast.makeText(getContext(), "Écran toujours allumé", Toast.LENGTH_SHORT).show();
+            } else {
+                getActivity().getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                Toast.makeText(getContext(), "Veille automatique rétablie", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void updateKeepScreenOnIcon(ImageButton btn) {
+        boolean isOn = Prefs.getBoolean("keep_screen_on", false);
+        btn.setColorFilter(isOn ? Color.parseColor("#FFD54F") : Color.WHITE); // Yellow if on
+        btn.setAlpha(isOn ? 1.0f : 0.6f);
+    }
+
+    private void toggleAutoScroll() {
+        isAutoScrolling = !isAutoScrolling;
+        View btn = getView() != null ? getView().findViewById(R.id.btn_auto_scroll) : null;
+        if (btn != null) {
+            btn.setBackgroundTintList(android.content.res.ColorStateList.valueOf(
+                isAutoScrolling ? Color.parseColor("#FF5252") : Color.parseColor("#E53935")
+            ));
+            // Optional: add a "glow" or elevation if scrolling
+            btn.setAlpha(isAutoScrolling ? 1.0f : 0.8f);
+        }
+
+        if (isAutoScrolling) {
+            startAutoScroll();
+            Toast.makeText(getContext(), "Auto-Scroll Activé", Toast.LENGTH_SHORT).show();
+        } else {
+            stopAutoScroll();
+            Toast.makeText(getContext(), "Auto-Scroll Désactivé", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private Runnable autoScrollRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (!isAutoScrolling || scrollView == null) return;
+
+            long currentTime = System.currentTimeMillis();
+            
+            // Momentary Pause Logic: pause for 2 seconds every 8 seconds of scrolling
+            if (!isPaused && currentTime - lastPauseTime > 8000) {
+                isPaused = true;
+                lastPauseTime = currentTime;
+            }
+
+            if (isPaused) {
+                if (currentTime - lastPauseTime > 2000) { // 2s pause
+                    isPaused = false;
+                    lastPauseTime = currentTime;
+                }
+            } else {
+                scrollView.smoothScrollBy(0, scrollSpeed);
+            }
+
+            autoScrollHandler.postDelayed(this, scrollDelay);
+        }
+    };
+
+    private void startAutoScroll() {
+        lastPauseTime = System.currentTimeMillis();
+        isPaused = false;
+        autoScrollHandler.post(autoScrollRunnable);
+    }
+
+    private void stopAutoScroll() {
+        autoScrollHandler.removeCallbacks(autoScrollRunnable);
     }
 
     private void initPageContent() {
@@ -215,7 +321,7 @@ public class ItemFragment extends BaseFragment {
     private void initAudio() {
         if (currentBook == null || currentPage == null) return;
         
-        audioUrls = AudioMapper.getAudioUrls(currentBook.getId(), currentPage.getNumber());
+        audioUrls = AudioMapper.getAudioUrls(getContext(), currentBook.getId(), currentPage.getNumber());
         if (audioUrls == null || audioUrls.isEmpty()) {
             if (audioPlayerCard != null) audioPlayerCard.setVisibility(View.GONE);
             return;
@@ -223,7 +329,6 @@ public class ItemFragment extends BaseFragment {
         
         if (audioPlayerCard != null) audioPlayerCard.setVisibility(View.VISIBLE);
         currentAudioVersionIndex = 0;
-        updateVersionButtonText();
         
         resetPlayer();
     }
@@ -231,60 +336,18 @@ public class ItemFragment extends BaseFragment {
     private void setupAudioPlayerUi() {
         if (audioPlayerCard == null) return;
         
-        btnAudioPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                togglePlay();
-            }
-        });
-        
-        btnAudioVersion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (audioUrls != null && audioUrls.size() > 1) {
-                    currentAudioVersionIndex = (currentAudioVersionIndex + 1) % audioUrls.size();
-                    updateVersionButtonText();
-                    boolean wasPlaying = mediaPlayer != null && mediaPlayer.isPlaying();
-                    resetPlayer();
-                    if (wasPlaying) {
-                        togglePlay();
-                    }
-                } else {
-                    Toast.makeText(getContext(), "Seule cette version est disponible.", Toast.LENGTH_SHORT).show();
+        if (btnAudioPlay != null) {
+            btnAudioPlay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    togglePlay();
                 }
-            }
-        });
-        
-        audioSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (fromUser && txtAudioCurrent != null) {
-                    txtAudioCurrent.setText(formatTime(progress));
-                }
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                isTrackingUserSeek = true;
-            }
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                isTrackingUserSeek = false;
-                if (mediaPlayer != null) {
-                    mediaPlayer.seekTo(seekBar.getProgress());
-                }
-            }
-        });
+            });
+        }
     }
 
     private void updateVersionButtonText() {
-        if (audioUrls != null && !audioUrls.isEmpty() && btnAudioVersion != null) {
-            String url = audioUrls.get(currentAudioVersionIndex).toLowerCase();
-            if (url.contains("piano")) {
-                btnAudioVersion.setText("🎹 Piano");
-            } else {
-                btnAudioVersion.setText("🎻 Orchestre");
-            }
-        }
+        // Redundant with the clean circular UI
     }
 
     private void resetPlayer() {
@@ -299,12 +362,10 @@ public class ItemFragment extends BaseFragment {
             btnAudioPlay.setVisibility(View.VISIBLE);
         }
         if (audioLoading != null) audioLoading.setVisibility(View.GONE);
-        if (audioSeekbar != null) {
-            audioSeekbar.setProgress(0);
-            audioSeekbar.setMax(0);
+        if (audioProgressCircle != null) {
+            audioProgressCircle.setProgress(0);
+            audioProgressCircle.setMax(0);
         }
-        if (txtAudioCurrent != null) txtAudioCurrent.setText("0:00");
-        if (txtAudioDuration != null) txtAudioDuration.setText("0:00");
         audioHandler.removeCallbacks(updateSeekbarTask);
     }
     
@@ -327,8 +388,9 @@ public class ItemFragment extends BaseFragment {
                         btnAudioPlay.setVisibility(View.VISIBLE);
                         audioLoading.setVisibility(View.GONE);
                         
-                        audioSeekbar.setMax(mp.getDuration());
-                        txtAudioDuration.setText(formatTime(mp.getDuration()));
+                        if (audioProgressCircle != null) {
+                            audioProgressCircle.setMax(mp.getDuration());
+                        }
                         
                         mp.start();
                         btnAudioPlay.setImageResource(android.R.drawable.ic_media_pause);
@@ -339,8 +401,9 @@ public class ItemFragment extends BaseFragment {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
                         btnAudioPlay.setImageResource(android.R.drawable.ic_media_play);
-                        audioSeekbar.setProgress(0);
-                        txtAudioCurrent.setText("0:00");
+                        if (audioProgressCircle != null) {
+                            audioProgressCircle.setProgress(0);
+                        }
                         audioHandler.removeCallbacks(updateSeekbarTask);
                     }
                 });
@@ -475,6 +538,7 @@ public class ItemFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         resetPlayer();
+        stopAutoScroll();
     }
 
     @Override
@@ -518,7 +582,7 @@ public class ItemFragment extends BaseFragment {
             View rootOverlay = getView() != null ? getView().findViewById(R.id.lyrics_root_layout) : null;
             if (rootOverlay != null) {
                 // If it's night, use deep dark semi-transparent overlay to obscure the image. If day, use white semi-transparent.
-                rootOverlay.setBackgroundColor(isNight ? Color.parseColor("#CD000000") : Color.parseColor("#DDFDFDFD"));
+                rootOverlay.setBackgroundColor(isNight ? Color.parseColor("#88000000") : Color.parseColor("#BBDDFDFD"));
             }
             
             if (txtTitle != null) {

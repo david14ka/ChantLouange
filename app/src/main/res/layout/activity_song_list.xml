@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/audience2_868074_640"
             android:scaleType="centerCrop"
-            android:alpha="0.3" />
+            android:alpha="0.25" />
 
         <!-- ── AppBar with Toolbar ── -->
         <com.google.android.material.appbar.AppBarLayout
@@ -28,91 +28,161 @@
             android:background="?android:attr/windowBackground"
             app:elevation="0dp">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?android:attr/windowBackground"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:layout_height="wrap_content"
+                app:contentScrim="?android:attr/windowBackground"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
 
+                <!-- Background Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book_bb"
+                    app:layout_collapseMode="parallax" />
+
+                <!-- Dark Overlay -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:background="#99000000" />
+
+                <!-- Content that scrolls/parallax -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingEnd="16dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="?attr/actionBarSize"
+                    app:layout_collapseMode="parallax">
 
-                    <ImageView
-                        android:id="@+id/btn_back"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_arrow_back"
-                        app:tint="#E53935"
-                        android:padding="8dp"
-                        android:contentDescription="Retour" />
-
-                    <TextView
-                        android:id="@+id/hero_book_name"
-                        android:layout_width="0dp"
+                    <!-- Hero Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="serif"
-                        android:textColor="@color/text_color_primary"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:text="Hymnes et Cantiques" />
+                        android:orientation="vertical"
+                        android:padding="32dp">
 
-                    <TextView
-                        android:id="@+id/hero_count_chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/pill_active_bg"
-                        android:backgroundTint="#2D1515"
-                        android:paddingHorizontal="10dp"
-                        android:paddingVertical="4dp"
-                        android:text="0"
-                        android:textColor="#E53935"
-                        android:textSize="11sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RECUEIL OFFICIEL"
+                            android:textColor="#BCBCBC"
+                            android:textSize="10sp"
+                            android:letterSpacing="0.1"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:id="@+id/hero_book_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hymnes et\nCantiques"
+                            android:textColor="#FFFFFF"
+                            android:textSize="42sp"
+                            android:fontFamily="serif"
+                            android:textStyle="italic"
+                            android:lineSpacingMultiplier="0.9" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:id="@+id/hero_count_chip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pill_active_bg"
+                                android:backgroundTint="#2D1515"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:text="650 Cantiques"
+                                android:textColor="#E53935"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="Édition Révisée"
+                                android:textColor="#BCBCBC"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Barre de recherche inline -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/search_pill_bg"
+                        android:backgroundTint="#33FFFFFF"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:paddingHorizontal="16dp">
+
+                        <EditText
+                            android:id="@+id/search_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:background="@null"
+                            android:hint="Rechercher dans ce recueil..."
+                            android:textColorHint="#CCCCCC"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:imeOptions="actionSearch" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </androidx.appcompat.widget.Toolbar>
+                <!-- Pinned Toolbar -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <!-- Barre de recherche inline -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@drawable/search_pill_bg"
-                android:backgroundTint="@color/surface_color"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="10dp"
-                android:paddingHorizontal="12dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:src="@drawable/gsearch_50px"
-                    app:tint="#555555" />
+                        <ImageView
+                            android:id="@+id/btn_back"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_back"
+                            app:tint="#E53935"
+                            android:padding="8dp" />
 
-                <EditText
-                    android:id="@+id/search_edit"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    android:background="@null"
-                    android:hint="Rechercher dans ce recueil..."
-                    android:textColorHint="@color/text_color_secondary"
-                    android:textColor="@color/text_color_primary"
-                    android:textSize="14sp"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:imeOptions="actionSearch" />
-            </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="serif"
+                            android:text="Hymnes et Cantiques"
+                            android:textColor="#E53935"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 

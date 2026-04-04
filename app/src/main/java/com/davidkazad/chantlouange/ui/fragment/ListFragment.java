@@ -27,6 +27,7 @@ import com.davidkazad.chantlouange.R;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.ui.activities.ItemActivity;
+import com.davidkazad.chantlouange.utils.AudioMapper;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import org.greenrobot.eventbus.EventBus;
@@ -356,6 +357,13 @@ public class ListFragment extends BaseFragment {
                         } else {
                             txtOriginalTitle.setVisibility(View.GONE);
                         }
+                    }
+
+                    // Audio indicator (red play button)
+                    if (AudioMapper.hasAudio(itemView.getContext(), mPage.getBookId(), mPage.getNumber())) {
+                        note.setVisibility(View.VISIBLE);
+                    } else {
+                        note.setVisibility(View.GONE);
                     }
                 }
                 boolean isFav = mPage.isFavorite();

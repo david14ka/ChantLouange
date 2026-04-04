@@ -3,11 +3,13 @@ package com.davidkazad.chantlouange.ui.fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.davidkazad.chantlouange.R;
+import com.davidkazad.chantlouange.utils.AudioMapper;
 
 import java.util.List;
 
@@ -72,6 +74,12 @@ public class AllSongsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     mListener.onItemClick(item);
                 }
             });
+
+            if (AudioMapper.hasAudio(sh.itemView.getContext(), item.page.getBookId(), item.page.getNumber())) {
+                sh.imgAudio.setVisibility(View.VISIBLE);
+            } else {
+                sh.imgAudio.setVisibility(View.GONE);
+            }
         }
         // FeaturedViewHolder requires no dynamic binding for now
     }
@@ -93,11 +101,13 @@ public class AllSongsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         TextView txtNum;
         TextView txtTitle;
         TextView txtBook;
+        ImageView imgAudio;
         SongViewHolder(View view) {
             super(view);
             txtNum = view.findViewById(R.id.txt_song_num);
             txtTitle = view.findViewById(R.id.txt_song_title);
             txtBook = view.findViewById(R.id.txt_song_book);
+            imgAudio = view.findViewById(R.id.img_audio_icon);
         }
     }
 

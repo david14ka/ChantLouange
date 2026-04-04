@@ -12,17 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bground"
+            android:scaleType="centerCrop"
+            android:alpha="0.3" />
+
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
             android:theme="@style/AppTheme.AppBarOverlay">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="@android:color/transparent"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -30,7 +39,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="56dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.viewpager.widget.ViewPager
@@ -93,41 +101,6 @@
             </com.github.clans.fab.FloatingActionMenu>
 
         </FrameLayout>
-
-        <LinearLayout
-            android:id="@+id/navigation_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#33000000"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="56dp"
-            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
-
-            <ImageButton
-                android:id="@+id/btn_prev"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_arrow_backward"
-                app:tint="@android:color/white"
-                android:contentDescription="Previous" />
-
-            <ImageButton
-                android:id="@+id/btn_next"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_arrow_forward"
-                app:tint="@android:color/white"
-                android:contentDescription="Next" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_bottom_nav" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

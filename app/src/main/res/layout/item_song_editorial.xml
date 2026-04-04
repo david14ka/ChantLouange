@@ -34,11 +34,20 @@
         android:ellipsize="end"
         android:maxLines="2" />
 
+    <ImageView
+        android:id="@+id/img_audio_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_headset_black_24dp"
+        android:tint="@color/primary_container"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/txt_song_book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:maxWidth="100dp"
         android:gravity="end"
         android:text="VICTOIRE"

@@ -64,7 +64,11 @@ public class ItemActivity extends BaseActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (currentBook != null) {
+            getSupportActionBar().setTitle(currentBook.getName());
+        } else {
+            getSupportActionBar().setTitle(R.string.app_name);
+        }
         ButterKnife.bind(this);
 
         // Keep screen awake setting
@@ -78,11 +82,11 @@ public class ItemActivity extends BaseActivity {
 
         setFabMenu();
 
-        btnPrev = findViewById(R.id.btn_prev);
-        btnNext = findViewById(R.id.btn_next);
+
 
         initPageContent();
 
+        /*
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +104,7 @@ public class ItemActivity extends BaseActivity {
                 }
             }
         });
+        */
 
         try {
             currentPage.addToRecent();
@@ -108,7 +113,7 @@ public class ItemActivity extends BaseActivity {
         }
 
         // Setup du menu en bas (aucun ne s'allume explicitement pour rester discret en mode lecture)
-        setupBottomNavigation(0);
+        // setupBottomNavigation(0);
     }
 
     private void initPageContent() {
@@ -122,7 +127,7 @@ public class ItemActivity extends BaseActivity {
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(currentPage.getId() - 1);
         
-        updateNavigationButtons(viewPager.getCurrentItem());
+        // updateNavigationButtons(viewPager.getCurrentItem());
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -154,10 +159,12 @@ public class ItemActivity extends BaseActivity {
     }
 
     private void updateNavigationButtons(int position) {
+        /*
         btnPrev.setEnabled(position > 0);
         btnPrev.setAlpha(position > 0 ? 1.0f : 0.5f);
         btnNext.setEnabled(position < currentBook.count() - 1);
         btnNext.setAlpha(position < currentBook.count() - 1 ? 1.0f : 0.5f);
+        */
     }
 
     private void setDisplaySong(Page currentPage) {

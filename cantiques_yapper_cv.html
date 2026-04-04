@@ -1,0 +1,3263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Enregistrements audio</title>
+
+    <link rel="stylesheet" href="/static/css/custom.css?v=2023-02-09"/>
+    <link rel="search" type="application/opensearchdescription+xml" title="Cantiques" href="/opensearch/"/>
+    <link rel="apple-touch-icon" href="/static/logo-180.png?v=2023-02-09" sizes="180x180"/>
+    <link rel="icon" href="/static/logo.svg?v=2023-02-09" type="image/svg+xml"/>
+    <link rel="mask-icon" href="/static/mask-icon.svg?v=2023-02-09" color="#007bff"/>
+    <link rel="manifest" href="/manifest.json"/>
+
+    <meta name="apple-mobile-web-app-title" content="Cantiquest"/>
+    <meta name="application-name" content="Cantiquest"/>
+    <meta name="theme-color" content="#008cba"/>
+    <meta name="keywords" content="cantiquest cantiques hymnes spirituel Bible Dieu Jésus Christ paroles partitions MP3 PDF SVG MIDI KAR"/>
+
+    
+    
+  </head>
+
+  <body>
+
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/static/logo.svg?v=2023-02-09" alt="" width="30" height="30" class="d-inline-block align-text-top"/>
+          Cantiquest
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHeader">
+          <ul class="navbar-nav me-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Français
+              </a>
+              <div class="dropdown-menu">
+                
+                <a class="dropdown-item" href="/CtqCa/index.html">Cantiques Canadiens</a>
+                
+                <a class="dropdown-item" href="/CpE/index.html">Cantiques pour enfants</a>
+                
+                <a class="dropdown-item" href="/CGG1/index.html">Chants de grâce et de gloire I</a>
+                
+                <a class="dropdown-item" href="/CGG2/index.html">Chants de grâce et de gloire II</a>
+                
+                <a class="dropdown-item" href="/CV/index.html">Chants de Victoire</a>
+                
+                <a class="dropdown-item" href="/CJ/index.html">Chants Joyeux</a>
+                
+                <a class="dropdown-item" href="/HeC/index.html">Hymnes et Cantiques (1991)</a>
+                
+                <a class="dropdown-item" href="/LSM/index.html">Le Seigneur m’aime</a>
+                
+                <a class="dropdown-item" href="/VaM/index.html">Venez à Moi</a>
+                
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Anglais
+              </a>
+              <div class="dropdown-menu">
+                
+                <a class="dropdown-item" href="/SSO/index.html">Original Spiritual Songs</a>
+                
+                <a class="dropdown-item" href="/SSN/index.html">New Spiritual Songs</a>
+                
+                <a class="dropdown-item" href="/SST/index.html">Spiritual Songs Traduits</a>
+                
+              </div>
+            </li>
+            
+          </ul>
+          <form class="form-lg-inline my-2 my-lg-0" method="get" action="/recherche/">
+            <div class="row">
+              <div class="col-12 input-group">
+                <input type="search" class="form-control border-right-0" name="q" value="" placeholder="Recherche…" autocomplete="off" maxlength="500"/>
+                
+                <button class="btn btn-light border-left-0 bg-light" type="submit">
+                  <span class="material-icons" data-nosnippet="" translate="no">search</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container pt-3">
+
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb d-none d-lg-flex">
+          <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>
+          
+    <li class="breadcrumb-item active" aria-current="page">Écouter</li>
+
+        </ol>
+      </nav>
+      
+
+      
+
+      <section>
+        
+    <h1>Enregistrements audio</h1>
+
+    <nav class="navbar navbar-light bg-light my-3">
+        <div class="container-fluid d-block">
+            <form class="row" id="filters">
+                <div class="col-md-6 col-lg-4 mb-1">
+                    <select name="filter" class="form-select">
+                        <option value="">Dans tous les recueils</option>
+                        
+                        <optgroup label="Français">
+                            
+                            <option value="CtqCa">Cantiques Canadiens</option>
+                            
+                            <option value="CpE">Cantiques pour enfants</option>
+                            
+                            <option value="CGG1">Chants de grâce et de gloire I</option>
+                            
+                            <option value="CGG2">Chants de grâce et de gloire II</option>
+                            
+                            <option value="CV" selected="selected">Chants de Victoire</option>
+                            
+                            <option value="CJ">Chants Joyeux</option>
+                            
+                            <option value="HeC">Hymnes et Cantiques (1991)</option>
+                            
+                            <option value="LSM">Le Seigneur m’aime</option>
+                            
+                            <option value="VaM">Venez à Moi</option>
+                            
+                        </optgroup>
+                        
+                        <optgroup label="Anglais">
+                            
+                            <option value="SSO">Original Spiritual Songs</option>
+                            
+                            <option value="SSN">New Spiritual Songs</option>
+                            
+                            <option value="SST">Spiritual Songs Traduits</option>
+                            
+                        </optgroup>
+                        
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-1">
+                    <select name="type" class="form-select">
+                        <option value="" selected="selected">Tous les types</option>
+                        
+                        <option value="choeur">Chanté par un chœur</option>
+                        
+                        <option value="chanteur1">Chanté par “Chanteur 1” (strophe 1)</option>
+                        
+                        <option value="chanteur2">Chanté par “Chanteur 2” (toutes les strophes)</option>
+                        
+                        <option value="polyinstru">Mélodie (divers instruments, 4 voix)</option>
+                        
+                        <option value="mono-piano">Mélodie (piano, 4 voix)</option>
+                        
+                    </select>
+                </div>
+            </form>
+      </div>
+    </nav>
+
+    <div id="player" class="card my-3 p-3 bg-light">
+
+        <div class="d-flex flex-wrap">
+
+            <div class="btn-group my-1 pe-1 pr-md-2" role="group">
+                <a id="downloadbtn" role="button" class="btn btn-secondary" href="#" title="Télécharger au format MP3" download="">
+                    <span class="material-icons" data-nosnippet="" translate="no">save</span>
+                </a>
+            </div>
+
+            <div class="btn-group my-1 pe-1 pr-md-2" role="group">
+                <button id="previousbtn" type="button" class="btn btn-secondary" title="Piste précédente">
+                    <span class="material-icons" data-nosnippet="" translate="no">skip_previous</span>
+                </button>
+
+                <button id="playbtn" type="button" class="btn btn-secondary" title="Lecture">
+                    <span class="material-icons" data-nosnippet="" translate="no">play_arrow</span>
+                </button>
+
+                <button id="pausebtn" type="button" class="btn btn-secondary" title="Pause">
+                    <span class="material-icons" data-nosnippet="" translate="no">pause</span>
+                </button>
+
+                <button id="nextbtn" type="button" class="btn btn-secondary" title="Piste suivante">
+                    <span class="material-icons" data-nosnippet="" translate="no">skip_next</span>
+                </button>
+            </div>
+
+            <div class="btn-group my-1 pe-1 pr-md-2" role="group">
+                <button id="loopbtn" type="button" class="btn btn-secondary" title="Répéter la piste">
+                    <span class="material-icons" data-nosnippet="" translate="no">loop</span>
+                </button>
+
+                <button id="randombtn" type="button" class="btn btn-secondary" title="Lecture aléatoire">
+                    <span class="material-icons" data-nosnippet="" translate="no">shuffle</span>
+                </button>
+            </div>
+
+            <a id="titletrack" role="button" class="btn btn-secondary my-1 flex-grow-1">Pas de lecture en cours</a>
+        </div>
+
+        <audio controls="controls" class="w-100 my-1"></audio>
+
+    </div>
+
+    
+    <div class="list-group my-3" id="playlist">
+        
+        <a href="#" data-url="/CV/CV_005.html" data-src="hymns/mp3/CV/CV_005-Jesus_Jesus_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                5. Jésus ! Jésus !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_005.html" data-src="hymns/mp3/CV/CV_005-Jesus_Jesus_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                5. Jésus ! Jésus !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_006.html" data-src="hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                6. À Dieu soit la Gloire !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_006.html" data-src="hymns/mp3/CV/CV_006-A_Dieu_soit_la_gloire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                6. À Dieu soit la Gloire !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:09</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_008.html" data-src="hymns/mp3/CV/CV_008-Le_nom_de_Jesus_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                8. Le nom de Jésus
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_008.html" data-src="hymns/mp3/CV/CV_008-Le_nom_de_Jesus_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                8. Le nom de Jésus
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_011.html" data-src="hymns/mp3/CV/CV_011-Adorable_mystere_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                11. Adorable mystère
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_011.html" data-src="hymns/mp3/CV/CV_011-Adorable_mystere_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                11. Adorable mystère
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_017.html" data-src="hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                17. À Celui qui nous a lavés
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:17</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_017.html" data-src="hymns/mp3/CV/CV_017-A_celui_qui_nous_a_laves_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                17. À Celui qui nous a lavés
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_018.html" data-src="hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                18. Vers toi monte notre hommage
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:00</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_018.html" data-src="hymns/mp3/CV/CV_018-Vers_toi_monte_notre_hommage_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                18. Vers toi monte notre hommage
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:59</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_020.html" data-src="hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                20. Oh ! quel bonheur de le connaître
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:31</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_020.html" data-src="hymns/mp3/CV/CV_020-Oh_quel_bonheur_de_le_connaitre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                20. Oh ! quel bonheur de le connaître
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_022.html" data-src="hymns/mp3/CV/CV_022-Je_l_ai_trouve_le_bonheur_ineffable_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                22. Je l’ai trouvé
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_022.html" data-src="hymns/mp3/CV/CV_022-Je_l_ai_trouve_le_bonheur_ineffable_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                22. Je l’ai trouvé
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_024.html" data-src="hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                24. Par tous les saints glorifié
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:23</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_024.html" data-src="hymns/mp3/CV/CV_024-Par_tous_les_saints_glorifie_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                24. Par tous les saints glorifié
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_026.html" data-src="hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                26. Les rayons de l’amour divin
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_026.html" data-src="hymns/mp3/CV/CV_026-Les_rayons_de_l_amour_divin_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                26. Les rayons de l’amour divin
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:09</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_028.html" data-src="hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                28. Oh ! que toute la terre entonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:27</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_028.html" data-src="hymns/mp3/CV/CV_028-Oh_que_toute_la_terre_entonne_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                28. Oh ! que toute la terre entonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:26</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_029.html" data-src="hymns/mp3/CV/CV_029-Redempteur_adorable_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                29. Rédempteur adorable
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:24</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_029.html" data-src="hymns/mp3/CV/CV_029-Redempteur_adorable_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                29. Rédempteur adorable
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:23</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_030.html" data-src="hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                30. Ma richesse, ma gloire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_030.html" data-src="hymns/mp3/CV/CV_030-Ma_richesse_ma_gloire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                30. Ma richesse, ma gloire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_034.html" data-src="hymns/mp3/CV/CV_034-Ah_si_ton_sang_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                34. Ah ! si ton sang
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:43</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_041.html" data-src="hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                41. Roi couvert de blessures
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:35</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_041.html" data-src="hymns/mp3/CV/CV_041-Roi_couvert_de_blessures_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                41. Roi couvert de blessures
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:34</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_042.html" data-src="hymns/mp3/CV/CV_042-Agneau_de_Dieu_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                42. Agneau de Dieu, Messager
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:59</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_042.html" data-src="hymns/mp3/CV/CV_042-Agneau_de_Dieu_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                42. Agneau de Dieu, Messager
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:59</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_043.html" data-src="hymns/mp3/CV/CV_043-Jesus_Christ_est_ma_sagesse_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                43. Jésus-Christ est ma sagesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:49</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_043.html" data-src="hymns/mp3/CV/CV_043-Jesus_Christ_est_ma_sagesse_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                43. Jésus-Christ est ma sagesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:49</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_046.html" data-src="hymns/mp3/CV/CV_046-Viens_mon_ame_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                46. Viens, mon âme, et contemple
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_046.html" data-src="hymns/mp3/CV/CV_046-Viens_mon_ame_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                46. Viens, mon âme, et contemple
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_047.html" data-src="hymns/mp3/CV/CV_047-C_est_toi_Jesus_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                47. C’est Toi, Jésus, Pain de vie
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:39</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_047.html" data-src="hymns/mp3/CV/CV_047-C_est_toi_Jesus_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                47. C’est Toi, Jésus, Pain de vie
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:37</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_057.html" data-src="hymns/mp3/CV/CV_057-Viens_a_la_croix_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                57. Viens à la croix, âme perdue
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_057.html" data-src="hymns/mp3/CV/CV_057-Viens_a_la_croix_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                57. Viens à la croix, âme perdue
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_070.html" data-src="hymns/mp3/CV/CV_070-Coeurs_fatigues_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                70. Cœurs fatigués et lassés
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:35</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_070.html" data-src="hymns/mp3/CV/CV_070-Coeurs_fatigues_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                70. Cœurs fatigués et lassés
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:32</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_071.html" data-src="hymns/mp3/CV/CV_071-Reviens_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                71. Reviens, reviens
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:14</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_071.html" data-src="hymns/mp3/CV/CV_071-Reviens_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                71. Reviens, reviens
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:13</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_074.html" data-src="hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                74. Arrête, ô pécheur, arrête !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:28</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_074.html" data-src="hymns/mp3/CV/CV_074-Arrete_o_pecheur_arrete_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                74. Arrête, ô pécheur, arrête !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:27</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_075.html" data-src="hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                75. Comme un phare
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_075.html" data-src="hymns/mp3/CV/CV_075-Comme_un_phare_sur_la_plage_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                75. Comme un phare
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_077.html" data-src="hymns/mp3/CV/CV_077-Reviens_a_ton_Pere_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                77. Reviens à ton Père
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:15</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_077.html" data-src="hymns/mp3/CV/CV_077-Reviens_a_ton_Pere_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                77. Reviens à ton Père
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:14</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_079.html" data-src="hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                79. Il est un roc séculaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:51</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_079.html" data-src="hymns/mp3/CV/CV_079-Il_est_un_roc_seculaire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                79. Il est un roc séculaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:50</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_084.html" data-src="hymns/mp3/CV/CV_084-Nous_voguons_vers_un_beau_rivage_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                84. Nous voguons vers un beau rivage
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_084.html" data-src="hymns/mp3/CV/CV_084-Nous_voguons_vers_un_beau_rivage_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                84. Nous voguons vers un beau rivage
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_086.html" data-src="hymns/mp3/CV/CV_086-Venez_au_Sauveur_qui_vous_aime_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                86. Venez au Sauveur
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:24</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_086.html" data-src="hymns/mp3/CV/CV_086-Venez_au_Sauveur_qui_vous_aime_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                86. Venez au Sauveur
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:23</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_087.html" data-src="hymns/mp3/CV/CV_087-Cest_encore_temps_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                87. C’est encor temps !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_087.html" data-src="hymns/mp3/CV/CV_087-Cest_encore_temps_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                87. C’est encor temps !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:00</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_090.html" data-src="hymns/mp3/CV/CV_090-Viens_ame_perdue_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                90. Viens, âme perdue
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:41</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_090.html" data-src="hymns/mp3/CV/CV_090-Viens_ame_perdue_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                90. Viens, âme perdue
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:40</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_094.html" data-src="hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                94. Par ce chemin solitaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_094.html" data-src="hymns/mp3/CV/CV_094-Par_ce_chemin_solitaire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                94. Par ce chemin solitaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_104.html" data-src="hymns/mp3/CV/CV_104-Bientot_le_Seigneur_va_venir_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                104. Bientôt le Seigneur va venir
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:02</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_104.html" data-src="hymns/mp3/CV/CV_104-Bientot_le_Seigneur_va_venir_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                104. Bientôt le Seigneur va venir
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_105.html" data-src="hymns/mp3/CV/CV_105-Pecheur_je_voudrais_te_guerir_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                105. Pécheur, je voudrais te guérir
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:55</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_107.html" data-src="hymns/mp3/CV/CV_107-Une_bonne_nouvelle_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                107. Une bonne nouvelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:58</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_107.html" data-src="hymns/mp3/CV/CV_107-Une_bonne_nouvelle_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                107. Une bonne nouvelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:57</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_108.html" data-src="hymns/mp3/CV/CV_108-Dis_tout_a_Jesus_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                108. Es-tu lassé, rempli de tristesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:41</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_108.html" data-src="hymns/mp3/CV/CV_108-Dis_tout_a_Jesus_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                108. Es-tu lassé, rempli de tristesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:38</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_111.html" data-src="hymns/mp3/CV/CV_111-Publiez_bien_haut_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                111. Publiez bien haut !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_111.html" data-src="hymns/mp3/CV/CV_111-Publiez_bien_haut_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                111. Publiez bien haut !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:17</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_112.html" data-src="hymns/mp3/CV/CV_112-Jesus_frappe_a_votre_porte_ouvrez_aujourd_hui_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                112. Jésus frappe à votre porte
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:04</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_115.html" data-src="hymns/mp3/CV/CV_115-Ou_cherchez_vous_le_bonheur_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                115. Où cherchez-vous le bonheur ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:37</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_115.html" data-src="hymns/mp3/CV/CV_115-Ou_cherchez_vous_le_bonheur_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                115. Où cherchez-vous le bonheur ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:36</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_120.html" data-src="hymns/mp3/CV/CV_120-Jesus_par_ton_sang_precieux_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                120. Jésus, par ton sang précieux
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:47</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_120.html" data-src="hymns/mp3/CV/CV_120-Jesus_par_ton_sang_precieux_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                120. Jésus, par ton sang précieux
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_122.html" data-src="hymns/mp3/CV/CV_122-Source_feconde_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                122. Source féconde
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:49</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_126.html" data-src="hymns/mp3/CV/CV_126-Roc_seculaire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                126. Roc séculaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_126.html" data-src="hymns/mp3/CV/CV_126-Roc_seculaire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                126. Roc séculaire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_127.html" data-src="hymns/mp3/CV/CV_127-Joie_au_ciel_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                127. Joie au ciel
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_127.html" data-src="hymns/mp3/CV/CV_127-Joie_au_ciel_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                127. Joie au ciel
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_128.html" data-src="hymns/mp3/CV/CV_128-Seigneur_ta_grace_m_appelle_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                128. Seigneur, ta grâce m’appelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:36</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_128.html" data-src="hymns/mp3/CV/CV_128-Seigneur_ta_grace_m_appelle_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                128. Seigneur, ta grâce m’appelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:34</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_131.html" data-src="hymns/mp3/CV/CV_131-Misericorde_insondable_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                131. Miséricorde insondable
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:51</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_131.html" data-src="hymns/mp3/CV/CV_131-Misericorde_insondable_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                131. Miséricorde insondable
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:51</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_132.html" data-src="recordings/CV_132-Torrents_d_amour.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Chœur">
+            <span class="me-auto">
+                
+                132. Torrents d’amour
+                
+            </span>
+            
+            <small class="px-2">Chanté par un chœur</small>
+            
+            <small class="px-2">3:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_132.html" data-src="hymns/mp3/CV/CV_132-Torrents_d_amour_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                132. Torrents d’amour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:57</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_132.html" data-src="hymns/mp3/CV/CV_132-Torrents_d_amour_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                132. Torrents d’amour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:56</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_135.html" data-src="hymns/mp3/CV/CV_135-Veux_tu_briser_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                135. Veux-tu briser du péché
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:43</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_135.html" data-src="hymns/mp3/CV/CV_135-Veux_tu_briser_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                135. Veux-tu briser du péché
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_143.html" data-src="hymns/mp3/CV/CV_143-Comme_une_terre_alteree_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                143. Comme une terre altérée
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_143.html" data-src="hymns/mp3/CV/CV_143-Comme_une_terre_alteree_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                143. Comme une terre altérée
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_147a.html" data-src="hymns/mp3/CV/CV_147a-Jesus_ta_sainte_presence_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                147a. Jésus, ta sainte présence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:21</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_147a.html" data-src="hymns/mp3/CV/CV_147a-Jesus_ta_sainte_presence_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                147a. Jésus, ta sainte présence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_148.html" data-src="hymns/mp3/CV/CV_148-Jesus_est_au_milieu_de_nous_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                148. Jésus est au milieu de nous
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_148.html" data-src="hymns/mp3/CV/CV_148-Jesus_est_au_milieu_de_nous_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                148. Jésus est au milieu de nous
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_149a.html" data-src="hymns/mp3/CV/CV_149a-Toi_qui_disposes_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                149a. Toi qui disposes
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_149a.html" data-src="hymns/mp3/CV/CV_149a-Toi_qui_disposes_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                149a. Toi qui disposes
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_161.html" data-src="hymns/mp3/CV/CV_161-Ecoutez_l_appel_du_Berger_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                161. Écoutez l’appel du Berger
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_161.html" data-src="hymns/mp3/CV/CV_161-Ecoutez_l_appel_du_Berger_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                161. Écoutez l’appel du Berger
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:53</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_162.html" data-src="hymns/mp3/CV/CV_162-Ah_que_je_ne_sois_pas_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                162. Ah ! que je ne sois pas
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:38</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_162.html" data-src="hymns/mp3/CV/CV_162-Ah_que_je_ne_sois_pas_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                162. Ah ! que je ne sois pas
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:36</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_166.html" data-src="hymns/mp3/CV/CV_166-Qu_il_fait_bon_a_ton_service_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                166. Qu’il fait bon à ton service
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_166.html" data-src="hymns/mp3/CV/CV_166-Qu_il_fait_bon_a_ton_service_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                166. Qu’il fait bon à ton service
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:52</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_167.html" data-src="hymns/mp3/CV/CV_167-C_est_mon_joyeux_service_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                167. C’est mon joyeux service
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:47</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_167.html" data-src="hymns/mp3/CV/CV_167-C_est_mon_joyeux_service_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                167. C’est mon joyeux service
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_172a.html" data-src="hymns/mp3/CV/CV_172a-Entre_tes_mains_j_abandonne_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                172a. Entre tes mains j’abandonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_172a.html" data-src="hymns/mp3/CV/CV_172a-Entre_tes_mains_j_abandonne_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                172a. Entre tes mains j’abandonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_174.html" data-src="hymns/mp3/CV/CV_174-Seul_refuge_de_mon_ame_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                174. Seul refuge de mon âme
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_174.html" data-src="hymns/mp3/CV/CV_174-Seul_refuge_de_mon_ame_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                174. Seul refuge de mon âme
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_175.html" data-src="hymns/mp3/CV/CV_175-L_amour_de_Jesus-Christ_nous_presse_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                175. L’amour de Jésus-Christ
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:15</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_175.html" data-src="hymns/mp3/CV/CV_175-L_amour_de_Jesus-Christ_nous_presse_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                175. L’amour de Jésus-Christ
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:14</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_180.html" data-src="hymns/mp3/CV/CV_180-La_voix_du_Seigneur_m_appelle_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                180. La voix du Seigneur m’appelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_180.html" data-src="hymns/mp3/CV/CV_180-La_voix_du_Seigneur_m_appelle_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                180. La voix du Seigneur m’appelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:53</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_184.html" data-src="hymns/mp3/CV/CV_184-Viens_mon_ame_te_reclame_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                184. Viens, mon âme te réclame
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:55</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_184.html" data-src="hymns/mp3/CV/CV_184-Viens_mon_ame_te_reclame_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                184. Viens, mon âme te réclame
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_187.html" data-src="hymns/mp3/CV/CV_187-C_est_un_rempart_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                187. C’est un rempart !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_187.html" data-src="hymns/mp3/CV/CV_187-C_est_un_rempart_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                187. C’est un rempart !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:04</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_188.html" data-src="hymns/mp3/CV/CV_188-Plus_que_vainqueurs_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                188. Plus que vainqueur !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:48</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_188.html" data-src="hymns/mp3/CV/CV_188-Plus_que_vainqueurs_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                188. Plus que vainqueur !
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:47</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_191.html" data-src="hymns/mp3/CV/CV_191-Jusqu_a_ta_venue_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                191. Jusqu’à la mort
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:56</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_191.html" data-src="hymns/mp3/CV/CV_191-Jusqu_a_ta_venue_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                191. Jusqu’à la mort
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:55</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_193.html" data-src="hymns/mp3/CV/CV_193-Le_signal_de_la_victoire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                193. Le signal de la victoire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:31</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_193.html" data-src="hymns/mp3/CV/CV_193-Le_signal_de_la_victoire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                193. Le signal de la victoire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_194.html" data-src="hymns/mp3/CV/CV_194-Sans_attendre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                194. Sans attendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:43</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_194.html" data-src="hymns/mp3/CV/CV_194-Sans_attendre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                194. Sans attendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_200.html" data-src="hymns/mp3/CV/CV_200-Veille_toujours_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                200. Veille au matin
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:28</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_200.html" data-src="hymns/mp3/CV/CV_200-Veille_toujours_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                200. Veille au matin
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:27</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_201.html" data-src="hymns/mp3/CV/CV_201-A_celui_qui_sera_vainqueur_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                201. À celui qui sera vainqueur
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:44</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_201.html" data-src="hymns/mp3/CV/CV_201-A_celui_qui_sera_vainqueur_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                201. À celui qui sera vainqueur
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:43</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_202.html" data-src="hymns/mp3/CV/CV_202-Vous_qui_gardez_les_murs_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                202. Vous qui gardez les murs de la sainte cité
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:29</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_202.html" data-src="hymns/mp3/CV/CV_202-Vous_qui_gardez_les_murs_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                202. Vous qui gardez les murs de la sainte cité
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:29</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_203.html" data-src="hymns/mp3/CV/CV_203-Sentinelle_vigilante_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                203. Sentinelle vigilante
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_203.html" data-src="hymns/mp3/CV/CV_203-Sentinelle_vigilante_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                203. Sentinelle vigilante
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_204a.html" data-src="hymns/mp3/CV/CV_204a-Debout_sainte_cohorte_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                204a. Debout, sainte cohorte
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:14</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_204a.html" data-src="hymns/mp3/CV/CV_204a-Debout_sainte_cohorte_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                204a. Debout, sainte cohorte
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:15</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_205.html" data-src="hymns/mp3/CV/CV_205-Travaillons_et_luttons_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                205. Travaillons et luttons
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:31</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_205.html" data-src="hymns/mp3/CV/CV_205-Travaillons_et_luttons_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                205. Travaillons et luttons
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:31</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_207.html" data-src="hymns/mp3/CV/CV_207-Maitre_entends-tu_la_tempete_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                207. Maître, entends-tu la tempête
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">5:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_207.html" data-src="hymns/mp3/CV/CV_207-Maitre_entends-tu_la_tempete_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                207. Maître, entends-tu la tempête
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">5:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_208.html" data-src="hymns/mp3/CV/CV_208-Compte_les_bienfaits_de_Dieu_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                208. Quand le vol de la tempête
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_208.html" data-src="hymns/mp3/CV/CV_208-Compte_les_bienfaits_de_Dieu_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                208. Quand le vol de la tempête
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:04</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_210.html" data-src="hymns/mp3/CV/CV_210-Une_nacelle_en_silence_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                210. Une nacelle en silence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:53</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_210.html" data-src="hymns/mp3/CV/CV_210-Une_nacelle_en_silence_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                210. Une nacelle en silence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_211.html" data-src="hymns/mp3/CV/CV_211-Tout_est_bien_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                211. Pour moi chrétien, la terre est un exil
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_211.html" data-src="hymns/mp3/CV/CV_211-Tout_est_bien_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                211. Pour moi chrétien, la terre est un exil
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:40</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_213.html" data-src="hymns/mp3/CV/CV_213-Invoque-moi_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                213. Invoque-moi du sein de la détresse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:58</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_213.html" data-src="hymns/mp3/CV/CV_213-Invoque-moi_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                213. Invoque-moi du sein de la détresse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:57</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_215a.html" data-src="hymns/mp3/CV/CV_215a-Oh_quelle_paix_parfaite_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                215a. Oh ! quelle paix parfaite
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:26</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_215a.html" data-src="hymns/mp3/CV/CV_215a-Oh_quelle_paix_parfaite_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                215a. Oh ! quelle paix parfaite
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:26</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_219.html" data-src="hymns/mp3/CV/CV_219-Dans_ce_triste_monde_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                219. Dans ce triste monde
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_219.html" data-src="hymns/mp3/CV/CV_219-Dans_ce_triste_monde_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                219. Dans ce triste monde
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:41</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_221.html" data-src="hymns/mp3/CV/CV_221-Tiens_dans_ta_main_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                221. Tiens dans ta main
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_221.html" data-src="hymns/mp3/CV/CV_221-Tiens_dans_ta_main_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                221. Tiens dans ta main
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:09</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_222.html" data-src="hymns/mp3/CV/CV_222-Ton_fidele_amour_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                222. Que ton fidèle amour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:54</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_222.html" data-src="hymns/mp3/CV/CV_222-Ton_fidele_amour_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                222. Que ton fidèle amour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:53</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_223.html" data-src="hymns/mp3/CV/CV_223-A_Jesus_je_m_abandonne_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                223. À Jésus je m’abandonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_223.html" data-src="hymns/mp3/CV/CV_223-A_Jesus_je_m_abandonne_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                223. À Jésus je m’abandonne
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_224.html" data-src="hymns/mp3/CV/CV_224-Comme_un_fleuve_immense_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                224. Comme un fleuve immense
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:59</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_224.html" data-src="hymns/mp3/CV/CV_224-Comme_un_fleuve_immense_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                224. Comme un fleuve immense
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:57</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_226.html" data-src="hymns/mp3/CV/CV_226-Ne_crains_rien_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                226. Ne crains rien je t’aime
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_226.html" data-src="hymns/mp3/CV/CV_226-Ne_crains_rien_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                226. Ne crains rien je t’aime
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:44</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_230.html" data-src="hymns/mp3/CV/CV_230-Un_chretien_je_croyait_etre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                230. Un chrétien je croyais être
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:44</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_230.html" data-src="hymns/mp3/CV/CV_230-Un_chretien_je_croyait_etre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                230. Un chrétien je croyais être
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_233.html" data-src="recordings/CV_233-Je_ne_sais_pourquoi_dans_sa_grace.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Chœur">
+            <span class="me-auto">
+                
+                233. Je ne sais pourquoi
+                
+            </span>
+            
+            <small class="px-2">Chanté par un chœur</small>
+            
+            <small class="px-2">2:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_233.html" data-src="hymns/mp3/CV/CV_233-Je_sais_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                233. Je ne sais pourquoi
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_233.html" data-src="hymns/mp3/CV/CV_233-Je_sais_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                233. Je ne sais pourquoi
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:17</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_234.html" data-src="hymns/mp3/CV/CV_234-Quel_ami_fidele_et_tendre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                234. Quel ami fidèle et tendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:01</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_234.html" data-src="hymns/mp3/CV/CV_234-Quel_ami_fidele_et_tendre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                234. Quel ami fidèle et tendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:02</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_236.html" data-src="hymns/mp3/CV/CV_236-O_jour_beni_jour_de_victoire_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                236. Ô jour béni, jour de victoire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_236.html" data-src="hymns/mp3/CV/CV_236-O_jour_beni_jour_de_victoire_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                236. Ô jour béni, jour de victoire
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_237.html" data-src="hymns/mp3/CV/CV_237-Aux_jours_d_angoisse_et_de_souffrance_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                237. Aux jours d’angoisse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:47</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_237.html" data-src="hymns/mp3/CV/CV_237-Aux_jours_d_angoisse_et_de_souffrance_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                237. Aux jours d’angoisse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_238.html" data-src="hymns/mp3/CV/CV_238-Oui_selon_ta_promesse_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                238. Oui, selon ta promesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:08</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_238.html" data-src="hymns/mp3/CV/CV_238-Oui_selon_ta_promesse_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                238. Oui, selon ta promesse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:07</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_240.html" data-src="hymns/mp3/CV/CV_240-Un_seul_pas_a_la_fois_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                240. Brillante Étoile
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_240.html" data-src="hymns/mp3/CV/CV_240-Un_seul_pas_a_la_fois_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                240. Brillante Étoile
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_241.html" data-src="hymns/mp3/CV/CV_241-Saisis_ma_main_craintive_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                241. Saisis ma main craintive
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:56</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_241.html" data-src="hymns/mp3/CV/CV_241-Saisis_ma_main_craintive_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                241. Saisis ma main craintive
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:56</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_243.html" data-src="hymns/mp3/CV/CV_243-Quel_repos_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                243. Quel repos céleste
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_243.html" data-src="hymns/mp3/CV/CV_243-Quel_repos_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                243. Quel repos céleste
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_246.html" data-src="hymns/mp3/CV/CV_246-A_lombre_de_tes_ailes_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                246. C’est à l’ombre de tes ailes
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:48</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_246.html" data-src="hymns/mp3/CV/CV_246-A_lombre_de_tes_ailes_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                246. C’est à l’ombre de tes ailes
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_249.html" data-src="hymns/mp3/CV/CV_249-J_ai_soif_de_ta_presence_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                249. J’ai soif de ta présence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:58</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_249.html" data-src="hymns/mp3/CV/CV_249-J_ai_soif_de_ta_presence_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                249. J’ai soif de ta présence
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:59</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_251.html" data-src="hymns/mp3/CV/CV_251-Ici_pleurer_et_souffrir_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                251. Ici pleurer et souffrir
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:32</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_251.html" data-src="hymns/mp3/CV/CV_251-Ici_pleurer_et_souffrir_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                251. Ici pleurer et souffrir
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:31</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_252.html" data-src="hymns/mp3/CV/CV_252-Voir_mon_Sauveur_face_a_face_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                252. Voir mon Sauveur face à face
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_252.html" data-src="hymns/mp3/CV/CV_252-Voir_mon_Sauveur_face_a_face_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                252. Voir mon Sauveur face à face
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_253.html" data-src="hymns/mp3/CV/CV_253-La_trompette_a_retenti_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                253. La trompette a retenti
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:28</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_253.html" data-src="hymns/mp3/CV/CV_253-La_trompette_a_retenti_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                253. La trompette a retenti
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:28</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_254.html" data-src="hymns/mp3/CV/CV_254-Il_va_venir_le_Seigneur_que_jadore_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                254. Il va venir le Seigneur que j’adore
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_254.html" data-src="hymns/mp3/CV/CV_254-Il_va_venir_le_Seigneur_que_jadore_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                254. Il va venir le Seigneur que j’adore
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:17</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_257.html" data-src="hymns/mp3/CV/CV_257-Je_ne_sais_pas_le_jour_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                257. Je ne sais pas le jour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:40</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_257.html" data-src="hymns/mp3/CV/CV_257-Je_ne_sais_pas_le_jour_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                257. Je ne sais pas le jour
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:39</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_261.html" data-src="hymns/mp3/CV/CV_261-Nombreux_comme_le_sable_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                261. Oh ! quel beau jour, où, devant ta face
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:08</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_261.html" data-src="hymns/mp3/CV/CV_261-Nombreux_comme_le_sable_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                261. Oh ! quel beau jour, où, devant ta face
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_264.html" data-src="hymns/mp3/CV/CV_264-Avec_allegresse_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                264. Avec allégresse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:40</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_264.html" data-src="hymns/mp3/CV/CV_264-Avec_allegresse_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                264. Avec allégresse
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:41</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_265.html" data-src="hymns/mp3/CV/CV_265-Vers_le_ciel_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                265. Vers le ciel, vers le ciel
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_265.html" data-src="hymns/mp3/CV/CV_265-Vers_le_ciel_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                265. Vers le ciel, vers le ciel
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:46</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_268.html" data-src="hymns/mp3/CV/CV_268-Pelerin_sur_cette_terre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                268. Pèlerin, sur cette terre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:29</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_268.html" data-src="hymns/mp3/CV/CV_268-Pelerin_sur_cette_terre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                268. Pèlerin, sur cette terre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:30</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_272.html" data-src="recordings/CV_272-Connais_tu_cette_cite.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Chœur">
+            <span class="me-auto">
+                
+                272. Connais-tu cette cité ?
+                
+            </span>
+            
+            <small class="px-2">Chanté par un chœur</small>
+            
+            <small class="px-2">3:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_272.html" data-src="hymns/mp3/CV/CV_272-Connais_tu_cette_cite_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                272. Connais-tu cette cité ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:32</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_272.html" data-src="hymns/mp3/CV/CV_272-Connais_tu_cette_cite_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                272. Connais-tu cette cité ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:29</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_273.html" data-src="hymns/mp3/CV/CV_273-Contempler_mon_Dieu_sur_son_trone_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                273. Contempler mon Dieu sur son trône
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_273.html" data-src="hymns/mp3/CV/CV_273-Contempler_mon_Dieu_sur_son_trone_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                273. Contempler mon Dieu sur son trône
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:45</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_274.html" data-src="hymns/mp3/CV/CV_274-Au_ciel_est_la_maison_du_Pere_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                274. Au ciel est la maison
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:07</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_274.html" data-src="hymns/mp3/CV/CV_274-Au_ciel_est_la_maison_du_Pere_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                274. Au ciel est la maison
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:05</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_275.html" data-src="hymns/mp3/CV/CV_275-Nous_attendons_le_Sauveur_glorieux_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                275. Nous attendons le Sauveur glorieux
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">4:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_275.html" data-src="hymns/mp3/CV/CV_275-Nous_attendons_le_Sauveur_glorieux_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                275. Nous attendons le Sauveur glorieux
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">4:15</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_279.html" data-src="hymns/mp3/CV/CV_279-Beni_soit_le_lien_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                279. Béni soit le lien
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:52</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_279.html" data-src="hymns/mp3/CV/CV_279-Beni_soit_le_lien_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                279. Béni soit le lien
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:50</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_286.html" data-src="hymns/mp3/CV/CV_286-Chant_d_adieu_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                286. Jésus soit avec vous à jamais
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:17</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_286.html" data-src="hymns/mp3/CV/CV_286-Chant_d_adieu_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                286. Jésus soit avec vous à jamais
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:16</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_288.html" data-src="hymns/mp3/CV/CV_288-Le_Chant_du_Reveil_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                288. Seigneur, que la terre entière
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">6:11</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_288.html" data-src="hymns/mp3/CV/CV_288-Le_Chant_du_Reveil_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                288. Seigneur, que la terre entière
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">6:10</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_290.html" data-src="hymns/mp3/CV/CV_290-Christ_est_ma_portion_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                290. Ô toi, Seigneur Jésus
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">6:09</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_290.html" data-src="hymns/mp3/CV/CV_290-Christ_est_ma_portion_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                290. Ô toi, Seigneur Jésus
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">6:08</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_292.html" data-src="hymns/mp3/CV/CV_292-Suivez_l_Agneau_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                292. Suivez, suivez l’Agneau
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_292.html" data-src="hymns/mp3/CV/CV_292-Suivez_l_Agneau_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                292. Suivez, suivez l’Agneau
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_293.html" data-src="hymns/mp3/CV/CV_293-Tout_joyeux_benissons_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                293. Tout joyeux, bénissons
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:44</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_293.html" data-src="hymns/mp3/CV/CV_293-Tout_joyeux_benissons_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                293. Tout joyeux, bénissons
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:43</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_294.html" data-src="hymns/mp3/CV/CV_294-Je_suis_petit_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                294. Je suis petit, mais que m’importe ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_294.html" data-src="hymns/mp3/CV/CV_294-Je_suis_petit_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                294. Je suis petit, mais que m’importe ?
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:18</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_295.html" data-src="hymns/mp3/CV/CV_295-Nul_enfant_nest_trop_petit_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                295. Nul enfant n’est trop petit
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:55</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_295.html" data-src="hymns/mp3/CV/CV_295-Nul_enfant_nest_trop_petit_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                295. Nul enfant n’est trop petit
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:56</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_298.html" data-src="hymns/mp3/CV/CV_298-Bientot_Jesus_va_nous_prendre_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                298. Bientôt Jésus va nous prendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:55</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_298.html" data-src="hymns/mp3/CV/CV_298-Bientot_Jesus_va_nous_prendre_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                298. Bientôt Jésus va nous prendre
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:53</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_299.html" data-src="hymns/mp3/CV/CV_299-Je_suis_la_lumiere_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                299. Je suis la lumière
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:27</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_299.html" data-src="hymns/mp3/CV/CV_299-Je_suis_la_lumiere_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                299. Je suis la lumière
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:26</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_301.html" data-src="hymns/mp3/CV/CV_301-Bon_Sauveur_berger_fidele_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                301. Bon Sauveur, berger fidèle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:37</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_301.html" data-src="hymns/mp3/CV/CV_301-Bon_Sauveur_berger_fidele_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                301. Bon Sauveur, berger fidèle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:36</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_302.html" data-src="hymns/mp3/CV/CV_302-Le_Seigneur_m_aime_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                302. Le Seigneur m’aime
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:25</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_302.html" data-src="hymns/mp3/CV/CV_302-Le_Seigneur_m_aime_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                302. Le Seigneur m’aime
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:23</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_303.html" data-src="hymns/mp3/CV/CV_303-Sous_le_sang_le_precieux_sang_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                303. Sous le sang, le précieux sang
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">0:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_303.html" data-src="hymns/mp3/CV/CV_303-Sous_le_sang_le_precieux_sang_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                303. Sous le sang, le précieux sang
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">0:19</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_304.html" data-src="hymns/mp3/CV/CV_304-Jesus_quitta_le_trone_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                304. Jésus quitta le trône de son Père
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:14</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_304.html" data-src="hymns/mp3/CV/CV_304-Jesus_quitta_le_trone_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                304. Jésus quitta le trône de son Père
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:12</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_305.html" data-src="hymns/mp3/CV/CV_305-Rayon_de_soleil_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                305. Jésus me demande d’être
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_305.html" data-src="hymns/mp3/CV/CV_305-Rayon_de_soleil_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                305. Jésus me demande d’être
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:20</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_306.html" data-src="hymns/mp3/CV/CV_306-Chaque_jour_de_ma_vie_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                306. Chaque jour de ma vie
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:21</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_306.html" data-src="hymns/mp3/CV/CV_306-Chaque_jour_de_ma_vie_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                306. Chaque jour de ma vie
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:21</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_307.html" data-src="hymns/mp3/CV/CV_307-Il_est_un_pays_magnifique_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                307. Il est un pays magnifique
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">3:23</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_307.html" data-src="hymns/mp3/CV/CV_307-Il_est_un_pays_magnifique_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                307. Il est un pays magnifique
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">3:22</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_309.html" data-src="hymns/mp3/CV/CV_309-Jesus_ne_change_pas_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                309. Jésus ne change pas
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">1:07</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_309.html" data-src="hymns/mp3/CV/CV_309-Jesus_ne_change_pas_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                309. Jésus ne change pas
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">1:06</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_310.html" data-src="hymns/mp3/CV/CV_310-David_n_avait_rien_que_sa_fronde_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                310. David n’avait rien que sa fronde
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:39</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_310.html" data-src="hymns/mp3/CV/CV_310-David_n_avait_rien_que_sa_fronde_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                310. David n’avait rien que sa fronde
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:38</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_311.html" data-src="hymns/mp3/CV/CV_311-priere_de_lenfant_a_son_coucher_polyinstru.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (divers instruments, 4 voix)">
+            <span class="me-auto">
+                
+                311. Oh ! que ta main paternelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (divers instruments, 4 voix)</small>
+            
+            <small class="px-2">2:42</small>
+        </a>
+        
+        <a href="#" data-url="/CV/CV_311.html" data-src="hymns/mp3/CV/CV_311-priere_de_lenfant_a_son_coucher_mono-piano.mp3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" title="Mélodie (piano, 4 voix)">
+            <span class="me-auto">
+                
+                311. Oh ! que ta main paternelle
+                
+            </span>
+            
+            <small class="px-2">Mélodie (piano, 4 voix)</small>
+            
+            <small class="px-2">2:41</small>
+        </a>
+        
+    </div>
+    
+    
+
+      </section>
+
+    </main>
+    
+
+    
+    <footer>
+      © 2026 Copyright :
+      <a href="/index.html">cantiques.yapper.fr</a>
+    </footer>
+    
+
+    <script src="/static/js/bootstrap.bundle.min.js?v=5.2.3"></script>
+    <script src="/static/js/main.js?v=2023-02-09"></script>
+    
+    <script src="/static/js/player.js?v=2023-02-09"></script>
+
+
+  </body>
+
+</html>
+

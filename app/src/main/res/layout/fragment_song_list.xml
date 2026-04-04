@@ -123,4 +123,14 @@
 
     </FrameLayout>
 
+    <!-- Psalm Quote Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#1A1110"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"/>
+
 </LinearLayout>

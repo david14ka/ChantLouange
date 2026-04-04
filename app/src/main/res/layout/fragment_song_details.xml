@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/bground"
             android:scaleType="centerCrop"
-            android:alpha="0.2" />
+            android:alpha="0.9" />
 
         <LinearLayout
             android:id="@+id/lyrics_root_layout"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:paddingHorizontal="24dp"
-                android:paddingTop="32dp"
+                android:paddingTop="48dp"
                 android:paddingBottom="24dp">
 
                 <!-- Watermark Number (e.g. 042) -->
@@ -42,12 +42,12 @@
                     android:id="@+id/txt_watermark_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="-12dp"
-                    android:layout_marginTop="-20dp"
+                    android:layout_marginStart="-16dp"
+                    android:layout_marginTop="-32dp"
                     android:fontFamily="serif"
                     android:includeFontPadding="false"
-                    android:textColor="#33C62828"
-                    android:textSize="140sp"
+                    android:textColor="#22C62828"
+                    android:textSize="180sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -141,9 +141,10 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="40dp"
                 android:background="@drawable/pill_background"
+                android:backgroundTint="#1AFFFFFF"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="12dp">
 
                 <TextView
                     android:id="@+id/btn_text_minus"
@@ -156,11 +157,6 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="24dp"
-                    android:background="#33FFFFFF" />
-
                 <TextView
                     android:id="@+id/btn_text_plus"
                     android:layout_width="0dp"
@@ -172,10 +168,36 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="24dp"
-                    android:background="#0CFFFFFF" />
+                <!-- Red Auto-Scroll Pill -->
+                <LinearLayout
+                    android:id="@+id/btn_auto_scroll"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="2.2"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/pill_active_bg"
+                    android:backgroundTint="#E53935"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_auto_scroll"
+                        app:tint="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="AUTO-\nSCROLL"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp"
+                        android:lineSpacingMultiplier="0.8" />
+                </LinearLayout>
 
                 <ImageButton
                     android:id="@+id/btn_theme"
@@ -186,12 +208,14 @@
                     android:src="@drawable/ic_invert_theme"
                     app:tint="@color/white" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="24dp"
-                    android:background="#33FFFFFF" />
-
-
+                <ImageButton
+                    android:id="@+id/btn_keep_screen_on"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_keep_screen_on"
+                    app:tint="@color/white" />
 
                 <ImageButton
                     android:id="@+id/btn_share"
