@@ -66,6 +66,9 @@ public class ItemFragment extends BaseFragment {
     // Audio Player Fields
     private View audioPlayerCard;
     private ProgressBar audioProgressCircle;
+    private SeekBar audioSeekbar;
+    private TextView txtAudioCurrentTime;
+    private TextView txtAudioDuration;
     private ProgressBar audioLoading;
     private ImageButton btnAudioPlay;
     private MediaPlayer mediaPlayer;
@@ -80,6 +83,12 @@ public class ItemFragment extends BaseFragment {
                 int currentPos = mediaPlayer.getCurrentPosition();
                 if (audioProgressCircle != null) {
                     audioProgressCircle.setProgress(currentPos);
+                }
+                if (audioSeekbar != null) {
+                    audioSeekbar.setProgress(currentPos);
+                }
+                if (txtAudioCurrentTime != null) {
+                    txtAudioCurrentTime.setText(formatTime(currentPos));
                 }
             }
             audioHandler.postDelayed(this, 1000);
@@ -191,6 +200,9 @@ public class ItemFragment extends BaseFragment {
         // --- Audio Player Initialization ---
         audioPlayerCard = view.findViewById(R.id.audio_player_card);
         audioProgressCircle = view.findViewById(R.id.audio_progress_circle);
+        audioSeekbar = view.findViewById(R.id.audio_seekbar);
+        txtAudioCurrentTime = view.findViewById(R.id.txt_audio_current_time);
+        txtAudioDuration = view.findViewById(R.id.txt_audio_duration);
         audioLoading = view.findViewById(R.id.audio_loading);
         btnAudioPlay = view.findViewById(R.id.btn_audio_play);
         
@@ -344,6 +356,32 @@ public class ItemFragment extends BaseFragment {
                 }
             });
         }
+        
+        if (audioSeekbar != null) {
+            audioSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    if (fromUser && mediaPlayer != null) {
+                        if (txtAudioCurrentTime != null) {
+                            txtAudioCurrentTime.setText(formatTime(progress));
+                        }
+                    }
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                    isTrackingUserSeek = true;
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                    isTrackingUserSeek = false;
+                    if (mediaPlayer != null) {
+                        mediaPlayer.seekTo(seekBar.getProgress());
+                    }
+                }
+            });
+        }
     }
 
     private void updateVersionButtonText() {
@@ -366,6 +404,12 @@ public class ItemFragment extends BaseFragment {
             audioProgressCircle.setProgress(0);
             audioProgressCircle.setMax(0);
         }
+        if (audioSeekbar != null) {
+            audioSeekbar.setProgress(0);
+            audioSeekbar.setMax(0);
+        }
+        if (txtAudioCurrentTime != null) txtAudioCurrentTime.setText("0:00");
+        if (txtAudioDuration != null) txtAudioDuration.setText("0:00");
         audioHandler.removeCallbacks(updateSeekbarTask);
     }
     
@@ -390,6 +434,12 @@ public class ItemFragment extends BaseFragment {
                         
                         if (audioProgressCircle != null) {
                             audioProgressCircle.setMax(mp.getDuration());
+                        }
+                        if (audioSeekbar != null) {
+                            audioSeekbar.setMax(mp.getDuration());
+                        }
+                        if (txtAudioDuration != null) {
+                            txtAudioDuration.setText(formatTime(mp.getDuration()));
                         }
                         
                         mp.start();

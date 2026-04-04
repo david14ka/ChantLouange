@@ -1,20 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/audio_player_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
     android:layout_marginBottom="24dp"
-    android:paddingVertical="16dp">
+    android:background="@drawable/player_bg_glass"
+    android:orientation="vertical"
+    android:paddingVertical="4dp">
 
-    <!-- Small horizontal dashes graphic above the player (decorative) -->
+    <!-- Decorative dashes above -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/player_container"
-        android:layout_marginBottom="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
-        <View android:layout_width="40dp" android:layout_height="2dp" android:background="#44FFFFFF" />
+        <View android:layout_width="20dp" android:layout_height="2dp" android:background="#44FFFFFF" />
         <View android:layout_width="8dp" android:layout_height="2dp" android:layout_marginStart="4dp" android:background="#44FFFFFF" />
         <View android:layout_width="8dp" android:layout_height="2dp" android:layout_marginStart="4dp" android:background="#44FFFFFF" />
     </LinearLayout>
@@ -23,8 +25,9 @@
         android:id="@+id/player_container"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:layout_centerInParent="true">
+        android:layout_gravity="center_horizontal">
 
+        <!-- Keeping circular progress for visual flair behind play button -->
         <ProgressBar
             android:id="@+id/audio_progress_circle"
             style="?android:attr/progressBarStyleHorizontal"
@@ -58,4 +61,50 @@
                 app:tint="@color/white" />
         </RelativeLayout>
     </FrameLayout>
-</RelativeLayout>
+
+    <!-- NEW: Seekbar and Time Labels -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="32dp">
+
+        <SeekBar
+            android:id="@+id/audio_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:max="100"
+            android:paddingHorizontal="0dp"
+            android:progressDrawable="@drawable/seekbar_progress_premium"
+            android:thumbTint="#E53935"
+            app:thumbRadius="6dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/txt_audio_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="0:00"
+                android:textColor="#BCBCBC"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txt_audio_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="0:00"
+                android:textColor="#BCBCBC"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
