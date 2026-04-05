@@ -20,6 +20,8 @@ import com.davidkazad.chantlouange.ui.fragment.DashFragment;
 import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.davidkazad.chantlouange.ui.fragment.FavFragment;
 import com.davidkazad.chantlouange.ui.fragment.AllSongsFragment;
+import com.davidkazad.chantlouange.ui.fragment.SettingsFragment;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -59,8 +61,10 @@ public class HomeActivity extends BaseActivity {
                     ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.favorities);
                     return true;
                 case R.id.navigation_settings:
-                    startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                    showFragment(new SettingsFragment());
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.settings);
                     return true;
+
             }
             return false;
         }
@@ -136,9 +140,11 @@ public class HomeActivity extends BaseActivity {
             startActivity(new Intent(this, GlobalSearchActivity.class));
             return true;
         }if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+            BottomNavigationView navigation = findViewById(R.id.navigation);
+            if (navigation != null) navigation.setSelectedItemId(R.id.navigation_settings);
             return true;
         }if (id == R.id.action_helps) {
+
             openBrowser("help");
             return true;
         }if (id == R.id.action_about) {

@@ -260,4 +260,7 @@
     <string name="settings_dark_mode_title">Mode Sombre</string>
     <string name="settings_dark_mode_desc">Réduit l\'éblouissement en environnement sombre</string>
     <string name="settings_interface_nav">Interface &amp; Navigation</string>
+    <string name="settings_credits_audio_sources">Remerciements Audio</string>
+    <string name="settings_credits_audio_desc">Nous exprimons notre gratitude aux sources open source (Cantiquest.org, Alive-Corporation) pour les ressources audio des cantiques.</string>
 </resources>
+

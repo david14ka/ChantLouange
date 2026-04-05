@@ -2,18 +2,22 @@ package com.davidkazad.chantlouange.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davidkazad.chantlouange.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.pixplicity.easyprefs.library.Prefs;
+
 
 public class SettingsActivity extends BaseActivity {
 
@@ -35,7 +39,7 @@ public class SettingsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_settings);
+        setContentView(R.layout.activity_settings);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +47,23 @@ public class SettingsActivity extends BaseActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
+
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        if (navigation != null) {
+            navigation.setSelectedItemId(R.id.navigation_settings);
+            navigation.setOnNavigationItemSelectedListener(item -> {
+                if (item.getItemId() != R.id.navigation_settings) {
+                    Intent intent = new Intent(this, HomeActivity.class);
+                    intent.putExtra("targetFragment", item.getItemId());
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
+                    return true;
+                }
+                return false;
+            });
+        }
+
         
         switchDarkMode = findViewById(R.id.switch_dark_mode);
         btnFontSize = findViewById(R.id.btn_font_size);
