@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Document Base Gradient -->
+    <path android:pathData="M14,2H6C4.9,2 4,2.9 4,4v16c0,1.1 0.89,2 1.99,2H18c1.1,0 2,-0.9 2,-2V8l-6,-6z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startY="2"
+                android:startX="12"
+                android:endY="22"
+                android:endX="12"
+                android:type="linear">
+                <item android:offset="0" android:color="#FDF1D5" />
+                <item android:offset="1" android:color="#E0B666" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Folded corner with shadow effect -->
+    <path
+        android:pathData="M13,2.5L18.5,8H14C13.45,8 13,7.55 13,7V2.5z"
+        android:fillColor="#C69E58" />
+
+    <!-- Stylized Clef / Music Elements inside -->
+    <!-- Clef Line -->
+    <path
+        android:pathData="M11.5,8v7"
+        android:strokeWidth="1.5"
+        android:strokeColor="#562F05"
+        android:strokeLineCap="round" />
+
+    <!-- Staff Lines (Subtle) -->
+    <path
+        android:pathData="M7,12h10M7,14h10"
+        android:strokeWidth="0.5"
+        android:strokeColor="#B58941" />
+
+    <!-- Music Note 1 -->
+    <path
+        android:pathData="M10.5,15.5 A1.5,1.5 0,1,1 9,14 A1.5,1.5 0,0,1 10.5,15.5 M10.5,11 V15.5"
+        android:strokeWidth="1"
+        android:fillColor="#80210B"
+        android:strokeColor="#80210B" />
+
+    <!-- Music Note 2 -->
+    <path
+        android:pathData="M14.5,13.5 A1.5,1.5 0,1,1 13,12 A1.5,1.5 0,0,1 14.5,13.5 M14.5,10.5 V13.5"
+        android:strokeWidth="1"
+        android:fillColor="#CA3716"
+        android:strokeColor="#CA3716" />
+
+    <!-- Connecting bar between notes -->
+    <path
+        android:pathData="M10.5,11 L14.5,10.5"
+        android:strokeWidth="1.5"
+        android:strokeColor="#562F05" />
+
+</vector>

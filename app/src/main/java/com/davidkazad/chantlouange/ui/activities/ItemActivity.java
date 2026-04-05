@@ -32,6 +32,7 @@ import com.davidkazad.chantlouange.datas.CC;
 import com.davidkazad.chantlouange.models.Favorites;
 import com.davidkazad.chantlouange.ui.fragment.ItemFragment;
 import com.davidkazad.chantlouange.ui.fragment.ListFragment;
+import com.davidkazad.chantlouange.utils.PdfMapper;
 import com.davidkazad.chantlouange.models.Book;
 import com.davidkazad.chantlouange.models.Page;
 import com.davidkazad.chantlouange.models.Recent;
@@ -207,7 +208,7 @@ public class ItemActivity extends BaseActivity {
     private FloatingActionButton fab2;
     private FloatingActionButton fab3;
     private FloatingActionButton fab4;
-
+    private FloatingActionButton fab_pdf;
 
     private void setFabMenu() {
 
@@ -217,11 +218,13 @@ public class ItemActivity extends BaseActivity {
         fab2 = findViewById(R.id.fab2);
         fab3 = findViewById(R.id.fab3);
         fab4 = findViewById(R.id.fab4);
+        fab_pdf = findViewById(R.id.fab_pdf);
 
         fab1.setLabelText(getString(R.string.jaime));
         fab2.setLabelText(getString(R.string.share_song));
         fab3.setLabelText(getString(R.string.add_to_favorites));
         fab4.setLabelText(getString(R.string.corriger_erreur));
+        fab_pdf.setLabelText("Lire la Partition PDF");
 
         updateIconFabMenuButton();
 
@@ -232,6 +235,7 @@ public class ItemActivity extends BaseActivity {
         fab2.setOnClickListener(fabClickListener);
         fab3.setOnClickListener(fabClickListener);
         fab4.setOnClickListener(fabClickListener);
+        fab_pdf.setOnClickListener(fabClickListener);
 
         mUiHandler.postDelayed(new Runnable() {
             @Override
@@ -256,6 +260,13 @@ public class ItemActivity extends BaseActivity {
         }else  {
             fab1.setImageDrawable(getDrawable(R.drawable.baseline_favorite_24));
             fab3.setImageDrawable(getDrawable(R.drawable.star_filed));
+        }
+        
+        // Show PDF FAB only if a PDF exists for this song
+        if (PdfMapper.hasPdf(this, currentBook.getId(), currentPage.getNumber())) {
+            fab_pdf.setVisibility(View.VISIBLE);
+        } else {
+            fab_pdf.setVisibility(View.GONE);
         }
     }
 
@@ -319,6 +330,17 @@ public class ItemActivity extends BaseActivity {
                     EditActivity.mBook = currentBook;
                     startActivity(new Intent(getApplicationContext(), EditActivity.class).putExtra("edit", true));
 
+                    break;
+                    
+                case R.id.fab_pdf:
+                    String pdfUrl = PdfMapper.getPdfUrl(ItemActivity.this, currentBook.getId(), currentPage.getNumber());
+                    if (pdfUrl != null) {
+                        WebviewActivity.dataUrl = "https://docs.google.com/gview?embedded=true&url=" + pdfUrl;
+                        WebviewActivity.dataTitle = "Partition : " + currentPage.getTitle();
+                        startActivity(new Intent(ItemActivity.this, WebviewActivity.class));
+                    } else {
+                        Toast.makeText(ItemActivity.this, "Partition PDF indésponible", Toast.LENGTH_SHORT).show();
+                    }
                     break;
             }
         }

@@ -295,6 +295,7 @@ public class ListFragment extends BaseFragment {
             @BindView(R.id.txt_tittle) TextView title;
             @BindView(R.id.fav) ImageView fav;
             @BindView(R.id.note) ImageView note;
+            @Nullable @BindView(R.id.ic_partition) ImageView icPartition;
             @Nullable @BindView(R.id.txt_letter) TextView letter;
             // Optional subtitle view (present in new design)
             TextView txtOriginalTitle;
@@ -326,6 +327,7 @@ public class ListFragment extends BaseFragment {
                     }
                     number.setVisibility(View.INVISIBLE);
                     note.setVisibility(View.GONE);
+                    if (icPartition != null) icPartition.setVisibility(View.GONE);
                     title.setVisibility(View.GONE);
                 } else {
                     if (letter != null) letter.setVisibility(View.GONE);
@@ -364,6 +366,13 @@ public class ListFragment extends BaseFragment {
                         note.setVisibility(View.VISIBLE);
                     } else {
                         note.setVisibility(View.GONE);
+                    }
+
+                    // Partition indicator (document icon)
+                    if (icPartition != null) {
+                        boolean hasPartition = com.davidkazad.chantlouange.utils.PdfMapper.hasPdf(
+                                itemView.getContext(), mPage.getBookId(), mPage.getNumber());
+                        icPartition.setVisibility(hasPartition ? View.VISIBLE : View.GONE);
                     }
                 }
                 boolean isFav = mPage.isFavorite();
@@ -416,7 +425,18 @@ public class ListFragment extends BaseFragment {
             holder.txtNumber.setText(page.getNumber().replace(". ", ""));
             highlightText(holder.txtTitle, page.getTitle(), currentQuery);
             holder.txtSubtitle.setText(book.getName());
+            
+            // Favorite status
             holder.imgFav.setVisibility(page.isFavorite() ? View.VISIBLE : View.GONE);
+
+            // Audio availability
+            boolean hasAudio = AudioMapper.hasAudio(holder.itemView.getContext(), page.getBookId(), page.getNumber());
+            holder.note.setVisibility(hasAudio ? View.VISIBLE : View.GONE);
+
+            // Partition availability
+            boolean hasPartition = com.davidkazad.chantlouange.utils.PdfMapper.hasPdf(
+                    holder.itemView.getContext(), page.getBookId(), page.getNumber());
+            holder.icPartition.setVisibility(hasPartition ? View.VISIBLE : View.GONE);
 
             holder.itemView.setOnClickListener(v -> {
                 ItemActivity.currentBook = book;
@@ -430,13 +450,15 @@ public class ListFragment extends BaseFragment {
 
         class ViewHolder extends RecyclerView.ViewHolder {
             TextView txtNumber, txtTitle, txtSubtitle;
-            ImageView imgFav;
+            ImageView imgFav, note, icPartition;
             ViewHolder(View itemView) {
                 super(itemView);
                 txtNumber   = itemView.findViewById(R.id.txt_number);
                 txtTitle    = itemView.findViewById(R.id.txt_title);
                 txtSubtitle = itemView.findViewById(R.id.txt_subtitle);
                 imgFav      = itemView.findViewById(R.id.img_fav);
+                note        = itemView.findViewById(R.id.note);
+                icPartition = itemView.findViewById(R.id.ic_partition);
             }
         }
 

@@ -39,8 +39,17 @@ import android.media.MediaPlayer;
 import android.widget.ProgressBar;
 import android.widget.ImageButton;
 import com.davidkazad.chantlouange.utils.AudioMapper;
+import com.davidkazad.chantlouange.utils.PdfMapper;
 import java.util.List;
 import java.io.IOException;
+import com.davidkazad.chantlouange.ui.activities.WebviewActivity;
+import android.app.Dialog;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebSettings.PluginState;
+import androidx.appcompat.widget.Toolbar;
+import android.graphics.drawable.ColorDrawable;
+import android.view.Window;
 
 public class ItemFragment extends BaseFragment {
 
@@ -71,6 +80,10 @@ public class ItemFragment extends BaseFragment {
     private TextView txtAudioDuration;
     private ProgressBar audioLoading;
     private ImageButton btnAudioPlay;
+
+    private LinearLayout playerAndPdfContainer;
+    private View btnPdfContainer;
+    private ImageButton fabPdfFragment;
 
     private MediaPlayer mediaPlayer;
     private List<String> audioUrls;
@@ -204,8 +217,11 @@ public class ItemFragment extends BaseFragment {
         txtAudioDuration = view.findViewById(R.id.txt_audio_duration);
         audioLoading = view.findViewById(R.id.audio_loading);
         btnAudioPlay = view.findViewById(R.id.btn_audio_play);
-
         
+        playerAndPdfContainer = view.findViewById(R.id.player_and_pdf_container);
+        btnPdfContainer = view.findViewById(R.id.btn_pdf_container);
+        fabPdfFragment = view.findViewById(R.id.fab_pdf_fragment);
+
         setupAudioPlayerUi();
 
         try {
@@ -328,12 +344,147 @@ public class ItemFragment extends BaseFragment {
         if (txtAudioTitle != null) {
             txtAudioTitle.setText(currentPage.getTitle() != null ? currentPage.getTitle().toUpperCase() : "");
         }
+        
+        boolean hasPdf = PdfMapper.hasPdf(getContext(), currentBook.getId(), currentPage.getNumber());
+        boolean hasAudio = AudioMapper.getAudioUrls(getContext(), currentBook.getId(), currentPage.getNumber()) != null && !AudioMapper.getAudioUrls(getContext(), currentBook.getId(), currentPage.getNumber()).isEmpty();
+
+        if (playerAndPdfContainer != null) {
+            playerAndPdfContainer.setVisibility((hasPdf || hasAudio) ? View.VISIBLE : View.GONE);
+        }
+
+        if (fabPdfFragment != null && currentBook != null && currentPage != null) {
+            if (hasPdf) {
+                if (btnPdfContainer != null) btnPdfContainer.setVisibility(View.VISIBLE);
+                fabPdfFragment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String pdfUrl = PdfMapper.getPdfUrl(getContext(), currentBook.getId(), currentPage.getNumber());
+                        if (pdfUrl != null) {
+                            showPdfPopup(pdfUrl);
+                        }
+                    }
+                });
+            } else {
+                if (btnPdfContainer != null) btnPdfContainer.setVisibility(View.GONE);
+            }
+        }
 
         initAudio();
 
 
         parseAndRenderLyrics();
     }
+
+    private void showPdfPopup(final String pdfUrl) {
+        if (getContext() == null || getActivity() == null) return;
+
+        final Dialog dialog = new Dialog(getContext(), android.R.style.Theme_Material_Light_NoActionBar);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_pdf_viewer);
+
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#141414")));
+        }
+
+        // Top Bar
+        ImageButton btnClose = dialog.findViewById(R.id.btn_close_pdf);
+        TextView txtTitle = dialog.findViewById(R.id.txt_pdf_title);
+
+        if (txtTitle != null && currentPage != null) {
+            txtTitle.setText(currentPage.getTitle());
+        }
+
+        if (btnClose != null) {
+            btnClose.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+        }
+
+        // PDF Main Area — always loads from internet
+        final WebView webView = dialog.findViewById(R.id.pdf_webview);
+        final ProgressBar progressBar = dialog.findViewById(R.id.pdf_progressbar);
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                if (progressBar != null) progressBar.setVisibility(View.GONE);
+            }
+        });
+
+        webView.loadUrl("https://docs.google.com/gview?embedded=true&url=" + pdfUrl);
+
+        // Bottom Control Pill
+        ImageButton btnReload   = dialog.findViewById(R.id.btn_pdf_reload);
+        ImageButton btnDownload = dialog.findViewById(R.id.btn_pdf_download);
+        ImageButton btnShare    = dialog.findViewById(R.id.btn_pdf_share);
+
+        // 1. Reload WebView page
+        if (btnReload != null) {
+            btnReload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (progressBar != null) progressBar.setVisibility(View.VISIBLE);
+                    webView.reload();
+                }
+            });
+        }
+
+        // 2. Download PDF to device Downloads folder via DownloadManager
+        if (btnDownload != null) {
+            btnDownload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        String filename = (currentPage != null ? currentPage.getTitle() : "partition") + ".pdf";
+                        android.app.DownloadManager.Request request =
+                                new android.app.DownloadManager.Request(android.net.Uri.parse(pdfUrl));
+                        request.setTitle(filename);
+                        request.setDescription("Téléchargement de la partition");
+                        request.setNotificationVisibility(
+                                android.app.DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                        request.setDestinationInExternalPublicDir(
+                                android.os.Environment.DIRECTORY_DOWNLOADS, filename);
+                        request.setMimeType("application/pdf");
+                        android.app.DownloadManager dm =
+                                (android.app.DownloadManager) getContext().getSystemService(android.content.Context.DOWNLOAD_SERVICE);
+                        if (dm != null) {
+                            dm.enqueue(request);
+                            Toast.makeText(getContext(), "Téléchargement démarré ↓", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (Exception e) {
+                        Toast.makeText(getContext(), "Erreur : " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+
+        // 3. Share PDF link
+        if (btnShare != null) {
+            btnShare.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_TEXT,
+                            "Voici la partition : " + (currentPage != null ? currentPage.getTitle() : "") + "\n" + pdfUrl);
+                    startActivity(Intent.createChooser(shareIntent, "Partager"));
+                }
+            });
+        }
+
+        dialog.show();
+    }
+
 
     private void initAudio() {
         if (currentBook == null || currentPage == null) return;

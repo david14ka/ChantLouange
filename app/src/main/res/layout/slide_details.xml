@@ -98,6 +98,17 @@
                     app:fab_colorPressed="@color/fab_colorPressed"
                     fab:fab_label="Corriger l'erreur" />
 
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_picture_as_pdf"
+                    android:padding="5dp"
+                    fab:fab_size="mini"
+                    app:fab_colorNormal="#d32f2f"
+                    app:fab_colorPressed="#b71c1c"
+                    fab:fab_label="Lire la Partition PDF" />
+
             </com.github.clans.fab.FloatingActionMenu>
 
         </FrameLayout>

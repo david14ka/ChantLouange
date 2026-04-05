@@ -6,67 +6,105 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/spacing_4">
 
-    <!-- Primary Card for actual song items (similar to item_numerique) -->
+    <!-- Primary Card for actual song items -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/item_song_border"
-        android:paddingVertical="12dp"
+        android:layout_height="80dp"
+        android:background="@drawable/song_item_bg_glass"
         android:paddingHorizontal="16dp">
 
-            <!-- Hymn Number -->
+        <!-- Hymn Number box -->
+        <FrameLayout
+            android:id="@+id/box_number"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/song_number_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
             <TextView
                 android:id="@+id/txt_number"
-                android:layout_width="48dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 tools:text="344B"
-                android:textColor="@color/on_primary_container"
+                android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:fontFamily="serif"
-                android:textStyle="bold"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textStyle="italic|bold" />
+        </FrameLayout>
 
-            <!-- Title -->
-            <TextView
-                android:id="@+id/txt_tittle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:fontFamily="sans-serif-medium"
-                android:lineSpacingMultiplier="1.2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/txt_number"
-                app:layout_constraintEnd_toStartOf="@+id/fav" />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/txt_tittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/box_number"
+            app:layout_constraintEnd_toStartOf="@+id/icons_container" />
 
-            <!-- Secondary elements (Notes / Favorites) pinned to top right -->
+        <!-- Icons Container -->
+        <LinearLayout
+            android:id="@+id/icons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Partition Icon -->
             <ImageView
-                android:id="@+id/fav"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/star0"
-                app:tint="@color/tertiary_fixed"
+                android:id="@+id/ic_partition"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_partition_list"
                 android:visibility="gone"
-                android:contentDescription="@string/fav_preferences"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                tools:visibility="visible" />
 
+            <!-- Play Icon -->
             <ImageView
                 android:id="@+id/note"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/note"
-                app:tint="@color/tertiary_fixed"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_play_red"
                 android:visibility="gone"
-                android:contentDescription="@string/note"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                tools:visibility="visible" />
+
+            <!-- Favorite Icon -->
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_bookmark"
+                app:tint="#E53935"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!-- Chevron -->
+            <ImageView
+                android:id="@+id/chevron_alphabetique"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/forward_24px"
+                app:tint="#66FFFFFF" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
