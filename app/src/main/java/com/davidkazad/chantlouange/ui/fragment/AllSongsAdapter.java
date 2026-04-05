@@ -66,20 +66,29 @@ public class AllSongsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             ((HeaderViewHolder) holder).txtLetter.setText(item.headerText);
         } else if (holder instanceof SongViewHolder) {
             SongViewHolder sh = (SongViewHolder) holder;
+            
+            // Basic data
             sh.txtNum.setText(item.page.getNumber().replace(". ", ""));
             sh.txtTitle.setText(item.page.getTitle());
             sh.txtBook.setText(item.bookAbbr);
+            
+            // Click handling (on itemView for reliability)
             sh.itemView.setOnClickListener(v -> {
                 if (mListener != null) {
                     mListener.onItemClick(item);
                 }
             });
 
-            if (AudioMapper.hasAudio(sh.itemView.getContext(), item.page.getBookId(), item.page.getNumber())) {
-                sh.imgAudio.setVisibility(View.VISIBLE);
-            } else {
-                sh.imgAudio.setVisibility(View.GONE);
-            }
+            // Audio indicator (Red play button)
+            boolean hasAudio = AudioMapper.hasAudio(sh.itemView.getContext(), item.page.getBookId(), item.page.getNumber());
+            sh.note.setVisibility(hasAudio ? View.VISIBLE : View.GONE);
+
+            // Partition indicator (Document icon)
+            boolean hasPdf = com.davidkazad.chantlouange.utils.PdfMapper.hasPdf(sh.itemView.getContext(), item.page.getBookId(), item.page.getNumber());
+            sh.icPartition.setVisibility(hasPdf ? View.VISIBLE : View.GONE);
+
+            // Favorite indicator (Bookmark)
+            sh.imgFav.setVisibility(item.page.isFavorite() ? View.VISIBLE : View.GONE);
         }
         // FeaturedViewHolder requires no dynamic binding for now
     }
@@ -101,13 +110,18 @@ public class AllSongsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         TextView txtNum;
         TextView txtTitle;
         TextView txtBook;
-        ImageView imgAudio;
+        ImageView note;
+        ImageView icPartition;
+        ImageView imgFav;
+
         SongViewHolder(View view) {
             super(view);
             txtNum = view.findViewById(R.id.txt_song_num);
             txtTitle = view.findViewById(R.id.txt_song_title);
             txtBook = view.findViewById(R.id.txt_song_book);
-            imgAudio = view.findViewById(R.id.img_audio_icon);
+            note = view.findViewById(R.id.note);
+            icPartition = view.findViewById(R.id.ic_partition);
+            imgFav = view.findViewById(R.id.img_fav);
         }
     }
 

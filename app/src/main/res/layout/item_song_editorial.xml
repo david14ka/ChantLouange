@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="24dp"
@@ -11,61 +12,113 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="16dp"
-        android:background="@drawable/song_item_bg_glass"
-        android:clickable="true"
         android:gravity="center_vertical"
-        android:focusable="true">
+        android:background="@drawable/song_item_bg_glass">
 
-        <TextView
-            android:id="@+id/txt_song_num"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="01"
-            android:textColor="@color/primary_container"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:fontFamily="serif" />
+        <!-- Numéro box -->
+        <FrameLayout
+            android:id="@+id/box_number"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/song_number_bg">
 
-        <TextView
-            android:id="@+id/txt_song_title"
+            <TextView
+                android:id="@+id/txt_song_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:textStyle="italic|bold"
+                tools:text="42" />
+        </FrameLayout>
+
+        <!-- Titre + Recueil -->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="vertical"
             android:layout_marginStart="16dp"
-            android:text="Grand Dieu, nous te bénissons"
-            android:textColor="?attr/textColor"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            android:maxLines="2" />
+            android:layout_marginEnd="8dp">
 
-        <ImageView
-            android:id="@+id/img_audio_icon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/ic_headset_black_24dp"
-            android:tint="@color/primary_container"
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/txt_song_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Grand Dieu, nous te bénissons" />
 
-        <TextView
-            android:id="@+id/txt_song_book"
+            <TextView
+                android:id="@+id/txt_song_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#BDBDBD"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                tools:text="VICTOIRE" />
+
+        </LinearLayout>
+
+        <!-- Icônes droites (Partition, Audio, Favorite, Chevron) -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:maxWidth="100dp"
-            android:gravity="end"
-            android:text="VICTOIRE"
-            android:textColor="@color/ed_text_secondary"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.05"
-            android:textAllCaps="true" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="12dp">
+
+            <!-- Partition Icon (Document) -->
+            <ImageView
+                android:id="@+id/ic_partition"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_partition_list"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!-- Play Icon (Red circular style) -->
+            <ImageView
+                android:id="@+id/note"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_play_red"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!-- Favorite Icon (Bookmark) -->
+            <ImageView
+                android:id="@+id/img_fav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_bookmark"
+                app:tint="#E53935"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!-- Chevron -->
+            <ImageView
+                android:id="@+id/chevron"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/forward_24px"
+                app:tint="#66FFFFFF" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
