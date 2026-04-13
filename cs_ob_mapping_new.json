@@ -1,0 +1,136 @@
+[
+  {
+    "cs_num": 1,
+    "cs_title": "1. CROIS  SEULEMENT.   C",
+    "cs_clean": "CROIS SEULEMENT",
+    "ob_num": 1,
+    "ob_title": "ONLY BELIEVE (C)",
+    "ob_clean": "ONLY BELIEVE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 2,
+    "cs_title": "GRACE ETONNANTE ! Ab",
+    "cs_clean": "GRACE ETONNANTE",
+    "ob_num": 2,
+    "ob_title": "AMAZING GRACE (Ab)",
+    "ob_clean": "AMAZING GRACE",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Amazing_Grace_file.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 3,
+    "cs_title": "ILS VIENNENT. Eb",
+    "cs_clean": "ILS VIENNENT",
+    "ob_num": 3,
+    "ob_title": "THEY COME (Eb)",
+    "ob_clean": "THEY COME",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 4,
+    "cs_title": "JE L’AIME. C",
+    "cs_clean": "JE L AIME",
+    "ob_num": 100,
+    "ob_title": "THEN JESUS CAME (C)",
+    "ob_clean": "THEN JESUS CAME",
+    "method": "fuzzy",
+    "score": 58.33333333333333,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 5,
+    "cs_title": "MOMENT DE PRIERE. Eb",
+    "cs_clean": "MOMENT DE PRIERE",
+    "ob_num": 5,
+    "ob_title": "SWEET HOUR OF PRAYER (Eb)",
+    "ob_clean": "SWEET HOUR OF PRAYER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 6,
+    "cs_title": "OH! COMBIEN J’AIME JESUS ! Ab",
+    "cs_clean": "OH COMBIEN J AIME JESUS",
+    "ob_num": 110,
+    "ob_title": "OH, IT IS JESUS (C)",
+    "ob_clean": "OH IT IS JESUS",
+    "method": "fuzzy",
+    "score": 64.86486486486487,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/451.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 7,
+    "cs_title": "QUAND LES RACHETES S' Y ASSEMBLERONT G",
+    "cs_clean": "QUAND LES RACHETES S Y ASSEMBLERONT",
+    "ob_num": null,
+    "ob_title": null,
+    "ob_clean": null,
+    "method": null,
+    "score": 0,
+    "audio_urls": [],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 8,
+    "cs_title": "OH! JE DESIRE LE VOIR! Ab",
+    "cs_clean": "OH JE DESIRE LE VOIR",
+    "ob_num": 8,
+    "ob_title": "OH, I WANT TO SEE HIM (Ab)",
+    "ob_clean": "OH I WANT TO SEE HIM",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
+    ],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 9,
+    "cs_title": "NOUS NOUS SENTONS SI BIEN F",
+    "cs_clean": "NOUS NOUS SENTONS SI BIEN",
+    "ob_num": 9,
+    "ob_title": "FEELING SO MUCH BETTER (F)",
+    "ob_clean": "FEELING SO MUCH BETTER",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [],
+    "partition_urls": []
+  },
+  {
+    "cs_num": 10,
+    "cs_title": "APPRENDS-MOI SEIGNEUR, A ATTENDRE F",
+    "cs_clean": "APPRENDS MOI SEIGNEUR A ATTENDRE",
+    "ob_num": 10,
+    "ob_title": "TEACH ME, LORD, TO WAIT (F)",
+    "ob_clean": "TEACH ME LORD TO WAIT",
+    "method": "manual_dict",
+    "score": 100,
+    "audio_urls": [
+      "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+    ],
+    "partition_urls": []
+  }
+]

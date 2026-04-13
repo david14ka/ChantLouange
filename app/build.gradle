@@ -9,8 +9,8 @@ android {
         applicationId "com.davidkazad.chantlouange"
         minSdk 23
         targetSdk 34
-        versionCode 13
-        versionName "5.0.2"
+        versionCode 14
+        versionName "3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

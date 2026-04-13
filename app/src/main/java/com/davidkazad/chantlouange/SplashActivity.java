@@ -57,7 +57,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.footerContainer.startAnimation(fadeInFooter);
 
         // Transitions to Home
-        handler.postDelayed(runnable, 3500); // 3.5s for full animation sequence
+        handler.postDelayed(runnable, 5000); // 5s as requested
 
         binding.btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override

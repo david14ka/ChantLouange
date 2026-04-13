@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="contributor">
-        <item>-------------------------</item>
-        <item>Josué MALENGELA</item>
         <item>Josué MALENGELA</item>
         <item>Prince NTUNKA</item>
         <item>Elisée LAMBI</item>
@@ -12,7 +10,6 @@
         <item>Abed MWAMBA</item>
         <item>Meschac MUTEB</item>
         <item>Josué MUTEBA</item>
-
     </string-array>
 
     <string-array name="contact">

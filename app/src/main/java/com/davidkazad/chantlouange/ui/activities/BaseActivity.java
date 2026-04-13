@@ -133,7 +133,12 @@ public abstract class BaseActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_share) {
                 shareApp();
             } else if (id == R.id.navigation_about) {
-                intent = new Intent(this, AboutActivity.class);
+                if (!(this instanceof HomeActivity)) {
+                    intent = new Intent(this, AboutActivity.class);
+                } else {
+                    com.google.android.material.bottomnavigation.BottomNavigationView nav = findViewById(R.id.navigation);
+                    if (nav != null) nav.setSelectedItemId(R.id.navigation_about);
+                }
             } else if (id == R.id.navigation_settings) {
                 intent = new Intent(this, SettingsActivity.class);
             }
@@ -211,7 +216,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-    protected void openUrl(String url) {
+    public void openUrl(String url) {
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -233,14 +238,14 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-    protected void openPlayStore() {
+    public void openPlayStore() {
         String url = "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
 
-    protected void shareApp() {
+    public void shareApp() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.davidkazad.chantlouange");
@@ -256,14 +261,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(sendIntent, getString(R.string.share_with)));
     }
 
-    protected void openFacebook() {
+    public void openFacebook() {
         String url = "https://web.facebook.com/tclcantiques";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
 
-    protected void openGithub() {
+    public void openGithub() {
         String url = "https://github.com/david14ka/chantlouange";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));

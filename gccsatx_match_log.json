@@ -1,0 +1,244 @@
+[
+  {
+    "gccs_url": "https://gccsatx.com/hymns/all-hail-the-power-of-jesus-name/",
+    "gccs_title": "All Hail the Power of Jesus' Name",
+    "ob_num": 145,
+    "ob_title": "ALL HAIL JESUS’ NAME (G)",
+    "cs_num": 108,
+    "score": 0.7451,
+    "audio_found": [
+      "https://media.gccsatx.com/All-Hail-the-Power-of-Jesus-Name-DD.mp3",
+      "https://a377806649c3f0197e29-e6708de219dc1beb62fafe8704087608.ssl.cf2.rackcdn.com/2020/05/All-Hail-The-Power-of-Jesus-NameC.mp3",
+      "https://media.gccsatx.com/AllHailC.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/amazing-grace/",
+    "gccs_title": "Amazing Grace",
+    "ob_num": 2,
+    "ob_title": "AMAZING GRACE (Ab)",
+    "cs_num": 2,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Amazing-Grace-1.mp3",
+      "https://media.gccsatx.com/Amazing-Grace-CC.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/blessed-be-your-name/",
+    "gccs_title": "Blessed Be Your Name",
+    "ob_num": 90,
+    "ob_title": "BLESSED BE THE NAME (Ab)",
+    "cs_num": 90,
+    "score": 0.8205,
+    "audio_found": [
+      "https://media.gccsatx.com/Blessed-Be-Your-Name-3-.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/have-thine-own-way-lord/",
+    "gccs_title": "Have Thine Own Way, Lord",
+    "ob_num": 37,
+    "ob_title": "HAVE THINE OWN WAY, LORD(Eb)",
+    "cs_num": 37,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Have-Thine-own-Way-.mp3",
+      "https://media.gccsatx.com/HaveThineC.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/higher-ground/",
+    "gccs_title": "Higher Ground",
+    "ob_num": 30,
+    "ob_title": "HIGHER GROUND (G)",
+    "cs_num": 30,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/HigherGround2.mp3",
+      "https://media.gccsatx.com/Higher-Ground-C.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/i-surrender-all/",
+    "gccs_title": "I Surrender All",
+    "ob_num": 25,
+    "ob_title": "I SURRENDER ALL (Eb)",
+    "cs_num": 185,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/I-Surrender-All-L.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/in-the-beauty-of-holiness/",
+    "gccs_title": "In the Beauty of Holiness",
+    "ob_num": 75,
+    "ob_title": "THE BEAUTY OF JESUS (Eb)",
+    "cs_num": 75,
+    "score": 0.7727,
+    "audio_found": [
+      "https://media.gccsatx.com/In-The-Beauty-of-Holiness-L.mp3",
+      "https://media.gccsatx.com/In-the-Beauty-CC.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/jesus-saves/",
+    "gccs_title": "Jesus Saves",
+    "ob_num": 128,
+    "ob_title": "JESUS LOVES ME (Eb)",
+    "cs_num": 211,
+    "score": 0.72,
+    "audio_found": [
+      "https://media.gccsatx.com/Jesus-Saves-L.mp3"
+    ],
+    "audio_added": [
+      "https://media.gccsatx.com/Jesus-Saves-L.mp3"
+    ]
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/jesus-saves-new/",
+    "gccs_title": "Jesus Saves (New)",
+    "ob_num": 128,
+    "ob_title": "JESUS LOVES ME (Eb)",
+    "cs_num": 211,
+    "score": 0.7586,
+    "audio_found": [
+      "https://media.gccsatx.com/Jesus-Saves-New.9.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-C.mp3"
+    ],
+    "audio_added": [
+      "https://media.gccsatx.com/Jesus-Saves-New.9.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-C.mp3"
+    ]
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/leaning-on-the-everlasting-arms/",
+    "gccs_title": "Leaning on the Everlasting Arms",
+    "ob_num": 45,
+    "ob_title": "LEANING ON LASTING ARMS(Eb)",
+    "cs_num": 45,
+    "score": 0.8519,
+    "audio_found": [
+      "https://media.gccsatx.com/Leaning-on-the-Everlasting-Arms-L.mp3",
+      "https://media.gccsatx.com/Leaning-on-The-Everlasting-Arms-C.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/marvelous-grace/",
+    "gccs_title": "Marvelous Grace",
+    "ob_num": 13,
+    "ob_title": "MARVELOUS GRACE (F)",
+    "cs_num": 13,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Marvelous-Grace-1.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/my-faith-looks-up-to-thee/",
+    "gccs_title": "My Faith Looks Up to Thee",
+    "ob_num": 23,
+    "ob_title": "MY FAITH LOOKS UP TO THEE(Eb)",
+    "cs_num": 23,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/My-Faith-Looks-Up-to-Thee-.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/onward-christian-soldiers/",
+    "gccs_title": "Onward Christian Soldiers",
+    "ob_num": 18,
+    "ob_title": "ONWARD, CHRISTIAN SOLDIER (Eb)",
+    "cs_num": 18,
+    "score": 0.9796,
+    "audio_found": [
+      "https://media.gccsatx.com/Onward-Christian-Soldiers-L.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/rock-of-ages/",
+    "gccs_title": "Rock of Ages",
+    "ob_num": 33,
+    "ob_title": "ROCK OF AGES (Bb)",
+    "cs_num": 33,
+    "score": 1.0,
+    "audio_found": [
+      "https://gccsatx.com/hymns/wp-content/uploads/2020/08/RockofAges.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/standing-on-the-promises/",
+    "gccs_title": "Standing on the Promises",
+    "ob_num": 31,
+    "ob_title": "STANDING ON THE PROMISES(Bb)",
+    "cs_num": 31,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Standing-on-The-Promises-8.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/surrender-all/",
+    "gccs_title": "Surrender All",
+    "ob_num": 25,
+    "ob_title": "I SURRENDER ALL (Eb)",
+    "cs_num": 185,
+    "score": 0.9286,
+    "audio_found": [
+      "https://media.gccsatx.com/Surrender-All-.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/sweet-hour-of-prayer/",
+    "gccs_title": "Sweet Hour of Prayer",
+    "ob_num": 5,
+    "ob_title": "SWEET HOUR OF PRAYER (Eb)",
+    "cs_num": 5,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Sweet-Hour-of-Prayer-.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/there-is-a-fountain/",
+    "gccs_title": "There Is a Fountain",
+    "ob_num": 54,
+    "ob_title": "THERE IS A FOUNTAIN (C)",
+    "cs_num": 54,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/There-Is-A-Fountain-.mp3"
+    ],
+    "audio_added": []
+  },
+  {
+    "gccs_url": "https://gccsatx.com/hymns/victory-in-jesus/",
+    "gccs_title": "Victory in Jesus",
+    "ob_num": 22,
+    "ob_title": "VICTORY IN JESUS (Ab)",
+    "cs_num": 22,
+    "score": 1.0,
+    "audio_found": [
+      "https://media.gccsatx.com/Victory-in-Jesus-.mp3",
+      "https://media.gccsatx.com/Victory.mp3"
+    ],
+    "audio_added": []
+  }
+]

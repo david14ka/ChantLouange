@@ -21,6 +21,7 @@ import com.davidkazad.chantlouange.config.utils.LogUtil;
 import com.davidkazad.chantlouange.ui.fragment.FavFragment;
 import com.davidkazad.chantlouange.ui.fragment.AllSongsFragment;
 import com.davidkazad.chantlouange.ui.fragment.SettingsFragment;
+import com.davidkazad.chantlouange.ui.fragment.AboutFragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -60,9 +61,12 @@ public class HomeActivity extends BaseActivity {
                     showFragment(new FavFragment());
                     ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.favorities);
                     return true;
-                case R.id.navigation_settings:
-                    showFragment(new SettingsFragment());
-                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.settings);
+                case R.id.navigation_search:
+                    startActivity(new Intent(HomeActivity.this, GlobalSearchActivity.class));
+                    return false; // Don't highlight this tab as it opens an activity
+                case R.id.navigation_about:
+                    showFragment(new AboutFragment());
+                    ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.apropos);
                     return true;
 
             }
@@ -148,7 +152,8 @@ public class HomeActivity extends BaseActivity {
             openBrowser("help");
             return true;
         }if (id == R.id.action_about) {
-            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            BottomNavigationView navigation = findViewById(R.id.navigation);
+            if (navigation != null) navigation.setSelectedItemId(R.id.navigation_about);
             return true;
         }
 
@@ -168,5 +173,21 @@ public class HomeActivity extends BaseActivity {
                         }
                     }
                 });
+    }
+
+    // ----- About page android:onClick handlers -----
+    public void rate_me(android.view.View view)  { openPlayStore(); }
+    public void share_me(android.view.View view) { shareApp(); }
+    public void github(android.view.View view)   { openGithub(); }
+    public void donation(android.view.View view) { shareApp(); }
+    public void alive(android.view.View view)    { openUrl("alivecorp.com"); }
+    public void me(android.view.View view)       { /* placeholder */ }
+
+    public void equipe(android.view.View view) {
+        new com.afollestad.materialdialogs.MaterialDialog.Builder(this)
+                .title(R.string.remerciement)
+                .items(R.array.contributor)
+                .itemsCallback((dialog, itemView, position, text) -> {})
+                .show();
     }
 }

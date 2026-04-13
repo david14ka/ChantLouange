@@ -8,7 +8,8 @@
     "ob_clean": "ONLY BELIEVE",
     "method": "manual_dict",
     "score": 100,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 2,
@@ -20,8 +21,10 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/Amazing_Grace_file.mid"
-    ]
+      "https://media.gccsatx.com/Amazing-Grace-1.mp3",
+      "https://media.gccsatx.com/Amazing-Grace-CC.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 3,
@@ -34,7 +37,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/gathering_home_slade.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 4,
@@ -47,7 +51,8 @@
     "score": 58.33333333333333,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Does_Jesus_Care.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 5,
@@ -59,8 +64,9 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/The_Lords_Prayer.mid"
-    ]
+      "https://media.gccsatx.com/Sweet-Hour-of-Prayer-.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 6,
@@ -73,7 +79,8 @@
     "score": 64.86486486486487,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/451.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 7,
@@ -84,7 +91,8 @@
     "ob_clean": null,
     "method": null,
     "score": 0,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 8,
@@ -97,7 +105,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Lord_I_Want_to_Be_a_Christian.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 9,
@@ -108,7 +117,8 @@
     "ob_clean": "FEELING SO MUCH BETTER",
     "method": "manual_dict",
     "score": 100,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 10,
@@ -121,6 +131,9 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Teach_me_Lord_to_wait.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/Screenshot_2025-07-12_031910.png"
     ]
   },
   {
@@ -134,7 +147,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Hymn_for_Easter.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 12,
@@ -145,7 +159,8 @@
     "ob_clean": "WEAR A CROWN",
     "method": "manual_dict",
     "score": 100,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 13,
@@ -156,7 +171,10 @@
     "ob_clean": "MARVELOUS GRACE",
     "method": "manual_dict",
     "score": 100,
-    "audio_urls": []
+    "audio_urls": [
+      "https://media.gccsatx.com/Marvelous-Grace-1.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 14,
@@ -169,7 +187,8 @@
     "score": 70.0,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Lord_Jesus_Think_on_Me.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 15,
@@ -180,7 +199,8 @@
     "ob_clean": null,
     "method": null,
     "score": 0,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 16,
@@ -193,7 +213,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/PsH_452.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 17,
@@ -204,7 +225,8 @@
     "ob_clean": "MY SHEEP KNOW MY VOICE",
     "method": "manual_dict",
     "score": 100,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 18,
@@ -216,8 +238,9 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/493-Onward_Christian_8zvMAyv.mid"
-    ]
+      "https://media.gccsatx.com/Onward-Christian-Soldiers-L.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 19,
@@ -229,8 +252,12 @@
     "method": "fuzzy",
     "score": 60.0,
     "audio_urls": [
+      "https://media.gccsatx.com/Jesus-Saves-New.9.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-C.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-L.mp3",
       "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 20,
@@ -243,7 +270,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/the_Lord_is_coming_by_and_by.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 21,
@@ -254,7 +282,8 @@
     "ob_clean": null,
     "method": null,
     "score": 0,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 22,
@@ -266,8 +295,10 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/More_Like_Jesus_Stillman.mid"
-    ]
+      "https://media.gccsatx.com/Victory-in-Jesus-.mp3",
+      "https://media.gccsatx.com/Victory.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 23,
@@ -279,7 +310,10 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/my_faith_looks_up_to_thee.mid"
+      "https://media.gccsatx.com/My-Faith-Looks-Up-to-Thee-.mp3"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/My_Faith_Looks_Up_to_Thee_hymn_sheet.png"
     ]
   },
   {
@@ -352,7 +386,8 @@
     "score": 66.66666666666667,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 30,
@@ -364,8 +399,10 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/484.mid"
-    ]
+      "https://media.gccsatx.com/HigherGround2.mp3",
+      "https://media.gccsatx.com/Higher-Ground-C.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 31,
@@ -377,8 +414,9 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/banner_of_the_cross.mid"
-    ]
+      "https://media.gccsatx.com/Standing-on-The-Promises-8.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 32,
@@ -400,7 +438,9 @@
     "ob_clean": "ROCK OF AGES",
     "method": "fuzzy",
     "score": 72.0,
-    "audio_urls": []
+    "audio_urls": [
+      "https://gccsatx.com/hymns/wp-content/uploads/2020/08/RockofAges.mp3"
+    ]
   },
   {
     "cs_num": 34,
@@ -413,7 +453,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Praise_Ye_the_Lord.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 35,
@@ -449,8 +490,10 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/Have_Thine_Own_Way_Lord.mid"
-    ]
+      "https://media.gccsatx.com/Have-Thine-own-Way-.mp3",
+      "https://media.gccsatx.com/HaveThineC.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 38,
@@ -522,7 +565,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 44,
@@ -535,7 +579,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/God_leads_us_along.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 45,
@@ -547,7 +592,8 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/Leaning_On_the_Everlasting_Arms.mid"
+      "https://media.gccsatx.com/Leaning-on-the-Everlasting-Arms-L.mp3",
+      "https://media.gccsatx.com/Leaning-on-The-Everlasting-Arms-C.mp3"
     ]
   },
   {
@@ -561,7 +607,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/grenada.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 47,
@@ -585,6 +632,9 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Bringing_in_the_Sheaves_Shaw.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/Bringing_In_the_Sheaves.png"
     ]
   },
   {
@@ -620,6 +670,9 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/140.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/0569557.png"
     ]
   },
   {
@@ -656,7 +709,7 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/338-How_Firm_a.mid"
+      "https://media.gccsatx.com/There-Is-A-Fountain-.mp3"
     ]
   },
   {
@@ -670,7 +723,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/he_is_so_precious.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 56,
@@ -683,6 +737,9 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Jesus_never_fails.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/Earthly_Friends_May_Prove_Untrue.png"
     ]
   },
   {
@@ -695,6 +752,8 @@
     "method": "manual_dict",
     "score": 100,
     "audio_urls": [
+      "https://media.gccsatx.com/Battle-Hymn-of-The-Church-8-.mp3",
+      "https://media.gccsatx.com/Battle-Hymn-CC.mp3",
       "https://www.hymnallibrary.org/media/midi_files/633-Mine_Eyes_Have.mid"
     ]
   },
@@ -709,7 +768,8 @@
     "score": 100,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Laura_B._Davis.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 59,
@@ -797,7 +857,8 @@
     "ob_clean": "I BELIEVE GOD",
     "method": "fuzzy",
     "score": 58.33333333333333,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 67,
@@ -899,8 +960,10 @@
     "method": "fuzzy",
     "score": 64.86486486486487,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/heart_of_Jesus.mid"
-    ]
+      "https://media.gccsatx.com/In-The-Beauty-of-Holiness-L.mp3",
+      "https://media.gccsatx.com/In-the-Beauty-CC.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 76,
@@ -924,7 +987,8 @@
     "score": 56.00000000000001,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/dummy_E6EyaNM.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 78,
@@ -1076,8 +1140,9 @@
     "method": "fuzzy",
     "score": 57.14285714285714,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/Blessed_Be_the_Name.mid"
-    ]
+      "https://media.gccsatx.com/Blessed-Be-Your-Name-3-.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 91,
@@ -1191,7 +1256,8 @@
     "score": 62.5,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/455.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 101,
@@ -1280,7 +1346,9 @@
     "method": "fuzzy",
     "score": 63.1578947368421,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/PsH_470.mid"
+      "https://media.gccsatx.com/All-Hail-the-Power-of-Jesus-Name-DD.mp3",
+      "https://a377806649c3f0197e29-e6708de219dc1beb62fafe8704087608.ssl.cf2.rackcdn.com/2020/05/All-Hail-The-Power-of-Jesus-NameC.mp3",
+      "https://media.gccsatx.com/AllHailC.mp3"
     ]
   },
   {
@@ -1318,6 +1386,9 @@
     "score": 57.14285714285714,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/464.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/0352340.png"
     ]
   },
   {
@@ -1399,7 +1470,8 @@
     "score": 77.77777777777779,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/i_dreamed_that_the_great_judgment_morning.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 119,
@@ -1443,7 +1515,8 @@
     "ob_clean": "JUST ANOTHER TOUCH LORD",
     "method": "fuzzy",
     "score": 59.25925925925925,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 123,
@@ -1522,7 +1595,8 @@
     "ob_clean": "BAPTIZED INTO THE BODY",
     "method": "fuzzy",
     "score": 55.81395348837209,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 130,
@@ -1612,7 +1686,8 @@
     "ob_clean": "THE SOLID ROCK",
     "method": "fuzzy",
     "score": 74.07407407407408,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 139,
@@ -1658,7 +1733,8 @@
     "score": 56.41025641025641,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 144,
@@ -1726,7 +1802,8 @@
     "score": 56.41025641025641,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/303.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 150,
@@ -1783,7 +1860,8 @@
     "score": 62.5,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/455.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 155,
@@ -1842,7 +1920,8 @@
     "score": 55.55555555555556,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/How_Great_Is_Our_God.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 160,
@@ -1866,7 +1945,8 @@
     "score": 62.22222222222222,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/303.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 163,
@@ -2013,7 +2093,8 @@
     "ob_clean": "WHEN WE SEE CHRIST",
     "method": "fuzzy",
     "score": 56.41025641025641,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 176,
@@ -2026,6 +2107,9 @@
     "score": 81.25,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/426.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/0592580.png"
     ]
   },
   {
@@ -2118,6 +2202,9 @@
     "score": 56.00000000000001,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/464.mid"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/0352340.png"
     ]
   },
   {
@@ -2130,7 +2217,11 @@
     "method": "fuzzy",
     "score": 55.55555555555556,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/275-I_Surrender_All.mid"
+      "https://media.gccsatx.com/Surrender-All-.mp3",
+      "https://media.gccsatx.com/I-Surrender-All-L.mp3"
+    ],
+    "partition_urls": [
+      "https://www.hymnallibrary.org/media/hymns/sheet_music/0479469.png"
     ]
   },
   {
@@ -2223,7 +2314,8 @@
     "score": 66.66666666666667,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 194,
@@ -2293,7 +2385,8 @@
     "score": 57.14285714285714,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/I_Am_Resolved.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 200,
@@ -2317,7 +2410,8 @@
     "score": 62.06896551724138,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/O_Come_and_Dwell_in_Me.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 202,
@@ -2391,7 +2485,8 @@
     "score": 55.81395348837209,
     "audio_urls": [
       "https://www.hymnallibrary.org/media/midi_files/Heralds_of_Christ.mid"
-    ]
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 208,
@@ -2436,8 +2531,11 @@
     "method": "fuzzy",
     "score": 56.25,
     "audio_urls": [
-      "https://www.hymnallibrary.org/media/midi_files/186_Jesus_Loves_Me.mid"
-    ]
+      "https://media.gccsatx.com/Jesus-Saves-New.9.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-C.mp3",
+      "https://media.gccsatx.com/Jesus-Saves-L.mp3"
+    ],
+    "partition_urls": []
   },
   {
     "cs_num": 212,
@@ -2448,7 +2546,8 @@
     "ob_clean": "WHEN WE SEE CHRIST",
     "method": "fuzzy",
     "score": 58.82352941176471,
-    "audio_urls": []
+    "audio_urls": [],
+    "partition_urls": []
   },
   {
     "cs_num": 213,

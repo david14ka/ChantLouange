@@ -74,4 +74,9 @@
     <color name="surface_color">#FFFFFF</color>
     <color name="text_color_primary">#1A1A1A</color>
     <color name="text_color_secondary">#5D4037</color>
+    <!-- ── About Page Overhaul Colors ──────────────────────── -->
+    <color name="about_accent">#EA8080</color>
+    <color name="about_bg">#121212</color>
+    <color name="about_surface">#1E1E1E</color>
+    <color name="about_text_secondary">#BDBDBD</color>
 </resources>

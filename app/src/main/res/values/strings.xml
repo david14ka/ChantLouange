@@ -57,9 +57,9 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
 
-    <string name="about_developer">Chant &amp; Louange est une application développée par David Kazad.</string>
-    <string name="developer_name">David Kazad</string>
-    <string name="developed_by">développée par</string>
+    <string name="about_developer">Chant &amp; Louange est une application dédiée à faciliter l’accès aux recueils de cantiques pour la louange et l’adoration.</string>
+    <string name="developer_name">David Kazadi</string>
+    <string name="developed_by">Développé par</string>
     <string name="share_with">Partager avec</string>
     <string name="contacts">** CONTACTS **</string>
     <string name="fav_preferences" formatted="false">fav%d%d</string>
@@ -134,8 +134,39 @@
     <string name="enregistrer">Enregistrer</string>
     <string name="annuler">Annuler</string>
     <string name="livres">Livres</string>
-    <string name="apropos">Apropos</string>
+    <string name="apropos">À Propos</string>
     <string name="remerciement">** REMERCIEMENTS **</string>
+
+    <!-- About Section Presentation -->
+    <!-- About Section Overhaul -->
+    <string name="about_version_badge">VERSION 3.0</string>
+    <string name="about_tagline">"Un recueil numérique conçu pour élever les cœurs et faciliter la louange au sein de la communauté chrétienne."</string>
+    
+    <string name="about_mission_title">Notre Mission</string>
+    <string name="about_mission_text_short">Faciliter l’accès aux cantiques, paroles et partitions pour l’adoration.</string>
+    <string name="about_cat_christians">Chrétiens</string>
+    <string name="about_cat_choirs">Chorales</string>
+    <string name="about_cat_musicians">Musiciens</string>
+
+    <string name="about_features_title_new">Fonctionnalités Clés</string>
+    <string name="about_feature_paroles_label">PAROLES</string>
+    <string name="about_feature_partitions_label">PARTITIONS</string>
+    <string name="about_feature_audio_label">AUDIO</string>
+    <string name="about_feature_partage_label">PARTAGE</string>
+
+    <string name="about_sources_title_new">Sources &amp; Archives</string>
+    <string name="about_sources_gratitude">Nous tenons à remercier les archives qui rendent ce projet possible</string>
+    <string name="about_sources_audio_label">Audio</string>
+    <string name="about_sources_partition_label">Partitions</string>
+
+    <string name="about_team_title_new">L’Équipe</string>
+    <string name="about_role_developer_label">DÉVELOPPEUR</string>
+    <string name="about_role_contributor_label">CONTRIBUTEUR</string>
+
+    <string name="about_contact_legal_title">Contact &amp; Légal</string>
+    <string name="about_contact_suggestion">Pour toute suggestion ou signalement, n’hésitez pas à nous contacter.</string>
+    <string name="about_copyright_new">© 2024 Chant &amp; Louange. Tous droits réservés.</string>
+    <string name="about_mentions_legales">Mentions Légales</string>
     <string name="home_title">Recueils</string>
     <string name="alive_corp">http://alive-corporation.org</string>
     <string name="list_of_songs">Liste des chants</string>
@@ -211,7 +242,7 @@
     <string name="user_image" translatable="false">image utilisateur\n</string>
     <string name="emoji" translatable="false">emoji</string>
     <string name="collection_de_cantiques" translatable="false">Collection de cantiques</string>
-    <string name="version" translatable="false">Version 6.2.0</string>
+    <string name="version" translatable="false">Version 3.0</string>
 
     <!-- Toolbar and Navigation Titles -->
     <string name="title_nos_chants">Nos Chants</string>
