@@ -61,9 +61,7 @@ public class HomeActivity extends BaseActivity {
                     showFragment(new FavFragment());
                     ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.favorities);
                     return true;
-                case R.id.navigation_search:
-                    startActivity(new Intent(HomeActivity.this, GlobalSearchActivity.class));
-                    return false; // Don't highlight this tab as it opens an activity
+
                 case R.id.navigation_about:
                     showFragment(new AboutFragment());
                     ((android.widget.TextView) findViewById(R.id.toolbar_title)).setText(R.string.apropos);

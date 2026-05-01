@@ -7,14 +7,16 @@
         android:title="RECUEIL" />
 
     <item
+        android:id="@+id/navigation_songs"
+        android:icon="@drawable/ic_menu_songs"
+        android:title="@string/title_nos_chants" />
+
+    <item
         android:id="@+id/navigation_favorites"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="FAVORIS" />
 
-    <item
-        android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:title="RECHERCHE" />
+    
 
     <item
         android:id="@+id/navigation_about"
